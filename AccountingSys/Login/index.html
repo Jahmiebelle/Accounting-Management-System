@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../Styles/styles.css?v=1.0">
+  <title>Login </title>
+  </head>
+  
+<body>
+  <div class="outer-box">
+  
+    <h2 class="brand-namin">Teach<span style="color: greenyellow">Track</span></h2>
+      <h1 class="background-text-bottom">EMPLOYEE•MANAGEMENT•SYSTEM</h1>
+      <h1 class="background-text-bottom2">EMPLOYEE•MANAGEMENT•SYSTEM</h1>
+      <h1 class="background-text-top">EMPLOYEE•MANAGEMENT•SYSTEM</h1>
+      <h1 class="background-text-top2">EMPLOYEE•MANAGEMENT•SYSTEM</h1>
+    <div class="overlay">
+      <h6 class="copyright">©2025 All Rights Reserved.</h6>    
+    </div>
+    
+    <form class="login-form" id="loginForm" method="POST" action="">
+      <div class="form-header">
+        <h2 class="lgn-header">-- Login --</h2>
+      </div>
+      <div class="form-content">
+        <input onclick="toggleAnimtion()" type="number" id="lgn-company-id" name="lgn-company-id" placeholder="Company ID#">
+        <input type="password" id="lgn-password" name="lgn-password" placeholder="Password">
+        <select class="position" name="position" id="position">
+          <option value="employee">Employee</option>
+          <option value="admin">Admin</option>
+          <option value="payroll">Payroll Officer</option>
+        </select>
+        <button type="submit" id="login-btn" name="login" style="color: .">Login</button>
+        <h5 onclick="showForgot()" class="forgot-pass" style="text-decoration: underline">Forgot Password?</h5>
+      </div>
+
+    </form>
+    
+    <form class="forgotPass-form" action="index.html" method="POST">
+      <div class="form-header">
+        <h2 class="forgotPass-header">Password Recovery</h2>
+      </div>
+      <div class="form-content">
+        <input type="number" name="company-id" id="company-id" placeholder="Company ID#">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <button type="submit" name="verify" id="verify-btn"><img src="" alt="">Verify</button>
+        <h5 onclick="showForgot()" class="remember-pass" style="text-decoration: underline">Remember Password? Login </h5>  
+      </div>
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
