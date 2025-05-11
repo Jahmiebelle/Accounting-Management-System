@@ -120,10 +120,10 @@ body {
 .section-name {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   height: 100%;
   width: 60%;
-  border: solid darkred 1px;
+  /*border: solid darkred 1px;*/
 }
 
 
@@ -131,24 +131,25 @@ body {
   display: flex;
   height: 45px;
   width: 45px;
-  border: solid red 1px;
+ /* border: solid red 1px;*/
   background-image: url('../Assets/home-icon-black.png');
   background-size: cover;
 }
 
 .section-text {
   display: flex;
-  font-family: 'Poppins-black';
+  font-family: 'Poppins-bold';
   font-size: 32px;
 }
  
 
 .logout-icon {
   display: flex;
-  height: 45px;
-  width: 45px;
-  border: solid black 1px;
-  background-image: url('');
+  height: 35px;
+  width: 35px;
+ /* border: solid black 1px;*/
+  background-image: url('../Assets/logout-icon.png');
+  background-size: cover;
 }
 
 .greetings-content {
