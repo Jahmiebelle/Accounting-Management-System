@@ -1,3 +1,36 @@
+/* mga fonts, puro poppins lang gamitin*/
+
+@font-face {
+  font-family: 'Poppins-black';
+  src: url('../Fonts/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('../Fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-regular';
+  src: url('../Fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-medium';
+  src: url('../Fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-light';
+  src: url('../Fonts/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-italic';
+  src: url('../Fonts/Poppins-Italic.ttf') format('truetype');
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -89,8 +122,8 @@ body {
   align-items: center;
   gap: 10px;
   height: 100%;
-  width: 40%;
-  /*border: solid darkred 1px;*/
+  width: 60%;
+  border: solid darkred 1px;
 }
 
 
@@ -99,10 +132,14 @@ body {
   height: 45px;
   width: 45px;
   border: solid red 1px;
+  background-image: url('../Assets/home-icon-black.png');
+  background-size: cover;
 }
 
 .section-text {
-  
+  display: flex;
+  font-family: 'Poppins-black';
+  font-size: 32px;
 }
  
 
@@ -111,6 +148,7 @@ body {
   height: 45px;
   width: 45px;
   border: solid black 1px;
+  background-image: url('');
 }
 
 .greetings-content {
