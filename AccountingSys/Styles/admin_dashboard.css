@@ -8,6 +8,7 @@ body {
   height: 200vh;
   width: 100vw;
   background-color: #f4f6f8;
+  color: #333333;
 }
 
 .outer-container {
@@ -67,7 +68,8 @@ body {
   flex-direction: column;
   height: 95%;
   width: 90%;
-  border: solid pink 3px;
+  gap: 10px;
+  /*border: solid pink 3px;*/
   
 }
 
@@ -78,7 +80,7 @@ body {
   justify-content: space-between;
   height: 10%;
   width: 100%;
-  border: solid black 1px;
+  /*border: solid black 1px;*/
   box-sizing: border-box;
 }
 
@@ -88,7 +90,7 @@ body {
   gap: 10px;
   height: 100%;
   width: 40%;
-  border: solid darkred 1px;
+  /*border: solid darkred 1px;*/
 }
 
 
@@ -115,7 +117,7 @@ body {
   display: flex;
   height: 10%;
   width: 100%;
-  border: solid darkcyan 1px;
+  border-top: solid dimgray 1px;
 }
 
 .main-content {
