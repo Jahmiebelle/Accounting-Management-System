@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  font-family: 'Poppins-regular';
   margin: 0;
   padding: 0;
   height: 200vh;
@@ -100,7 +101,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 95%;
-  width: 90%;
+  width: 85%;
   gap: 10px;
   /*border: solid pink 3px;*/
   
@@ -129,8 +130,8 @@ body {
 
 .section-icon {
   display: flex;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
  /* border: solid red 1px;*/
   background-image: url('../Assets/home-icon-black.png');
   background-size: cover;
@@ -154,9 +155,69 @@ body {
 
 .greetings-content {
   display: flex;
-  height: 10%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: auto;
   width: 100%;
+  align-items: center;
+  justify-content: space-between;
   border-top: solid dimgray 1px;
+  box-sizing: border-box;
+}
+
+.left-greetings, .right-greetings {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  border: solid darkgreen 1px;
+  
+}
+
+.greetings {
+  display: flex;
+  padding: 5px;
+  font-family: 'Poppins-medium';
+  align-items: center;
+  height: auto;
+  width: 100%;
+  border: solid darkred 1px;
+  box-sizing: border-box;
+}
+
+.path {
+  display: flex;
+  padding: 5px;
+  font-family: 'Poppins-light';
+  align-items: center;
+  height: auto;
+  width: 100%;
+  border: solid darkblue 1px;
+  box-sizing: border-box;
+}
+
+.datetime {
+  display: flex;
+  padding: 5px;
+  font-family: 'Poppins-light';
+  align-items: center;
+  justify-content: right;
+  height: auto;
+  width: 100%;
+  border: solid darkblue 1px;
+  box-sizing: border-box;
+}
+
+.emptybox {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  border: solid darkred 1px;
+  box-sizing: border-box;
+  
 }
 
 .main-content {
