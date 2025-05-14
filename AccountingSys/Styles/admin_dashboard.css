@@ -124,7 +124,7 @@ body {
   gap: calc((75vw * 0.85) * 0.6 * 0.05);
   height: 100%;
   width: 60%;
-  /*border: solid darkred 1px;*/
+  border: solid darkred 1px;
 }
 
 
@@ -132,7 +132,7 @@ body {
   display: flex;
   height: 40px;
   width: 40px;
- /* border: solid red 1px;*/
+  border: solid darkorange 1px;
   background-image: url('../Assets/home-icon-black.png');
   background-size: cover;
 }
@@ -141,6 +141,7 @@ body {
   display: flex;
   font-family: 'Poppins-bold';
   font-size: 32px;
+  border: solid lawngreen 1px;
 }
  
 
