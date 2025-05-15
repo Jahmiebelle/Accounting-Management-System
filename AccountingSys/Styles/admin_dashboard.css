@@ -68,8 +68,7 @@ body {
 
 .inner-container {
   display: flex;
-  position: relative;
-  top: 14.9vh;
+  margin-top: 15vh;
   height: calc(100% - 15vh);
   width: 100%;
   border: solid black 1px;
@@ -89,8 +88,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 25vw;
+  margin-left: 25vw;
   height: 100%;
   width: 75vw;
   border: solid gray 1px;
@@ -229,11 +227,9 @@ body {
 
 .footer-container {
   display: flex;
-  position: absolute;
   justify-content: center;
   align-items: center;
-  left: 25vw;
-  top: 100%;
+  margin-left: 25vw;
   height: 15vh;
   width: calc(100% - 25vw);
   border: solid blue 1px;
