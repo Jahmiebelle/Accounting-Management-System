@@ -177,7 +177,7 @@ body {
 .greetings {
   display: flex;
   padding: 5px;
-  font-family: 'Poppins-medium';
+  font-family: 'Poppins-light';
   align-items: center;
   height: auto;
   width: 100%;
@@ -258,9 +258,9 @@ body {
 
 .uppercard-icon {
   display: flex;
-  margin: 0 15px;
-  height: 75px;
-  width: 75px;
+  margin-left: 20px;
+  height: 65px;
+  width: 65px;
   background-size: cover;
   background-position: center;
 }
@@ -271,16 +271,15 @@ body {
   align-items: center;
   height: 100%;
   flex: 1;
-  border: solid black 1px;
+  /*border: solid black 1px;*/
 }
 
 .uppercard-header {
   display: flex;
   font-family: 'Poppins-medium';
-  font-size: 16px;
   justify-content: center;
   align-items: center;
-  height: 30%;
+  height: 40%;
 }
 
 .uppercard-count {
@@ -289,8 +288,8 @@ body {
   font-size: 32px;
   justify-content: center;
   align-items: center;
-  height: 50%;
-  border: solid orangered 1px;
+  height: auto;
+  /*border: solid orangered 1px;*/
 }
 
 .lower-summarycards {
