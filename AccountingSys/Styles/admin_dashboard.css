@@ -94,9 +94,8 @@ body {
 .inner-container {
   display: flex;
   margin-top: 80px;
-  height: 100%;
+  height: calc(100% - 180px);
   width: 100%;
-  /*border: solid black 1px;*/
 }
 
 .sidebar-container {
