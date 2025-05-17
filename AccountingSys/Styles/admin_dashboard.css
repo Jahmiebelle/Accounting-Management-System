@@ -616,7 +616,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 25vw;
-  height: 30vh;
+  height: 100px;
   width: calc(100% - 25vw);
   background-color: #162E7B;
   color: #f4f6f8;
