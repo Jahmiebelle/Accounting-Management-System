@@ -345,7 +345,7 @@ body {
   width: 48%;
   border-radius: 20px;
   background-color: #FFFFFF;
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 #employee-card-icon {
@@ -404,38 +404,44 @@ body {
 
 .lowercard {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   height: 100%;
   width: 48%;
   border-radius: 10px;
   background-color: #FFFFFF;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
   
 }
 
 .request-card-header-container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  height: 20%;
+  gap: 20px;
+  height: 25%;
   width: 100%;
-  /*border: solid darkblue 1px;*/
+  border-radius: 10px;
 }
 
 .rch-text {
   display: flex;
+  margin-left: 20px;
   font-family: 'Poppins-medium';
   text-align: center;
-}
+  /*border: solid black 1px;*/
+} 
 
 .rch-count {
   display: flex;
-  height: 100%;
+  flex: 1;
   align-items: center;
-  justify-content: center;
   text-align: center;
   font-family: 'Poppins-bold';
-  font-size: 28px;
+  border-radius: 0px;
+  /*border: solid #CCC 0.1px;*/
+  /*box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2);*/
+  /*background-color: #F4F6F8;*/
 }
 
 .request-card-content-container {
@@ -452,9 +458,11 @@ body {
   display: flex;
   align-items: center;
   flex: 1;
-  width: 90%;
+  width: 95%;
   border-radius: 30px;
-  border: solid #162E7B 1px;
+  background-color: #f4f6f8;
+  /*box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2);*/
+  /*border: solid #CCC 0.1px;*/
 }
 
 .person1-profile, .person2-profile {
@@ -528,12 +536,30 @@ body {
   justify-content: center;
   align-items: center;
   height: 40px;
-  width: 160px;
+  width: 120px;
   border-radius: 30px;
   background-color: #162E7B;
   color: #F4f6f8;
   border: none;
-  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+#payroll-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.payroll-card-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payroll-card-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-container {
