@@ -94,7 +94,7 @@ body {
 .inner-container {
   display: flex;
   margin-top: 80px;
-  flex: 1;
+  height: calc(100% - 200px);
   width: 100%;
 }
 
