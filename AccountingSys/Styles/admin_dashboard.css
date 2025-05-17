@@ -51,7 +51,7 @@ body {
   height: 100%;
   width: 100%;
   /*border: solid green 1px;*/
-  overflow-x: hidden;
+
   
 }
 
@@ -94,8 +94,7 @@ body {
 .inner-container {
   display: flex;
   margin-top: 80px;
-  flex: 1;
-  height: calc(100% - 260px);
+  height: calc(100% - 180px);
   width: 100%;
 }
 
