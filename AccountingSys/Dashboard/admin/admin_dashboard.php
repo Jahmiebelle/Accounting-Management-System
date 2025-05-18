@@ -1,4 +1,5 @@
-<?php include '/AccountingMSG1/AccountingSys/Login/db.php'; ?>
+<?php include '/AccountingMSG1/AccountingSys/Login/db.php'; 
+?>
 
 
 <!DOCTYPE html>
@@ -22,7 +23,11 @@
           
         </div>
         <div class="brand-name">
-          HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
+          <?php
+            global $db_status;
+            echo "Status is: $db_status";
+          
+          ?><span id="track" style="color: #ADD8E6">TRACK</span>
           
         </div>
       </div>
