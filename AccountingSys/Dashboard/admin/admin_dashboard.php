@@ -28,18 +28,7 @@
         </div>
       </div>
       <div class="role">
-        <?php
-          if($db_status === "fail"){
-            echo "Nope";
-          }
-          elseif ($db_status === "success"){
-            echo "Goods";
-          }
-          else {
-            echo "Idk";
-          }
-        
-        ?>
+        admin
       </div>
     </header>
     
