@@ -14,7 +14,7 @@ document.getElementById('login-btn').addEventListener('click', function(){
   const password = document.getElementById('lgn-password').value;
   const role = document.getElementById('position').value;
   if(parseInt(company_Id) === 1234 && password === 'gabby'){
-    window.location.href = "../Dashboard/admin/admin_dashboard.html";
+    window.location.href = "../Dashboard/admin/admin_dashboard.php";
   }
   else{
     alert("Invalid Credentials!! "+ role);
