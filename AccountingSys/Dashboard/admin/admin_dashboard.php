@@ -24,7 +24,6 @@
         </div>
         <div class="brand-name">
           <?php
-            global $db_status;
             echo "Status is: $db_status";
           
           ?><span id="track" style="color: #ADD8E6">TRACK</span>
