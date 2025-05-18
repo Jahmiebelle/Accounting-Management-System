@@ -63,8 +63,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: rgba(22, 46, 123, 0.1);
-  backdrop-filter: blur(2px);
+  /*background-color: rgba(22, 46, 123, 0.7);
+  backdrop-filter: blur(2px);*/
   z-index: 4;
 }
 
