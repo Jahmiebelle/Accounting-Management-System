@@ -11,6 +11,15 @@
 </head>
 
 <body>
+  <?php
+    if (isset($db_status)) {
+        if ($db_status === "success") {
+            echo "<script>alert('✅ Connected to DB!');</script>";
+        } else {
+            echo "<script>alert('❌ DB Connection Failed: $db_error');</script>";
+        }
+    }
+  ?>
   <div class="outer-container">
     
     <header class="header-container">
