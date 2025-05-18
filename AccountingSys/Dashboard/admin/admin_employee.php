@@ -1,4 +1,4 @@
-<?php include '../../Login/db.php'; ?>
+<?php include '/AccountingMSG1/AccountingSys/Login/db.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
-  <link rel="stylesheet" href="../../Styles/admin_employee.css">
+  <link rel="stylesheet" href="AccountingMSG1/AccountingSys/Styles/admin_employee.css">
 </head>
 
 <body>
