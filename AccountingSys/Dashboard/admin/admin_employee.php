@@ -1,4 +1,4 @@
-<?php include 'db.php'; ?>
+<?php include '../../..Login/db.php'; ?>
 
 <!DOCTYPE html>
 <html>
