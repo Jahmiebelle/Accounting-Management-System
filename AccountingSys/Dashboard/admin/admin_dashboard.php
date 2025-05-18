@@ -1,5 +1,6 @@
 <?php include '/AccountingMSG1/AccountingSys/Login/db.php'; ?>
 
+
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +12,7 @@
 </head>
 
 <body>
-
+  
   <div class="outer-container">
     
     <header class="header-container">
@@ -26,7 +27,18 @@
         </div>
       </div>
       <div class="role">
-        admin
+        <?php
+          if($db_status === "fail"){
+            echo "Nope";
+          }
+          elseif ($db_status === "success"){
+            echo "Goods";
+          }
+          else {
+            echo "Idk";
+          }
+        
+        ?>
       </div>
     </header>
     
