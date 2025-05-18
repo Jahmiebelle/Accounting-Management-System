@@ -1,4 +1,4 @@
-<?php include '/AccountingMSG1/AccountingSys/Login/db.php'; ?>
+<?php include 'db.php'; ?>
 
 <!DOCTYPE html>
 <html>

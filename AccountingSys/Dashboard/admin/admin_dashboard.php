@@ -1,4 +1,4 @@
-<?php include '/AccountingMSG1/AccountingSys/Login/db.php'; 
+<?php include 'db.php'; 
 ?>
 
 
@@ -23,10 +23,7 @@
           
         </div>
         <div class="brand-name">
-          <?php
-            echo "Status is: $db_status";
-          
-          ?><span id="track" style="color: #ADD8E6">TRACK</span>
+          HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
           
         </div>
       </div>
