@@ -12,6 +12,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname, $port, $termu
 
 
 if ($conn->connect_error) {
+    echo "<script>alert('cant connect to db');</script>";
     die("Connection failed: " . $conn->connect_error);
 }
 
