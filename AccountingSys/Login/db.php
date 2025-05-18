@@ -11,7 +11,9 @@ $conn = mysqli_connect($servername, $username, $password, $dbname, 3306, $termux
 
 if (!$conn) {
     $db_status = "fail";
+    $db_error = addslashes(mysqli_connect_error()); 
 } else {
     $db_status = "success";
 }
 ?>
+
