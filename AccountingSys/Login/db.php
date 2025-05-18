@@ -10,9 +10,10 @@ $termux = "/data/data/com.termux/files/usr/var/run/mysqld.sock";
 $conn = mysqli_connect($servername, $username, $password, $dbname, 3306, $termux); 
 
 if (!$conn) {
-    die("❌ Connection failed: " . mysqli_connect_error());
+    echo "<script>console.error('❌ DB Connection Failed: " . mysqli_connect_error() . "');</script>";
 } else {
-    echo "✅ Connected to DB!";
+    
+    echo "<script>console.log('✅ Connected to DB successfully');</script>";
 }
 ?>
 
