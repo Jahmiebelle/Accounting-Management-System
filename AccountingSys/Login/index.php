@@ -35,8 +35,36 @@
         <button type="submit" id="login-btn" name="login" style="color: .">Login</button>
         <h5 onclick="showForgot()" class="forgot-pass" style="text-decoration: underline">Forgot Password?</h5>
       </div>
-
     </form>
+    <?php
+      session_start();
+      if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $company_id = $_POST['lgn-company-id'];
+        $password = $_POST['lgn-password'];
+        $role = $_POST['position'];
+        if(isset($_POST['login'])) {
+          $query = "SELECT * FROM admin_table WHERE password = '$password' AND company_id = '$company_id'";
+          $result = mysqli_query($conn, $query);
+          if((mysqli_num_rows($result) === 1) && $role === 'admin') {
+            $user_data = mysqli_fetch_assoc($result);
+            $_SESSION['admin_id'] = $user_data['admin_id'];
+            $_SESSION['admin_first_name'] = $user_data['first_name'];
+            $_SESSION['admin_middle_name'] = $user_data['middle_name'];
+            $_SESSION['admin_last_name'] = $user_data['last_name'];
+            $_SESSION['admin_email'] = $user_data['email'];
+            $_SESSION['company_id'] = $user_data['company_id'];
+            $_SESSION['password'] = $user_data['password'];
+            header("Location: ../admin/admin_dashboard.php");
+            exit();
+          }
+          else {
+            echo "<script>alert('Invalid Credentials');</script>";
+          }
+        }
+        
+      }
+    
+    ?>
     
     <form class="forgotPass-form" action="index.html" method="POST">
       <div class="form-header">
