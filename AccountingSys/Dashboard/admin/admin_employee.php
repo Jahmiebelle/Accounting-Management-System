@@ -1,4 +1,6 @@
-<?php include '../../..Login/db.php'; ?>
+<?php include '../../Login/db.php';
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -108,7 +110,9 @@
           <div class="greetings-content">
             <div class="left-greetings">
               <div class="greetings">
-                Welcome, Jahmiebelle Laurente
+                Welcome, <?php
+                  echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
+                ?>
               </div>
               <div class="path">
                 Admin / Employee
