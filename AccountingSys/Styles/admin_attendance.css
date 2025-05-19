@@ -284,7 +284,7 @@ body {
   height: 40px;
   width: 40px;
   /*border: solid darkorange 1px;*/
-  background-image: url('../Assets/attendance-icon');
+  background-image: url('../Assets/attendance-icon.png');
   background-size: cover;
 }
 

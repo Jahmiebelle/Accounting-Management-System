@@ -193,7 +193,7 @@ body {
 }
 
 #dashboard-tab-icon {
-  background-image: url('../Assets/leavereq-icon.png');
+  background-image: url('../Assets/home-icon-white.png');
   background-size: cover;
   background-position: center;
 }
@@ -284,7 +284,7 @@ body {
   height: 40px;
   width: 40px;
   /*border: solid darkorange 1px;*/
-  background-image: url('../Assets/home-icon-black.png');
+  background-image: url('../Assets/leavereq-icon.png');
   background-size: cover;
 }
 
