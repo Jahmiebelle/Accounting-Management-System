@@ -46,7 +46,7 @@ session_start();
     <div class="overlay">
       <h6 class="copyright">©2025 All Rights Reserved.</h6>
     </div>
-    <form class="login-form" id="loginForm" method="POST" action="">
+    <form class="login-form" id="loginForm" method="POST" action="index.php">
       <div class="form-header">
         <h2 class="lgn-header"> Login </h2>
       </div>
@@ -64,7 +64,7 @@ session_start();
     </form>
     
     
-    <form class="forgotPass-form" action="index.html" method="POST">
+    <form class="forgotPass-form" action="index.php" method="POST">
       <div class="form-header">
         <h2 class="forgotPass-header">Password Recovery</h2>
       </div>
