@@ -2,7 +2,6 @@
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +9,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
-  <link rel="stylesheet" href="/AccountingMSG1/AccountingSys/Styles/admin_dashboard.css">
+  <link rel="stylesheet" href="../../Styles/admin_dashboard.css">
 </head>
 
 <body>
