@@ -36,6 +36,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins-regular';
   margin: 0;
   padding: 0;
