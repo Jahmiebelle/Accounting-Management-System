@@ -1,8 +1,8 @@
 <?php include 'db.php';
 session_start();
       if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        $company_id = $_POST['lgn-company-id'];
-        $password = $_POST['lgn-password'];
+        $company_id = $_POST['lgn_company_id'];
+        $password = $_POST['lgn_password'];
         $role = $_POST['position'];
         if(isset($_POST['login'])) {
           $query = "SELECT * FROM admin_table WHERE password = '$password' AND company_id = '$company_id'";
@@ -46,13 +46,13 @@ session_start();
     <div class="overlay">
       <h6 class="copyright">©2025 All Rights Reserved.</h6>
     </div>
-    <form class="login-form" id="loginForm" method="POST" action="index.php">
+    <form class="login-form" id="loginForm" method="POST" action="">
       <div class="form-header">
         <h2 class="lgn-header"> Login </h2>
       </div>
       <div class="form-content">
-        <input onclick="toggleAnimation()" type="number" id="lgn-company-id" name="lgn-company-id" placeholder="Company ID#">
-        <input type="password" id="lgn-password" name="lgn-password" placeholder="Password">
+        <input onclick="toggleAnimation()" type="number" id="lgn-company-id" name="lgn_company_id" placeholder="Company ID#">
+        <input type="password" id="lgn-password" name="lgn_password" placeholder="Password">
         <select class="position" name="position" id="position">
           <option value="employee">Employee</option>
           <option value="admin">Admin</option>
@@ -64,12 +64,12 @@ session_start();
     </form>
     
     
-    <form class="forgotPass-form" action="index.php" method="POST">
+    <form class="forgotPass-form" action="" method="POST">
       <div class="form-header">
         <h2 class="forgotPass-header">Password Recovery</h2>
       </div>
       <div class="form-content">
-        <input type="number" name="company-id" id="company-id" placeholder="Company ID#">
+        <input type="number" name="company_id" id="company-id" placeholder="Company ID#">
         <input type="email" name="email" id="email" placeholder="Email">
         <button type="submit" name="verify" id="verify-btn"><img src="" alt="">Verify</button>
         <h5 onclick="showForgot()" class="remember-pass" style="text-decoration: underline">Remember Password? Login </h5>  
