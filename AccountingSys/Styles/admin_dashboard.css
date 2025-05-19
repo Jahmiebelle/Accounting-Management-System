@@ -116,7 +116,7 @@ body {
 .inner-container {
   display: flex;
   margin-top: 80px;
-  height: calc(2000px - 180px);
+  height: calc(1000px - 180px);
   width: 100%;
 }
 
