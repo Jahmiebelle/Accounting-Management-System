@@ -116,7 +116,7 @@ body {
 .inner-container {
   display: flex;
   margin-top: 80px;
-  height: calc(1000px - 180px);
+  height: auto;
   width: 100%;
 }
 
@@ -258,7 +258,7 @@ body {
 
 .upper-content {
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 0 20px;
   align-items: center;
   justify-content: space-between;
@@ -387,7 +387,6 @@ body {
 .main-content {
   display: flex;
   height: 500px;
-  max-height: 150vh;
   width: 100%;
   flex-direction: column;
   gap: 20px;
