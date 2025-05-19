@@ -387,8 +387,7 @@ body {
 
 .main-content {
   display: flex;
-  height: 500px;
-  max-height: 150vh;
+  height: auto;
   width: 100%;
   flex-direction: column;
   gap: 20px;
