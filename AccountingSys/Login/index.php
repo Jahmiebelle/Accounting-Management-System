@@ -5,7 +5,7 @@ session_start();
         $password = $_POST['lgn_password'];
         $role = $_POST['position'];
         if(isset($_POST['login'])) {
-          if(empty($company_id) && empty($password)){
+          if(empty($company_id) || empty($password)){
             echo "<script>alert('Missing Credentials');</script>";
           }
           else {
