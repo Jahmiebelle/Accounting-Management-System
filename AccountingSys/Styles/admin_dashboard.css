@@ -50,7 +50,7 @@ body {
 .outer-container {
   display: flex;
   flex-direction: column;
-  height: 1000px;
+  height: 100%;
   width: 100%;
   /*border: solid green 1px;*/
 
@@ -116,7 +116,7 @@ body {
 .inner-container {
   display: flex;
   margin-top: 80px;
-  height: calc(100% - 180px);
+  height: calc(2000px - 180px);
   width: 100%;
 }
 
