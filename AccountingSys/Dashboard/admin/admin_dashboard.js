@@ -1,5 +1,5 @@
 document.getElementById('logout-icon').addEventListener('click', function () {
-  window.location.href = "../../Login/index.php";
+  window.location.href = "../../Login/logout.php";
 });
 
 document.getElementById('employee-tab').addEventListener('click', function () {
