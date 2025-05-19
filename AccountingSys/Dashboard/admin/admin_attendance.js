@@ -22,6 +22,3 @@ document.getElementById('payroll-tab').addEventListener('click', function () {
   window.location.href = "admin_payroll.php";
 });
 
-document.getElementById('attendance-tab').addEventListener('click', function () {
-  window.location.href = "admin_attendance.php";
-});

@@ -9,3 +9,15 @@ document.getElementById('employee-tab').addEventListener('click', function () {
 document.getElementById('department-tab').addEventListener('click', function () {
   window.location.href = "admin_department.php";
 });
+
+document.getElementById('leavereq-tab').addEventListener('click', function () {
+  window.location.href = "admin_leavereq.php";
+});
+
+document.getElementById('payroll-tab').addEventListener('click', function () {
+  window.location.href = "admin_payroll.php";
+});
+
+document.getElementById('attendance-tab').addEventListener('click', function () {
+  window.location.href = "admin_attendance.php";
+});
