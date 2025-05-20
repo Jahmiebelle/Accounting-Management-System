@@ -137,7 +137,7 @@ session_start();
                     $deptResult = mysqli_query($conn, $getDept);
                     while($deptnames = mysqli_fetch_assoc($deptResult)){
                       $dept = $deptnames['department_name'];
-                      echo "<option value='$deptnames'>$deptnames</option>";
+                      echo "<option value='$dept'>$dept</option>";
                     }
                   ?>
                 </select>
