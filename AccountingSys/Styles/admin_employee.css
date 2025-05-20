@@ -417,7 +417,8 @@ body {
   border-spacing: 0px;
   align-items: center;
   text-align: center;
-  flex: 1;
+  height: auto;
+  width: 100%;
   color: #333333;
 
 }
@@ -486,14 +487,3 @@ tr:nth-child(even) {
   font-size: 8px;
 }
 
-.outer-container, .footer-container {
-  border: 2px dashed red;
-}
-
-.main-content{
-  border: 2px dashed black;
-}
-
-.upper-maincontent {
-  border: 2px dashed darkblue;
-}
