@@ -136,7 +136,8 @@ session_start();
                     $getDept = "SELECT department_name FROM department_table";
                     $deptResult = mysqli_query($conn, $getDept);
                     while($deptnames = mysqli_fetch_assoc($deptResult)){
-                      echo "<option value='" . $deptnames['department_name'] . "'>'" . $deptnames['department_name'] . "'</option>";
+                      $dept = $deptnames['department_name'];
+                      echo "<option value='$deptnames'>$deptnames</option>";
                     }
                   ?>
                 </select>
@@ -165,16 +166,20 @@ session_start();
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   while($employeeData = mysqli_fetch_assoc($employeeResult)){
                     $emp_id = $employeeData['employee_id'];
-                  
+                    $first_name = $employeeData['first_name'];
+                    $last_name = $employeeData['last_name'];
+                    $department = $employeeData['department'];
+                    $status = $employeeData['status'];
+                    
                     echo "<tr class='row'>
-                      <td>" . $emp_id . "</td>
-                      <td>" . $employeeData['first_name'] . "</td>
-                      <td>" . $employeeData['last_name'] . "</td>
-                      <td>" . $employeeData['department'] . "</td>
-                      <td>" . $employeeData['status'] . "</td>
+                      <td>$emp_id</td>
+                      <td>$first_name</td>
+                      <td>$last_name</td>
+                      <td>$department</td>
+                      <td>$status</td>
                       <td> 
                         <form action='admin_employee.php' method='POST' accept-charset='utf-8'>
-                          <input type='hidden' name='emp_id' id='emp_id' value='" . $emp_id . "'/>
+                          <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
                           <button type='submit'>Profile</button>
                         </form>
                       </td>
