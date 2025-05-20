@@ -462,7 +462,8 @@ body {
   font-size: 12px;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  height: 90%;
+  flex: 1;
+  border-radius: 30px;
 }
 
 .lower-maincontent {
