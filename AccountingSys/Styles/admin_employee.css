@@ -417,7 +417,7 @@ body {
   border-spacing: 0px;
   align-items: center;
   text-align: center;
-  height: auto;
+  flex: 1;
   color: #333333;
 
 }
@@ -489,4 +489,8 @@ tr:nth-child(even) {
 
 .outer-container, .content-container, .main-content, .footer-container {
   border: 2px dashed red;
+}
+
+.main-content, .table {
+  border: 2px dashed black;
 }
