@@ -421,6 +421,7 @@ body {
   text-align: center;
   height: auto;
   border-radius: 30px;
+  border: solid #cccccc 1px;
   background-color: rgba(0, 0, 0, 0);
   padding: 5px 10px;
   font-family: 'Poppins-light';
@@ -518,12 +519,8 @@ tr:nth-child(even) {
   align-items: center;
   height: auto;
   width: auto;
-  border: solid darkred 1px;
 }
 
-#emp_id {
-  border: solid black 2px;
-}
 
 .profile-btn {
   display: flex;
