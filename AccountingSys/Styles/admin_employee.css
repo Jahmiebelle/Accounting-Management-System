@@ -482,7 +482,6 @@ body {
 }
 
 td, th {
-  display: flex;
   margin: 0px;
   border: 0.1px solid #ccc;
   
