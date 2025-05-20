@@ -419,7 +419,7 @@ body {
   text-align: center;
   height: auto;
   color: #333333;
-  border: solid red 3px;
+
 }
 
 td, th {
@@ -484,4 +484,9 @@ tr:nth-child(even) {
 
 .brand-info-footer, .brand-copyright {
   font-size: 8px;
+}
+
+
+.outer-container, .content-container, .main-content, .footer-container {
+  border: 2px dashed red;
 }
