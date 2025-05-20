@@ -65,10 +65,10 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(22, 46, 123, 0.7);
   backdrop-filter: blur(2px);
   z-index: 4;
-  border-bottom: solid #ccc 1px;
+  
 }
 
 .brand-container {
@@ -92,7 +92,7 @@ body {
   display: flex;
   font-family: 'Poppins-black';
   font-size: 24px;
-  color: #162e7b;
+  color: #f4f6f8;
   align-items: center;
   text-align: center;
   /*border: solid greenyellow 1px;*/
@@ -110,8 +110,8 @@ body {
   align-items: center;
   text-align: center;
   border-radius: 50px;
-  border: solid #333333 1px;
-  color: #333333;
+  border: solid #f4f6f8 1px;
+  color: #f4f6f8;
 }
 
 .inner-container {

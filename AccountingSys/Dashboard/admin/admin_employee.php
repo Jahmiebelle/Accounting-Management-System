@@ -23,7 +23,7 @@ session_start();
           
         </div>
         <div class="brand-name">
-          HEROES TEACH<span id="track" style="color: #162e7b">TRACK</span>
+          HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
           
         </div>
       </div>
