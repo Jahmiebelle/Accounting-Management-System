@@ -401,8 +401,55 @@ body {
 .upper-maincontent {
   display: flex;
   width: 100%;
-  height: 75px;
-  /*border: solid red 1px;*/
+  height: 50px;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.dept-sort {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.department-selection {
+  display: flex;
+  justify-content: center;
+  color: #333333;
+  font-size: 12px;
+  align-items: center;
+  text-align: center;
+  height: 15px;
+  border-radius: 30px;
+}
+
+.name-search {
+  display: flex;
+  height: auto;
+  align-items: center;
+  gap: 10px;
+  border: solid #cccccc 1px ;
+  color: #333333;
+  border-radius: 30px;
+  padding: 5px 0px;
+  padding-left: 10px;
+  padding-right: 25px;
+}
+
+.search-logo {
+  display: flex;
+  height: 15px;
+  width: 15px;
+  background-image: url('../Assets/search.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.search-label {
+  display: flex;
+  font-family: 'Poppins-light';
+  font-size: 12px;
 }
 
 .lower-maincontent {
@@ -437,6 +484,7 @@ th {
   letter-spacing: 0.5px;
   font-family: 'Poppins-light';
   border: 0.1px solid #ccc;
+  font-size: 12px;
 
 
 }
