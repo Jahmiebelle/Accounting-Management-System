@@ -516,17 +516,19 @@ tr:nth-child(even) {
   justify-self: center;
   justify-content: center;
   align-items: center;
-  height: 20px;
-  width: 20px;
-  border: solid black 1px;
+  height: auto;
+  width: auto;
+  border: solid darkred 1px;
 }
 
 #emp_id {
-  display: none;
+  border: solid black 2px;
 }
 
 .profile-btn {
   display: flex;
+  height: 25px;
+  padding: 5px 10px;
   justify-self: center;
   align-self: center;
   font-size: 12px ;
