@@ -514,8 +514,7 @@ tr:nth-child(even) {
 
 .profile-form {
   display: flex;
-  align-self: center;
-  justify-self: center;
+  vertical-align: center;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -528,8 +527,6 @@ tr:nth-child(even) {
   height: 25px;
   padding: 10px 15px;
   text-align: center;
-  justify-self: center;
-  align-self: center;
   font-size: 12px;
   color: #162e7b;
   background-color: rgba(0, 0, 0, 0);
