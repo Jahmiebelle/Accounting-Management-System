@@ -472,18 +472,19 @@ body {
   display: flex;
   justify-content: center;
   border-spacing: 0px;
+  border-collapse: collapse;
   align-items: center;
   text-align: center;
-  height: auto;
+  height: 100%;
   width: 100%;
   color: #333333;
 
 }
 
 td, th {
-  
+  display: flex;
   margin: 0px;
-  border-bottom: 0.1px solid #ccc;
+  border: 0.1px solid #ccc;
   
 }
 
@@ -493,14 +494,13 @@ th {
   color: #333333;
   letter-spacing: 0.5px;
   font-family: 'Poppins-light';
-  border: 0.1px solid #ccc;
   font-size: 12px;
 
 
 }
 
 td {
-  padding: 5px 10px;
+  padding: 8px 16px;
   text-justify: center;
   text-align: center;
   font-family: 'Poppins-light';
