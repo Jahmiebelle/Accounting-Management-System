@@ -442,9 +442,7 @@ body {
   border: solid #cccccc 1px ;
   color: #333333;
   border-radius: 30px;
-  padding: 5px 0px;
   padding-left: 10px;
-  padding-right: 25px;
 }
 
 .search-logo {
@@ -464,6 +462,11 @@ body {
   border: none;
   flex: 1;
   border-radius: 30px;
+}
+
+.search-label:focus {
+  border: solid #4a90e2 1px;
+  
 }
 
 .lower-maincontent {
