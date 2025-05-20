@@ -130,7 +130,25 @@ session_start();
           </div>
           <div class="main-content">
             <div class="upper-maincontent">
-              
+              <div class="dept-sort">
+                <select name="department_selection" id="department_selection">
+                  <?php
+                    $getDept = "SELECT department_name FROM department_table";
+                    $deptResult = mysqli_query($conn, $getDept);
+                    while($deptnames = mysqli_fetch_assoc($deptResult)){
+                      echo "<option value='" . $deptnames['department_name'] . "'>'" . $deptnames['department_name'] . "'</option>";
+                    }
+                  ?>
+                </select>
+              </div>
+              <div class="name-search">
+                <div class="search-logo">
+                  
+                </div>
+                <div class="search-label">
+                  Employee Name
+                </div>
+              </div>
             </div>
             <div class="lower-maincontent">
               <table class="table" border="0">
@@ -142,26 +160,28 @@ session_start();
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
-                <tr class="row">
-                  <td>1001</td>
-                  <td>Gabriel</td>
-                  <td>Lopez</td>
-                  <td>Computer Science</td>
-                  <td>Active</td>
-                  <td>
-                    empty
-                  </td>
-                </tr>
-                <tr class="row">
-                  <td>1002</td>
-                  <td>Harry</td>
-                  <td>DeGuzman</td>
-                  <td>Information Technology</td>
-                  <td>Active</td>
-                  <td>
-                    empty
-                  </td>
-                </tr>
+                <?php
+                  $getEmployee = "SELECT * FROM employee_table";
+                  $employeeResult = mysqli_query($conn, $getEmployee);
+                  while($employeeData = mysqli_fetch_assoc($employeeResult)){
+                    $emp_id = $employeeResult['employee_id'];
+                  
+                    echo "<tr class='row'>
+                      <td>" . $emp_id . "</td>
+                      <td>" . $employeeResult['first_name'] . "</td>
+                      <td>" . $employeeResult['last_name'] . "</td>
+                      <td>" . $employeeResult['department'] . "</td>
+                      <td>" . $employeeResult['status'] . "</td>
+                      <td> 
+                        <form action='admin_employee.php' method='POST' accept-charset='utf-8'>
+                          <input type='hidden' name='emp_id' id='emp_id' value='" . $emp_id . "'/>
+                          <button type='submit'>Profile</button>
+                        </form>
+                      </td>
+                    </tr>";
+                  }
+                ?>
+               
               </table>
             </div>
           </div>
