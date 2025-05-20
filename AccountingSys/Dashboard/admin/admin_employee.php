@@ -132,6 +132,7 @@ session_start();
             <div class="upper-maincontent">
               <div class="dept-sort">
                 <select name="department_selection" id="department_selection">
+                  <option class="options" value="allDepartment"> All Department</option>
                   <?php
                     $getDept = "SELECT department_name FROM department_table";
                     $deptResult = mysqli_query($conn, $getDept);
