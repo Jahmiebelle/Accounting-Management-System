@@ -132,14 +132,7 @@ session_start();
             <div class="upper-maincontent">
               <div class="dept-sort">
                 <select name="department_selection" id="department_selection">
-                  <?php
-                    $getDept = "SELECT department_name FROM department_table";
-                    $deptResult = mysqli_query($conn, $getDept);
-                    while($deptnames = mysqli_fetch_assoc($deptResult)){
-                      $dept = $deptnames['department_name'];
-                      echo "<option value='$dept'>$dept</option>";
-                    }
-                  ?>
+
                 </select>
               </div>
               <div class="name-search">

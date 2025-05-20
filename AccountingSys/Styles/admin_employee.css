@@ -486,7 +486,6 @@ tr:nth-child(even) {
   font-size: 8px;
 }
 
-
 .outer-container, .footer-container {
   border: 2px dashed red;
 }
