@@ -422,7 +422,15 @@ body {
   text-align: center;
   height: auto;
   border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0);
   padding: 5px 10px;
+}
+
+.options {
+  margin: 5px 10px;
+  color: #333333;
+  font-size: 12px;
+  font-family: 'Poppins-light';
 }
 
 .name-search {
@@ -506,14 +514,16 @@ tr:nth-child(even) {
   align-items: center;
   height: 20px;
   width: 20px;
+  border: solid black 1px;
 }
 
 .profile-btn {
   display: flex;
+  justify-self: center;
   align-self: center;
   font-size: 12px ;
   color: #162e7b;
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 30px;
   border: solid #162e7b 1px;
 }
