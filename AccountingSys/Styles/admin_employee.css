@@ -500,6 +500,7 @@ th {
 }
 
 td {
+  padding: 10px 15px;
   text-justify: center;
   text-align: center;
   font-family: 'Poppins-light';
