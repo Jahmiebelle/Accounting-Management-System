@@ -502,6 +502,8 @@ td {
   padding: 8px 16px;
   text-justify: center;
   text-align: center;
+  align-content: center;
+  align-items: center;
   font-family: 'Poppins-light';
   font-size: 14px;
   vertical-align: middle;
@@ -518,13 +520,14 @@ tr:nth-child(even) {
   align-items: center;
   height: 100%;
   width: 100%;
+  margin: 0;
   border: solid red 1px;
 }
 
 
 .profile-btn {
   display: flex;
-  height: 100%;
+  height: 90px;
   padding: 10px 15px;
   text-align: center;
   justify-content: center;
