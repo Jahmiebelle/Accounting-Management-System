@@ -488,7 +488,7 @@ td, th {
 }
 
 th {
-  padding: 15px 15px;
+  padding: 5px 10px;
   background-color: #eeeeee;
   color: #333333;
   letter-spacing: 0.5px;
@@ -500,7 +500,7 @@ th {
 }
 
 td {
-  padding: 10px 15px;
+  padding: 5px 10px;
   text-justify: center;
   text-align: center;
   font-family: 'Poppins-light';
@@ -513,7 +513,6 @@ tr:nth-child(even) {
 
 .profile-form {
   display: flex;
-  margin-top: 10px;
   align-self: center;
   justify-self: center;
   justify-content: center;
@@ -526,7 +525,7 @@ tr:nth-child(even) {
 .profile-btn {
   display: flex;
   height: 25px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   justify-self: center;
   align-self: center;
   font-size: 12px ;
