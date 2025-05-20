@@ -413,7 +413,7 @@ body {
   height: auto;
 }
 
-.department-selection {
+.department_selection {
   display: flex;
   justify-content: center;
   color: #333333;
@@ -424,6 +424,7 @@ body {
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0);
   padding: 5px 10px;
+  font-family: 'Poppins-light';
 }
 
 .options {
@@ -499,6 +500,8 @@ th {
 }
 
 td {
+  justify-content: center;
+  align-items: center;
   padding: 10px 15px;
   font-family: 'Poppins-light';
   font-size: 14px;
