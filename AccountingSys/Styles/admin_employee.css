@@ -389,7 +389,6 @@ body {
 .main-content {
   display: flex;
   height: auto;
-  min-height: 100vh;
   width: 100%;
   flex-direction: column;
   gap: 5px;
@@ -488,7 +487,7 @@ tr:nth-child(even) {
 }
 
 
-.outer-container, .content-container, .main-content, .footer-container {
+.outer-container, .footer-container {
   border: 2px dashed red;
 }
 
