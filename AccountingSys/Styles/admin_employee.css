@@ -491,6 +491,6 @@ tr:nth-child(even) {
   border: 2px dashed red;
 }
 
-.main-content, .table {
+.main-content{
   border: 2px dashed black;
 }
