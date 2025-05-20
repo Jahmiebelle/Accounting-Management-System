@@ -164,14 +164,14 @@ session_start();
                   $getEmployee = "SELECT * FROM employee_table";
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   while($employeeData = mysqli_fetch_assoc($employeeResult)){
-                    $emp_id = $employeeResult['employee_id'];
+                    $emp_id = $employeeData['employee_id'];
                   
                     echo "<tr class='row'>
                       <td>" . $emp_id . "</td>
-                      <td>" . $employeeResult['first_name'] . "</td>
-                      <td>" . $employeeResult['last_name'] . "</td>
-                      <td>" . $employeeResult['department'] . "</td>
-                      <td>" . $employeeResult['status'] . "</td>
+                      <td>" . $employeeData['first_name'] . "</td>
+                      <td>" . $employeeData['last_name'] . "</td>
+                      <td>" . $employeeData['department'] . "</td>
+                      <td>" . $employeeData['status'] . "</td>
                       <td> 
                         <form action='admin_employee.php' method='POST' accept-charset='utf-8'>
                           <input type='hidden' name='emp_id' id='emp_id' value='" . $emp_id . "'/>
