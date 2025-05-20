@@ -495,3 +495,7 @@ tr:nth-child(even) {
 .main-content{
   border: 2px dashed black;
 }
+
+.upper-maincontent {
+  border: 2px dashed darkblue;
+}
