@@ -9,7 +9,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
-  <link rel="stylesheet" href="/AccountingMSG1/AccountingSys/Styles/admin_employee.css">
+  <link rel="stylesheet" href="../../Styles/admin_employee.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@ session_start();
           
         </div>
         <div class="brand-name">
-          HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
+          HEROES TEACH<span id="track" style="color: #162e7b">TRACK</span>
           
         </div>
       </div>
@@ -123,14 +123,47 @@ session_start();
                 APRIL 28, 2025 10:00 A.M
               </div>
               <div class="emptybox">
-                
+                empty
               </div>
             </div>
             
           </div>
           <div class="main-content">
-
-
+            <div class="upper-maincontent">
+              
+            </div>
+            <div class="lower-maincontent">
+              <table class="table" border="0">
+                <tr class="row-head">
+                  <th>Employee Id</th>
+                  <th>First Name</th>        
+                  <th>Last Name</th>
+                  <th>Department</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+                <tr class="row">
+                  <td>1001</td>
+                  <td>Gabriel</td>
+                  <td>Lopez</td>
+                  <td>Computer Science</td>
+                  <td>Active</td>
+                  <td>
+                    empty
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td>1002</td>
+                  <td>Harry</td>
+                  <td>DeGuzman</td>
+                  <td>Information Technology</td>
+                  <td>Active</td>
+                  <td>
+                    empty
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
