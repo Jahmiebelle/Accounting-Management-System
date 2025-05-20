@@ -389,6 +389,7 @@ body {
 .main-content {
   display: flex;
   height: auto;
+  min-height: 100vh;
   width: 100%;
   flex-direction: column;
   gap: 5px;
