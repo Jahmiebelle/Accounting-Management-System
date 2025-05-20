@@ -527,7 +527,7 @@ tr:nth-child(even) {
 
 .profile-btn {
   display: flex;
-  height: 90px;
+  height: 30px;
   padding: 10px 15px;
   text-align: center;
   justify-content: center;
