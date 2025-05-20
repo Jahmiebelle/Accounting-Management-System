@@ -501,9 +501,6 @@ th {
 
 td {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
   font-family: 'Poppins-light';
   font-size: 14px;
 }
