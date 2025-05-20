@@ -146,9 +146,7 @@ session_start();
                 <div class="search-logo">
                   
                 </div>
-                <div class="search-label">
-                  Employee Name
-                </div>
+                <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Employee Name">
               </div>
             </div>
             <div class="lower-maincontent">
