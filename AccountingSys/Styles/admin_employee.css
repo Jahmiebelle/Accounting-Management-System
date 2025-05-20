@@ -500,7 +500,8 @@ th {
 }
 
 td {
-  display: flex;
+  text-justify: center;
+  text-align: center;
   font-family: 'Poppins-light';
   font-size: 14px;
 }
