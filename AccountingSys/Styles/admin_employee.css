@@ -419,6 +419,7 @@ body {
   text-align: center;
   height: auto;
   color: #333333;
+  border: solid red 3px;
 }
 
 td, th {
@@ -447,6 +448,12 @@ td {
 
 tr:nth-child(even) {
   background-color: #ffffff;
+}
+
+.profile-form {
+  display: flex;
+  height: 20px;
+  width: 20px;
 }
 
 .footer-container {

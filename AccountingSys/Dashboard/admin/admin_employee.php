@@ -178,7 +178,7 @@ session_start();
                       <td>$department</td>
                       <td>$status</td>
                       <td> 
-                        <form action='admin_employee.php' method='POST' accept-charset='utf-8'>
+                        <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                           <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
                           <button type='submit'>Profile</button>
                         </form>
