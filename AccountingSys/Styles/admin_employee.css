@@ -460,6 +460,8 @@ body {
   display: flex;
   font-family: 'Poppins-light';
   font-size: 12px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 
 .lower-maincontent {
