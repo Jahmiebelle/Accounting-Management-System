@@ -16,7 +16,7 @@ session_start();
 
   <div class="outer-container">
     <!-- Dito mga overlays, ol means overlay -->
-    <div class="profile-ol">
+    <div class="profile-ol" id="profile-ol">
       <div class="profile-ol-content">
         <form action="" method="POST" class="profile-form">
           <input type="text" name="employee_id" value="01" readonly>
