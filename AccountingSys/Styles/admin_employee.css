@@ -404,16 +404,14 @@ body {
   height: 50px;
   align-items: center;
   text-align: center;
-  border: solid green 1px;
 }
 
 #search_form {
   display: flex;
   gap: 20px;
-  flex: 1;
+  width: 100%;
   align-items: center;
   text-align: center;
-  border: solid red 2px;
 }
 
 .dept-sort {
