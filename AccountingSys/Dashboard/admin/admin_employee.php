@@ -173,26 +173,31 @@ session_start();
                     $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept'";
                   }
                   $employeeResult = mysqli_query($conn, $getEmployee);
-                  while($employeeData = mysqli_fetch_assoc($employeeResult)){
-                    $emp_id = $employeeData['employee_id'];
-                    $first_name = $employeeData['first_name'];
-                    $last_name = $employeeData['last_name'];
-                    $department = $employeeData['department'];
-                    $status = $employeeData['status'];
-                    
-                    echo "<tr class='row'>
-                      <td>$emp_id</td>
-                      <td>$first_name</td>
-                      <td>$last_name</td>
-                      <td>$department</td>
-                      <td>$status</td>
-                      <td> 
-                        <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
-                          <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
-                            <button class='profile-btn' type='submit'>Profile</button>
-                        </form>
-                      </td>
-                    </tr>";
+                  if (mysqli_num_rows($employeeResult) == 0) {
+                    echo "<tr><td colspan='6'>No employees found.</td></tr>";
+                  }
+                  else {
+                    while($employeeData = mysqli_fetch_assoc($employeeResult)){
+                      $emp_id = $employeeData['employee_id'];
+                      $first_name = $employeeData['first_name'];
+                      $last_name = $employeeData['last_name'];
+                      $department = $employeeData['department'];
+                      $status = $employeeData['status'];
+                      
+                      echo "<tr class='row'>
+                        <td>$emp_id</td>
+                        <td>$first_name</td>
+                        <td>$last_name</td>
+                        <td>$department</td>
+                        <td>$status</td>
+                        <td> 
+                          <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
+                            <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
+                              <button class='profile-btn' type='submit'>Profile</button>
+                          </form>
+                        </td>
+                      </tr>";
+                    }
                   }
                 ?>
                
