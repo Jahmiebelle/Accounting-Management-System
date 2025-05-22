@@ -169,7 +169,7 @@ session_start();
                   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $searchname = strtolower(trim($_POST['search_employee']));
                     $parts = explode(' ', $searchname);
-                    if (!isset($searchname)){
+                    if (isset($searchname) && empty($searchname)){
                       if ($selected_dept == 'all') {
                         $getEmployee = "SELECT * FROM employee_table";
                       }
