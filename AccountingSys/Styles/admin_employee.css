@@ -81,8 +81,10 @@ body {
 
 .profile-ol-content {
   display: flex;
-  min-height: 90%;
-  max-width: 60%;
+  height: 400px;
+  max-height: 95%;
+  width: 600px;
+  max-width: 70%;
   background-color: #f4f6f8;
   border-radius: 10px;
   align-items: center;
