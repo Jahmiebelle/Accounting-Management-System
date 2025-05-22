@@ -132,7 +132,7 @@ session_start();
             <div class="upper-maincontent">
               <form action="" method="POST" id="search_form">
                 <div class="dept-sort">
-                  <select name="department_selection" id="department_selection" onchange="getElementById('department_selection').submit()">
+                  <select name="department_selection" id="department_selection" onchange="document.getElementById('search_form').submit()">
                     <option class="options" value="all" selected> All Department</option>
                     <?php
                       $getDept = "SELECT department_name FROM department_table";

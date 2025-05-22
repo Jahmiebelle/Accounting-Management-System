@@ -402,13 +402,17 @@ body {
   display: flex;
   width: 100%;
   height: 50px;
-  gap: 20px;
   align-items: center;
   text-align: center;
 }
 
 #search_form {
-  display: contents;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 .dept-sort {
