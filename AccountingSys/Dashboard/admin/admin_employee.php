@@ -15,7 +15,17 @@ session_start();
 <body>
 
   <div class="outer-container">
-    
+    <!-- Dito mga overlays, ol means overlay -->
+    <div class="profile-ol">
+      <div class="profile-ol-content">
+        <form action="" method="POST" class="profile-form">
+          <input type="text" name="employee_id" value="01" readonly>
+          <input type="text" name="employee_fn" value="Gab" readonly>
+          <input type="text" name="employee_ln" value="Lopez" readonly>
+          <input type="text" name="employee_email" value="gab123@gmail.com" readonly>
+        </form>
+      </div>
+    </div>  
     <header class="header-container">
       <div class="brand-container">
         <div class="brand-icon">
@@ -224,7 +234,7 @@ session_start();
                           <td> 
                             <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                               <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
-                                <button class='profile-btn' type='submit'>Profile</button>
+                                <button class='profile-btn' id='profile-btn' type='submit'>Profile</button>
                             </form>
                           </td>
                         </tr>";
