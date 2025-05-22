@@ -27,11 +27,10 @@ const profileOl = document.getElementById('profile-ol');
 
 profileButton.addEventListener('click', function(){
   profileOl.classList.add('show');
-  profile01.addEventListener('click', function(event){
-    if (event.target === profileOl) {
-      profileOl.classList.remove('show');
-    }
-    
-  });
-  
+});
+
+profileOl.addEventListener('click', function(event){
+  if (event.target === profileOl) {
+    profileOl.classList.remove('show');
+  }
 });
