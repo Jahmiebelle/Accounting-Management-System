@@ -133,13 +133,16 @@ session_start();
               <form action="" method="POST" id="search_form">
                 <div class="dept-sort">
                   <select name="department_selection" id="department_selection" onchange="document.getElementById('search_form').submit()">
-                    <option class="options" value="all" selected> All Department</option>
                     <?php
+                      $selected_dept = $_POST['department_selection'] ?? 'all';
+                      echo "<option class='options' value='all' $selected_dept == 'all' ? selected : '' > All Department</option>";
+        
                       $getDept = "SELECT department_name FROM department_table";
                       $deptResult = mysqli_query($conn, $getDept);
                       while($deptnames = mysqli_fetch_assoc($deptResult)){
                         $dept = $deptnames['department_name'];
-                        echo "<option class='options' value='$dept'>$dept</option>";
+                        $selected = $selected_dept == $dept ? "selected" : "";
+                        echo "<option class='options' value='$dept' $selected>$dept</option>";
                       }
                     ?>
                   </select>
@@ -163,8 +166,7 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                  $selected_dept = $_POST['department_selection'];
-                  if ($selected_dept === 'all') {
+                  if ($selected_dept == 'all') {
                     $getEmployee = "SELECT * FROM employee_table";
                   }
                   else {
