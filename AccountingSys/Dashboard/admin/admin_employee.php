@@ -130,25 +130,27 @@ session_start();
           </div>
           <div class="main-content">
             <div class="upper-maincontent">
-              <div class="dept-sort">
-                <select name="department_selection" id="department_selection" onchange="changeValue(this.value)">
-                  <option class="options" value="all" selected> All Department</option>
-                  <?php
-                    $getDept = "SELECT department_name FROM department_table";
-                    $deptResult = mysqli_query($conn, $getDept);
-                    while($deptnames = mysqli_fetch_assoc($deptResult)){
-                      $dept = $deptnames['department_name'];
-                      echo "<option class='options' value='$dept'>$dept</option>";
-                    }
-                  ?>
-                </select>
-              </div>
-              <div class="name-search">
-                <div class="search-logo">
-                  
+              <form action="" method="POST" id="search_form">
+                <div class="dept-sort">
+                  <select name="department_selection" id="department_selection" onchange="getElementById('department_selection').submit()">
+                    <option class="options" value="all" selected> All Department</option>
+                    <?php
+                      $getDept = "SELECT department_name FROM department_table";
+                      $deptResult = mysqli_query($conn, $getDept);
+                      while($deptnames = mysqli_fetch_assoc($deptResult)){
+                        $dept = $deptnames['department_name'];
+                        echo "<option class='options' value='$dept'>$dept</option>";
+                      }
+                    ?>
+                  </select>
                 </div>
-                <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Employee Name">
-              </div>
+                <div class="name-search">
+                  <div class="search-logo">
+                    
+                  </div>
+                  <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Employee Name">
+                </div>
+              </form>
             </div>
             <div class="lower-maincontent">
               <table class="table" border="0">

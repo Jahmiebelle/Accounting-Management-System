@@ -407,6 +407,10 @@ body {
   text-align: center;
 }
 
+#search_form {
+  display: contents;
+}
+
 .dept-sort {
   display: flex;
   align-items: center;
