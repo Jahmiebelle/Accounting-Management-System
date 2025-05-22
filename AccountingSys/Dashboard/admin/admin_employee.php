@@ -131,8 +131,8 @@ session_start();
           <div class="main-content">
             <div class="upper-maincontent">
               <div class="dept-sort">
-                <select name="department_selection" id="department_selection">
-                  <option class="options" value="allDepartment"> All Department</option>
+                <select name="department_selection" id="department_selection" onchange="changeValue(this.value)">
+                  <option class="options" value="all" selected> All Department</option>
                   <?php
                     $getDept = "SELECT department_name FROM department_table";
                     $deptResult = mysqli_query($conn, $getDept);
@@ -161,7 +161,13 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                  $getEmployee = "SELECT * FROM employee_table";
+                  $selected_dept = $_POST['department_selection'];
+                  if ($selected_dept === 'all') {
+                    $getEmployee = "SELECT * FROM employee_table";
+                  }
+                  else {
+                    $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept'";
+                  }
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   while($employeeData = mysqli_fetch_assoc($employeeResult)){
                     $emp_id = $employeeData['employee_id'];
