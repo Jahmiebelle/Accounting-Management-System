@@ -151,7 +151,7 @@ session_start();
                   <div class="search-logo">
                     
                   </div>
-                  <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Employee Name">
+                  <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="First and Last name (e.g., Anna Cruz)">
                 </div>
               </form>
             </div>
@@ -166,37 +166,70 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                  if ($selected_dept == 'all') {
-                    $getEmployee = "SELECT * FROM employee_table";
-                  }
-                  else {
-                    $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept'";
-                  }
-                  $employeeResult = mysqli_query($conn, $getEmployee);
-                  if (mysqli_num_rows($employeeResult) == 0) {
-                    echo "<tr><td colspan='6'>No employees found.</td></tr>";
-                  }
-                  else {
-                    while($employeeData = mysqli_fetch_assoc($employeeResult)){
-                      $emp_id = $employeeData['employee_id'];
-                      $first_name = $employeeData['first_name'];
-                      $last_name = $employeeData['last_name'];
-                      $department = $employeeData['department'];
-                      $status = $employeeData['status'];
-                      
-                      echo "<tr class='row'>
-                        <td>$emp_id</td>
-                        <td>$first_name</td>
-                        <td>$last_name</td>
-                        <td>$department</td>
-                        <td>$status</td>
-                        <td> 
-                          <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
-                            <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
-                              <button class='profile-btn' type='submit'>Profile</button>
-                          </form>
-                        </td>
-                      </tr>";
+                  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    $searchname = strtolower(trim($_POST['search_employee']));
+                    $parts = explode(' ', $searchname);
+                    if (empty($searchname)){
+                      if ($selected_dept == 'all') {
+                        $getEmployee = "SELECT * FROM employee_table";
+                      }
+                      else {
+                        $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept'";
+                      }
+                    }
+                    else {
+                      if ($selected_dept == 'all') {
+                        if (count($parts) >= 2){
+                          $full = implode(' ', $parts);
+                          $lname = array_pop($parts);
+                          $fname = implode(' ', $parts);
+                          $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname')";
+                        }
+                        else {
+                          $name = implode(' ', $parts);
+                          $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$name') OR last_name = LOWER('$name')";
+                        }
+                        
+                      }
+                      else {
+                        if (count($parts) >= 2){
+                          $full = implode(' ', $parts);
+                          $lname = array_pop($parts);
+                          $fname = implode(' ', $parts);
+                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname')";
+                        }
+                        else {
+                          $name = implode(' ', $parts);
+                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$name') OR last_name = LOWER('$name')";
+                        }
+                      }
+                    }
+                    $employeeResult = mysqli_query($conn, $getEmployee);
+                    if (mysqli_num_rows($employeeResult) == 0) {
+                      echo "<tr><td colspan='8'>No employees found.</td></tr>";
+                    }
+                    else {
+                      while($employeeData = mysqli_fetch_assoc($employeeResult)){
+                        $emp_id = $employeeData['employee_id'];
+                        $first_name = $employeeData['first_name'];
+                        $last_name = $employeeData['last_name'];
+                        $department = $employeeData['department'];
+                        $status = $employeeData['status'];
+                        
+                        echo "<tr class='row'>
+                          <td>$emp_id</td>
+                          <td>$first_name</td>
+                          <td>$last_name</td>
+                          <td>$department</td>
+                          <td>$status</td>
+                          <td> 
+                            <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
+                              <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
+                                <button class='profile-btn' type='submit'>Profile</button>
+                            </form>
+                          </td>
+                        </tr>";
+                      }
                     }
                   }
                 ?>
