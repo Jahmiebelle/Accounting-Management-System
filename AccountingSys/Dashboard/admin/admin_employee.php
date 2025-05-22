@@ -234,7 +234,7 @@ session_start();
                           <td> 
                             <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                               <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
-                                <button class='profile-btn' id='profile-btn' type='submit'>Profile</button>
+                                <button class='profile-btn' id='profile-btn' type='button'>Profile</button>
                             </form>
                           </td>
                         </tr>";
