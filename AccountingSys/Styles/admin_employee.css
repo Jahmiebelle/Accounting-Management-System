@@ -73,7 +73,7 @@ body {
   transition: all 1s ease;
 }
 
-.profile-ol:show {
+.profile-ol.show {
   opacity: 1;
   pointer-events: auto
 }
