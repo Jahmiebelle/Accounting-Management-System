@@ -755,6 +755,17 @@ tr:nth-child(even) {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 30px;
   border: solid #162e7b 1px;
+  transition: all 0.15s ease;
+}
+
+.profile-btn:hover {
+  border: none;
+  background-color:  #162e7b;
+  color: #f4f6f8;
+}
+
+.profile-btn:active {
+  opacity: 0.75;
 }
 
 .footer-container {
