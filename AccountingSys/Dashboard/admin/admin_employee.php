@@ -20,415 +20,157 @@ session_start();
       <div class="profile-ol-content">
         <form action="" method="POST" class="profile-form">
           <div class="upper-profile-form">
-            hellow
+            <div class="upf-profile-container">
+              <div class="upf-upper-profile">
+                
+              </div>
+              <div class="upf-upper-info">
+                <h1 id="upf-upper-name">Gabriel Lopez</h1>
+                <h5 id="upf-upper-dept">Information Technology</h5>
+                <h6 id="upf-upper-id">A6007B</h6>
+              </div>
+            </div>
+
+            <div class="save-edit-btn">
+              <button type="button" class="upf-save-btn">
+                Save  
+              </button>
+              <button type="button" class="upf-edit-btn">
+                Edit
+              </button>
+            </div>
           </div>
           <div class="lower-profile-form">
-            <div class="modern-input-container">
-              <div class="modern-input">
-                <fieldset class="fieldsets">
-                  <legend>Employee Id</legend>
-                </fieldset>
-                <input class="inputboxes" type="text" name="employee_id" value="01" readonly>
+            <div class="lpf-content">
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Employee Id</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_id" value="01" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>First Name</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_fn" value="Gab" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Last Name</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_ln" value="Lopez" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Email</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_email" value="gab123@gmail.com" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Contact Number</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_contact" value="09516325319" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Gender</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_gender" value="male" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Birthdate</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="date" name="employee_contact" value="2004-08-17" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Join Date</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="date" name="employee_contact" value="2025-03-22" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Department</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_dept" value="Information Technology" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Position</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_position" value="teacher" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Employment Type</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_type" value="regular" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Status</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_status" value="Active" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Bank Number</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_bank" value="987654321098" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>SSS</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_sss" value="02-3456789-0" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Philhealth</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_philhealth" value="2345-67890-12" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Pagibig</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_pagibig" value="2345-6789-0123" readonly>
+                </div>
               </div>
             </div>
-            <div class="modern-input-container">
-              <div class="modern-input">
-                <fieldset class="fieldsets">
-                  <legend>First Name</legend>
-                </fieldset>
-                <input class="inputboxes" type="text" name="employee_fn" value="Gab" readonly>
-              </div>
-            </div>
-            <div class="modern-input-container">
-              <div class="modern-input">
-                <fieldset class="fieldsets">
-                  <legend>Last Name</legend>
-                </fieldset>
-                <input class="inputboxes" type="text" name="employee_ln" value="Lopez" readonly>
-              </div>
-            </div>
-            <div class="modern-input-container">
-              <div class="modern-input">
-                <fieldset class="fieldsets">
-                  <legend>Email</legend>
-                </fieldset>
-                <input class="inputboxes" type="text" name="employee_email" value="gab123@gmail.com" readonly>
-              </div>
-            </div>
-            G
-            justgsgaahah
-            ggagsg
-            gagaha
-            gsgs
-Sign Up
-You Don’t Know Me
-Ray Charles
-Lyrics 
-About 
-Tracklist 
-Comments 
-1
-74.5K
-
-14
-
-2
-See upcoming rock shows
-Get tickets for your favorite artists
-You Don’t Know Me Lyrics
-[Intro]
-You don't love me
-You don't know me
-
-[Verse]
-You give your hand to me and then you say, "Hello"
-And I can hardly speak, my heart is beating so
-And anyone can tell, you think you know me well
-Well, you don't know me (No, you don't know me)
-No, you don't know the one who dreams of you at night
-And longs to kiss your lips and longs to hold you tight
-Oh, I'm just a friend, that's all I've ever been
-'Cause you don't know me (No, you don't know me)
-
-
-[Chorus]
-Oh, I never knew the art of making love
-Though my heart aches with love for you
-Afraid and shy, I let my chance go by
-A chance that you might love me too (Love me too)
-
-[Post-Chorus]
-You give your hand to me and then you say, "Goodbye"
-I watch you walk away beside the lucky guy
-Oh, to never, never know the one who loved you so
-Well, you don't know me
-
-[Chorus]
-Oh, I never knew the art of making love
-Though my heart aches with love for you
-Afraid and shy, I let my chance go by
-A chance that you might love me too (Love me too)
-
-[Post-Chorus]
-Oh, you give your hand to me and then you say, "Goodbye"
-I watch you walk away beside the lucky guy
-Oh, you never, never know the one who loved you so
-Well, you don't know me
-
-[Outro]
-You don't love me
-You don't know me
-You might also like
-So Long, London
-Taylor Swift
-loml
-Taylor Swift
-You Don’t Know Me
-Jax Jones & RAYE
-
-
-
-2
-Embed
-About
-Have the inside scoop on this song?
-Sign up and drop some knowledge
-Start the song bio
-Q&A
-Find answers to frequently asked questions about the song and explore its deeper meaning
-
-Ask a question
-Who produced “You Don't Know Me” by Ray Charles?
-
-When did Ray Charles release “You Don't Know Me”?
-
-Who wrote “You Don't Know Me” by Ray Charles?
-
-Genius & Soul: The 50th Anniversary Collection (1997)
-Ray Charles
-1.
-Confession Blues
-2.
-Baby Let Me Hold Your Hand
-3.
-Kiss Me Baby
-4.
-It Should Have Been Me
-5.
-Don’t You Know
-6.
-Come Back Baby
-7.
-I’ve Got a Woman
-8.
-A Fool For You
-9.
-This Little Girl Of Mine
-10.
-Blackjack
-11.
-Greenbacks
-12.
-Drown In My Own Tears
-13.
-Hallelujah, I Love Her So
-14.
-Lonely Avenue
-15.
-Leave My Woman Alone
-16.
-Ain’t That Love
-17.
-Swanee River Rock (Talkin’ ’Bout That River)
-18.
-My Bonnie
-19.
-Rockhouse Parts 1 & 2
-20.
-(Night Time Is) The Right Time
-21.
-What’d I Say
-22.
-Tell The Truth
-23.
-I Believe To My Soul
-24.
-Don’t Let the Sun Catch You Cryin’
-25.
-Let the Good Times Roll
-26.
-Come Rain or Come Shine
-29.
-I’m Movin’ On
-30.
-My Baby! (I Love Her, Yes I Do)
-31.
-Sticks and Stones
-32.
-I Wonder
-33.
-Georgia On My Mind
-34.
-Them That Got
-35.
-Ruby
-36.
-Hardhearted Hannah
-37.
-I’ve Got News for You
-38.
-One Mint Julep
-39.
-I’m Gonna Move to the Outskirts of Town
-40.
-Hit The Road Jack
-41.
-The Danger Zone
-42.
-Unchain My Heart
-43.
-But On The Other Hand Baby
-44.
-Baby, It’s Cold Outside
-45.
-Ev’ry Time We Say Goodbye
-46.
-At The Club
-47.
-Hide Nor Hair
-48.
-I Can’t Stop Loving You
-49.
-Bye Bye, Love
-50.
-Born To Lose
-51.
-You Don’t Know Me
-52.
-You Are My Sunshine
-53.
-Your Cheating Heart
-54.
-Take These Chains from My Heart
-55.
-The Brightest Smile In Town
-56.
-Without Love (There Is Nothing)
-57.
-Busted
-58.
-That Lucky Old Sun
-59.
-Ol’ Man River
-60.
-Smack Dab In The Middle
-61.
-Makin’ Whoopee!
-62.
-Without A Song
-63.
-The Cincinnati Kid
-64.
-Crying Time
-65.
-Let’s Go Get Stoned
-66.
-I Chose To Sing The Blues
-67.
-Together Again
-68.
-I Don’t Need No Doctor
-69.
-Eleanor Rigby
-70.
-Yesterday
-71.
-Understanding
-72.
-Drifting Blues
-73.
-Here We Go Again
-74.
-In the Heat of the Night
-75.
-Gee, Baby, Ain’t I Good To You?
-76.
-I Didn’t Know What Time It Was
-77.
-If It Wasn’t For Bad Luck
-78.
-We Can Make It
-79.
-Don’t Change On Me
-80.
-Feel So Bad
-81.
-Look What They’ve Done To My Song, Ma
-82.
-Spirit In the Dark (Reprise with Ray Charles) [Live February 7, 1971]
-83.
-Booty Butt
-84.
-I Can Make It Through The Days (But Oh Those Lonely Nights)
-85.
-Rainy Night In Georgia
-86.
-America the Beautiful
-87.
-Living For The City
-88.
-Till There Was You (Live)
-89.
-Am I Blue (Live in Japan)
-90.
-How Long Has This Been Going On?
-91.
-The Jealous Kind
-92.
-Is There Anyone Out There?
-93.
-Don’t You Love Me Anymore?
-94.
-One of These Days
-95.
-Seven Spanish Angels
-96.
-We Didn’t See a Thing
-97.
-Two Old Cats Like Us
-98.
-Shake a Tailfeather
-99.
-I’ll Be Good To You
-100.
-That’s Where It’s At
-101.
-A Song For You
-102.
-Still Crazy After All These Years
-Expand 
-Credits
-Producer
-Sid Feller
-Writers
-Eddy Arnold & Cindy Walker
-Released in
-1962
-Songs That Sample You Don’t Know Me
-Meglio Tenersi I Dubbi by Ghemon & The Love 4tet (Ft. Hyst)
-You Don’t Know Me Is A Cover Of
-You Don't Know Me by Eddy Arnold
-You Don’t Know Me Covers
-You Don't Know Me [Duet Version] by Ray Charles & Diana Krall & Cryin' Time / You Don't Know Me by Elsa García
-View You Don’t Know Me samples
-Tags
-Rock
-Country
-R&B
-Cover
-In English
-USA
-Expand 
-Comments
-Add a comment
-zeubatista
-a year ago
-what a classic…
-
-Sign Up And Drop Knowledge 🤓
-Genius is the ultimate source of music knowledge, created by scholars like you who share facts and insight about the songs and artists they love.
-Sign Up
-Genius is the world’s biggest collection of song lyrics and musical knowledge
-About Genius
-Contributor Guidelines
-Press
-Shop
-Advertise
-Privacy Policy
-Licensing
-Jobs
-Developers
-Copyright Policy
-Contact Us
-Sign In
-Do Not Sell My Personal Information
-Verified Artists
-All Artists:
-a
-b
-c
-d
-e
-f
-g
-h
-i
-j
-k
-l
-m
-n
-o
-p
-q
-r
-s
-t
-u
-v
-w
-x
-y
-z
-#
-Hot Songs:
-Die Fremde
-YALLAH
-Правена в България (Pravena v Bulgaria)
-Дъното копай (Danoto kopay)
-View All
-Terms of Use
-© 2025 ML Genius Holdings, LLC
           </div>
         </form>
       </div>

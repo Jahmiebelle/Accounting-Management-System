@@ -87,34 +87,118 @@ body {
   max-width: 80%;
   background-color: #f4f6f8;
   border-radius: 5px;
+  overflow-y: auto;
 }
 
 .profile-form {
   display: flex;
-  height: 100%;
+  height: auto;
   width: 100%;
   flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .upper-profile-form {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 2rem;
   height: 100px;
   width: 100%;
-  border: solid red 1px;
+  box-sizing: border-box;
+  border-bottom: solid #ccc 1px;
+}
+
+.upf-profile-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+  width: auto;
+}
+
+.upf-upper-profile {
+  display: flex;
+  height: 75px;
+  width: 75px;
+  align-items: center;
+  border-radius: 50px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../Assets/default-user.png');
+}
+
+.upf-upper-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  
+}
+
+#upf-upper-name, #upf-upper-dept, #upf-upper-id {
+  margin: 0;
+  padding: 0;
+}
+
+#upf-upper-name {
+  font-family: 'Poppins-medium';
+}
+
+#upf-upper-dept, #upf-upper-id {
+  font-family: 'Poppins-light';
+  color: gray;
+}
+
+.save-edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  width: auto;
+
+
+}
+
+.upf-save-btn, .upf-edit-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.upf-save-btn {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.upf-edit-btn {
+  background-color: #007BFF;
+  color: white ;
+  transition: all 0.15 ease;
+}
+
+.upf-edit-btn:hover {
+  background-color: #0056b3;
 }
 
 .lower-profile-form {
   display: flex;
-  flex: 1;
+  height: calc(100% - 100px);
   width: 100%;
+  
+  box-sizing: border-box;
+}
+
+.lpf-content {
+  display: flex;
+  height: calc(100% + 100px);
+  padding-bottom: 50px;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  
 }
-
 
 .modern-input-container {
   display: flex;
