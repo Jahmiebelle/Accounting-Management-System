@@ -19,10 +19,43 @@ session_start();
     <div class="profile-ol" id="profile-ol">
       <div class="profile-ol-content">
         <form action="" method="POST" class="profile-form">
-          <input type="text" name="employee_id" value="01" readonly>
-          <input type="text" name="employee_fn" value="Gab" readonly>
-          <input type="text" name="employee_ln" value="Lopez" readonly>
-          <input type="text" name="employee_email" value="gab123@gmail.com" readonly>
+          <div class="upper-profile-form">
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Employee Id</legend>
+                </fieldset>
+                <input class="inputboxes" type="text" name="employee_id" value="01" readonly>
+              </div>
+            </div>
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>First Name</legend>
+                </fieldset>
+                <input class="inputboxes" type="text" name="employee_fn" value="Gab" readonly>
+              </div>
+            </div>
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Last Name</legend>
+                </fieldset>
+                <input class="inputboxes" type="text" name="employee_ln" value="Lopez" readonly>
+              </div>
+            </div>
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Email</legend>
+                </fieldset>
+                <input class="inputboxes" type="text" name="employee_email" value="gab123@gmail.com" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="lower-profile-form">
+            
+          </div>
         </form>
       </div>
     </div>  
@@ -224,6 +257,8 @@ session_start();
                         $last_name = $employeeData['last_name'];
                         $department = $employeeData['department'];
                         $status = $employeeData['status'];
+                        $email = $employeeData['email'];
+                        
                         
                         echo "<tr class='row'>
                           <td>$emp_id</td>
@@ -234,7 +269,7 @@ session_start();
                           <td> 
                             <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                               <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
-                                <button class='profile-btn' id='profile-btn' type='button'>Profile</button>
+                                <button class='profile-btn' id='profile-btn' type='button' data-id='$emp_id' data-fn=''>Profile</button>
                             </form>
                           </td>
                         </tr>";

@@ -22,18 +22,3 @@ document.getElementById('attendance-tab').addEventListener('click', function () 
   window.location.href = "admin_attendance.php";
 });
 
-const profileButtons = document.querySelectorAll('.profile-btn');
-const profileOl = document.getElementById('profile-ol');
-
-profileButtons.forEach(function(button){
-  button.addEventListener('click', function() {
-    profileOl.classList.add('show');
-  });
-  
-});
-
-profileOl.addEventListener('click', function(event){
-    if (event.target === profileOl) {
-      profileOl.classList.remove('show');
-    }
-});
