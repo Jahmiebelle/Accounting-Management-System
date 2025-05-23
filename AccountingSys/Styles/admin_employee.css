@@ -71,7 +71,7 @@ body {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 .profile-ol.show {
