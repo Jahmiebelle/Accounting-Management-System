@@ -48,7 +48,7 @@ profileButtons.forEach(function(button){
     const contact = button.dataset.contact;
     document.getElementById('upf-upper-name').innerText = fn + " " + ln;
     document.getElementById('upf-upper-dept').innerText = dept;
-    document.getElementById('upf-upper-id').innerText = id;
+    document.getElementById('upf-upper-id').innerText = pagibig;
     document.getElementById('emp-id').value = id;
     document.getElementById('emp-fn').value = fn;
     document.getElementById('emp-ln').value = ln;
