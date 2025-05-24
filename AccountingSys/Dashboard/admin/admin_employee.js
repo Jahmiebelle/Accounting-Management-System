@@ -30,6 +30,7 @@ const profileOl = document.getElementById('profile-ol');
 profileButtons.forEach(function(button){
   button.addEventListener('click', function() {
     profileOl.classList.add('show');
+    profileOl.scrollTop = 0;
     const id = button.dataset.id;
     const fn = button.dataset.fn;
     const ln = button.dataset.ln;
