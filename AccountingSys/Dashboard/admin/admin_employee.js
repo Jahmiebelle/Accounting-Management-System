@@ -46,9 +46,7 @@ profileButtons.forEach(function(button){
     const pagibig = button.dataset.pagibig;
     const email = button.dataset.email;
     const contact = button.dataset.contact;
-    document.getElementById('upf-upper-name').innerText = fn + " " + ln;
-    document.getElementById('upf-upper-dept').innerText = dept;
-    document.getElementById('upf-upper-id').innerText = pagibig;
+    
     document.getElementById('emp-id').value = id;
     document.getElementById('emp-fn').value = fn;
     document.getElementById('emp-ln').value = ln;
@@ -65,7 +63,9 @@ profileButtons.forEach(function(button){
     document.getElementById('emp-pagibig').value = pagibig;
     document.getElementById('emp-email').value = email;
     document.getElementById('emp-contact').value = contact;
-  
+    document.getElementById('upf-upper-name').innerText = fn + " " + ln;
+    document.getElementById('upf-upper-dept').innerText = dept;
+    document.getElementById('upf-upper-id').innerText = id;
     
   });
 });
