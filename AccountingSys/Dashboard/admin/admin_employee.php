@@ -18,11 +18,10 @@ session_start();
     <!-- Dito mga overlays, ol means overlay -->
     <div class="profile-ol" id="profile-ol">
       <div class="profile-ol-content">
-        <form action="" method="POST" class="profile-form">
+        <form action="" method="POST" class="profile-form-ol">
           <div class="upper-profile-form">
             <div class="upf-profile-container">
               <div class="upf-upper-profile">
-                
               </div>
               <div class="upf-upper-info">
                 <h1 id="upf-upper-name">Gabriel Lopez</h1>
@@ -30,7 +29,6 @@ session_start();
                 <h6 id="upf-upper-id">A6007B</h6>
               </div>
             </div>
-
             <div class="save-edit-btn">
               <button type="button" class="upf-save-btn">
                 Save  
@@ -40,8 +38,11 @@ session_start();
               </button>
             </div>
           </div>
+          
+          
           <div class="lower-profile-form">
-            <div class="lpf-content">
+            <label class="profile-labels" for="lpf-basic">Basic Details</label>
+            <div class="lpf-basic" id="lpf-basic">
               <div class="modern-input-container">
                 <div class="modern-input">
                   <fieldset class="fieldsets">
@@ -66,22 +67,7 @@ session_start();
                   <input class="inputboxes" type="text" name="employee_ln" value="Lopez" readonly>
                 </div>
               </div>
-              <div class="modern-input-container">
-                <div class="modern-input">
-                  <fieldset class="fieldsets">
-                    <legend>Email</legend>
-                  </fieldset>
-                  <input class="inputboxes" type="text" name="employee_email" value="gab123@gmail.com" readonly>
-                </div>
-              </div>
-              <div class="modern-input-container">
-                <div class="modern-input">
-                  <fieldset class="fieldsets">
-                    <legend>Contact Number</legend>
-                  </fieldset>
-                  <input class="inputboxes" type="text" name="employee_contact" value="09516325319" readonly>
-                </div>
-              </div>
+              
               <div class="modern-input-container">
                 <div class="modern-input">
                   <fieldset class="fieldsets">
@@ -98,6 +84,9 @@ session_start();
                   <input class="inputboxes" type="date" name="employee_contact" value="2004-08-17" readonly>
                 </div>
               </div>
+            </div>
+            <label class="profile-labels" for="lpf-work">Work Details</label>
+            <div class="lpf-work" id="lpf-work">
               <div class="modern-input-container">
                 <div class="modern-input">
                   <fieldset class="fieldsets">
@@ -171,6 +160,28 @@ session_start();
                 </div>
               </div>
             </div>
+            <label class="profile-labels" for="lpf-contact">Contact Details</label>
+            <div class="lpf-contact" id="lpf-contact">
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Email</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_email" value="gab123@gmail.com" readonly>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Contact Number</legend>
+                  </fieldset>
+                  <input class="inputboxes" type="text" name="employee_contact" value="09516325319" readonly>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="deac-btn-container">
+            <button type="button" name="deac-btn" id="deac-btn" class="deac-btn">Deactivate Account</button>
           </div>
         </form>
       </div>

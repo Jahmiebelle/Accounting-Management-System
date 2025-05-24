@@ -86,16 +86,19 @@ body {
   width: 700px;
   max-width: 80%;
   background-color: #f4f6f8;
+  flex-direction: column;
   border-radius: 5px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.profile-form {
+.profile-form-ol {
   display: flex;
   height: auto;
   width: 100%;
   flex-direction: column;
-  box-sizing: border-box;
+  align-items: center;
+  
 }
 
 .upper-profile-form {
@@ -162,7 +165,7 @@ body {
 }
 
 .upf-save-btn, .upf-edit-btn {
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 5px;
   border: none;
 }
@@ -185,20 +188,32 @@ body {
 
 .lower-profile-form {
   display: flex;
-  height: calc(100% - 100px);
+  flex-direction: column;
+  height: auto;
   width: 100%;
-  
+  padding-top: 20px;
   box-sizing: border-box;
 }
 
-.lpf-content {
+.profile-labels {
   display: flex;
-  height: calc(100% + 100px);
-  padding-bottom: 50px;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  margin-left: 1rem;
+  padding: 0;
+  font-family: 'Poppins-medium';
 }
+
+.lpf-basic, .lpf-work, .lpf-contact {
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid #ccc 1px;
+  border-top: solid #ccc 1px;
+  margin-bottom: 2rem;
+}
+
 
 .modern-input-container {
   display: flex;
@@ -252,6 +267,25 @@ legend {
 .inputboxes:focus {
   border: solid rgba(0, 0, 0, 0) 1px;
   outline: none;
+}
+
+.deac-btn-container {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  
+
+}
+
+.deac-btn {
+  margin-top: 1rem;
+  height: 50%;
+  padding: 1rem 2rem;
+  width: 40%;
+  border: none;
+  background-color: #d64545;
+  color: #f4f6f8;
 }
 
 .header-container {
