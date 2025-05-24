@@ -394,7 +394,7 @@ session_start();
                         $philhealth = $employeeData['philhealth_number'];
                         $pagibig = $employeeData['pagibig_number'];
                         $email = $employeeData['email'];
-                        $contact = $employedData['contact_number'];
+                        $contact = $employeeData['contact_number'];
                         
                         
                         echo "<tr class='row'>
