@@ -140,7 +140,7 @@ body {
   
 }
 
-#upf-upper-name, #upf-upper-dept, #upf-upper-id {
+#upf-upper-name, #upf-upper-dept {
   margin: 0;
   padding: 0;
 }
@@ -149,7 +149,7 @@ body {
   font-family: 'Poppins-medium';
 }
 
-#upf-upper-dept, #upf-upper-id {
+#upf-upper-dept {
   font-family: 'Poppins-light';
   color: gray;
 }
@@ -212,7 +212,7 @@ body {
   align-items: center;
   border-bottom: solid #ccc 1px;
   border-top: solid #ccc 1px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 

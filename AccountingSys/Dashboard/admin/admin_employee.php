@@ -24,9 +24,8 @@ session_start();
               <div class="upf-upper-profile">
               </div>
               <div class="upf-upper-info">
-                <h1 id="upf-upper-name">Full Name</h1>
+                <h3 id="upf-upper-name">Full Name</h3>
                 <h5 id="upf-upper-dept">Department</h5>
-                <h5 id="upf-upper-id">ID</h5>
               </div>
             </div>
             <div class="save-edit-btn">
