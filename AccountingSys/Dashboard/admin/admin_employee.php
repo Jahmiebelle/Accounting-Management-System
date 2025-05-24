@@ -48,7 +48,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Employee Id</legend>
                   </fieldset>
-                  <input class="inputboxes" type="number" name="employee_id" value="" readonly>
+                  <input class="inputboxes" type="number" id="emp-id" name="employee_id" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
