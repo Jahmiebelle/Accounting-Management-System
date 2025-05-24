@@ -33,7 +33,7 @@ profileButtons.forEach(function(button){
     const id = button.dataset.id;
     const fn = button.dataset.fn;
     
-    document.getElementById('emp_name').value = fn;
+    document.getElementById('emp-fn').value = fn;
   });
 });
 
