@@ -175,7 +175,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Contact Number</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-contact" name="employee_contact" value="Contact Number" readonly>
+                  <input class="inputboxes" type="text" id="emp-contact" name="employee_contact" value="Contact" readonly>
                 </div>
               </div>
             </div>
@@ -405,7 +405,7 @@ session_start();
                           <td>$status</td>
                           <td> 
                             <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
-                              <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
+                              <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
                                 <button class='profile-btn' id='profile-btn' type='button' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact'>Profile</button>
                             </form>
                           </td>
