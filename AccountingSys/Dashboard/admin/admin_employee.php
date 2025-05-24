@@ -175,7 +175,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Contact Number</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-contact" name="employee_contact" value="" readonly>
+                  <input class="inputboxes" type="text" id="emp-contact" name="employee_contact" readonly>
                 </div>
               </div>
             </div>

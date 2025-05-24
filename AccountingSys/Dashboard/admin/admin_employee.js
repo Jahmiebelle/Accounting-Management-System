@@ -29,6 +29,7 @@ const profileOl = document.getElementById('profile-ol');
 
 profileButtons.forEach(function(button){
   button.addEventListener('click', function() {
+    profileOl.classList.add('show');
     const id = button.dataset.id;
     const fn = button.dataset.fn;
     const ln = button.dataset.ln;
@@ -64,7 +65,7 @@ profileButtons.forEach(function(button){
     document.getElementById('emp-pagibig').value = pagibig;
     document.getElementById('emp-email').value = email;
     document.getElementById('emp-contact').value = contact;
-    profileOl.classList.add('show');
+  
     
   });
 });
