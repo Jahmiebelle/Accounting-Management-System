@@ -17,7 +17,7 @@ session_start();
   <div class="outer-container">
     <!-- Dito mga overlays, ol means overlay -->
     <div class="profile-ol" id="profile-ol">
-      <div class="profile-ol-content">
+      <div class="profile-ol-content" id="profile-ol-content">
         <form action="" method="POST" class="profile-form-ol">
           <div class="upper-profile-form">
             <div class="upf-profile-container">

@@ -26,11 +26,12 @@ document.querySelector('.profile-form').scrollTop = 0;
 
 const profileButtons = document.querySelectorAll('.profile-btn');
 const profileOl = document.getElementById('profile-ol');
+const profile_content = document.getElementById('profile-ol-content');
 
 profileButtons.forEach(function(button){
   button.addEventListener('click', function() {
     profileOl.classList.add('show');
-    profileOl.scrollTop = 0;
+    profile_content.scrollTop = 0;
     const id = button.dataset.id;
     const fn = button.dataset.fn;
     const ln = button.dataset.ln;
