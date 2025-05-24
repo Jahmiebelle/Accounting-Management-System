@@ -52,8 +52,8 @@ profileButtons.forEach(function(button){
     
     //document.getElementById('emp-id').value = id;
     document.getElementById('emp-fn').value = fn;
-    //document.getElementById('emp-ln').value = ln;
-    //document.getElementById('emp-gender').value = gender;
+    document.getElementById('emp-ln').value = ln;
+    document.getElementById('emp-gender').value = gender;
     //document.getElementById('emp-birth').value = birthdate;
     //document.getElementById('emp-join').value = joindate;
   //document.getElementById('emp-dept').value = dept;
