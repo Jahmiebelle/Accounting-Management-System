@@ -50,22 +50,22 @@ profileButtons.forEach(function(button){
     document.getElementById('upf-upper-dept').innerText = dept;
     document.getElementById('upf-upper-id').innerText = id;
     
-    document.getElementById('emp-id').value = id;
+    //document.getElementById('emp-id').value = id;
     document.getElementById('emp-fn').value = fn;
-    document.getElementById('emp-ln').value = ln;
-    document.getElementById('emp-gender').value = gender;
-    document.getElementById('emp-birth').value = birthdate;
-    document.getElementById('emp-join').value = joindate;
-    document.getElementById('emp-dept').value = dept;
-    document.getElementById('emp-position').value = position;
-    document.getElementById('emp-type').value = emptype;
-    document.getElementById('emp-status').value = status;
-    document.getElementById('emp-bank').value = bank;
-    document.getElementById('emp-sss').value = sss;
-    document.getElementById('emp-philhealth').value = philhealth;
-    document.getElementById('emp-pagibig').value = pagibig;
-    document.getElementById('emp-email').value = email;
-    document.getElementById('emp-contact').value = contact;
+    //document.getElementById('emp-ln').value = ln;
+    //document.getElementById('emp-gender').value = gender;
+    //document.getElementById('emp-birth').value = birthdate;
+    //document.getElementById('emp-join').value = joindate;
+  //document.getElementById('emp-dept').value = dept;
+    //document.getElementById('emp-position').value = position;
+    //document.getElementById('emp-type').value = emptype;
+    //document.getElementById('emp-status').value = status;
+    //document.getElementById('emp-bank').value = bank;
+    //document.getElementById('emp-sss').value = sss;
+    //document.getElementById('emp-philhealth').value = philhealth;
+    //document.getElementById('emp-pagibig').value = pagibig;
+    //document.getElementById('emp-email').value = email;
+    //document.getElementById('emp-contact').value = contact;
   
   });
 });
