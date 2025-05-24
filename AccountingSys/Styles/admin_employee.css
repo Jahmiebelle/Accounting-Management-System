@@ -105,7 +105,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-right: 2rem;
   height: 100px;
   width: 100%;
@@ -117,7 +117,7 @@ body {
   display: flex;
   align-items: center;
   height: 100%;
-  gap: 1rem;
+  gap: 2rem;
   width: auto;
 }
 
@@ -165,7 +165,7 @@ body {
 }
 
 .upf-save-btn, .upf-edit-btn {
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   border-radius: 5px;
   border: none;
 }
@@ -207,6 +207,7 @@ body {
   height: auto;
   flex-wrap: wrap;
   padding: 1rem 2rem;
+  gap: 1rem;
   justify-content: space-between;
   align-items: center;
   border-bottom: solid #ccc 1px;
@@ -238,7 +239,7 @@ body {
 .fieldsets {
   display: flex;
   position: absolute;
-  padding: 0;
+  padding: 3px 0;
   margin: 0;
   height: 100%;
   width: 100%;
@@ -254,7 +255,7 @@ legend {
 
 .inputboxes {
   display: flex;
-  margin-top: 0.6rem;
+  margin-top: 0.7rem;
   padding-left: 0.5rem;
   height: calc(100% - 1rem);
   width: 100%;
@@ -284,6 +285,7 @@ legend {
   padding: 1rem 2rem;
   width: 40%;
   border: none;
+  border-radius: 5px;
   background-color: #d64545;
   color: #f4f6f8;
 }

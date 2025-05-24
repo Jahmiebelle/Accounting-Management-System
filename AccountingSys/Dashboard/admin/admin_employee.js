@@ -30,8 +30,11 @@ const profileOl = document.getElementById('profile-ol');
 profileButtons.forEach(function(button){
   button.addEventListener('click', function() {
     profileOl.classList.add('show');
+    const id = button.dataset.id;
+    const fn = button.dataset.fn;
+    
+    document.getElementById('emp_name').value = fn;
   });
-  
 });
 
 profileOl.addEventListener('click', function(event){

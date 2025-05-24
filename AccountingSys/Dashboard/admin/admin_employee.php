@@ -26,7 +26,7 @@ session_start();
               <div class="upf-upper-info">
                 <h1 id="upf-upper-name">Gabriel Lopez</h1>
                 <h5 id="upf-upper-dept">Information Technology</h5>
-                <h6 id="upf-upper-id">A6007B</h6>
+                <h5 id="upf-upper-id">A6007B</h5>
               </div>
             </div>
             <div class="save-edit-btn">
@@ -56,7 +56,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>First Name</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" name="employee_fn" value="Gab" readonly>
+                  <input class="inputboxes" type="text" id="emp-fn" name="employee_fn" value="First Name" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -382,9 +382,19 @@ session_start();
                         $emp_id = $employeeData['employee_id'];
                         $first_name = $employeeData['first_name'];
                         $last_name = $employeeData['last_name'];
+                        $gender = $employeeData['gender'];
+                        $birthdate = $employeeData['birthdate'];
+                        $join_date = $employeeData['join_date'];
                         $department = $employeeData['department'];
+                        $position = $employeeData['position'];
+                        $emp_type = $employeeData['employment_type'];
                         $status = $employeeData['status'];
+                        $bank = $employeeData['bank_number'];
+                        $sss = $employeeData['sss_number'];
+                        $philhealth = $employeeData['philhealth_number'];
+                        $pagibig = $employeeData['pagibig_number'];
                         $email = $employeeData['email'];
+                        $contact = $employedData['contact_number'];
                         
                         
                         echo "<tr class='row'>
@@ -396,7 +406,7 @@ session_start();
                           <td> 
                             <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                               <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'/>
-                                <button class='profile-btn' id='profile-btn' type='button' data-id='$emp_id' data-fn=''>Profile</button>
+                                <button class='profile-btn' id='profile-btn' type='button' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact'>Profile</button>
                             </form>
                           </td>
                         </tr>";
