@@ -48,7 +48,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Employee Id</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" name="employee_id" value="ID" readonly>
+                  <input class="inputboxes" type="text" name="employee_id" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -56,7 +56,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>First Name</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-fn" name="employee_fn" value="First Name" readonly>
+                  <input class="inputboxes" type="text" id="emp-fn" name="employee_fn" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -64,7 +64,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Last Name</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-ln" name="employee_ln" value="Last Name" readonly>
+                  <input class="inputboxes" type="text" id="emp-ln" name="employee_ln" value="" readonly>
                 </div>
               </div>
               
@@ -73,7 +73,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Gender</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-gender" name="employee_gender" value="Gender" readonly>
+                  <input class="inputboxes" type="text" id="emp-gender" name="employee_gender" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -81,7 +81,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Birthdate</legend>
                   </fieldset>
-                  <input class="inputboxes" type="date" id="emp-birth" name="employee_birthdate" value="Birthdate" readonly>
+                  <input class="inputboxes" type="date" id="emp-birth" name="employee_birthdate" value="" readonly>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Join Date</legend>
                   </fieldset>
-                  <input class="inputboxes" type="date" id="emp-join" name="employee_joindate" value="Join Date" readonly>
+                  <input class="inputboxes" type="date" id="emp-join" name="employee_joindate" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -100,7 +100,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Department</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-dept" name="employee_dept" value="Department" readonly>
+                  <input class="inputboxes" type="text" id="emp-dept" name="employee_dept" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -108,7 +108,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Position</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-position" name="employee_position" value="Position" readonly>
+                  <input class="inputboxes" type="text" id="emp-position" name="employee_position" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -116,7 +116,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Employment Type</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-type" name="employee_type" value="Employment Type" readonly>
+                  <input class="inputboxes" type="text" id="emp-type" name="employee_type" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -124,7 +124,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Status</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-status" name="employee_status" value="Status" readonly>
+                  <input class="inputboxes" type="text" id="emp-status" name="employee_status" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -132,7 +132,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Bank Number</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-bank" name="employee_bank" value="Bank Number" readonly>
+                  <input class="inputboxes" type="text" id="emp-bank" name="employee_bank" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -140,7 +140,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>SSS</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-sss" name="employee_sss" value="SSS" readonly>
+                  <input class="inputboxes" type="text" id="emp-sss" name="employee_sss" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -148,7 +148,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Philhealth</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-philhealth" name="employee_philhealth" value="Philhealth" readonly>
+                  <input class="inputboxes" type="text" id="emp-philhealth" name="employee_philhealth" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -156,7 +156,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Pagibig</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-pagibig" name="employee_pagibig" value="Pagibig" readonly>
+                  <input class="inputboxes" type="text" id="emp-pagibig" name="employee_pagibig" value="" readonly>
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Email</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-email" name="employee_email" value="Email" readonly>
+                  <input class="inputboxes" type="text" id="emp-email" name="employee_email" value="" readonly>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -175,7 +175,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Contact Number</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-contact" name="employee_contact" value="Contact" readonly>
+                  <input class="inputboxes" type="text" id="emp-contact" name="employee_contact" value="" readonly>
                 </div>
               </div>
             </div>
