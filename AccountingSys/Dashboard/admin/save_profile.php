@@ -21,13 +21,11 @@
   
   $updateData = "UPDATE employee_table SET employee_id = '$id', first_name = '$fn', last_name = '$ln', gender = '$gender', birthdate = '$birthdate', join_date = '$joindate', department = '$dept', position = '$position', employment_type = '$emptype', status = '$status', bank_number = '$bank', sss_number = '$sss', philhealth_number = '$philhealth', pagibig_number = '$pagibig', email = '$email', contact = '$contact' WHERE company_id = '$cid'";
   
-  mysqli_query($conn, $updateData);
-  
-  if($conn){
-    echo "Connected to db";
-  }
+  if (mysqli_query($conn, $updateData)) {
+  echo "Data Saved Successfully!";
+  } 
   else {
-    echo "Can't connect somehow";
+  echo "SQL Error: " . mysqli_error($conn);
   }
 
 ?>
