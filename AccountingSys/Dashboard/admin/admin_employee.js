@@ -92,8 +92,6 @@ edit_btn.addEventListener('click', function(){
   
   if(edit){
     save_btn.addEventListener('click', () => {
-      document.getElementById('profile-form-ol').addEventListener('submit', function(e){
-        e.preventDefault();
         let cid = document.getElementById('emp-cid').value;
         let id = document.getElementById('emp-id').value;
         let fn = document.getElementById('emp-fn').value;
@@ -125,7 +123,6 @@ edit_btn.addEventListener('click', function(){
         };
         const data = "cid=" + encodeURIComponent(cid) + "&id=" + encodeURIComponent(id) + "&fn=" + encodeURIComponent(fn) + "&ln=" + encodeURIComponent(ln) + "&gender=" + encodeURIComponent(gender) + "&birthdate=" + encodeURIComponent(birthdate) + "&joindate=" + encodeURIComponent(joindate) + "&dept=" + encodeURIComponent(dept) + "&position=" + encodeURIComponent(position) + "&emptype=" + encodeURIComponent(emptype) + "&status=" + encodeURIComponent(status) + "&bank=" + encodeURIComponent(bank) + "&sss=" + encodeURIComponent(sss) + "&philhealth=" + encodeURIComponent(philhealth) + "&pagibig=" + encodeURIComponent(pagibig) + "&email=" + encodeURIComponent(email) + "&contact=" + encodeURIComponent(contact);
         xhr.send(data);
-      });
     });
     inputbox.forEach(function(input){
     input.classList.add('editable');
