@@ -108,7 +108,7 @@ edit_btn.addEventListener('click', function(){
         let bank = document.getElementById('emp-bank').value;
         let sss = document.getElementById('emp-sss').value;
         let philhealth = document.getElementById('emp-philhealth').value;
-        let pagibig = document.getElementById('emp-pagibig').value = pagibig;
+        let pagibig = document.getElementById('emp-pagibig').value;
         let email = document.getElementById('emp-email').value;
         let contact = document.getElementById('emp-contact').value;
         
@@ -122,9 +122,9 @@ edit_btn.addEventListener('click', function(){
           else {
             alert("Something went wrong!");
           }
+        }
         const data = "cid=" + encodeURIComponent(cid) + "&id=" + encodeURIComponent(id) + "&fn=" + encodeURIComponent(fn) + "&ln=" + encodeURIComponent(ln) + "&gender=" + encodeURIComponent(gender) + "&birthdate=" + encodeURIComponent(birthdate) + "&joindate=" + encodeURIComponent(joindate) + "&dept=" + encodeURIComponent(dept) + "&position=" + encodeURIComponent(position) + "&emptype=" + encodeURIComponent(emptype) + "&status=" + encodeURIComponent(status) + "&bank=" + encodeURIComponent(bank) + "&sss=" + encodeURIComponent(sss) + "&philhealth=" + encodeURIComponent(philhealth) + "&pagibig=" + encodeURIComponent(pagibig) + "&email=" + encodeURIComponent(email) + "&contact=" + encodeURIComponent(contact);
         xhr.send(data);
-        }
       });
     });
     inputbox.forEach(function(input){
