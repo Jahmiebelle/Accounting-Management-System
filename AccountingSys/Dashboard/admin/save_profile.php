@@ -23,6 +23,11 @@
   
   mysqli_query($conn, $updateData);
   
-  echo "Data Saved Successfully!";
+  if($conn){
+    echo "Connected to db";
+  }
+  else {
+    echo "Can't connect somehow";
+  }
 
 ?>
