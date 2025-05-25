@@ -116,6 +116,9 @@ edit_btn.addEventListener('click', function(){
         xhr.onload = function(){
           if (xhr.status === 200) {
             alert(xhr.responseText);
+            setTimeout(function(){
+              location.reload();
+            }, 100);
           }
           else {
             alert(xhr.responseText);
@@ -123,7 +126,6 @@ edit_btn.addEventListener('click', function(){
         };
         const data = "cid=" + encodeURIComponent(cid) + "&id=" + encodeURIComponent(id) + "&fn=" + encodeURIComponent(fn) + "&ln=" + encodeURIComponent(ln) + "&gender=" + encodeURIComponent(gender) + "&birthdate=" + encodeURIComponent(birthdate) + "&joindate=" + encodeURIComponent(joindate) + "&dept=" + encodeURIComponent(dept) + "&position=" + encodeURIComponent(position) + "&emptype=" + encodeURIComponent(emptype) + "&status=" + encodeURIComponent(status) + "&bank=" + encodeURIComponent(bank) + "&sss=" + encodeURIComponent(sss) + "&philhealth=" + encodeURIComponent(philhealth) + "&pagibig=" + encodeURIComponent(pagibig) + "&email=" + encodeURIComponent(email) + "&contact=" + encodeURIComponent(contact);
         
-        alert(data);
         xhr.send(data);
     });
     inputbox.forEach(function(input){

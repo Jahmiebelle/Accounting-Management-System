@@ -32,6 +32,5 @@
   echo "SQL Error: " . mysqli_error($conn);
   }
   
-  header("Location: admin_employee.php");
 
 ?>
