@@ -23,7 +23,7 @@
   $email = $_POST['email'];
   $contact = $_POST['contact'];
   
-  $updateData = "UPDATE employee_table SET employee_id = '$id', first_name = '$fn', last_name = '$ln', gender = '$gender', birthdate = '$birthdate', join_date = '$joindate', department = '$dept', position = '$position', employment_type = '$emptype', status = '$status', bank_number = '$bank', sss_number = '$sss', philhealth_number = '$philhealth', pagibig_number = '$pagibig', email = '$email', contact = '$contact' WHERE company_id = '$cid'";
+  $updateData = "UPDATE employee_table SET employee_id = '$id', first_name = '$fn', last_name = '$ln', gender = '$gender', birthdate = '$birthdate', join_date = '$joindate', department = '$dept', position = '$position', employment_type = '$emptype', status = '$status', bank_number = '$bank', sss_number = '$sss', philhealth_number = '$philhealth', pagibig_number = '$pagibig', email = '$email', contact_number = '$contact' WHERE company_id = '$cid'";
   
   if (mysqli_query($conn, $updateData)) {
   echo "Data Saved Successfully!";
