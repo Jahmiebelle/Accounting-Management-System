@@ -18,12 +18,13 @@ session_start();
     <!-- Dito mga overlays, ol means overlay -->
     <div class="profile-ol" id="profile-ol">
       <div class="profile-ol-content" id="profile-ol-content">
-        <form action="" method="POST" class="profile-form-ol">
+        <form action="" method="POST" class="profile-form-ol" id="profile-form-ol">
           <div class="upper-profile-form">
             <div class="upf-profile-container">
               <div class="upf-upper-profile">
               </div>
               <div class="upf-upper-info">
+                 <input style="display: none; pointer-events: none;" type="number" id="emp-cid" name="employee_cid" value="" readonly>
                 <h3 id="upf-upper-name">Full Name</h3>
                 <h5 id="upf-upper-dept">Department</h5>
               </div>
@@ -378,6 +379,7 @@ session_start();
                     }
                     else {
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
+                        $comp_id = $employeeData['company_id'];
                         $emp_id = $employeeData['employee_id'];
                         $first_name = $employeeData['first_name'];
                         $last_name = $employeeData['last_name'];
@@ -405,7 +407,7 @@ session_start();
                           <td> 
                             <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                               <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
-                                <button class='profile-btn' id='profile-btn' type='button' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact'>Profile</button>
+                                <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact'>Profile</button>
                             </form>
                           </td>
                         </tr>";
