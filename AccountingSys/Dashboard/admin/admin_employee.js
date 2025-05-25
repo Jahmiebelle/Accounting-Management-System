@@ -94,7 +94,7 @@ edit_btn.addEventListener('click', function(){
     save_btn.addEventListener('click', () => {
       document.getElementById('profile-form-ol').addEventListener('submit', function(e){
         e.preventDefault();
-        let cid = document.getElementId('emp-cid');
+        let cid = document.getElementId('emp-cid').value;
         let id = document.getElementById('emp-id').value;
         let fn = document.getElementById('emp-fn').value;
         let ln = document.getElementById('emp-ln').value;
