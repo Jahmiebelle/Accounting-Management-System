@@ -118,7 +118,7 @@ edit_btn.addEventListener('click', function(){
             alert(xhr.responseText);
           }
           else {
-            alert("error");
+            alert(xhr.responseText);
           }
         };
         const data = "cid=" + encodeURIComponent(cid) + "&id=" + encodeURIComponent(id) + "&fn=" + encodeURIComponent(fn) + "&ln=" + encodeURIComponent(ln) + "&gender=" + encodeURIComponent(gender) + "&birthdate=" + encodeURIComponent(birthdate) + "&joindate=" + encodeURIComponent(joindate) + "&dept=" + encodeURIComponent(dept) + "&position=" + encodeURIComponent(position) + "&emptype=" + encodeURIComponent(emptype) + "&status=" + encodeURIComponent(status) + "&bank=" + encodeURIComponent(bank) + "&sss=" + encodeURIComponent(sss) + "&philhealth=" + encodeURIComponent(philhealth) + "&pagibig=" + encodeURIComponent(pagibig) + "&email=" + encodeURIComponent(email) + "&contact=" + encodeURIComponent(contact);
