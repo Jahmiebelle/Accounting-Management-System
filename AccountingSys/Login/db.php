@@ -11,10 +11,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname, 3306, $termux
 
 if (!$conn) {
     $db_status = "fail";
-    echo "<script>console.error('❌ DB Connection Failed: " . mysqli_connect_error() . "');</script>";
+    
 } else {
     $db_status = "success";
-    echo "<script>console.log('✅ Connected to DB successfully');</script>";
+    
 }
 ?>
 
