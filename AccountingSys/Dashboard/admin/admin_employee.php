@@ -325,7 +325,7 @@ session_start();
                 </div>
                 <div class="deacbox-container">
                   <label id="deacbox-label" for="deac-emp">Deactivated Accounts</label>
-                  <input type="checkbox" name="activation" id="deac-emp" onchange="document.getElementById('search_form').submit()"/>
+                  <input type="checkbox" name="activation" id="deac-emp" value="0" onclick="deac_clicked()">
                 </div>
               </form>
             </div>
@@ -340,49 +340,48 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                    $showDeac = isset($_POST['activation']);
-                    
-                    $searchname = strtolower(trim($_POST['search_employee']));
-                    $parts = explode(' ', $searchname);
-                    if (empty($searchname)){
-                      if ($selected_dept == 'all') {
-                        $getEmployee = "SELECT * FROM employee_table WHERE is_active";
-                      }
-                      else {
-                        $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND is_active";
-                      }
+                    if (isset($_POST['activation'])) {
+                      $getEmployee = "SELECT * FROM employee_table WHERE is_active = 0";
                     }
                     else {
-                      if ($selected_dept == 'all') {
-                        if (count($parts) >= 2){
-                          $full = implode(' ', $parts);
-                          $lname = array_pop($parts);
-                          $fname = implode(' ', $parts);
-                          $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname') AND is_active";
+                      $searchname = strtolower(trim($_POST['search_employee']));
+                      $parts = explode(' ', $searchname);
+                      if (empty($searchname)){
+                        if ($selected_dept == 'all') {
+                          $getEmployee = "SELECT * FROM employee_table WHERE is_active";
                         }
                         else {
-                          $name = implode(' ', $parts);
-                          $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$name') OR last_name = LOWER('$name') AND is_active";
+                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND is_active";
                         }
-                        
                       }
                       else {
-                        if (count($parts) >= 2){
-                          $full = implode(' ', $parts);
-                          $lname = array_pop($parts);
-                          $fname = implode(' ', $parts);
-                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname') AND is_active";
+                        if ($selected_dept == 'all') {
+                          if (count($parts) >= 2){
+                            $full = implode(' ', $parts);
+                            $lname = array_pop($parts);
+                            $fname = implode(' ', $parts);
+                            $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname') AND is_active";
+                          }
+                          else {
+                            $name = implode(' ', $parts);
+                            $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$name') OR last_name = LOWER('$name') AND is_active";
+                          }
+                          
                         }
                         else {
-                          $name = implode(' ', $parts);
-                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$name') OR last_name = LOWER('$name') AND is_active";
+                          if (count($parts) >= 2){
+                            $full = implode(' ', $parts);
+                            $lname = array_pop($parts);
+                            $fname = implode(' ', $parts);
+                            $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname') AND is_active";
+                          }
+                          else {
+                            $name = implode(' ', $parts);
+                            $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$name') OR last_name = LOWER('$name') AND is_active";
+                          }
                         }
                       }
                     }
-                    if($showDeac){
-                    $getEmployee = "SELECT * FROM employee_table WHERE is_active = 0";
-                    }
-                    
                     $employeeResult = mysqli_query($conn, $getEmployee);
                     if (mysqli_num_rows($employeeResult) == 0) {
                       echo "<tr><td colspan='10'>No employees found.</td></tr>";

@@ -682,6 +682,12 @@ legend {
   display: flex;
   align-items: center;
   height: auto;
+  transition: all 0.2s ease;
+}
+
+.dept-sort.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 #department_selection {
@@ -714,6 +720,12 @@ legend {
   border: solid #cccccc 1px ;
   color: #333333;
   border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+.name-search.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .search-logo {
@@ -741,6 +753,7 @@ legend {
   padding: 5px 10px;
   padding-left: 35px;
 }
+
 
 .search-label:focus {
   border: none;
