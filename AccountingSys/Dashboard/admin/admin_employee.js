@@ -86,63 +86,67 @@ const save_btn = document.getElementById('upf-save-btn');
 
 let edit = true;
 
+function saveEmpData(){
+  let cid = document.getElementById('emp-cid').value;
+  let id = document.getElementById('emp-id').value;
+  let fn = document.getElementById('emp-fn').value;
+  let ln = document.getElementById('emp-ln').value;
+  let gender = document.getElementById('emp-gender').value;
+  let birthdate = document.getElementById('emp-birth').value;
+  let joindate = document.getElementById('emp-join').value;
+  let dept = document.getElementById('emp-dept').value;
+  let position = document.getElementById('emp-position').value;
+  let emptype = document.getElementById('emp-type').value;
+  let status = document.getElementById('emp-status').value;
+  let bank = document.getElementById('emp-bank').value;
+  let sss = document.getElementById('emp-sss').value;
+  let philhealth = document.getElementById('emp-philhealth').value;
+  let pagibig = document.getElementById('emp-pagibig').value;
+  let email = document.getElementById('emp-email').value;
+  let contact = document.getElementById('emp-contact').value;
+  
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "save_profile.php", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.onload = function(){
+    if (xhr.status === 200) {
+      alert(xhr.responseText);
+      setTimeout(function(){
+        location.reload();
+      }, 100);
+    }
+    else {
+      alert(xhr.responseText);
+    }
+  };
+  const data = "cid=" + encodeURIComponent(cid) + "&id=" + encodeURIComponent(id) + "&fn=" + encodeURIComponent(fn) + "&ln=" + encodeURIComponent(ln) + "&gender=" + encodeURIComponent(gender) + "&birthdate=" + encodeURIComponent(birthdate) + "&joindate=" + encodeURIComponent(joindate) + "&dept=" + encodeURIComponent(dept) + "&position=" + encodeURIComponent(position) + "&emptype=" + encodeURIComponent(emptype) + "&status=" + encodeURIComponent(status) + "&bank=" + encodeURIComponent(bank) + "&sss=" + encodeURIComponent(sss) + "&philhealth=" + encodeURIComponent(philhealth) + "&pagibig=" + encodeURIComponent(pagibig) + "&email=" + encodeURIComponent(email) + "&contact=" + encodeURIComponent(contact);
+  
+  xhr.send(data);
+
+}
+
 edit_btn.addEventListener('click', function(){
   save_btn.classList.toggle('enable');
   const inputbox = document.querySelectorAll('.inputboxes');
   
   if(edit){
-    save_btn.addEventListener('click', () => {
-        let cid = document.getElementById('emp-cid').value;
-        let id = document.getElementById('emp-id').value;
-        let fn = document.getElementById('emp-fn').value;
-        let ln = document.getElementById('emp-ln').value;
-        let gender = document.getElementById('emp-gender').value;
-        let birthdate = document.getElementById('emp-birth').value;
-        let joindate = document.getElementById('emp-join').value;
-        let dept = document.getElementById('emp-dept').value;
-        let position = document.getElementById('emp-position').value;
-        let emptype = document.getElementById('emp-type').value;
-        let status = document.getElementById('emp-status').value;
-        let bank = document.getElementById('emp-bank').value;
-        let sss = document.getElementById('emp-sss').value;
-        let philhealth = document.getElementById('emp-philhealth').value;
-        let pagibig = document.getElementById('emp-pagibig').value;
-        let email = document.getElementById('emp-email').value;
-        let contact = document.getElementById('emp-contact').value;
-        
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", "save_profile.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onload = function(){
-          if (xhr.status === 200) {
-            alert(xhr.responseText);
-            setTimeout(function(){
-              location.reload();
-            }, 100);
-          }
-          else {
-            alert(xhr.responseText);
-          }
-        };
-        const data = "cid=" + encodeURIComponent(cid) + "&id=" + encodeURIComponent(id) + "&fn=" + encodeURIComponent(fn) + "&ln=" + encodeURIComponent(ln) + "&gender=" + encodeURIComponent(gender) + "&birthdate=" + encodeURIComponent(birthdate) + "&joindate=" + encodeURIComponent(joindate) + "&dept=" + encodeURIComponent(dept) + "&position=" + encodeURIComponent(position) + "&emptype=" + encodeURIComponent(emptype) + "&status=" + encodeURIComponent(status) + "&bank=" + encodeURIComponent(bank) + "&sss=" + encodeURIComponent(sss) + "&philhealth=" + encodeURIComponent(philhealth) + "&pagibig=" + encodeURIComponent(pagibig) + "&email=" + encodeURIComponent(email) + "&contact=" + encodeURIComponent(contact);
-        
-        xhr.send(data);
-    });
+    save_btn.addEventListener('click', saveEmpData);
     inputbox.forEach(function(input){
     input.classList.add('editable');
     input.removeAttribute('readonly');
     });
     edit_btn.innerText = "Cancel";
-    edit = false;
+    
   }
   else {
+    save_btn.removeEventListener('click', saveEmpData);
     inputbox.forEach(function(input){
     input.classList.remove('editable');
     input.setAttribute('readonly', true);
     });
     edit_btn.innerText = "Edit";
-    edit = true;
-  }
   
+  }
+  edit = !edit;
 });
 
