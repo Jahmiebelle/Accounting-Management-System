@@ -325,7 +325,8 @@ session_start();
                 </div>
                 <div class="deacbox-container">
                   <label id="deacbox-label" for="deac-emp">Deactivated Accounts</label>
-                  <input type="checkbox" name="activation" id="deac-emp" value="0" onchange="deac_clicked()">
+                  <input type="checkbox" name="activation" id="deac-emp" onchange="document.getElementById('search_form').submit()" <?php $deacOrNot = $deac_checked ? 'checked' : '';
+                  ?>>
                 </div>
               </form>
             </div>
@@ -340,7 +341,8 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                    if (isset($_POST['activation'])) {
+                    $deac_checked = isset($_POST['activation']);
+                    if ($deac_checked) {
                       $getEmployee = "SELECT * FROM employee_table WHERE is_active = 0";
                     }
                     else {

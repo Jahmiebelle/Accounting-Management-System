@@ -149,22 +149,3 @@ edit_btn.addEventListener('click', function(){
   edit = !edit;
 });
 
-function deac_clicked(){
-  checkbox = document.getElementById('deac-emp');
-  searchbar = document.querySelector('.name-search');
-  deptsort = document.querySelector('.dept-sort');
-  if(checkbox.value == '0'){
-    checkbox.value = '1';
-    checkbox.setAttribute('checked', true);
-    searchbar.classList.add('hide');
-    deptsort.classList.add('hide');
-    
-  }
-  else {
-    checkbox.value = '0';
-    checkbox.removeAttribute('checked');
-    searchbar.classList.remove('hide');
-    deptsort.classList.remove('hide');
-  }
-  
-}
