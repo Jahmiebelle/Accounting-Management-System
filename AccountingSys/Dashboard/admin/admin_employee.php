@@ -304,6 +304,7 @@ session_start();
                 <div class="dept-sort">
                   <select name="department_selection" id="department_selection" onchange="document.getElementById('search_form').submit()">
                     <?php
+                      $deac_checked = isset($_POST['activation']);
                       $selected_dept = $_POST['department_selection'] ?? 'all';
                       echo "<option class='options' value='all' $selected_dept == 'all' ? selected : '' > All Department</option>";
         
@@ -341,7 +342,7 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                    $deac_checked = isset($_POST['activation']);
+                    
                     if ($deac_checked) {
                       $getEmployee = "SELECT * FROM employee_table WHERE is_active = 0";
                     }
