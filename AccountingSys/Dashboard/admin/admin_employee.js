@@ -166,5 +166,5 @@ function deac_clicked(){
     searchbar.classList.remove('hide');
     deptsort.classList.remove('hide');
   }
-  location.reload();
+  
 }
