@@ -281,6 +281,7 @@ session_start();
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
+                  $deac_checked = isset($_POST['activation']);
                   echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
                 ?>
               </div>
@@ -304,7 +305,7 @@ session_start();
                 <div class="dept-sort">
                   <select name="department_selection" id="department_selection" onchange="document.getElementById('search_form').submit()">
                     <?php
-                      $deac_checked = isset($_POST['activation']);
+                      
                       $selected_dept = $_POST['department_selection'] ?? 'all';
                       echo "<option class='options' value='all' $selected_dept == 'all' ? selected : '' > All Department</option>";
         
@@ -326,7 +327,7 @@ session_start();
                 </div>
                 <div class="deacbox-container">
                   <label id="deacbox-label" for="deac-emp">Deactivated Accounts</label>
-                  <input type="checkbox" name="activation" id="deac-emp" onchange="document.getElementById('search_form').submit()" <?php $deac_checked ? 'checked' : '';
+                  <input type="checkbox" name="activation" id="deac-emp" onchange="document.getElementById('search_form').submit()" <?php echo $deac_checked ? 'checked' : '';
                   ?>>
                 </div>
               </form>
