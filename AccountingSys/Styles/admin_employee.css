@@ -674,7 +674,8 @@ legend {
   height: 100%;
   width: 100%;
   align-items: center;
-  text-align: center;
+  text-align: center 1px;
+  border: solid red;
 }
 
 .dept-sort {
@@ -745,6 +746,20 @@ legend {
   border: none;
   
 }
+
+.deacbox-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border: solid green 1px;
+  gap: 5px;
+}
+
+#deacbox-label {
+  font-size: 12px;
+}
+
 
 .lower-maincontent {
   display: flex;

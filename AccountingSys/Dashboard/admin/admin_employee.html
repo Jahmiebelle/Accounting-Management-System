@@ -323,6 +323,10 @@ session_start();
                   </div>
                   <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
                 </div>
+                <div class="deacbox-container">
+                  <label id="deacbox-label" for="deac-emp">Deactivated Accounts</label>
+                  <input type="checkbox" name="activation" id="deac-emp"/>
+                </div>
               </form>
             </div>
             <div class="lower-maincontent">
@@ -336,6 +340,8 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
+                    $showDeac = isset($_POST['activation']);
+                    
                     $searchname = strtolower(trim($_POST['search_employee']));
                     $parts = explode(' ', $searchname);
                     if (empty($searchname)){
@@ -414,7 +420,9 @@ session_start();
                         </tr>";
                       }
                     }
-                  
+                  if($showDeac){
+                    $getEmployee = "SELECT * FROM employee_table WHERE is_active = 0";
+                  }
                 ?>
                
               </table>
