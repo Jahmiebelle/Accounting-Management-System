@@ -158,6 +158,7 @@ function deac_clicked(){
     checkbox.setAttribute('checked', true);
     searchbar.classList.add('hide');
     deptsort.classList.add('hide');
+    
   }
   else {
     checkbox.value = '0';
@@ -165,4 +166,5 @@ function deac_clicked(){
     searchbar.classList.remove('hide');
     deptsort.classList.remove('hide');
   }
+  location.reload();
 }
