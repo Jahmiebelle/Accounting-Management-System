@@ -325,7 +325,7 @@ session_start();
                 </div>
                 <div class="deacbox-container">
                   <label id="deacbox-label" for="deac-emp">Deactivated Accounts</label>
-                  <input type="checkbox" name="activation" id="deac-emp" value="0" onclick="deac_clicked()">
+                  <input type="checkbox" name="activation" id="deac-emp" value="0" onchange="deac_clicked()">
                 </div>
               </form>
             </div>
