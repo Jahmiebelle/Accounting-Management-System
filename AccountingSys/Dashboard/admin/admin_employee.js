@@ -130,7 +130,6 @@ edit_btn.addEventListener('click', function(){
   const inputbox = document.querySelectorAll('.inputboxes');
   
   if(edit){
-    save_btn.addEventListener('click', saveEmpData);
     inputbox.forEach(function(input){
     input.classList.add('editable');
     input.removeAttribute('readonly');
@@ -139,7 +138,7 @@ edit_btn.addEventListener('click', function(){
     
   }
   else {
-    save_btn.removeEventListener('click', saveEmpData);
+    
     inputbox.forEach(function(input){
     input.classList.remove('editable');
     input.setAttribute('readonly', true);

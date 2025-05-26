@@ -30,7 +30,7 @@ session_start();
               </div>
             </div>
             <div class="save-edit-btn">
-              <button type="button" class="upf-save-btn" id="upf-save-btn">
+              <button type="button" class="upf-save-btn" id="upf-save-btn" onclick="saveEmpData()">
                 Save
               </button>
               <button type="button" class="upf-edit-btn" id="upf-edit-btn">
