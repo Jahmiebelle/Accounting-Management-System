@@ -379,6 +379,10 @@ session_start();
                         }
                       }
                     }
+                    if($showDeac){
+                    $getEmployee = "SELECT * FROM employee_table WHERE is_active = 0";
+                    }
+                    
                     $employeeResult = mysqli_query($conn, $getEmployee);
                     if (mysqli_num_rows($employeeResult) == 0) {
                       echo "<tr><td colspan='10'>No employees found.</td></tr>";
@@ -420,9 +424,7 @@ session_start();
                         </tr>";
                       }
                     }
-                  if($showDeac){
-                    $getEmployee = "SELECT * FROM employee_table WHERE is_active = 0";
-                  }
+                  
                 ?>
                
               </table>
