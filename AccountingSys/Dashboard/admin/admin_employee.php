@@ -340,10 +340,10 @@ session_start();
                     $parts = explode(' ', $searchname);
                     if (empty($searchname)){
                       if ($selected_dept == 'all') {
-                        $getEmployee = "SELECT * FROM employee_table";
+                        $getEmployee = "SELECT * FROM employee_table WHERE is_active";
                       }
                       else {
-                        $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept'";
+                        $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND is_active";
                       }
                     }
                     else {
@@ -352,11 +352,11 @@ session_start();
                           $full = implode(' ', $parts);
                           $lname = array_pop($parts);
                           $fname = implode(' ', $parts);
-                          $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname')";
+                          $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname') AND is_active";
                         }
                         else {
                           $name = implode(' ', $parts);
-                          $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$name') OR last_name = LOWER('$name')";
+                          $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$name') OR last_name = LOWER('$name') AND is_active";
                         }
                         
                       }
@@ -365,17 +365,17 @@ session_start();
                           $full = implode(' ', $parts);
                           $lname = array_pop($parts);
                           $fname = implode(' ', $parts);
-                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname')";
+                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname') AND is_active";
                         }
                         else {
                           $name = implode(' ', $parts);
-                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$name') OR last_name = LOWER('$name')";
+                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$name') OR last_name = LOWER('$name') AND is_active";
                         }
                       }
                     }
                     $employeeResult = mysqli_query($conn, $getEmployee);
                     if (mysqli_num_rows($employeeResult) == 0) {
-                      echo "<tr><td colspan='8'>No employees found.</td></tr>";
+                      echo "<tr><td colspan='10'>No employees found.</td></tr>";
                     }
                     else {
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
@@ -396,6 +396,7 @@ session_start();
                         $pagibig = $employeeData['pagibig_number'];
                         $email = $employeeData['email'];
                         $contact = $employeeData['contact_number'];
+                        $is_active = $employeeData['is_active'];
                         
                         
                         echo "<tr class='row'>
