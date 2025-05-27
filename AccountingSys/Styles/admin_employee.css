@@ -682,7 +682,8 @@ legend {
   display: flex;
   position: relative;
   align-items: center;
-  height: 90%;
+  padding: 0.25rem 0;
+  height: auto;
   width: 20%;
   border-radius: 30px;
   border: solid #cccccc 1px;
@@ -780,6 +781,7 @@ legend {
 .upper-filter {
   display: flex;
   width: 90%;
+  margin-top: 1rem;
   align-items: center;
   justify-content: center;
   flex: 1;
