@@ -337,15 +337,15 @@ session_start();
                         <?php
                           $getDept = "SELECT department_name FROM department_table";
                           $dept_names = mysqli_query($conn, $getDept);
+                          $count = 1;
                           while($dept = mysqli_fetch_assoc($dept_names)){
-                            $count = 1;
                             $dept_name = $dept['department_name'];
                             $input_id = "dept" . $count;
                             echo "<div class='checkbox-container-lower'>
-                              <input type='checkbox' name='$departments[]' id='$input_id' value='$dept_name' />
-                              <label for='$input_id'>$dept</label>
-                            </div>"
-                            $count ++;
+                              <input type='checkbox' name= 'departments[]'' id='$input_id' value='$dept_name' />
+                              <label for='$input_id'>$dept_name</label>
+                            </div>";
+                          $count ++;
                           }
                         ?>
                       </div>
