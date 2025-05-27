@@ -7,7 +7,6 @@
   <title>Employee's Dashboard</title>
   <link rel="stylesheet" href="../../Styles/employee_dashboard.css?v=1.0">
 </head>
-
 <body>
   <header>
     <h2 class="brand-namin">Teach<span style="color: greenyellow">Track</span></h2>
