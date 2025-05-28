@@ -736,6 +736,7 @@ legend {
 .filter-overlay {
   display: flex;
   position: absolute;
+  z-index: 10;
   flex-direction: column;
   top: 125%;
   left: 0;
