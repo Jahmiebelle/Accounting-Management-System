@@ -302,19 +302,6 @@ session_start();
             <div class="upper-maincontent">
               <form action="" method="POST" id="search_form">
                 <div class="filter-by">
-                  <script>
-                    const filterOverlay = document.getElementById('filter-overlay');
-                    let showfilter = false;
-                    document.querySelector('.filter-by').addEventListener('click', function() {
-                      if (showfilter) {
-                        filterOverlay.classList.remove('show');
-                      }
-                      else {
-                        filterOverlay.classList.add('show');
-                      }
-                      showfilter = !showfilter;
-                    });
-                  </script>
                   <div class="filter-box">
                     <div class="filter-icon">
                     </div>
@@ -322,7 +309,7 @@ session_start();
                     <div class="filter-arrow">
                       
                     </div>
-                    <div class="filter-overlay" id="filter-overlay">
+                    <div class="filter-overlay" id="filter_overlay">
                       <div class="filter-overlay-container">
                         <div class="upper-option">
                           <div class="upper-filter-header">
@@ -362,6 +349,7 @@ session_start();
                             $count ++;
                             }
                             $checkedDept = isset($_POST['departments']);
+                            
                             
                           ?>
                         </div>

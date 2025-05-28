@@ -150,11 +150,13 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   
   const deptCheckbox = document.querySelectorAll('.dept-checkboxes');
-  const filterOverlay = document.getElementById('filter-overlay');
+  const filterOverlay = document.getElementById('filter_overlay');
   const selectAll = document.getElementById('select-all');
   const deselectAll = document.getElementById('deselect-all');
   
-  
+  document.querySelector('.filter-by').addEventListener('click', function() {
+    filterOverlay.classList.toggle('show');
+  });
   
   selectAll.addEventListener('click', function(event){
     event.stopPropagation();  
@@ -162,18 +164,17 @@ document.addEventListener('DOMContentLoaded', function(){
       deptbox.checked = true;
     });
   });
+
   
   deselectAll.addEventListener('click', function(event) {
     event.stopPropagation();
     deptCheckbox.forEach(function(deptbox){
       deptbox.checked = false;
-      
     });
   });
   
   filterOverlay.addEventListener('click', function(e){
     e.stopPropagation();
-    
   });
   
   filterOverlay.querySelectorAll('*').forEach(function(child){
