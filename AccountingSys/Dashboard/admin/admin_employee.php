@@ -317,7 +317,7 @@ session_start();
                           </div>
                           <div class="upper-filter">
                             <div class="checkbox-container">
-                              <input type="checkbox" name="accstatus[]" id="active-choice" value="1" />
+                              <input type="checkbox" name="accstatus[]" id="active-choice" value="1" checked/>
                               <label for="active-choice">Activated</label>
                             </div>
                             <div class="checkbox-container">
@@ -343,7 +343,7 @@ session_start();
                               $dept_name = $dept['department_name'];
                               $input_id = "dept" . $count;
                               echo "<div class='checkbox-container-lower'>
-                                <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' />
+                                <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' checked/>
                                 <label for='$input_id'>$dept_name</label>
                               </div>";
                             $count ++;
@@ -395,12 +395,22 @@ session_start();
                   }
                   $finalAccStatus = implode(',', $checkedAccStatus);
                   //default checks pag walang values ang arrays, default active sa status and default all sa departments
+                  if(empty($finalAccStatus)){
+                    $finalAccStatus = "1";
+                  }
                   
-                  if(empty($_POST['search_employee'])){
+                  if(empty($getDept) && empty($searchname)){
+                    $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus)";
+                  }
+                  
+                  elseif (empty($getDept)) {
+                    $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus)";
+                  }
+                  
+                  elseif(empty($searchname)){
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus)";
                   }
                   
-                  $getEmployee = "SELECT * FROM employee_table WHERE last_name = 'Celfo'";
                   
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   if (mysqli_num_rows($employeeResult) == 0) {
