@@ -683,11 +683,13 @@ legend {
   padding: 0.25rem 0;
   height: auto;
   width: 20%;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 30px;
   border: solid #cccccc 1px;
   color: #666666;
   cursor: pointer;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
   transition: all 0.2s ease;
 
 }
@@ -695,6 +697,12 @@ legend {
 .filter-by:hover {
   border: solid #666666 1px;
   color: #333333;
+}
+
+.filter-by:focus,
+.filter-by:active {
+  background-color: inherit;
+  outline: none;
 }
 
 .filter-box {
@@ -845,9 +853,19 @@ legend {
 
 #select-all, #deselect-all {
   font-weight: normal;
-  text-decoration: underline;
   cursor: pointer;
   pointer-events: auto;
+  transition: all 0.2s ease;
+}
+
+#select-all.select {
+  color: #162E7B;
+  text-decoration: underline;
+}
+
+#deselect-all.select {
+  color: #162E7B;
+  text-decoration: underline;
 }
 
 .checkbox-container-lower {

@@ -160,6 +160,8 @@ document.addEventListener('DOMContentLoaded', function(){
   
   selectAll.addEventListener('click', function(event){
     event.stopPropagation();  
+    selectAll.classList.add('select');
+    deselectAll.classList.remove('select');
     deptCheckbox.forEach(function(deptbox){
       deptbox.checked = true;
     });
@@ -168,6 +170,8 @@ document.addEventListener('DOMContentLoaded', function(){
   
   deselectAll.addEventListener('click', function(event) {
     event.stopPropagation();
+    selectAll.classList.remove('select');
+    deselectAll.classList.add('select');
     deptCheckbox.forEach(function(deptbox){
       deptbox.checked = false;
     });
