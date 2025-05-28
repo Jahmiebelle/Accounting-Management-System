@@ -303,6 +303,7 @@ session_start();
               <form action="" method="POST" id="search_form">
                 <div class="filter-by">
                   <script>
+                    const filterOverlay = document.getElementById('filter-overlay');
                     let showfilter = false;
                     document.querySelector('.filter-by').addEventListener('click', function() {
                       if (showfilter) {
