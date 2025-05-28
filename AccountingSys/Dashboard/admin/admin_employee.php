@@ -302,6 +302,11 @@ session_start();
             <div class="upper-maincontent">
               <form action="" method="POST" id="search_form">
                 <div class="filter-by" onclick="showOption()">
+                  <script>
+  document.querySelector('.filter-by').addEventListener('click', function () {
+    alert('clicked');
+  });
+</script>
                   <div class="filter-box">
                     <div class="filter-icon">
                     </div>
