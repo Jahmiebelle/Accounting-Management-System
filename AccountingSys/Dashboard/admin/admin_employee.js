@@ -159,3 +159,6 @@ function deselectAllBox() {
   deptCheckbox.checked = false;
 }
 
+function showOption() {
+  document.getElementById().classList.toggle('show');
+}

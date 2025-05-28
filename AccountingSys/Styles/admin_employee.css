@@ -675,6 +675,7 @@ legend {
   width: 100%;
   align-items: center;
   text-align: center 1px;
+  border: solid red 1px;
 
 }
 
@@ -748,7 +749,14 @@ legend {
   border-radius: 5px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
   
+}
+
+.filter-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .filter-overlay-container {

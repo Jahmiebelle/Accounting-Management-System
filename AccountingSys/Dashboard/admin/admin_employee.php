@@ -309,7 +309,7 @@ session_start();
                   <div class="filter-arrow">
                     
                   </div>
-                  <div class="filter-overlay">
+                  <div class="filter-overlay" id="filter-overlay">
                     <form class="filter-overlay-container" action="" method="POST">
                       <div class="upper-option">
                         <div class="upper-filter-header">
