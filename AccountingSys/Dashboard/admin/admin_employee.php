@@ -317,11 +317,11 @@ session_start();
                           </div>
                           <div class="upper-filter">
                             <div class="checkbox-container">
-                              <input type="checkbox" name="active_choice" id="active-choice" value="activated" />
+                              <input type="checkbox" name="accstatus[]" id="active-choice" value="1" />
                               <label for="active-choice">Activated</label>
                             </div>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="deac_choice" id="deac-choice" value="deactivated" />
+                              <input type="checkbox" name="accstatus[]" id="deac-choice" value="0" />
                               <label for="deac-choice">Deactivated        </label>
                             </div>
                           </div>
@@ -380,7 +380,26 @@ session_start();
                 <?php
                   $searchname = strtolower(trim($_POST['search_employee']));
                   $parts = explode(' ', $searchname);
-                  $getEmployee = "SELECT * FROM employee_table WHERE is_active";
+                  
+                  $getDept = $_POST['departments'];
+                  $checkedDept = [];
+                  foreach ($getDept as $deptName) {
+                    $checkedDept[] = "'".$deptName."'";
+                  }
+                  $finalDeptNames = implode(',', $checkedDept);
+                  
+                  $getAccStatus = $_POST['accstatus'];
+                  $checkedAccStatus = [];
+                  foreach ($getAccStatus as $accstatus) {
+                    $checkedAccStatus[] = "'".$accstatus."'";
+                  }
+                  $finalAccStatus = implode(',', $checkedAccStatus);
+                  //default checks pag walang values ang arrays, default active sa status and default all sa departments
+                  
+                  if(empty($searchname)){
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus)";
+                  }
+                  
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   if (mysqli_num_rows($employeeResult) == 0) {
                     echo "<tr><td colspan='10'>No employees found.</td></tr>";

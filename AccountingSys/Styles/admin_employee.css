@@ -1044,7 +1044,7 @@ tr:nth-child(even) {
   color: #f4f6f8;
   
 }
-
+/*  default nato sa lahat  */
 .brand-name-footer, .brand-info-footer, .brand-copyright {
   display: flex;
   align-items: center;
