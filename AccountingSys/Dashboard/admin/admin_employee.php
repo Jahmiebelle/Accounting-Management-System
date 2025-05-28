@@ -414,6 +414,10 @@ session_start();
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus)";
                   }
                   
+                  else{
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus)";
+                  }
+                  
                   
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   if (mysqli_num_rows($employeeResult) == 0) {
