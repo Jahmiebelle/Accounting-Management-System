@@ -657,7 +657,6 @@ legend {
   align-items: center;
   box-sizing: border-box;
   margin-bottom: 100px;
-  border: solid darkblue 3px;
 }
 
 .upper-maincontent {
@@ -666,7 +665,6 @@ legend {
   height: 40px;
   align-items: center;
   text-align: center;
-  border: solid green 5px;
 }
 
 #search_form {
@@ -676,7 +674,6 @@ legend {
   width: 100%;
   align-items: center;
   text-align: center;
-  border: solid red 5px;
 
 }
 
@@ -705,7 +702,6 @@ legend {
   position: relative;
   height: auto;
   width: 100%;
-  border: solid red 1px;
   
 }
 
@@ -865,7 +861,6 @@ legend {
   flex: 1;
   align-items: center;
   justify-content: center;
-  border: solid black 1px;
 }
 
 .name-search {
@@ -934,8 +929,7 @@ legend {
   display: flex;
   height: auto;
   width: 100%;
-  flex: 1;
-  border: solid black 5px;
+  
 }
 
 .table {
