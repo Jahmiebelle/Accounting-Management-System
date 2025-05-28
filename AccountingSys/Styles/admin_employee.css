@@ -657,7 +657,7 @@ legend {
   align-items: center;
   box-sizing: border-box;
   margin-bottom: 100px;
-  /*border: solid darkblue 3px;*/
+  border: solid darkblue 3px;
 }
 
 .upper-maincontent {
@@ -666,6 +666,7 @@ legend {
   height: 40px;
   align-items: center;
   text-align: center;
+  border: solid green 5px;
 }
 
 #search_form {
@@ -674,8 +675,8 @@ legend {
   height: 100%;
   width: 100%;
   align-items: center;
-  text-align: center 1px;
-  border: solid red 1px;
+  text-align: center;
+  border: solid red 5px;
 
 }
 
@@ -684,7 +685,7 @@ legend {
   align-items: center;
   padding: 0.25rem 0;
   height: auto;
-  width: 20%;
+  width: 30%;
   border-radius: 30px;
   border: solid #cccccc 1px;
   color: #666666;
@@ -859,10 +860,18 @@ legend {
   box-sizing: border-box;
 }
 
+.searchbar {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border: solid black 1px;
+}
+
 .name-search {
   display: flex;
   position: relative;
-  height: auto;
+  height: 100%;
   align-items: center;
   gap: 10px;
   border: solid #cccccc 1px ;
@@ -925,6 +934,7 @@ legend {
   display: flex;
   height: auto;
   width: 100%;
+  border: solid black 5px;
 }
 
 .table {

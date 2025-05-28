@@ -152,10 +152,12 @@ edit_btn.addEventListener('click', function(){
 deptCheckbox = document.querySelectorAll('.dept-checkboxes');
 
 function selectAllBox() {
+  deptCheckbox.stopPropagation();
   deptCheckbox.checked = true;
 }
 
 function deselectAllBox() {
+  deptCheckbox.stopPropagation();
   deptCheckbox.checked = false;
 }
 

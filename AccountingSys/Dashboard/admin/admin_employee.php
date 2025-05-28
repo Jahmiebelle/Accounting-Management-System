@@ -355,15 +355,17 @@ session_start();
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="name-search">
-                  <div class="search-logo">
-                      
+                  <div class="searchbar">
+                    <div class="name-search">
+                      <div class="search-logo">
+                        
+                      </div>
+                      <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
+                    </div>
                   </div>
-                  <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
                 </div>
               </form>
-            </div>
+            </div>  
             <div class="lower-maincontent">
               <table class="table" border="0">
                 <tr class="row-head">
@@ -459,15 +461,13 @@ session_start();
                         </tr>";
                       }
                     }
-                  
                 ?>
                
               </table>
             </div>
-          </div>
+          </div>  
         </div>
       </div>
-      
     </div>
     
     <footer class="footer-container">
