@@ -10,7 +10,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
   <link rel="stylesheet" href="../../Styles/admin_employee.css">
-  <script src="admin_employee.js"></script>
+  
 </head>
 
 <body>
@@ -301,7 +301,7 @@ session_start();
           <div class="main-content">
             <div class="upper-maincontent">
               <form action="" method="POST" id="search_form">
-                <div class="filter-by">
+                <div class="filter-by" onclick="showOption()">
                   <div class="filter-box">
                     <div class="filter-icon">
                     </div>
@@ -486,7 +486,7 @@ and optimize payroll and performance tracking.
     </footer>
       
   </div>
-
+<script src="admin_employee.js"></script>
 </body>
 
 </html>

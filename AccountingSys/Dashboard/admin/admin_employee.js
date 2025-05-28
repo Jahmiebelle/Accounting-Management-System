@@ -154,9 +154,9 @@ document.addEventListener('DOMContentLoaded', function(){
   const selectAll = document.getElementById('select-all');
   const deselectAll = document.getElementById('deselect-all');
   
-  var showfilter = false;
-  document.querySelector('.filter-by').addEventListener('click', function() {
-    if(showfilter){
+  let showfilter = false;
+  document.querySelector('.filter-by').addEventListener('click', function(){
+    if (showfilter) {
       filterOverlay.classList.remove('show');
     }
     else {

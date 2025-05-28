@@ -745,7 +745,7 @@ legend {
   position: absolute;
   z-index: 10;
   flex-direction: column;
-  top: 125%;
+  top: 150%;
   left: 0;
   height: 250px;
   width: 200%;
