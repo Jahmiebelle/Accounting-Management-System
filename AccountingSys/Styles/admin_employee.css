@@ -515,7 +515,8 @@ legend {
   height: 95%;
   width: 85%;
   gap: 10px;
-  /*border: solid pink 3px;*/
+  overflow-y: auto;
+  border: solid pink 3px;
   
 }
 
@@ -653,6 +654,7 @@ legend {
   height: 500px;
   width: 100%;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 5px;
   align-items: center;
   box-sizing: border-box;
@@ -950,7 +952,7 @@ legend {
   padding: 0.1rem 0.5rem;
   color: #162E7B;
   border: solid #162E7B 1px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: rgba(0, 0, 0, 0);
   transition: all 0.15s ease;
 }
@@ -970,6 +972,8 @@ legend {
   display: flex;
   height: auto;
   width: 100%;
+  border: solid darkgreen 3px;
+  overflow-y: auto;
   
 }
 
