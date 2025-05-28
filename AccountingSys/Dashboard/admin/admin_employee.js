@@ -149,3 +149,13 @@ edit_btn.addEventListener('click', function(){
   edit = !edit;
 });
 
+deptCheckbox = document.querySelectorAll('.dept-checkboxes');
+
+function selectAllBox() {
+  deptCheckbox.checked = true;
+}
+
+function deselectAllBox() {
+  deptCheckbox.checked = false;
+}
+

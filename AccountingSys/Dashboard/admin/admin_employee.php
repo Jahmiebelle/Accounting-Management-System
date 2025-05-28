@@ -310,7 +310,7 @@ session_start();
                     
                   </div>
                   <div class="filter-overlay">
-                    <div class="filter-overlay-container">
+                    <form class="filter-overlay-container" action="" method="POST">
                       <div class="upper-option">
                         <div class="upper-filter-header">
                           Account Status
@@ -331,25 +331,28 @@ session_start();
                           Departments
                         </div>
                         <div class="select-all-or-not">
-                          <h5 id="select-all">Select All</h5>
-                          <h5 id="deselect-all">Deselect All</h5>
+                          <h5 id="select-all" onclick="selectAllBox()">Select All</h5>
+                          <h5 id="deselect-all" onclick="deselectAllBox()">Deselect All</h5>
                         </div>
                         <?php
-                          $getDept = "SELECT department_name FROM department_table";
-                          $dept_names = mysqli_query($conn, $getDept);
+                          $getDeptName = "SELECT department_name FROM department_table";
+                          $getDeptCount = "SELECT COUNT(department_id) FROM department_table";
+                          $dept_names = mysqli_query($conn, $getDeptName);
                           $count = 1;
                           while($dept = mysqli_fetch_assoc($dept_names)){
                             $dept_name = $dept['department_name'];
                             $input_id = "dept" . $count;
                             echo "<div class='checkbox-container-lower'>
-                              <input type='checkbox' name= 'departments[]'' id='$input_id' value='$dept_name' />
+                              <input type='checkbox' name= 'departments[]'' id='$input_id' class='dept-checkboxes' value='$dept_name' />
                               <label for='$input_id'>$dept_name</label>
                             </div>";
                           $count ++;
                           }
+                          $checkedDept = isset($_POST['departments']);
+                          
                         ?>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
                 <div class="name-search">
