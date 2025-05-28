@@ -365,6 +365,9 @@ session_start();
                     <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
                   </div>
                 </div>
+                <div class="search-btn-container">
+                  <button type="submit" class="search-btn" id="search-btn">Search</button>
+                </div>
               </form>
             </div>  
             <div class="lower-maincontent">

@@ -879,14 +879,17 @@ legend {
 
 .searchbar {
   display: flex;
+  width: 50%;
   align-items: center;
   justify-content: center;
+  border: solid red 1px;
 }
 
 .name-search {
   display: flex;
   position: relative;
   height: 100%;
+  width: 100%;
   align-items: center;
   gap: 10px;
   border: solid #cccccc 1px ;
@@ -932,16 +935,30 @@ legend {
   
 }
 
-.deacbox-container {
+.search-btn-container {
   display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-#deacbox-label {
-  font-size: 10px;
+.search-btn {
+  display: flex;
+  padding: 0.25rem 0.5rem;
+  color: #162E7B;
+  border: solid #162E7B 1px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.15s ease;
+}
+
+.search-btn:hover {
+  color: #f4f6f8;
+  background-color: #162E7B;
+  border: none;
+}
+
+.search-btn:active {
+  opacity: 0.75;
 }
 
 

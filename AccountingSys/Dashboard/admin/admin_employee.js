@@ -212,5 +212,11 @@ document.addEventListener('DOMContentLoaded', function(){
       deptbox.checked = false;
     });
   });
+  
+  document.getElementById('search_employee').addEventListener('keydown', function(e){
+    if(e.key === "Enter"){
+      e.preventDefault();
+    }
+  });
 
 });
