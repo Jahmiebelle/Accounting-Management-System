@@ -155,17 +155,22 @@ const selectAll = document.getElementById('select-all');
 const deselectAll = document.getElementById('deselect-all');
 
 filterOverlay.addEventListener('click', function(event){
-  event.stopPropagation
+  event.stopPropagation();
 });
 
 selectAll.addEventListener('click', function(event){
   event.stopPropagation();  
-  deptCheckbox.checked = true;
+  deptCheckbox.forEach(function(deptbox){
+    deptbox.checked = true;
+  });
 });
 
 deselectAll.addEventListener('click', function(event) {
   event.stopPropagation();
-  deptCheckbox.checked = false;
+  deptCheckbox.forEach(function(deptbox){
+    deptbox.checked = false;
+    
+  });
 });
 
 function showOption() {
