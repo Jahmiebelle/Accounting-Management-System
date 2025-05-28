@@ -10,10 +10,10 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
   <link rel="stylesheet" href="../../Styles/admin_employee.css">
+  <script src="admin_employee.js"></script>
 </head>
 
 <body>
-
   <div class="outer-container">
     <!-- Dito mga overlays, ol means overlay -->
     <div class="profile-ol" id="profile-ol">
@@ -488,5 +488,5 @@ and optimize payroll and performance tracking.
   </div>
 
 </body>
-<script src="admin_employee.js"></script>
+
 </html>

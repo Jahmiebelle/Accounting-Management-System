@@ -756,6 +756,7 @@ legend {
   box-sizing: border-box;
   opacity: 0;
   pointer-events: none;
+  transition: all 0.15s ease;
   
 }
 
