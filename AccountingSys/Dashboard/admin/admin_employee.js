@@ -155,6 +155,11 @@ const selectAll = document.getElementById('select-all');
 const deselectAll = document.getElementById('deselect-all');
 
 
+document.querySelector('.filter-by').addEventListener('click', function() {
+  filterOverlay.classList.toggle('show');
+  
+});
+
 selectAll.addEventListener('click', function(event){
   event.stopPropagation();  
   deptCheckbox.forEach(function(deptbox){
@@ -168,11 +173,6 @@ deselectAll.addEventListener('click', function(event) {
     deptbox.checked = false;
     
   });
-});
-
-document.querySelector('.filter-by').addEventListener('click', function(){
-  filterOverlay.classList.toggle('show');
-  
 });
 
 filterOverlay.addEventListener('click', function(e){
