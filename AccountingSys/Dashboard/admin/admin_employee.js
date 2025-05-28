@@ -154,6 +154,7 @@ const filterOverlay = document.getElementById('filter-overlay');
 const selectAll = document.getElementById('select-all');
 const deselectAll = document.getElementById('deselect-all');
 
+
 selectAll.addEventListener('click', function(event){
   event.stopPropagation();  
   deptCheckbox.forEach(function(deptbox){
@@ -169,6 +170,18 @@ deselectAll.addEventListener('click', function(event) {
   });
 });
 
-function showOption() {
-  document.getElementById('filter-overlay').classList.toggle('show');
-}
+document.querySelector('.filter-by').addEventListener('click', function(){
+  filterOverlay.classList.toggle('show');
+  
+});
+
+filterOverlay.addEventListener('click', function(e){
+  e.stopPropagation();
+  
+});
+
+filterOverlay.querySelectorAll('*').forEach(function(child){
+  child.addEventListener('click', function(e){
+    e.stopPropagation();
+  });
+});
