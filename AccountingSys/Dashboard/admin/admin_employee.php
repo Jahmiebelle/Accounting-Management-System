@@ -378,90 +378,50 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                    
-                    if ($deac_checked) {
-                      $getEmployee = "SELECT * FROM employee_table WHERE is_active = 0";
+                  $searchname = strtolower(trim($_POST['search_employee']));
+                  $parts = explode(' ', $searchname);
+                  $getEmployee = "SELECT * FROM employee_table WHERE is_active";
+                  $employeeResult = mysqli_query($conn, $getEmployee);
+                  if (mysqli_num_rows($employeeResult) == 0) {
+                    echo "<tr><td colspan='10'>No employees found.</td></tr>";
+                  }
+                  else {
+                    while($employeeData = mysqli_fetch_assoc($employeeResult)){
+                      $comp_id = $employeeData['company_id'];
+                      $emp_id = $employeeData['employee_id'];
+                      $first_name = $employeeData['first_name'];
+                      $last_name = $employeeData['last_name'];
+                      $gender = $employeeData['gender'];
+                      $birthdate = $employeeData['birthdate'];
+                      $join_date = $employeeData['join_date'];
+                      $department = $employeeData['department'];
+                      $position = $employeeData['position'];
+                      $emp_type = $employeeData['employment_type'];
+                      $status = $employeeData['status'];
+                      $bank = $employeeData['bank_number'];
+                      $sss = $employeeData['sss_number'];
+                      $philhealth = $employeeData['philhealth_number'];
+                      $pagibig = $employeeData['pagibig_number'];
+                      $email = $employeeData['email'];
+                      $contact = $employeeData['contact_number'];
+                      $is_active = $employeeData['is_active'];
+                      
+                      
+                      echo "<tr class='row'>
+                        <td>$emp_id</td>
+                        <td>$first_name</td>
+                        <td>$last_name</td>
+                        <td>$department</td>
+                        <td>$status</td>
+                        <td> 
+                          <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
+                            <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
+                              <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact'>Profile</button>
+                          </form>
+                        </td>
+                      </tr>";
                     }
-                    else {
-                      $searchname = strtolower(trim($_POST['search_employee']));
-                      $parts = explode(' ', $searchname);
-                      if (empty($searchname)){
-                        if ($selected_dept == 'all') {
-                          $getEmployee = "SELECT * FROM employee_table WHERE is_active";
-                        }
-                        else {
-                          $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND is_active";
-                        }
-                      }
-                      else {
-                        if ($selected_dept == 'all') {
-                          if (count($parts) >= 2){
-                            $full = implode(' ', $parts);
-                            $lname = array_pop($parts);
-                            $fname = implode(' ', $parts);
-                            $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname') AND is_active";
-                          }
-                          else {
-                            $name = implode(' ', $parts);
-                            $getEmployee = "SELECT * FROM employee_table WHERE first_name = LOWER('$name') OR last_name = LOWER('$name') AND is_active";
-                          }
-                          
-                        }
-                        else {
-                          if (count($parts) >= 2){
-                            $full = implode(' ', $parts);
-                            $lname = array_pop($parts);
-                            $fname = implode(' ', $parts);
-                            $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$full') OR first_name = LOWER('$fname') OR last_name = LOWER('$lname') AND is_active";
-                          }
-                          else {
-                            $name = implode(' ', $parts);
-                            $getEmployee = "SELECT * FROM employee_table WHERE department = '$selected_dept' AND first_name = LOWER('$name') OR last_name = LOWER('$name') AND is_active";
-                          }
-                        }
-                      }
-                    }
-                    $employeeResult = mysqli_query($conn, $getEmployee);
-                    if (mysqli_num_rows($employeeResult) == 0) {
-                      echo "<tr><td colspan='10'>No employees found.</td></tr>";
-                    }
-                    else {
-                      while($employeeData = mysqli_fetch_assoc($employeeResult)){
-                        $comp_id = $employeeData['company_id'];
-                        $emp_id = $employeeData['employee_id'];
-                        $first_name = $employeeData['first_name'];
-                        $last_name = $employeeData['last_name'];
-                        $gender = $employeeData['gender'];
-                        $birthdate = $employeeData['birthdate'];
-                        $join_date = $employeeData['join_date'];
-                        $department = $employeeData['department'];
-                        $position = $employeeData['position'];
-                        $emp_type = $employeeData['employment_type'];
-                        $status = $employeeData['status'];
-                        $bank = $employeeData['bank_number'];
-                        $sss = $employeeData['sss_number'];
-                        $philhealth = $employeeData['philhealth_number'];
-                        $pagibig = $employeeData['pagibig_number'];
-                        $email = $employeeData['email'];
-                        $contact = $employeeData['contact_number'];
-                        $is_active = $employeeData['is_active'];
-                        
-                        
-                        echo "<tr class='row'>
-                          <td>$emp_id</td>
-                          <td>$first_name</td>
-                          <td>$last_name</td>
-                          <td>$department</td>
-                          <td>$status</td>
-                          <td> 
-                            <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
-                              <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
-                                <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact'>Profile</button>
-                            </form>
-                          </td>
-                        </tr>";
-                      }
-                    }
+                  }
                 ?>
                
               </table>
