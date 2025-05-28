@@ -301,12 +301,19 @@ session_start();
           <div class="main-content">
             <div class="upper-maincontent">
               <form action="" method="POST" id="search_form">
-                <div class="filter-by" onclick="showOption()">
+                <div class="filter-by">
                   <script>
-  document.querySelector('.filter-by').addEventListener('click', function () {
-    alert('clicked');
-  });
-</script>
+                    let showfilter = false;
+                    document.querySelector('.filter-by').addEventListener('click', function() {
+                      if (showfilter) {
+                        filterOverlay.classList.remove('show');
+                      }
+                      else {
+                        filterOverlay.classList.add('show');
+                      }
+                      showfilter = !showfilter;
+                    });
+                  </script>
                   <div class="filter-box">
                     <div class="filter-icon">
                     </div>
@@ -491,7 +498,7 @@ and optimize payroll and performance tracking.
     </footer>
       
   </div>
-<script src="admin_employee.js"></script>
+<script src="admin_employee.js?v=1.2"></script>
 </body>
 
 </html>
