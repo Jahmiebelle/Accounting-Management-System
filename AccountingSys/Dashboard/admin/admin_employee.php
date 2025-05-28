@@ -331,8 +331,8 @@ session_start();
                             Departments
                           </div>
                           <div class="select-all-or-not">
-                            <h5 id="select-all" onclick="selectAllBox()">Select All</h5>
-                            <h5 id="deselect-all" onclick="deselectAllBox()">Deselect All</h5>
+                            <h5 id="select-all">Select All</h5>
+                            <h5 id="deselect-all">Deselect All</h5>
                           </div>
                           <?php
                             $getDeptName = "SELECT department_name FROM department_table";

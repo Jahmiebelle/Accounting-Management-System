@@ -682,7 +682,7 @@ legend {
   align-items: center;
   padding: 0.25rem 0;
   height: auto;
-  width: 30%;
+  width: 20%;
   border-radius: 30px;
   border: solid #cccccc 1px;
   color: #666666;
@@ -858,7 +858,6 @@ legend {
 
 .searchbar {
   display: flex;
-  flex: 1;
   align-items: center;
   justify-content: center;
 }

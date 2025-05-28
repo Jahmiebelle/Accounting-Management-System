@@ -149,17 +149,24 @@ edit_btn.addEventListener('click', function(){
   edit = !edit;
 });
 
-deptCheckbox = document.querySelectorAll('.dept-checkboxes');
+const deptCheckbox = document.querySelectorAll('.dept-checkboxes');
+const filterOverlay = document.getElementById('filter-overlay');
+const selectAll = document.getElementById('select-all');
+const deselectAll = document.getElementById('deselect-all');
 
-function selectAllBox() {
-  deptCheckbox.stopPropagation();
+filterOverlay.addEventListener('click', function(event){
+  event.stopPropagation
+});
+
+selectAll.addEventListener('click', function(event){
+  event.stopPropagation();  
   deptCheckbox.checked = true;
-}
+});
 
-function deselectAllBox() {
-  deptCheckbox.stopPropagation();
+deselectAll.addEventListener('click', function(event) {
+  event.stopPropagation();
   deptCheckbox.checked = false;
-}
+});
 
 function showOption() {
   document.getElementById('filter-overlay').classList.toggle('show');
