@@ -160,5 +160,5 @@ function deselectAllBox() {
 }
 
 function showOption() {
-  document.getElementById().classList.toggle('show');
+  document.getElementById('filter-overlay').classList.toggle('show');
 }

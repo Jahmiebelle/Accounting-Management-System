@@ -300,68 +300,72 @@ session_start();
           </div>
           <div class="main-content">
             <div class="upper-maincontent">
-              <form action="" method="POST" id="search_form">
+              <div id="search_form">
                 <div class="filter-by" onclick="showOption()">
-                  <div class="filter-icon">
+                  <div class="filter-box">
                     
-                  </div>
-                  <div class="filter-label">Filter by</div>
-                  <div class="filter-arrow">
-                    
-                  </div>
-                  <div class="filter-overlay" id="filter-overlay">
-                    <form class="filter-overlay-container" action="" method="POST">
-                      <div class="upper-option">
-                        <div class="upper-filter-header">
-                          Account Status
-                        </div>
-                        <div class="upper-filter">
-                          <div class="checkbox-container">
-                            <input type="checkbox" name="active_choice" id="active-choice" value="activated" />
-                            <label for="active-choice">Activated</label>
+              
+                    <div class="filter-icon">
+                      
+                    </div>
+                    <div class="filter-label">Filter by</div>
+                    <div class="filter-arrow">
+                      
+                    </div>
+                    <div class="filter-overlay" id="filter-overlay">
+                      <form class="filter-overlay-container" action="" method="POST">
+                        <div class="upper-option">
+                          <div class="upper-filter-header">
+                            Account Status
                           </div>
-                          <div class="checkbox-container">
-                            <input type="checkbox" name="deac_choice" id="deac-choice" value="deactivated" />
-                            <label for="deac-choice">Deactivated        </label>
+                          <div class="upper-filter">
+                            <div class="checkbox-container">
+                              <input type="checkbox" name="active_choice" id="active-choice" value="activated" />
+                              <label for="active-choice">Activated</label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input type="checkbox" name="deac_choice" id="deac-choice" value="deactivated" />
+                              <label for="deac-choice">Deactivated        </label>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="lower-option">
-                        <div class="lower-filter-header">
-                          Departments
+                        <div class="lower-option">
+                          <div class="lower-filter-header">
+                            Departments
+                          </div>
+                          <div class="select-all-or-not">
+                            <h5 id="select-all" onclick="selectAllBox()">Select All</h5>
+                            <h5 id="deselect-all" onclick="deselectAllBox()">Deselect All</h5>
+                          </div>
+                          <?php
+                            $getDeptName = "SELECT department_name FROM department_table";
+                            $getDeptCount = "SELECT COUNT(department_id) FROM department_table";
+                            $dept_names = mysqli_query($conn, $getDeptName);
+                            $count = 1;
+                            while($dept = mysqli_fetch_assoc($dept_names)){
+                              $dept_name = $dept['department_name'];
+                              $input_id = "dept" . $count;
+                              echo "<div class='checkbox-container-lower'>
+                                <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' />
+                                <label for='$input_id'>$dept_name</label>
+                              </div>";
+                            $count ++;
+                            }
+                            $checkedDept = isset($_POST['departments']);
+                            
+                          ?>
                         </div>
-                        <div class="select-all-or-not">
-                          <h5 id="select-all" onclick="selectAllBox()">Select All</h5>
-                          <h5 id="deselect-all" onclick="deselectAllBox()">Deselect All</h5>
-                        </div>
-                        <?php
-                          $getDeptName = "SELECT department_name FROM department_table";
-                          $getDeptCount = "SELECT COUNT(department_id) FROM department_table";
-                          $dept_names = mysqli_query($conn, $getDeptName);
-                          $count = 1;
-                          while($dept = mysqli_fetch_assoc($dept_names)){
-                            $dept_name = $dept['department_name'];
-                            $input_id = "dept" . $count;
-                            echo "<div class='checkbox-container-lower'>
-                              <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' />
-                              <label for='$input_id'>$dept_name</label>
-                            </div>";
-                          $count ++;
-                          }
-                          $checkedDept = isset($_POST['departments']);
-                          
-                        ?>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
+                  <form action="" method="POST" class="name-search">
+                    <div class="search-logo">
+                      
+                    </div>
+                    <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
+                  </form>
                 </div>
-                <div class="name-search">
-                  <div class="search-logo">
-                    
-                  </div>
-                  <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
-                </div>
-              </form>
+              </div>
             </div>
             <div class="lower-maincontent">
               <table class="table" border="0">

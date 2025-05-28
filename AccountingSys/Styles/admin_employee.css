@@ -681,7 +681,6 @@ legend {
 
 .filter-by {
   display: flex;
-  position: relative;
   align-items: center;
   padding: 0.25rem 0;
   height: auto;
@@ -700,6 +699,14 @@ legend {
   color: #333333;
 }
 
+.filter-box {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: solid red 1px;
+  
+}
 
 
 .filter-icon {
