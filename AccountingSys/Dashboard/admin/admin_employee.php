@@ -381,14 +381,14 @@ session_start();
                   $searchname = strtolower(trim($_POST['search_employee']));
                   $parts = explode(' ', $searchname);
                   
-                  $getDept = $_POST['departments'];
+                  $getDept = $_POST['departments'] ?? [];
                   $checkedDept = [];
                   foreach ($getDept as $deptName) {
                     $checkedDept[] = "'".$deptName."'";
                   }
                   $finalDeptNames = implode(',', $checkedDept);
                   
-                  $getAccStatus = $_POST['accstatus'];
+                  $getAccStatus = $_POST['accstatus'] ?? [];
                   $checkedAccStatus = [];
                   foreach ($getAccStatus as $accstatus) {
                     $checkedAccStatus[] = "'".$accstatus."'";
@@ -396,9 +396,11 @@ session_start();
                   $finalAccStatus = implode(',', $checkedAccStatus);
                   //default checks pag walang values ang arrays, default active sa status and default all sa departments
                   
-                  if(empty($searchname)){
+                  if(empty($_POST['search_employee'])){
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus)";
                   }
+                  
+                  $getEmployee = "SELECT * FROM employee_table WHERE last_name = 'Celfo";
                   
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   if (mysqli_num_rows($employeeResult) == 0) {
