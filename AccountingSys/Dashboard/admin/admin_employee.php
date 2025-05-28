@@ -300,20 +300,17 @@ session_start();
           </div>
           <div class="main-content">
             <div class="upper-maincontent">
-              <div id="search_form">
+              <form action="" method="POST" id="search_form">
                 <div class="filter-by" onclick="showOption()">
                   <div class="filter-box">
-                    
-              
                     <div class="filter-icon">
-                      
                     </div>
                     <div class="filter-label">Filter by</div>
                     <div class="filter-arrow">
                       
                     </div>
                     <div class="filter-overlay" id="filter-overlay">
-                      <form class="filter-overlay-container" action="" method="POST">
+                      <div class="filter-overlay-container">
                         <div class="upper-option">
                           <div class="upper-filter-header">
                             Account Status
@@ -355,17 +352,17 @@ session_start();
                             
                           ?>
                         </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
-                  <form action="" method="POST" class="name-search">
+                  <div class="name-search">
                     <div class="search-logo">
                       
                     </div>
                     <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
-                  </form>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
             <div class="lower-maincontent">
               <table class="table" border="0">
