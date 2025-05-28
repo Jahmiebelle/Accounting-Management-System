@@ -158,6 +158,13 @@ filterOverlay.addEventListener('click', function(event){
   event.stopPropagation();
 });
 
+filterOverlay.querySelectorAll('*').forEach(function(child){
+  child.addEventListener('click', function(e){
+    e.stopPropagation();
+    
+  });
+});
+
 selectAll.addEventListener('click', function(event){
   event.stopPropagation();  
   deptCheckbox.forEach(function(deptbox){
