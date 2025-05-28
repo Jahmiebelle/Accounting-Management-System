@@ -169,23 +169,20 @@ document.addEventListener('DOMContentLoaded', function(){
   selectAll.removeEventListener('click', stopProp);
   deselectAll.removeEventListener('click', stopProp);
   
-let showOption = false;
   filterBy.addEventListener('click', function(event) {
     event.stopPropagation();
       filterBy.classList.toggle('show');
       filterOverlay.classList.toggle('show');
-      showOption = !showOption;
   });
   
   
-  outerContainer.addEventListener('click', function(event){
-        if(showOption && !filterOverlay.contains(event.target) && !filterBy.contains(event.target)){
-          filterOverlay.classList.toggle('show');
-          filterBy.classList.toggle('show');
+//  outerContainer.addEventListener('click', function(event){
+//        if(!filterOverlay.contains(event.target) && !filterBy.contains(event.target)){
+     //     filterOverlay.classList.toggle('show');
+ //         filterBy.classList.toggle('show');
           
-        }
-        showOption = false;
-    });
+ //       }
+//    });
   
   selectAll.addEventListener('click', function(event){
     event.stopPropagation();
