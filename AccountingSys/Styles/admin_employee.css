@@ -934,6 +934,7 @@ legend {
   display: flex;
   height: auto;
   width: 100%;
+  flex: 1;
   border: solid black 5px;
 }
 
