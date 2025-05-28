@@ -486,7 +486,7 @@ and optimize payroll and performance tracking.
     </footer>
       
   </div>
-  <script src="admin_employee.js"></script>
-</body>
 
+</body>
+<script src="admin_employee.js"></script>
 </html>

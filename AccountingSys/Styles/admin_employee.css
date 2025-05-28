@@ -700,6 +700,7 @@ legend {
 .filter-box {
   display: flex;
   position: relative;
+  border-radius: 30px;
   height: auto;
   width: 100%;
   
