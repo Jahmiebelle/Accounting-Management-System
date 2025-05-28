@@ -72,8 +72,6 @@ document.addEventListener('DOMContentLoaded', function(){
       document.getElementById('emp-email').value = email;
       document.getElementById('emp-contact').value = contact;
       
-      
-    
     });
   });
   
@@ -156,10 +154,15 @@ document.addEventListener('DOMContentLoaded', function(){
   const selectAll = document.getElementById('select-all');
   const deselectAll = document.getElementById('deselect-all');
   
-  
+  var showfilter = false;
   document.querySelector('.filter-by').addEventListener('click', function() {
-    filterOverlay.classList.toggle('show');
-    
+    if(showfilter){
+      filterOverlay.classList.remove('show');
+    }
+    else {
+      filterOverlay.classList.add('show');
+    }
+    showfilter = !showfilter;
   });
   
   selectAll.addEventListener('click', function(event){
