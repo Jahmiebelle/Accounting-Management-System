@@ -169,19 +169,12 @@ document.addEventListener('DOMContentLoaded', function(){
   selectAll.removeEventListener('click', stopProp);
   deselectAll.removeEventListener('click', stopProp);
   
-  let showOption = false;
+
   filterBy.addEventListener('click', function(event) {
     event.stopPropagation();
-    if(showOption) {
-      filterBy.classList.remove('show');
-      filterOverlay.classList.remove('show');
-    }
-    else{
-      filterBy.classList.add('show');
-      filterOverlay.classList.add('show');
-      
-    }
-    showOption = !showOption;
+      filterBy.classList.toggle('show');
+      filterOverlay.classList.toggle('show');
+
   });
   
   
