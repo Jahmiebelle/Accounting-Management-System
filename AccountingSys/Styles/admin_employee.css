@@ -937,13 +937,17 @@ legend {
 
 .search-btn-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   box-sizing: border-box;
 }
 
 .search-btn {
   display: flex;
-  padding: 0.25rem 0.5rem;
+  text-align: center;
+  font-family: 'Poppins-light';
+  padding: 0.1rem 0.5rem;
   color: #162E7B;
   border: solid #162E7B 1px;
   border-radius: 10px;
