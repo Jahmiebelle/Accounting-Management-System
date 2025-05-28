@@ -355,13 +355,13 @@ session_start();
                       </div>
                     </div>
                   </div>
-                  <div class="searchbar">
-                    <div class="name-search">
-                      <div class="search-logo">
-                        
-                      </div>
-                      <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
+                </div>
+                <div class="searchbar">
+                  <div class="name-search">
+                    <div class="search-logo">
+                      
                     </div>
+                    <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
                   </div>
                 </div>
               </form>
