@@ -343,7 +343,7 @@ session_start();
                             $dept_name = $dept['department_name'];
                             $input_id = "dept" . $count;
                             echo "<div class='checkbox-container-lower'>
-                              <input type='checkbox' name= 'departments[]'' id='$input_id' class='dept-checkboxes' value='$dept_name' />
+                              <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' />
                               <label for='$input_id'>$dept_name</label>
                             </div>";
                           $count ++;
