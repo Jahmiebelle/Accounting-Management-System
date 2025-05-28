@@ -14,7 +14,7 @@ session_start();
 </head>
 
 <body>
-  <div class="outer-container">
+  <div class="outer-container" id="outer-container">
     <!-- Dito mga overlays, ol means overlay -->
     <div class="profile-ol" id="profile-ol">
       <div class="profile-ol-content" id="profile-ol-content">
@@ -331,8 +331,8 @@ session_start();
                             Departments
                           </div>
                           <div class="select-all-or-not">
-                            <h5 id="select-all">Select All</h5>
-                            <h5 id="deselect-all">Deselect All</h5>
+                            <h5 id="select-all" class="select-all">Select All</h5>
+                            <h5 id="deselect-all" class="deselect-all">Deselect All</h5>
                           </div>
                           <?php
                             $getDeptName = "SELECT department_name FROM department_table";

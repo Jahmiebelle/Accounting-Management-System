@@ -153,13 +153,49 @@ document.addEventListener('DOMContentLoaded', function(){
   const filterOverlay = document.getElementById('filter_overlay');
   const selectAll = document.getElementById('select-all');
   const deselectAll = document.getElementById('deselect-all');
+  const outerContainer = document.getElementById('outer-container');
+  const filterBy = document.querySelector('.filter-by');
   
-  document.querySelector('.filter-by').addEventListener('click', function() {
-    filterOverlay.classList.toggle('show');
+  const stopProp = function(event){
+    event.stopPropagation();
+  }
+  
+  filterOverlay.addEventListener('click', stopProp);
+  
+  filterOverlay.querySelectorAll('*').forEach(function(child){
+    child.addEventListener('click', stopProp);
   });
   
+  selectAll.removeEventListener('click', stopProp);
+  deselectAll.removeEventListener('click', stopProp);
+  
+  let showOption = false;
+  filterBy.addEventListener('click', function(event) {
+    event.stopPropagation();
+    if(showOption) {
+      filterBy.classList.remove('show');
+      filterOverlay.classList.remove('show');
+    }
+    else{
+      filterBy.classList.add('show');
+      filterOverlay.classList.add('show');
+      
+    }
+    showOption = !showOption;
+  });
+  
+  
+  outerContainer.addEventListener('click', function(event){
+        if(showOption && !filterOverlay.contains(event.target) && !filterBy.contains(event.target)){
+          filterOverlay.classList.remove('show');
+          filterBy.classList.remove('show');
+          
+        }
+        showOption = false;
+    });
+  
   selectAll.addEventListener('click', function(event){
-    event.stopPropagation();  
+    event.stopPropagation();
     selectAll.classList.add('select');
     deselectAll.classList.remove('select');
     deptCheckbox.forEach(function(deptbox){
@@ -176,16 +212,5 @@ document.addEventListener('DOMContentLoaded', function(){
       deptbox.checked = false;
     });
   });
-  
-  filterOverlay.addEventListener('click', function(e){
-    e.stopPropagation();
-  });
-  
-  filterOverlay.querySelectorAll('*').forEach(function(child){
-    child.addEventListener('click', function(e){
-      e.stopPropagation();
-    });
-  });
-  
-  
+
 });

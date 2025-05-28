@@ -694,15 +694,16 @@ legend {
 
 }
 
-.filter-by:hover {
-  border: solid #666666 1px;
-  color: #333333;
-}
 
 .filter-by:focus,
 .filter-by:active {
   background-color: inherit;
   outline: none;
+}
+
+.filter-by.show {
+  border: solid #666666 1px;
+  color: #333333;
 }
 
 .filter-box {
