@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
   
   let edit = true;
   
-  function saveEmpData(){
+  const saveEmpData = function(){
     let cid = document.getElementById('emp-cid').value;
     let id = document.getElementById('emp-id').value;
     let fn = document.getElementById('emp-fn').value;
@@ -124,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function(){
     xhr.send(data);
   
   }
+  
+  save_btn.addEventListener('click', saveEmpData);
   
   edit_btn.addEventListener('click', function(){
     save_btn.classList.toggle('enable');
@@ -169,20 +171,23 @@ document.addEventListener('DOMContentLoaded', function(){
   selectAll.removeEventListener('click', stopProp);
   deselectAll.removeEventListener('click', stopProp);
   
+  let showOption = false;
   filterBy.addEventListener('click', function(event) {
     event.stopPropagation();
       filterBy.classList.toggle('show');
       filterOverlay.classList.toggle('show');
+      showOption = !showOption;
   });
   
   
-//  outerContainer.addEventListener('click', function(event){
-//        if(!filterOverlay.contains(event.target) && !filterBy.contains(event.target)){
-     //     filterOverlay.classList.toggle('show');
- //         filterBy.classList.toggle('show');
+  outerContainer.addEventListener('click', function(event){
+        if(showOption && !filterOverlay.contains(event.target) && !filterBy.contains(event.target)){
+          filterOverlay.classList.toggle('show');
+          filterBy.classList.toggle('show');
           
- //       }
-//    });
+        }
+        showOption = false;
+    });
   
   selectAll.addEventListener('click', function(event){
     event.stopPropagation();
