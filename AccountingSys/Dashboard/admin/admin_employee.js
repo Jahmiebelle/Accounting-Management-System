@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
   
   let edit = true;
   
-  const saveEmpData = function(){
+  function saveEmpData(){
     let cid = document.getElementById('emp-cid').value;
     let id = document.getElementById('emp-id').value;
     let fn = document.getElementById('emp-fn').value;
@@ -125,7 +125,10 @@ document.addEventListener('DOMContentLoaded', function(){
   
   }
   
-  save_btn.addEventListener('click', saveEmpData);
+  save_btn.addEventListener('click', function(){
+    saveEmpData();
+    
+  });
   
   edit_btn.addEventListener('click', function(){
     save_btn.classList.toggle('enable');
