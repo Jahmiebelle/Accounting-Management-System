@@ -1030,7 +1030,8 @@ tr:nth-child(even) {
   align-items: center;
   height: auto;
   width: auto;
-  padding: 0.2rem 0.5rem;
+  text-wrap: not-allowed;
+  padding: 0.2rem 0.75rem;
   backdrop-filter: blur(5px);
   border-radius: 30px;
   background-color: rgba(51,105,30, 0.25);
