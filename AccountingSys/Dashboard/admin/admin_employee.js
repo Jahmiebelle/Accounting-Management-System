@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function(){
           input.removeAttribute('readonly');
         });
         dropdown_box.forEach(function(downBox){
-          downBox.classlist.add('editable');
+          downBox.classList.add('editable');
           downBox.removeAttribute('disabled');
         });
         edit_btn.innerText = "Cancel";
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function(){
           input.setAttribute('readonly', true);
         });
         dropdown_box.forEach(function(downBox){
-          downBox.classlist.remove('editable');
+          downBox.classList.remove('editable');
           downBox.setAttribute('disabled', true);
         });
         edit_btn.innerText = "Edit";
