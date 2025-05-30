@@ -445,7 +445,7 @@ session_start();
                       $is_active = $employeeData['is_active'];
                       
                       
-                      echo "<tr class='row'>
+                      echo "<tr class='row' id='emp-table-data'>
                         <td>$emp_id</td>
                         <td>$first_name</td>
                         <td>$last_name</td>
