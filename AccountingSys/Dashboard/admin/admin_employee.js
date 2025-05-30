@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('emp-dept').value = dept;
         document.getElementById('emp-position').value = position;
         document.getElementById('emp-type').value = emptype;
-        document.getElementById('emp-status').value = status;
+        document.getElementById(status + '-status').setAttribute('selected', true);
         document.getElementById('emp-bank').value = bank;
         document.getElementById('emp-sss').value = sss;
         document.getElementById('emp-philhealth').value = philhealth;
@@ -133,11 +133,16 @@ document.addEventListener('DOMContentLoaded', function(){
     edit_btn.addEventListener('click', function(){
       save_btn.classList.toggle('enable');
       const inputbox = document.querySelectorAll('.inputboxes');
+      const dropdown_box = document.querySelectorAll('.dropdown-boxes');
       
       if(edit){
         inputbox.forEach(function(input){
-        input.classList.add('editable');
-        input.removeAttribute('readonly');
+          input.classList.add('editable');
+          input.removeAttribute('readonly');
+        });
+        dropdown_box.forEach(function(downBox){
+          downbox.classlist.add('editable');
+          downbox.removeAttribute('disabled');
         });
         edit_btn.innerText = "Cancel";
         
@@ -145,8 +150,12 @@ document.addEventListener('DOMContentLoaded', function(){
       else {
         
         inputbox.forEach(function(input){
-        input.classList.remove('editable');
-        input.setAttribute('readonly', true);
+          input.classList.remove('editable');
+          input.setAttribute('readonly', true);
+        });
+        dropdown_box.forEach(function(downBox){
+          downbox.classlist.remove('editable');
+          downbox.setAttribute('disabled', true);
         });
         edit_btn.innerText = "Edit";
       

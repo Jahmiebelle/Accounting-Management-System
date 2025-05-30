@@ -124,7 +124,11 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Status</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-status" name="employee_status" value="" readonly>
+                  <select class="dropdown-boxes" id="emp-status" name="employee_status" value="" disabled>
+                    <option id="active-status" value="active">Active</option>
+                    <option id="inactive-status" value="inactive">Inactive</option>
+                    <option id="onleave-status" value="onleave">On Leave</option>
+                  </select>
                 </div>
               </div>
               <div class="modern-input-container">

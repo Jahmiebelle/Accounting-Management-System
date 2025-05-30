@@ -276,7 +276,7 @@ legend {
   margin: 0;
 }
 
-.inputboxes {
+.inputboxes, .dropdown-boxes {
   display: flex;
   margin-top: 0.7rem;
   padding-left: 0.5rem;
@@ -290,11 +290,11 @@ legend {
 
 }
 
-.inputboxes.editable {
+.inputboxes.editable, .dropdown-boxes.editable {
   color: #333333;
 }
 
-.inputboxes:focus {
+.inputboxes:focus, .dropdown-boxes:focus {
   border: solid rgba(0, 0, 0, 0) 1px;
   outline: none;
 }
