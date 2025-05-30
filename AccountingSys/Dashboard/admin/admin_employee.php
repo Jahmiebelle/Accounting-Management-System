@@ -315,13 +315,28 @@ session_start();
                           <div class="upper-filter-header">
                             Account Status
                           </div>
+                          <?php
+                            $getAccStatus = $_POST['accstatus'] ?? [];
+                            $checkedAccStatus = [];
+                            foreach ($getAccStatus as $accstatus) {
+                              $checkedAccStatus[] = "'".$accstatus."'";
+                            }
+                            $finalAccStatus = implode(',', $checkedAccStatus);
+                            
+                            $getDept = $_POST['departments'] ?? [];
+                            $checkedDept = [];
+                            foreach ($getDept as $deptName) {
+                              $checkedDept[] = "'".$deptName."'";
+                            }
+                            $finalDeptNames = implode(',', $checkedDept);
+                          ?>
                           <div class="upper-filter">
                             <div class="checkbox-container">
-                              <input type="checkbox" name="accstatus[]" id="active-choice" value="1" checked/>
+                              <input type="checkbox" name="accstatus[]" id="active-choice" value="1" <?php echo in_array("1", $getAccStatus) ? "checked" : ""?>/>
                               <label for="active-choice">Activated</label>
                             </div>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="accstatus[]" id="deac-choice" value="0" />
+                              <input type="checkbox" name="accstatus[]" id="deac-choice" value="0" <?php echo in_array("0", $getAccStatus) ? "checked" : ""?>/>/>
                               <label for="deac-choice">Deactivated        </label>
                             </div>
                           </div>
@@ -343,7 +358,7 @@ session_start();
                               $dept_name = $dept['department_name'];
                               $input_id = "dept" . $count;
                               echo "<div class='checkbox-container-lower'>
-                                <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' checked/>
+                                <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' in_array('$dept_name', $getDept) ? 'checked' : ''/>
                                 <label for='$input_id'>$dept_name</label>
                               </div>";
                             $count ++;
@@ -383,20 +398,15 @@ session_start();
                 <?php
                   $searchname = strtolower(trim($_POST['search_employee']));
                   $parts = explode(' ', $searchname);
-                  
-                  $getDept = $_POST['departments'] ?? [];
-                  $checkedDept = [];
-                  foreach ($getDept as $deptName) {
-                    $checkedDept[] = "'".$deptName."'";
+                  if(count($parts) >= 2){
+                    $last_name = array_pop($parts);
+                    $first_name = implode(' ', $parts);
                   }
-                  $finalDeptNames = implode(',', $checkedDept);
-                  
-                  $getAccStatus = $_POST['accstatus'] ?? [];
-                  $checkedAccStatus = [];
-                  foreach ($getAccStatus as $accstatus) {
-                    $checkedAccStatus[] = "'".$accstatus."'";
+                  else{
+                    $first_name = implode(' ', $parts);
+                    $last_name = implode(' ', $parts);
                   }
-                  $finalAccStatus = implode(',', $checkedAccStatus);
+                  
                   //default checks pag walang values ang arrays, default active sa status and default all sa departments
                   if(empty($finalAccStatus)){
                     $finalAccStatus = "1";
@@ -407,7 +417,7 @@ session_start();
                   }
                   
                   elseif (empty($getDept)) {
-                    $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus)";
+                    $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'))";
                   }
                   
                   elseif(empty($searchname)){
@@ -415,7 +425,7 @@ session_start();
                   }
                   
                   else{
-                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus)";
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'))";
                   }
                   
                   
