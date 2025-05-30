@@ -1034,17 +1034,20 @@ tr:nth-child(even) {
   padding: 0.2rem 0.75rem;
   backdrop-filter: blur(5px);
   border-radius: 30px;
-  background-color: rgba(51,105,30, 0.25);
+  border: solid #33691E 0.25px;
+  background-color: rgba(51,105,30, 0.1);
   color: #33691E;
 }
 
 .gray-status {
-  background-color: rgba(38,50,56,0.25);
+  border: solid #263238 0.25px;
+  background-color: rgba(38,50,56, 0.1);
   color: #263238;
 }
 
 .orange-status {
-  background-color: rgba(230,74,25,0.25);
+  border: solid #E64A19 0.25px;
+  background-color: rgba(230,74,25, 0.1);
   color: #E64A19;
 }
 
