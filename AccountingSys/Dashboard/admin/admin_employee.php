@@ -474,10 +474,13 @@ session_start();
         HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
       </div>
       <div class="brand-info-footer">
-        Heroes TeachTrack is more than just an employee management system; 
+        <?php
+          echo $searchname, $finalDeptNames, $finalAccStatus;
+        ?>
+        <!--Heroes TeachTrack is more than just an employee management system; 
 it's a commitment to excellence. We provide businesses with the tools 
 they need to simplify HR operations, enhance workforce efficiency, 
-and optimize payroll and performance tracking. 
+and optimize payroll and performance tracking. -->
       </div>
       <div class="brand-copyright">
         © 2025 Heroes TeachTrack. All Rights Reserved.
