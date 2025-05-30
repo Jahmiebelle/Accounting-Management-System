@@ -73,7 +73,10 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Gender</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-gender" name="employee_gender" value="" readonly>
+                  <select class="dropdown-boxes" id="emp-gender" name="employee_gender" value="" disabled>
+                    <option id="male-gender" value="male">Male</option>
+                    <option id="female-gender" value="female">Female</option>
+                  </select>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -100,7 +103,16 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Department</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-dept" name="employee_dept" value="" readonly>
+                  <select class="dropdown-boxes" id="emp-dept" name="employee_dept" value="" disabled>
+                    <?php
+                      $getDeptName = "SELECT department_name FROM department_table";
+                      $dept_names = mysqli_query($conn, $getDeptName);
+                      while($deptname = mysqli_fetch_assoc($dept_names)){
+                        $deptIdName = str_replace(' ', '', (strtolower($deptname)));
+                        echo "<option id='$deptIdName' value='$deptname'>$deptname</option>";      
+                      }
+                    ?>
+                  </select>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -362,9 +374,7 @@ session_start();
                             <h5 id="deselect-all" class="deselect-all">Deselect All</h5>
                           </div>
                           <?php
-                            $getDeptName = "SELECT department_name FROM department_table";
                             $getDeptCount = "SELECT COUNT(department_id) FROM department_table";
-                            $dept_names = mysqli_query($conn, $getDeptName);
                             $count = 1;
                             while($dept = mysqli_fetch_assoc($dept_names)){
                               $dept_name = $dept['department_name'];

@@ -59,10 +59,10 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('emp-id').value = id;
         document.getElementById('emp-fn').value = fn;
         document.getElementById('emp-ln').value = ln;
-        document.getElementById('emp-gender').value = gender;
+        document.getElementById(gender + '-gender').setAttribute('selected', true);
         document.getElementById('emp-birth').value = birthdate;
         document.getElementById('emp-join').value = joindate;
-        document.getElementById('emp-dept').value = dept;
+        document.getElementById(deptIdName).addAttribute('selected', true);
         document.getElementById(position + '-role').setAttribute('selected', true);
         document.getElementById(emptype + '-type').setAttribute('selected', true);
         document.getElementById(status + '-status').setAttribute('selected', true);
