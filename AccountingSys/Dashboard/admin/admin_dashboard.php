@@ -1,10 +1,6 @@
 <?php include '../../Login/db.php';
 session_start();
 
-$countDept = "SELECT COUNT(department_id) FROM department_table";
-$deptCount = mysqli_query($conn, $countDept);
-$countEmployee = "SELECT COUNT(employee_id) FROM employee_table";
-$employeeCount = mysqli_query($conn, $countEmployee);
 ?>
 
 <!DOCTYPE html>
@@ -133,6 +129,13 @@ $employeeCount = mysqli_query($conn, $countEmployee);
             
           </div>
           <div class="main-content">
+            <?php
+              $countDept = "SELECT COUNT(department_id) FROM department_table";
+              $deptCount = mysqli_query($conn, $countDept);
+              $countEmployee = "SELECT COUNT(employee_id) FROM employee_table";
+              $employeeCount = mysqli_query($conn, $countEmployee);
+            
+            ?>
             <div class="upper-summarycards">
               <div id="employee-card" class="uppercard">
                 <div id="employee-card-icon" class="uppercard-icon"></div>
@@ -141,7 +144,9 @@ $employeeCount = mysqli_query($conn, $countEmployee);
                     Total Employees
                   </div>
                   <div id="employee-card-count" class="uppercard-count">
-                    <?php echo $employeeCount;?>
+                    <?php 
+                      echo $employeeCount;
+                    ?>
                   </div>
                 </div>
               </div>
@@ -154,7 +159,9 @@ $employeeCount = mysqli_query($conn, $countEmployee);
                     Total Departments
                   </div>
                   <div id="department-card-count" class="uppercard-count">
-                    <?php echo $deptCount;?>
+                    <?php 
+                      echo $deptCount;
+                    ?>
                   </div>
                   
                 </div>
