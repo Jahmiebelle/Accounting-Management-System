@@ -336,8 +336,8 @@ session_start();
                               <label for="active-choice">Activated</label>
                             </div>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="accstatus[]" id="deac-choice" value="0" <?php echo in_array("0", $getAccStatus) ? "checked" : ""?>/>/>
-                              <label for="deac-choice">Deactivated        </label>
+                              <input type="checkbox" name="accstatus[]" id="deac-choice" value="0" <?php echo in_array("0", $getAccStatus) ? "checked" : ""?>/>
+                              <label for="deac-choice">Deactivated</label>
                             </div>
                           </div>
                         </div>
@@ -357,8 +357,9 @@ session_start();
                             while($dept = mysqli_fetch_assoc($dept_names)){
                               $dept_name = $dept['department_name'];
                               $input_id = "dept" . $count;
+                            $box_checked = in_array("$dept_name", $getDept) ? "checked" : "";
                               echo "<div class='checkbox-container-lower'>
-                                <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' in_array('$dept_name', $getDept) ? 'checked' : ''/>
+                                <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' $box_checked/>
                                 <label for='$input_id'>$dept_name</label>
                               </div>";
                             $count ++;
