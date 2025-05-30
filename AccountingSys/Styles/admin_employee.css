@@ -1023,6 +1023,28 @@ tr:nth-child(even) {
   background-color: #ffffff;
 }
 
+.green-status, .gray-status, .orange-status {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 0.2rem 0.5rem;
+  background-color: rgba(51,105,30, 0.4);
+  color: #33691E;
+}
+
+.gray-status {
+  background-color: rgba(230,74,25,0.4);
+  color: #E64A19;
+}
+
+.orange-status {
+  background-color: rgba(38,50,56,0.4);
+  color: #263238;
+}
+
 .profile-form {
   display: flex;
   vertical-align: center;

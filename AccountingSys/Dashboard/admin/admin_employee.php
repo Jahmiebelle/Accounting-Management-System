@@ -455,13 +455,22 @@ session_start();
                       $contact = $employeeData['contact_number'];
                       $is_active = $employeeData['is_active'];
                       
-                      
+                      if(strtolower($status) == "active"){
+                        $status_color = "green-status";
+                      }
+                      elseif (strtolower($status) == "inactive") {
+                        $status_color = "gray-status";
+                      }
+                      else {
+                        $status_color = "orange-status";
+                      }
+                    
                       echo "<tr class='row' id='emp-table-data'>
                         <td>$emp_id</td>
                         <td>$first_name</td>
                         <td>$last_name</td>
                         <td>$department</td>
-                        <td>$status</td>
+                        <td><div class='$status_color'>$status</div></td>
                         <td> 
                           <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                             <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
