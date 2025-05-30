@@ -107,7 +107,8 @@ session_start();
                     <?php
                       $getDeptName = "SELECT department_name FROM department_table";
                       $dept_names = mysqli_query($conn, $getDeptName);
-                      while($deptname = mysqli_fetch_assoc($dept_names)){
+                      while($deptnamerow = mysqli_fetch_assoc($dept_names)){
+                        $deptname = $deptnamerow['department_name'];
                         $deptIdName = str_replace(' ', '', (strtolower($deptname)));
                         echo "<option id='$deptIdName' value='$deptname'>$deptname</option>";      
                       }
