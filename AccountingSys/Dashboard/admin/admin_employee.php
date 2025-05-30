@@ -108,7 +108,11 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Position</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-position" name="employee_position" value="" readonly>
+                  <select class="dropdown-boxes" id="emp-position" name="employee_position" value="" disabled>
+                    <option id="professor-role" value="professor">Professor</option>
+                    <option id="instructor-role" value="instructor">Instructor</option>
+                    <option id="part_time_instructor-role" value="part_time_instructor">Part-Time Instructor</option>
+                  </select>
                 </div>
               </div>
               <div class="modern-input-container">
@@ -116,7 +120,11 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Employment Type</legend>
                   </fieldset>
-                  <input class="inputboxes" type="text" id="emp-type" name="employee_type" value="" readonly>
+                  <select class="dropdown-boxes" id="emp-type" name="employee_type" value="" disabled>
+                    <option id="regular-type" value="regular">Regular</option>
+                    <option id="contractual-type" value="contractual">Contractual</option>
+                    <option id="part-time-type" value="part-time">Part-Time</option>
+                  </select>
                 </div>
               </div>
               <div class="modern-input-container">

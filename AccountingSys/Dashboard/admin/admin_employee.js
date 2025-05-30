@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const contact = button.dataset.contact;
         document.getElementById('upf-upper-name').innerText = fn + " " + ln;
         document.getElementById('upf-upper-dept').innerText = dept;
+        const deptIdName = (dept.toLowerCase()).replace(/\s+/g, '');
         
         document.getElementById('emp-cid').value = cid;
         document.getElementById('emp-id').value = id;
@@ -62,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('emp-birth').value = birthdate;
         document.getElementById('emp-join').value = joindate;
         document.getElementById('emp-dept').value = dept;
-        document.getElementById('emp-position').value = position;
-        document.getElementById('emp-type').value = emptype;
+        document.getElementById(position + '-role').setAttribute('selected', true);
+        document.getElementById(emptype + '-type').setAttribute('selected', true);
         document.getElementById(status + '-status').setAttribute('selected', true);
         document.getElementById('emp-bank').value = bank;
         document.getElementById('emp-sss').value = sss;
