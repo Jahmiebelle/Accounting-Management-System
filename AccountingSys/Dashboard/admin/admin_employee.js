@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById(gender + '-gender').setAttribute('selected', true);
         document.getElementById('emp-birth').value = birthdate;
         document.getElementById('emp-join').value = joindate;
-        document.getElementById(deptIdName).addAttribute('selected', true);
+        document.getElementById(deptIdName).setAttribute('selected', true);
         document.getElementById(position + '-role').setAttribute('selected', true);
         document.getElementById(emptype + '-type').setAttribute('selected', true);
         document.getElementById(status + '-status').setAttribute('selected', true);
