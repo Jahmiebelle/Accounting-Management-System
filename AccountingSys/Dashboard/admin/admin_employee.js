@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function(){
           let confirmed = confirm("Are you sure you want to " + accstatus + " this account?");
           if(comfirmed){
             is_active = !is_active;
+            accstatus = is_active ? "Deactivate" : "Reactivate";
             document.getElementById('deac-btn').innerText = accstatus + " Account";
             document.getElementById('deac-btn').value = is_active ? "1" : "0";
           }
