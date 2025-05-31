@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const pagibig = button.dataset.pagibig;
         const email = button.dataset.email;
         const contact = button.dataset.contact;
-        const is_active = button.dataset.active;
+        let is_active = button.dataset.active;
         let accstatus = is_active === "1" ? "Deactivate" : "Reactivate";
         
         document.getElementById('deac-btn').addEventListener('click', function(){
