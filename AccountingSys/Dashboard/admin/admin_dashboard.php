@@ -131,9 +131,13 @@ session_start();
           <div class="main-content">
             <?php
               $countDept = "SELECT COUNT(department_id) FROM department_table";
-              $deptCount = mysqli_query($conn, $countDept);
+              $deptCountResult = mysqli_query($conn, $countDept);
+              $deptCountRow = mysqli_fetch_array($deptCountResult);
+              $deptCount = $deptCountRow[0];
               $countEmployee = "SELECT COUNT(employee_id) FROM employee_table";
-              $employeeCount = mysqli_query($conn, $countEmployee);
+              $employeeCountResult = mysqli_query($conn, $countEmployee);
+              $employeeCountRow = mysqli_fetch_array($employeeCountResult);
+              $employeeCount = $employeeCountRow[0];
             
             ?>
             <div class="upper-summarycards">
