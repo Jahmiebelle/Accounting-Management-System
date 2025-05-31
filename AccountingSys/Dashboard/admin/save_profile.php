@@ -22,8 +22,9 @@
   $pagibig = $_POST['pagibig'];
   $email = $_POST['email'];
   $contact = $_POST['contact'];
+  $is_active = $_POST['is_active'];
   
-  $updateData = "UPDATE employee_table SET employee_id = '$id', first_name = '$fn', last_name = '$ln', gender = '$gender', birthdate = '$birthdate', join_date = '$joindate', department = '$dept', position = '$position', employment_type = '$emptype', status = '$status', bank_number = '$bank', sss_number = '$sss', philhealth_number = '$philhealth', pagibig_number = '$pagibig', email = '$email', contact_number = '$contact' WHERE company_id = '$cid'";
+  $updateData = "UPDATE employee_table SET employee_id = '$id', first_name = '$fn', last_name = '$ln', gender = '$gender', birthdate = '$birthdate', join_date = '$joindate', department = '$dept', position = '$position', employment_type = '$emptype', status = '$status', bank_number = '$bank', sss_number = '$sss', philhealth_number = '$philhealth', pagibig_number = '$pagibig', email = '$email', contact_number = '$contact', is_active = '$is_active' WHERE company_id = '$cid'";
   
   if (mysqli_query($conn, $updateData)) {
   echo "Data Saved Successfully!";

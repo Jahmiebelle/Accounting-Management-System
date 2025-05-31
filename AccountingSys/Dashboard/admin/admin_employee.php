@@ -206,7 +206,7 @@ session_start();
             </div>
           </div>
           <div class="deac-btn-container">
-            <button type="button" name="deac-btn" id="deac-btn" class="deac-btn">Deactivate Account</button>
+            <button type="button" name="deac-btn" id="deac-btn" class="deac-btn" value="">Deactivate Account</button>
           </div>
         </form>
       </div>
@@ -497,7 +497,7 @@ session_start();
                         <td> 
                           <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                             <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
-                              <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact'>Profile</button>
+                              <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact' data-active='$is_active'>Profile</button>
                           </form>
                         </td>
                       </tr>";
