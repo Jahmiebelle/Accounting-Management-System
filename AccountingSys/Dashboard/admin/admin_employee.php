@@ -1,8 +1,5 @@
 <?php include '../../Login/db.php';
 session_start();
-
-$getDeptName = "SELECT department_name FROM department_table";
-$dept_names = mysqli_query($conn, $getDeptName);
 ?>
 
 <!DOCTYPE html>
@@ -108,7 +105,8 @@ $dept_names = mysqli_query($conn, $getDeptName);
                   </fieldset>
                   <select class="dropdown-boxes" id="emp-dept" name="employee_dept" value="" disabled>
                     <?php
-                      
+                      $getDeptName = "SELECT department_name FROM department_table";
+                      $dept_names = mysqli_query($conn, $getDeptName);
                       while($deptnamerow = mysqli_fetch_assoc($dept_names)){
                         $deptname = $deptnamerow['department_name'];
                         $deptIdName = str_replace(' ', '', (strtolower($deptname)));
@@ -377,6 +375,8 @@ $dept_names = mysqli_query($conn, $getDeptName);
                             <h5 id="deselect-all" class="deselect-all">Deselect All</h5>
                           </div>
                           <?php
+                            $getDeptName = "SELECT department_name FROM department_table";
+                            $dept_names = mysqli_query($conn, $getDeptName);
                             $getDeptCount = "SELECT COUNT(department_id) FROM department_table";
                             $count = 1;
                             while($dept = mysqli_fetch_assoc($dept_names)){

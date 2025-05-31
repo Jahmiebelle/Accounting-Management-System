@@ -51,8 +51,18 @@ document.addEventListener('DOMContentLoaded', function(){
         const pagibig = button.dataset.pagibig;
         const email = button.dataset.email;
         const contact = button.dataset.contact;
-        const is_active = button.dataset.active === "1";
-        let accstatus = is_active ? "Deactivate" : "Reactivate";
+        const is_active = button.dataset.active;
+        let accstatus = is_active === "1" ? "Deactivate" : "Reactivate";
+        
+        document.getElementById('deac-btn').addEventListener('click', function(){
+          let confirmed = confirm("Are you sure you want to " + accstatus + " this account?");
+          if(confirmed){
+            is_active = !is_active;
+            accstatus = is_active === "1" ? "Deactivate" : "Reactivate";
+            document.getElementById('deac-btn').innerText = accstatus + " Account";
+            document.getElementById('deac-btn').value = is_active ? "1" : "0";
+          }
+        });
       
         document.getElementById('upf-upper-name').innerText = fn + " " + ln;
         document.getElementById('upf-upper-dept').innerText = dept;
@@ -77,15 +87,7 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('emp-contact').value = contact;
         document.getElementById('deac-btn').value = is_active;
         document.getElementById('deac-btn').innerText = accstatus + " Account";
-        document.getElementById('deac-btn').addEventListener('click', function(){
-          let confirmed = confirm("Are you sure you want to " + accstatus + " this account?");
-          if(comfirmed){
-            is_active = !is_active;
-            accstatus = is_active ? "Deactivate" : "Reactivate";
-            document.getElementById('deac-btn').innerText = accstatus + " Account";
-            document.getElementById('deac-btn').value = is_active ? "1" : "0";
-          }
-        });
+        
       });
     });
     
@@ -142,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
     save_btn.addEventListener('click', function(){
       let confirmed = confirm("Do you want to save changes?");
-      if (confirm) {
+      if (confirmed) {
         saveEmpData();
       }
     });
