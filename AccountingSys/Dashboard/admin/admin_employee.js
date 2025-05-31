@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const pagibig = button.dataset.pagibig;
         const email = button.dataset.email;
         const contact = button.dataset.contact;
-        const is_active = button.dataset.active;
+        const is_active = button.dataset.active === "1";
         let accstatus = is_active ? "Deactivate" : "Reactivate";
       
         document.getElementById('upf-upper-name').innerText = fn + " " + ln;
