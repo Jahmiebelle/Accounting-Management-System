@@ -206,7 +206,7 @@ session_start();
             </div>
           </div>
           <div class="deac-btn-container">
-            <button type="button" name="deac-btn" id="deac-btn" class="deac-btn" value="">Deactivate Account</button>
+            <button type="button" name="deac-btn" id="deac-btn" class="deac-btn" value="">Account</button>
           </div>
         </form>
       </div>
