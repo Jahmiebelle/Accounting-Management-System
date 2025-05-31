@@ -57,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('deac-btn').addEventListener('click', function(){
           let confirmed = confirm("Are you sure you want to " + accstatus + " this account?");
           if(confirmed){
-            is_active = !is_active;
+            is_active = is_active === "1" ? "0" : "1";
             accstatus = is_active === "1" ? "Deactivate" : "Reactivate";
             document.getElementById('deac-btn').innerText = accstatus + " Account";
-            document.getElementById('deac-btn').value = is_active ? "1" : "0";
+            document.getElementById('deac-btn').value = is_active === "1" ? "1" : "0";
           }
         });
       
