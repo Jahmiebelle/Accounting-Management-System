@@ -16,6 +16,206 @@ session_start();
 <body>
   <div class="outer-container" id="outer-container">
     <!-- Dito mga overlays, ol means overlay -->
+    <div class="add-ol" id="add-ol">
+      <div class="add-ol-content" id="add-ol-content">
+        <form action="" method="POST" class="add-ol-form" id="add-ol-form">
+          <div class="upper-add-form">
+            ADD EMPLOYEE
+            <button class="save-add-btn" type="submit">Save Employee</button>
+          </div>
+          <div class="lower-add-form">
+            <label class="profile-labels" for="lpf-basic">Basic Details</label>
+            <div class="lpf-basic" id="lpf-basic">
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Employee Id</legend>
+                  </fieldset>
+                  <input class="addboxes" type="number" id="add-id" name="add_id" value="" placeholder="e.g. 12345" required>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Company Id</legend>
+                  </fieldset>
+                  <input class="addboxes" type="number" id="add-cid" name="add_cid" value="" placeholder="e.g. 2025000" required>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Password</legend>
+                  </fieldset>
+                  <input class="addboxes" type="password" id="add-password" name="add_password" value="" placeholder="Password" required>
+                  <div class="show-pass-icon" id="show-pass-icon">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>First Name</legend>
+                  </fieldset>
+                  <input class="addboxes" type="text" id="add-fn" name="add_fn" value="" placeholder="e.g. Juan" required>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Last Name</legend>
+                  </fieldset>
+                  <input class="addboxes" type="text" id="add-ln" name="add_ln" value="" placeholder="e.g. Delacruz" required>
+                </div>
+              </div>
+              
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Gender</legend>
+                  </fieldset>
+                  <select class="dropdown-addboxes" id="add-gender" name="add_gender" value="" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option id="add-male-gender" value="male">Male</option>
+                    <option id="add-female-gender" value="female">Female</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Birthdate</legend>
+                  </fieldset>
+                  <input class="addboxes" type="date" id="add-birth" name="add_birthdate" value="" placeholder="04/18/1999" required>
+                </div>
+              </div>
+            </div>
+            <label class="profile-labels" for="lpf-work">Work Details</label>
+            <div class="lpf-work" id="lpf-work">
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Join Date</legend>
+                  </fieldset>
+                  <input class="addboxes" type="date" id="add-join" name="add_joindate" value="" placeholder="04/18/1999" required>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Department</legend>
+                  </fieldset>
+                  <select class="dropdown-addboxes" id="add-dept" name="add_dept" value="" required>
+                    <option value="" disabled selected>Select Department</option>
+                    <?php
+                      $getDeptName = "SELECT department_name FROM department_table";
+                      $dept_names = mysqli_query($conn, $getDeptName);
+                      while($deptnamerow = mysqli_fetch_assoc($dept_names)){
+                        $deptname = $deptnamerow['department_name'];
+                        $deptIdName = str_replace(' ', '', (strtolower($deptname)));
+                        echo "<option id='$deptIdName' value='$deptname'>$deptname</option>";      
+                      }
+                    ?>
+                  </select>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Position</legend>
+                  </fieldset>
+                  <select class="dropdown-addboxes" id="add-position" name="add_position" value="" required>
+                    <option value="" disabled selected>Select Position</option>
+                    <option id="add-professor-role" value="professor">Professor</option>
+                    <option id="add-instructor-role" value="instructor">Instructor</option>
+                    <option id="add-part_time_instructor-role" value="part_time_instructor">Part-Time Instructor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Employment Type</legend>
+                  </fieldset>
+                  <select class="dropdown-addboxes" id="add-type" name="add_type" value="" required>
+                    <option value="" disabled selected>Select Type</option>
+                    <option id="add-regular-type" value="regular">Regular</option>
+                    <option id="add-contractual-type" value="contractual">Contractual</option>
+                    <option id="add-part-time-type" value="part-time">Part-Time</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Status</legend>
+                  </fieldset>
+                  <select class="dropdown-addboxes" id="add-status" name="add_status" value="" required>
+                    <option value="" disabled selected>Select Status</option>
+                    <option id="add-active-status" value="active">Active</option>
+                    <option id="add-inactive-status" value="inactive">Inactive</option>
+                    <option id="add-onleave-status" value="onleave">On Leave</optionl>
+                  </select>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Bank Number</legend>
+                  </fieldset>
+                  <input class="addboxes" type="text" id="add-bank" name="add_bank" value="" placeholder="e.g. 012345678901" required>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>SSS</legend>
+                  </fieldset>
+                  <input class="addboxes" type="text" id="add-sss" name="add_sss" value=""  placeholder="e.g. 34-1234567-8" required>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Philhealth</legend>
+                  </fieldset>
+                  <input class="addboxes" type="text" id="add-philhealth" name="add_philhealth" value="" placeholder="e.g. 12-345678901-2" required>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Pagibig</legend>
+                  </fieldset>
+                  <input class="addboxes" type="text" id="add-pagibig" name="add_pagibig" value="" placeholder="e.g. 1234-5678-9012" required>
+                </div>
+              </div>
+            </div>
+            <label class="profile-labels" for="lpf-contact">Contact Details</label>
+            <div class="lpf-contact" id="lpf-contact">
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Email</legend>
+                  </fieldset>
+                  <input class="addboxes" type="text" id="add-email" name="add_email" value="" placeholder="e.g. JuanDc@gmail.com" required>
+                </div>
+              </div>
+              <div class="modern-input-container">
+                <div class="modern-input">
+                  <fieldset class="fieldsets">
+                    <legend>Contact Number</legend>
+                  </fieldset>
+                  <input class="addboxes" type="number" id="add-contact" name="add_contact" value="" placeholder="e.g 09123456789" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    
     <div class="profile-ol" id="profile-ol">
       <div class="profile-ol-content" id="profile-ol-content">
         <form action="" method="POST" class="profile-form-ol" id="profile-form-ol">
@@ -407,7 +607,10 @@ session_start();
                   </div>
                 </div>
                 <div class="search-btn-container">
-                  <button type="submit" class="search-btn" id="search-btn">Search</button>
+                
+                </div>
+                <div class="add-emp-btn" id="add-emp-btn">
+                  
                 </div>
               </form>
             </div>  

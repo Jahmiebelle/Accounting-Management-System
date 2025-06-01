@@ -183,6 +183,31 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
   
+  
+  
+  const addEmpBtn = document.getElementById('add-emp-btn');
+  const addOl = document.getElementById('add-ol');
+  addEmpBtn.addEventListener('click', function(){
+    addOl.classList.add('show');
+    
+    addOl.addEventListener('click', function(e){
+      if(e.target === addOl){
+        addOl.classList.remove('show');
+      }
+    })
+  });
+  
+  
+  const showPassIcon = document.getElementById('show-pass-icon');
+  const passbox = document.getElementById('add-password');
+  showPassIcon.addEventListener('click', function(){
+    passbox.type = passbox.type === "password" ? "text" : "password";
+    showPassIcon.classList.toggle('show');
+  });
+  
+  
+  
+  
   const deptCheckbox = document.querySelectorAll('.dept-checkboxes');
   const filterOverlay = document.getElementById('filter_overlay');
   const selectAll = document.getElementById('select-all');

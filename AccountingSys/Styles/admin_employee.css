@@ -57,7 +57,7 @@ body {
 
 }
 
-.profile-ol {
+.profile-ol, .add-ol {
   display: flex;
   position: fixed;
   top: 0;
@@ -74,13 +74,14 @@ body {
   transition: all 0.2s ease;
 }
 
-.profile-ol.show {
+
+.profile-ol.show, .add-ol.show {
   opacity: 1;
   pointer-events: auto
 }
 
 
-.profile-ol-content {
+.profile-ol-content, .add-ol-content {
   display: flex;
   height: 80vh;
   width: 700px;
@@ -92,7 +93,7 @@ body {
   overflow-x: hidden;
 }
 
-.profile-form-ol {
+.profile-form-ol, .add-ol-form {
   display: flex;
   height: auto;
   width: 100%;
@@ -101,7 +102,7 @@ body {
   
 }
 
-.upper-profile-form {
+.upper-profile-form, .upper-add-form {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -207,7 +208,7 @@ body {
   background-color: darkblue;
 }
 
-.lower-profile-form {
+.lower-profile-form, .lower-add-form {
   display: flex;
   flex-direction: column;
   height: auto;
@@ -294,9 +295,41 @@ legend {
   color: #333333;
 }
 
-.inputboxes:focus, .dropdown-boxes:focus {
+.inputboxes:focus, .dropdown-boxes:focus, .addboxes:focus, .dropdown-addboxes:focus {
   border: solid rgba(0, 0, 0, 0) 1px;
   outline: none;
+}
+
+.addboxes, .dropdown-addboxes {
+  display: flex;
+  position: relative;
+  margin-top: 0.7rem;
+  padding-left: 0.5rem;
+  height: calc(100% - 1rem);
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 10;
+  border: none;
+  box-sizing: border-box;
+}
+
+.show-pass-icon {
+  display: flex;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  background-image: url('../Assets/hide.png');
+  background-size: cover;
+  background-position: center;
+  transition: all 0.2s ease;
+}
+
+.show-pass-icon.show {
+  background-image: url('../Assets/view.png');
 }
 
 .deac-btn-container {
@@ -966,6 +999,15 @@ legend {
 
 .search-btn:active {
   opacity: 0.75;
+}
+
+.add-emp-btn {
+  display: flex;
+  height: 25px;
+  width: 25px;
+  background-image: url('../Assets/add-user.png');
+  background-size: cover;
+  background-position: center;
 }
 
 
