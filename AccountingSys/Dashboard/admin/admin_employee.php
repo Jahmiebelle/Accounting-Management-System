@@ -607,7 +607,7 @@ session_start();
                   </div>
                 </div>
                 <div class="search-btn-container">
-                
+                  <button class="search-btn" type="submit">Search</button>
                 </div>
                 <div class="add-emp-btn" id="add-emp-btn">
                   
