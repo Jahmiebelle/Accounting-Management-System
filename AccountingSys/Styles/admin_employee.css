@@ -710,6 +710,7 @@ legend {
   width: 100%;
   align-items: center;
   text-align: center;
+  border: solid green 1px;
 
 }
 
@@ -977,6 +978,7 @@ legend {
   justify-content: center;
   height: 100%;
   width: 75px;
+  border: solid black 1px;
   box-sizing: border-box;
 }
 
@@ -1006,6 +1008,7 @@ legend {
   display: flex;
   height: 25px;
   width: 25px;
+  border: solid red 1px;
   background-image: url('../Assets/add-user.png');
   background-size: cover;
   background-position: center;
