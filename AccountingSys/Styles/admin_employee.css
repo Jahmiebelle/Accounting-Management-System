@@ -976,6 +976,7 @@ legend {
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 75px;
   box-sizing: border-box;
 }
 
