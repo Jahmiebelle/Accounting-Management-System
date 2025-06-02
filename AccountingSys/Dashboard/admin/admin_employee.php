@@ -624,7 +624,7 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                  $searchname = empty($_POST['search_employee']) ? "" : strtolower(trim($_POST['search_employee']));
+                  $searchname = strtolower(trim($_POST['search_employee'] ?? ""));
                   $parts = explode(' ', $searchname);
                   if(count($parts) >= 2){
                     $last_name = array_pop($parts);
@@ -639,7 +639,15 @@ session_start();
                   if(empty($finalAccStatus)){
                     $finalAccStatus = "'1'";
                   }
-                  
+                  if(empty($finalDeptNames)){
+                    $getAllDept = "SELECT department_name FROM department_table";
+                    $allDeptResult = mysqli_query($conn, $getAllDept);
+                    $allDeptNames = [];
+                    while($allDeptRow = mysqli_fetch_assoc($allDeptResult)){
+                      $allDeptNames = "'".$allDeptRow['department_name']."'";
+                      $finalDeptNames = implode(",", $allDeptNames);
+                    }
+                  }
                   
                   
                   if(empty($getDept) && empty($searchname)){
