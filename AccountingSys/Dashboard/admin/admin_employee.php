@@ -154,7 +154,7 @@ session_start();
                     <option value="" disabled selected>Select Status</option>
                     <option id="add-active-status" value="active">Active</option>
                     <option id="add-inactive-status" value="inactive">Inactive</option>
-                    <option id="add-onleave-status" value="onleave">On Leave</optionl>
+                    <option id="add-onleave-status" value="onleave">On Leave</option>
                   </select>
                 </div>
               </div>
