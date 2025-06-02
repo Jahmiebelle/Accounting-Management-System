@@ -109,10 +109,10 @@ session_start();
                   <select class="dropdown-addboxes" id="add-dept" name="add_dept" value="" required>
                     <option value="" disabled selected>Select Department</option>
                     <?php
-                      $getDeptName = "SELECT department_name FROM department_table";
-                      $dept_names = mysqli_query($conn, $getDeptName);
-                      while($deptnamerow = mysqli_fetch_assoc($dept_names)){
-                        $deptname = $deptnamerow['department_name'];
+                      $getAddDeptName = "SELECT department_name FROM department_table";
+                      $addDeptResult = mysqli_query($conn, $getAddDeptName);
+                      while($adddeptnamerow = mysqli_fetch_assoc($addDeptResult)){
+                        $deptname = $adddeptnamerow['department_name'];
                         echo "<option value='$deptname'>$deptname</option>";      
                       }
                     ?>
@@ -304,9 +304,9 @@ session_start();
                   </fieldset>
                   <select class="dropdown-boxes" id="emp-dept" name="employee_dept" value="" disabled>
                     <?php
-                      $getDeptName = "SELECT department_name FROM department_table";
-                      $dept_names = mysqli_query($conn, $getDeptName);
-                      while($deptnamerow = mysqli_fetch_assoc($dept_names)){
+                      $getEditDeptName = "SELECT department_name FROM department_table";
+                      $editDeptResult = mysqli_query($conn, $getEditDeptName);
+                      while($deptnamerow = mysqli_fetch_assoc($editDeptResult)){
                         $deptname = $deptnamerow['department_name'];
                         $deptIdName = str_replace(' ', '', (strtolower($deptname)));
                         echo "<option id='$deptIdName' value='$deptname'>$deptname</option>";      
@@ -558,8 +558,8 @@ session_start();
                               $getAllDeptQuery = "SELECT department_name FROM department_table";
                               $allDeptResult = mysqli_query($conn, $getAllDeptQuery);
                               $allDeptNames = [];
-                              while ($row = mysqli_fetch_assoc($allDeptResult)) {
-                                $allDeptNames[] = "'" . $row['department_name'] . "'";
+                              while ($allDeptRow = mysqli_fetch_assoc($allDeptResult)) {
+                                $allDeptNames[] = "'" . $allDeptRow['department_name'] . "'";
                               }
                               $finalDeptNames = implode(",", $allDeptNames);
                             }
