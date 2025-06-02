@@ -656,6 +656,7 @@ session_start();
                   $sqlError = ''; 
                   $noEmpFound = '';
                   $employeeResult = mysqli_query($conn, $getEmployee);
+                  mysqli_fetch_assoc($employeeResult);
                   
                   if (!$employeeResult) {
                     $sqlError = mysqli_error($conn);
