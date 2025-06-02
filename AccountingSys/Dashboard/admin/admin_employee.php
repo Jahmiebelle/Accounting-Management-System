@@ -647,14 +647,13 @@ session_start();
                   
                   
                   if(empty($searchname)){
-                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus); AND first_name LIKE %*";
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND first_name LIKE '%%';";
                   }
                   
                   else{
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'));";
                   }
                   
-                  $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'));";
                   
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   if (mysqli_num_rows($employeeResult) == 0) {
