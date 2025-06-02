@@ -658,10 +658,11 @@ session_start();
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   $empRowCount = mysqli_num_rows($employeeResult);
                   if (!$employeeResult) {
-                      $sqlError = "SQL ERROR: " . mysqli_error($conn);
+                      
                   } else {
                     $noEmpFound = "No employees";
                     if ($empRowCount > 0){
+                      $sqlError = "SQL ERROR: " . mysqli_error($conn);
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
                         $comp_id = $employeeData['company_id'];
                         $emp_id = $employeeData['employee_id'];
