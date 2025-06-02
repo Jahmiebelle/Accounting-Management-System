@@ -669,8 +669,8 @@ session_start();
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
                         $comp_id = $employeeData['company_id'];
                         $emp_id = $employeeData['employee_id'];
-                        $first_name = $employeeData['first_name'];
-                        $last_name = $employeeData['last_name'];
+                        $emp_first_name = $employeeData['first_name'];
+                        $emp_last_name = $employeeData['last_name'];
                         $gender = $employeeData['gender'];
                         $birthdate = $employeeData['birthdate'];
                         $join_date = $employeeData['join_date'];
@@ -698,14 +698,14 @@ session_start();
                       
                         echo "<tr class='row' id='emp-table-data'>
                           <td>$emp_id</td>
-                          <td>$first_name</td>
-                          <td>$last_name</td>
+                          <td>$emp_first_name</td>
+                          <td>$emp_last_name</td>
                           <td>$department</td>
                           <td><div class='$status_color'>$status</div></td>
                           <td> 
                             <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                               <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
-                                <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact' data-active='$is_active'>Profile</button>
+                                <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$emp_first_name' data-ln='$emp_last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact' data-active='$is_active'>Profile</button>
                             </form>
                           </td>
                         </tr>";
