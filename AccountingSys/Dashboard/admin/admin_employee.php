@@ -645,8 +645,9 @@ session_start();
                     $allDeptNames = [];
                     while($allDeptRow = mysqli_fetch_assoc($allDeptResult)){
                       $allDeptNames = "'".$allDeptRow['department_name']."'";
-                      $finalDeptNames = implode(",", $allDeptNames);
+                      
                     }
+                    $finalDeptNames = implode(",", $allDeptNames);
                   }
                   
                   
