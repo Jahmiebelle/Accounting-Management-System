@@ -663,6 +663,7 @@ session_start();
                     $empRowCount = mysqli_num_rows($employeeResult);
                     if ($empRowCount > 0){
                       $noEmpFound = "Employees Exists"; 
+                      mysqli_fetch_assoc($employeeResult);
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
                         $comp_id = $employeeData['company_id'];
                         $emp_id = $employeeData['employee_id'];
