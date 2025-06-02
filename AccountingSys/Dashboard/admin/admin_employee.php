@@ -637,7 +637,7 @@ session_start();
                   
                   //default checks pag walang values ang arrays, default active sa status and default all sa departments
                   if(empty($finalAccStatus)){
-                    $finalAccStatus = "1";
+                    $finalAccStatus = "'1'";
                   }
                   
                   if(empty($getDept) && empty($searchname)){
