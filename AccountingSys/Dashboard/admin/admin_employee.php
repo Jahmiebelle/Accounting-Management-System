@@ -593,7 +593,7 @@ session_start();
                               $input_id = "dept" . $count;
                             $box_checked = in_array("$dept_name", $getDept) ? "checked" : "";
                               echo "<div class='checkbox-container-lower'>
-                                <input type='checkbox' name= 'departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' $box_checked/>
+                                <input type='checkbox' name='departments[]' id='$input_id' class='dept-checkboxes' value='$dept_name' $box_checked/>
                                 <label for='$input_id'>$dept_name</label>
                               </div>";
                             $count ++;
@@ -647,13 +647,14 @@ session_start();
                   
                   
                   if(empty($searchname)){
-                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus);";
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus); AND first_name LIKE %*";
                   }
                   
                   else{
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'));";
                   }
                   
+                  $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'));";
                   
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   if (mysqli_num_rows($employeeResult) == 0) {
