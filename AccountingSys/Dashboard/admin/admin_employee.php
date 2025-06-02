@@ -624,7 +624,7 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                  $searchname = strtolower(trim($_POST['search_employee']));
+                  $searchname = empty($_POST['search_employee']) ? "" : strtolower(trim($_POST['search_employee']));
                   $parts = explode(' ', $searchname);
                   if(count($parts) >= 2){
                     $last_name = array_pop($parts);
