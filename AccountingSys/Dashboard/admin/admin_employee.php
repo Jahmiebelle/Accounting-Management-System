@@ -656,13 +656,13 @@ session_start();
                   $sqlError = ''; 
                   $noEmpFound = '';
                   $employeeResult = mysqli_query($conn, $getEmployee);
-                  $empRowCount = mysqli_num_rows($employeeResult);
+                  
                   if (!$employeeResult) {
-                      
+                    $sqlError = mysqli_error($conn);
                   } else {
-                    $noEmpFound = "No employees";
+                    $empRowCount = mysqli_num_rows($employeeResult);
                     if ($empRowCount > 0){
-                      $sqlError = "SQL ERROR: " . mysqli_error($conn);
+                      $noEmpFound = "Employees Exists"; 
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
                         $comp_id = $employeeData['company_id'];
                         $emp_id = $employeeData['employee_id'];
@@ -709,6 +709,7 @@ session_start();
                       }
                     }
                     else{
+                      $noEmpFound = "No employees";
                       echo "<tr><td colspan='10'>No employees found.</td></tr>";
                     }
                   }
