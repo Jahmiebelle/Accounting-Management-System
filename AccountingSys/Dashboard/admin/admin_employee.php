@@ -640,6 +640,8 @@ session_start();
                     $finalAccStatus = "'1'";
                   }
                   
+                  
+                  
                   if(empty($getDept) && empty($searchname)){
                     $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus)";
                   }
@@ -655,6 +657,8 @@ session_start();
                   else{
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'))";
                   }
+                  
+                  $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ('1','0')";
                   
                   
                   $employeeResult = mysqli_query($conn, $getEmployee);
