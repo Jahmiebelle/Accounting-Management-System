@@ -649,7 +649,7 @@ session_start();
                   
                   
                   if(empty($searchname)){
-                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus);";
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND '$first_name' LIKE '%%';";
                   }
                   
                   else{
