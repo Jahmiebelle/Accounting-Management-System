@@ -647,62 +647,68 @@ session_start();
                   
                   
                   if(empty($searchname)){
-                    $getEmployee = "SELECT * FROM employee_table WHERE (department IN ($finalDeptNames)) AND (is_active IN ($finalAccStatus)) AND (first_name LIKE '%%');";
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus);";
                   }
                   
                   else{
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'));";
                   }
                   
-                  
+                  $sqlError = '';  // initialize
+
                   $employeeResult = mysqli_query($conn, $getEmployee);
-                  if (mysqli_num_rows($employeeResult) == 0) {
-                    echo "<tr><td colspan='10'>No employees found.</td></tr>";
-                  }
-                  else {
-                    while($employeeData = mysqli_fetch_assoc($employeeResult)){
-                      $comp_id = $employeeData['company_id'];
-                      $emp_id = $employeeData['employee_id'];
-                      $first_name = $employeeData['first_name'];
-                      $last_name = $employeeData['last_name'];
-                      $gender = $employeeData['gender'];
-                      $birthdate = $employeeData['birthdate'];
-                      $join_date = $employeeData['join_date'];
-                      $department = $employeeData['department'];
-                      $position = $employeeData['position'];
-                      $emp_type = $employeeData['employment_type'];
-                      $status = $employeeData['status'];
-                      $bank = $employeeData['bank_number'];
-                      $sss = $employeeData['sss_number'];
-                      $philhealth = $employeeData['philhealth_number'];
-                      $pagibig = $employeeData['pagibig_number'];
-                      $email = $employeeData['email'];
-                      $contact = $employeeData['contact_number'];
-                      $is_active = $employeeData['is_active'];
-                      
-                      if(strtolower($status) == "active"){
-                        $status_color = "green-status";
-                      }
-                      elseif (strtolower($status) == "inactive") {
-                        $status_color = "gray-status";
-                      }
+                  
+                  if (!$employeeResult) {
+                      $sqlError = "SQL ERROR: " . mysqli_error($conn) . " | Query: " . $getEmployee;
+                  } else {
+                      if (mysqli_num_rows($employeeResult) == 0) {
+                          echo "<tr><td colspan='10'>No employees found.</td></tr>";
+                      } 
                       else {
-                        $status_color = "orange-status";
+                      while($employeeData = mysqli_fetch_assoc($employeeResult)){
+                        $comp_id = $employeeData['company_id'];
+                        $emp_id = $employeeData['employee_id'];
+                        $first_name = $employeeData['first_name'];
+                        $last_name = $employeeData['last_name'];
+                        $gender = $employeeData['gender'];
+                        $birthdate = $employeeData['birthdate'];
+                        $join_date = $employeeData['join_date'];
+                        $department = $employeeData['department'];
+                        $position = $employeeData['position'];
+                        $emp_type = $employeeData['employment_type'];
+                        $status = $employeeData['status'];
+                        $bank = $employeeData['bank_number'];
+                        $sss = $employeeData['sss_number'];
+                        $philhealth = $employeeData['philhealth_number'];
+                        $pagibig = $employeeData['pagibig_number'];
+                        $email = $employeeData['email'];
+                        $contact = $employeeData['contact_number'];
+                        $is_active = $employeeData['is_active'];
+                        
+                        if(strtolower($status) == "active"){
+                          $status_color = "green-status";
+                        }
+                        elseif (strtolower($status) == "inactive") {
+                          $status_color = "gray-status";
+                        }
+                        else {
+                          $status_color = "orange-status";
+                        }
+                      
+                        echo "<tr class='row' id='emp-table-data'>
+                          <td>$emp_id</td>
+                          <td>$first_name</td>
+                          <td>$last_name</td>
+                          <td>$department</td>
+                          <td><div class='$status_color'>$status</div></td>
+                          <td> 
+                            <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
+                              <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
+                                <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact' data-active='$is_active'>Profile</button>
+                            </form>
+                          </td>
+                        </tr>";
                       }
-                    
-                      echo "<tr class='row' id='emp-table-data'>
-                        <td>$emp_id</td>
-                        <td>$first_name</td>
-                        <td>$last_name</td>
-                        <td>$department</td>
-                        <td><div class='$status_color'>$status</div></td>
-                        <td> 
-                          <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
-                            <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
-                              <button class='profile-btn' id='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$first_name' data-ln='$last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact' data-active='$is_active'>Profile</button>
-                          </form>
-                        </td>
-                      </tr>";
                     }
                   }
                 ?>
@@ -720,7 +726,7 @@ session_start();
       </div>
       <div class="brand-info-footer">
         <?php
-          echo "for bugs lang! " . $searchname, $finalAccStatus . "\nQuery: " . $getEmployee;
+          echo "for bugs lang! " . $sqlError . "\nQuery: " . $getEmployee;
         ?>
         <!--Heroes TeachTrack is more than just an employee management system; 
 it's a commitment to excellence. We provide businesses with the tools 
