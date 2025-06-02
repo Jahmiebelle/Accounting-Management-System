@@ -663,6 +663,12 @@ session_start();
                     $empRowCount = mysqli_num_rows($employeeResult);
                     if ($empRowCount > 0){
                       $noEmpFound = "Employees Exists"; 
+                       $row = mysqli_fetch_assoc($employeeResult);
+                      if ($row) {
+                        echo "<tr><td colspan='10'>First employee: " . htmlspecialchars($row['first_name']) . "</td></tr>";
+                      } else {
+                        echo "<tr><td colspan='10'>No rows fetched from result</td></tr>";
+                      }
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
                         $comp_id = $employeeData['company_id'];
                         $emp_id = $employeeData['employee_id'];

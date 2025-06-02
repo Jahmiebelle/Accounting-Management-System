@@ -24,14 +24,19 @@
   $email = $_POST['add_email'];
   $contact = $_POST['add_contact'];
   
-  
-  $insertData = "INSERT INTO employee_table VALUES('$id', '$cid', '$password', '$fn', 'N/A', '$ln', '$email', '$status', '$dept', '$gender', '$contact', '$emptype', '$position', '$joindate', '$birthdate', '$bank', '$sss', '$philhealth', '$pagibig', '1')";
-  
-  if(mysqli_query($conn, $insertData)){
-    echo "Employee Created!";
+  $checkQuery = "SELECT * FROM employee_table WHERE company_id = '$cid' OR employee_id = '$id';";
+  $checkQueryResult = mysqli_query($conn, $checkQuery);
+  if(mysqli_num_rows($checkQueryResult) > 0){
+    echo "Company Id / Employee Id already Exist";
   }
   else {
-    echo "Cannot Create Employee";
+    $insertData = "INSERT INTO employee_table VALUES('$id', '$cid', '$password', '$fn', 'N/A', '$ln', '$email', '$status', '$dept', '$gender', '$contact', '$emptype', '$position', '$joindate', '$birthdate', '$bank', '$sss', '$philhealth', '$pagibig', '1')";
+    
+    if(mysqli_query($conn, $insertData)){
+      echo "Employee Created!";
+    }
+    else {
+      echo "Cannot Create Employee";
+    }
   }
-
   ?>
