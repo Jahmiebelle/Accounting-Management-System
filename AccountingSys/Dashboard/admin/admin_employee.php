@@ -634,7 +634,7 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <?php
-                  $searchname = strtolower(trim($_POST['search_employee'] ?? ""));
+                  $searchname = strtolower(trim($_POST['search_employee'] ?? ''));
                   $parts = explode(' ', $searchname);
                   if(count($parts) >= 2){
                     $last_name = array_pop($parts);
@@ -646,16 +646,16 @@ session_start();
                   }
                   
                   //default checks pag walang values ang arrays, default active sa status and default all sa departments
-                  if(empty($finalAccStatus)){
+                  if(empty($getAccStatus)){
                     $finalAccStatus = "'1'";
                   }
                   
                   
-                  if(empty($finalDeptNames) && empty($searchname)){
+                  if(empty($getDept) && empty($searchname)){
                     $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus)";
                   }
                   
-                  elseif (empty($finalDeptNames)) {
+                  elseif (empty($getDept)) {
                     $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'))";
                   }
                   
