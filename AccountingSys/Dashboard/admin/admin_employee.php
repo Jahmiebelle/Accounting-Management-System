@@ -727,7 +727,7 @@ session_start();
       </div>
       <div class="brand-info-footer">
         <?php
-          echo "for bugs lang! " . $sqlError, $noEmpFound. "\nQuery: " . $getEmployee;
+          echo "for bugs lang! " . $sqlError . $noEmpFound. "\nQuery: " . $getEmployee;
         ?>
         <!--Heroes TeachTrack is more than just an employee management system; 
 it's a commitment to excellence. We provide businesses with the tools 
