@@ -553,6 +553,16 @@ session_start();
                               $checkedDept[] = "'".$deptName."'";
                             }
                             $finalDeptNames = implode(',', $checkedDept);
+                            
+                            if (empty($checkedDept)) {
+                              $getAllDeptQuery = "SELECT department_name FROM department_table";
+                              $allDeptResult = mysqli_query($conn, $getAllDeptQuery);
+                              $allDeptNames = [];
+                              while ($row = mysqli_fetch_assoc($allDeptResult)) {
+                                $allDeptNames[] = "'" . $row['department_name'] . "'";
+                              }
+                              $finalDeptNames = implode(",", $allDeptNames);
+                            }
                           ?>
                           <div class="upper-filter">
                             <div class="checkbox-container">
