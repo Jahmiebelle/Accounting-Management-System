@@ -9,7 +9,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
-  <link rel="stylesheet" href="../../Styles/admin_leavereq.css">
+  <link rel="stylesheet" href="../../Styles/employee_dashboard.css">
 </head>
 
 <body>
@@ -49,20 +49,20 @@ session_start();
               Dashboard
             </div>
           </div>
-          <div class="sidetabs" id="employee-tab">
-            <div class="tab-icon" id="employee-tab-icon">
+          <div class="sidetabs" id="profile-tab">
+            <div class="tab-icon" id="profile-tab-icon">
   
             </div>
             <div class="tab-text">
-              Employee
+              Profile 
             </div>
           </div>
-          <div class="sidetabs" id="department-tab">
-            <div class="tab-icon" id="department-tab-icon">
+          <div class="sidetabs" id="attendance-tab">
+            <div class="tab-icon" id="attendance-tab-icon">
   
             </div>
             <div class="tab-text">
-              Department
+              Attendance
             </div>
           </div>
           <div class="sidetabs" id="leavereq-tab">
@@ -81,13 +81,7 @@ session_start();
               Payroll
             </div>
           </div>
-          <div class="sidetabs" id="attendance-tab">
-            <div class="tab-icon" id="attendance-tab-icon">
-  
-            </div>
-            <div class="tab-text">
-              Attendance
-            </div>
+
           </div>
         </div>
       </div>
@@ -99,7 +93,7 @@ session_start();
                 
               </div>
               <div class="section-text">
-                Leave Requests
+                Employee
               </div>
             </div>
 
@@ -111,11 +105,11 @@ session_start();
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
-                  echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
+                  echo $_SESSION['employee_first_name'] . " " . $_SESSION['employee_last_name'];
                 ?>
               </div>
               <div class="path">
-                Admin / Leave Requests
+                Employee
               </div>
             </div>
             <div class="right-greetings">
