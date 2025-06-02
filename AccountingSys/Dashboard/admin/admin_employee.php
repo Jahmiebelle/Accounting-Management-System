@@ -639,6 +639,9 @@ session_start();
                   if(empty($finalAccStatus)){
                     $finalAccStatus = "'1'";
                   }
+                  else{
+                    
+                  }
                   
                   if(empty($getDept) && empty($searchname)){
                     $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus)";
