@@ -658,8 +658,6 @@ session_start();
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'))";
                   }
                   
-                  $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ('1','0')";
-                  
                   
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   if (mysqli_num_rows($employeeResult) == 0) {
@@ -726,7 +724,7 @@ session_start();
       </div>
       <div class="brand-info-footer">
         <?php
-          echo $searchname, $finalDeptNames, $finalAccStatus . "\nQuery: " . $getEmployee;
+          echo "for bugs lang! " . $searchname, $finalDeptNames, $finalAccStatus . "\nQuery: " . $getEmployee;
         ?>
         <!--Heroes TeachTrack is more than just an employee management system; 
 it's a commitment to excellence. We provide businesses with the tools 
