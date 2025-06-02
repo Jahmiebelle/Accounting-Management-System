@@ -230,6 +230,9 @@ document.addEventListener('DOMContentLoaded', function(){
       
       xhr.send(formData);
     }
+    else{
+      alert("Fill up the missing information");
+    }
   });
   
   const deptCheckbox = document.querySelectorAll('.dept-checkboxes');
