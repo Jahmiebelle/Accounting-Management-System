@@ -215,7 +215,6 @@ document.addEventListener('DOMContentLoaded', function(){
       
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "checkAddEmp.php", true);
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onload = function () {
         if (xhr.status === 200) {
           alert(xhr.responseText);
