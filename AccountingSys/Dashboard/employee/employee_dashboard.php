@@ -1,123 +1,159 @@
+<?php include '../../Login/db.php';
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Employee's Dashboard</title>
-  <link rel="stylesheet" href="../../Styles/employee_dashboard.css?v=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="../../Styles/admin_leavereq.css">
 </head>
+
 <body>
-  <header>
-    <h2 class="brand-namin">Teach<span style="color: greenyellow">Track</span></h2>
-  </header>
+
   <div class="outer-container">
-    <div class="hamburger-menu" onclick="show_sidebar()">
-      <span></span>
-      <span></span>
-    </div>
-    <div class="overlay">
-        
-    </div>
-    <div class="sidebar">
-      
-      <div class="sidebar-inner-container">
-        <div class="sidebar-content" style="background-color: navajowhite">(icon dito)Home</div>
-        <div class="sidebar-content">(icon dito)Employee Calendar</div>
-        <div class="sidebar-content">(icon dito)Request Leave</div>
-        <div class="sidebar-content">"" Reports</div>
-        <div class="sidebar-content">"" Department</div>
-        <div class="sidebar-content">""Payroll</div>
-        <div class="sidebar-content">"" Settings</div>
-        <div class="sidebar-content">"" Help</div>    
-      </div>
-    </div>
-    <div class="home-content">
-      <div class="home-upper-content">
-        <div class="upper-user-box">
-          <h1 class="intro">Hello Perds!</h1>
-          <h4 class="intro">IT Department</h4>
-          <h6 class="intro">Junior Developer</h6>
-          <button class="attendance-btn" type="button"><a style="text-decoration: none; color: white" href="#attendance">Attendance<a/></button>
+    
+    <header class="header-container">
+      <div class="brand-container">
+        <div class="brand-icon">
+          
+          
         </div>
-        <div class="summarization-cards">
-          <div class="card">
-            <div class="card-icon">
-              🪪
-            </div>
-            <div class="card-info">
-              <p>Daily Report: Completed</p>
-            </div>
-             
-          </div>
-          <div class="card">
-            <div class="card-icon">
-              🗓️
-            </div>
-            <div class="card-info">
-              <p>Attendance Streak: 15</p>
+        <div class="brand-name">
+          HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
+          
+        </div>
+      </div>
+      <div class="role">
+        admin
+      </div>
+    </header>
+    
+    <div class="inner-container">
+      <div class="sidebar-container">
+        <div class="sidebar">
+          <div class="sidebar-header-container">  
+            <div class="sidebar-header-text">
+            
             </div>
             
           </div>
-          <div class="card">
-            <div class="card-icon">
-              📤
+          <div class="sidetabs" id="dashboard-tab">
+            <div class="tab-icon" id="dashboard-tab-icon">
+              
             </div>
-            <div class="card-info">
-              <p>Leave Requests: 3</p>
-            </div>
-            
-          </div>
-          <div class="card">
-            <div class="card-icon">
-              ✅
-            </div>
-            <div class="card-info">
-              <p>Approved Requests: 2</p>
+            <div class="tab-text">
+              Dashboard
             </div>
           </div>
-          <div class="card">
-            <div class="card-icon">
-              ❌
-            </div>
-            <div class="card-info">
-              <p>Denied Requests: 1</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-icon">
-            
+          <div class="sidetabs" id="employee-tab">
+            <div class="tab-icon" id="employee-tab-icon">
   
             </div>
-            <div class="card-info"></div>
+            <div class="tab-text">
+              Employee
+            </div>
+          </div>
+          <div class="sidetabs" id="department-tab">
+            <div class="tab-icon" id="department-tab-icon">
+  
+            </div>
+            <div class="tab-text">
+              Department
+            </div>
+          </div>
+          <div class="sidetabs" id="leavereq-tab">
+            <div class="tab-icon" id="leavereq-tab-icon">
+  
+            </div>
+            <div class="tab-text">
+              Leave Requests
+            </div>
+          </div>
+          <div class="sidetabs" id="payroll-tab">
+            <div class="tab-icon" id="payroll-tab-icon">
+  
+            </div>
+            <div class="tab-text">
+              Payroll
+            </div>
+          </div>
+          <div class="sidetabs" id="attendance-tab">
+            <div class="tab-icon" id="attendance-tab-icon">
+  
+            </div>
+            <div class="tab-text">
+              Attendance
+            </div>
           </div>
         </div>
       </div>
-      <section id="attendance">
-        <div class="home-lower-content">
-          <div class="left-content">
-            <div class="left-box">
-              TIME IN
+      <div class="content-container">
+        <div class="employee-content-container">
+          <div class="upper-content">
+            <div class="section-name">
+              <div class="section-icon">
+                
+              </div>
+              <div class="section-text">
+                Leave Requests
+              </div>
             </div>
-            <button type="button">Time In</button>
-          </div>
-          <div class="right-content">
-            <div class="right-box">
-              TIME OUT
+
+            <div class="logout-icon" id="logout-icon">
+              
             </div>
-            <button type="button">Time Out</button>
           </div>
-        </div>  
-      </section>
+          <div class="greetings-content">
+            <div class="left-greetings">
+              <div class="greetings">
+                Welcome, <?php
+                  echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
+                ?>
+              </div>
+              <div class="path">
+                Admin / Leave Requests
+              </div>
+            </div>
+            <div class="right-greetings">
+              <div class="datetime">
+                APRIL 28, 2025 10:00 A.M
+              </div>
+              <div class="emptybox">
+                
+              </div>
+            </div>
+            
+          </div>
+          <div class="main-content">
+
+
+          </div>
+        </div>
+      </div>
       
     </div>
     
+    <footer class="footer-container">
+      <div class="brand-name-footer">
+        HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
+      </div>
+      <div class="brand-info-footer">
+        Heroes TeachTrack is more than just an employee management system; 
+it's a commitment to excellence. We provide businesses with the tools 
+they need to simplify HR operations, enhance workforce efficiency, 
+and optimize payroll and performance tracking. 
+      </div>
+      <div class="brand-copyright">
+        © 2025 Heroes TeachTrack. All Rights Reserved.
+      </div>
+    </footer>
+      
   </div>
-  <script src="employee_dashboard.js"></script>
-  <footer>
-    footer
-  </footer>
+  <script src="admin_leavereq.js"></script>
 </body>
-
 
 </html>

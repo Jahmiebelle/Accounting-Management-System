@@ -1,9 +1,23 @@
-function show_sidebar(){
- document.querySelector('.sidebar').classList.toggle('expand'); 
- document.querySelector('.hamburger-menu').classList.toggle('move');
- document.querySelector('.overlay').classList.toggle('active');
- document.querySelectorAll('span').forEach(span => {
-   span.classList.toggle('change-color');
- });
- 
-}
+document.getElementById('logout-icon').addEventListener('click', function () {
+  window.location.href = "../../Login/logout.php";
+});
+
+document.getElementById('dashboard-tab').addEventListener('click', function () {
+  window.location.href = "admin_dashboard.php";
+});
+
+document.getElementById('employee-tab').addEventListener('click', function () {
+  window.location.href = "admin_employee.php";
+});
+
+document.getElementById('department-tab').addEventListener('click', function () {
+  window.location.href = "admin_department.php";
+});
+
+document.getElementById('payroll-tab').addEventListener('click', function () {
+  window.location.href = "admin_payroll.php";
+});
+
+document.getElementById('attendance-tab').addEventListener('click', function () {
+  window.location.href = "admin_attendance.php";
+});
