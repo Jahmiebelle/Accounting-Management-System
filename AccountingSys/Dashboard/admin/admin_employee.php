@@ -540,7 +540,7 @@ session_start();
                             Account Status
                           </div>
                           <?php
-                            $getAccStatus = $_POST['accstatus'] ?? [];
+                            $getAccStatus = $_POST['accstatus'] ?? ['1'];
                             $checkedAccStatus = [];
                             foreach ($getAccStatus as $accstatus) {
                               $checkedAccStatus[] = "'".$accstatus."'";
@@ -646,17 +646,14 @@ session_start();
                   }
                   
                   //default checks pag walang values ang arrays, default active sa status and default all sa departments
-                  if(empty($getAccStatus)){
-                    $finalAccStatus = "'1'";
-                  }
                   
                   
                   if(empty($searchname)){
-                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus)";
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus);";
                   }
                   
                   else{
-                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'))";
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'));";
                   }
                   
                   
