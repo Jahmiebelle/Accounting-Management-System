@@ -566,11 +566,11 @@ session_start();
                           ?>
                           <div class="upper-filter">
                             <div class="checkbox-container">
-                              <input type="checkbox" name="accstatus[]" id="active-choice" value="1" <?php echo in_array("1", $getAccStatus) ? "checked" : ""?>/>
+                              <input type="checkbox" name="accstatus[]" id="active-choice" value="1" <?php echo in_array("1", $getAccStatus) ? "checked" : ""?>>
                               <label for="active-choice">Activated</label>
                             </div>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="accstatus[]" id="deac-choice" value="0" <?php echo in_array("0", $getAccStatus) ? "checked" : ""?>/>
+                              <input type="checkbox" name="accstatus[]" id="deac-choice" value="0" <?php echo in_array("0", $getAccStatus) ? "checked" : ""?>>
                               <label for="deac-choice">Deactivated</label>
                             </div>
                           </div>
@@ -649,7 +649,7 @@ session_start();
                   
                   
                   if(empty($searchname)){
-                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND first_name LIKE '%%';";
+                    $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus);";
                   }
                   
                   else{
