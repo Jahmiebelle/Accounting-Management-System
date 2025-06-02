@@ -651,15 +651,7 @@ session_start();
                   }
                   
                   
-                  if(empty($getDept) && empty($searchname)){
-                    $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus)";
-                  }
-                  
-                  elseif (empty($getDept)) {
-                    $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'))";
-                  }
-                  
-                  elseif(empty($searchname)){
+                  if(empty($searchname)){
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus)";
                   }
                   
