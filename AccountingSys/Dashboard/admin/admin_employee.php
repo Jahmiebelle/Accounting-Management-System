@@ -649,7 +649,6 @@ session_start();
                   if(empty($searchname)){
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus);";
                   }
-                  
                   else{
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'));";
                   }
@@ -661,8 +660,9 @@ session_start();
                   if (!$employeeResult) {
                       $sqlError = "SQL ERROR: " . mysqli_error($conn);
                   } else {
-                      if (mysqli_num_rows($employeeResult) == 0) {
-                          $noEmpFound = "No employees";
+                      $noEmpFound = "No employees";
+                      if (mysqli_num_rows($employeeResult) === 0) {
+                          
                           echo "<tr><td colspan='10'>No employees found.</td></tr>";
                       } 
                       else {
