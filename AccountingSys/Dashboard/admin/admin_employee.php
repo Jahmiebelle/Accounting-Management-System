@@ -654,14 +654,15 @@ session_start();
                     $getEmployee = "SELECT * FROM employee_table WHERE department IN ($finalDeptNames) AND is_active IN ($finalAccStatus) AND ((LOWER(first_name) = '$first_name' OR LOWER(last_name) = '$first_name') OR (LOWER(first_name) = '$last_name' OR LOWER(last_name) = '$last_name'));";
                   }
                   
-                  $sqlError = '';  // initialize
-
+                  $sqlError = ''; 
+                  $noEmpFound = '';
                   $employeeResult = mysqli_query($conn, $getEmployee);
                   
                   if (!$employeeResult) {
-                      $sqlError = "SQL ERROR: " . mysqli_error($conn) . " | Query: " . $getEmployee;
+                      $sqlError = "SQL ERROR: " . mysqli_error($conn);
                   } else {
                       if (mysqli_num_rows($employeeResult) == 0) {
+                          $noEmpFound = "No employees";
                           echo "<tr><td colspan='10'>No employees found.</td></tr>";
                       } 
                       else {
@@ -726,7 +727,7 @@ session_start();
       </div>
       <div class="brand-info-footer">
         <?php
-          echo "for bugs lang! " . $sqlError . "\nQuery: " . $getEmployee;
+          echo "for bugs lang! " . $sqlError, $noEmpFound. "\nQuery: " . $getEmployee;
         ?>
         <!--Heroes TeachTrack is more than just an employee management system; 
 it's a commitment to excellence. We provide businesses with the tools 
