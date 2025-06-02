@@ -25,7 +25,7 @@
   $contact = $_POST['add_contact'];
   
   
-  $insertData = "INSERT INTO employee_table VALUES($id, $cid, '$password', $fn', 'N/A', '$ln', '$email', '$status', '$dept', $gender', '$contact', '$emptype', '$position', '$joindate', '$birthdate', '$bank', '$sss', '$philhealth', '$pagibig', '1')";
+  $insertData = "INSERT INTO employee_table VALUES('$id', '$cid', '$password', '$fn', 'N/A', '$ln', '$email', '$status', '$dept', '$gender', '$contact', '$emptype', '$position', '$joindate', '$birthdate', '$bank', '$sss', '$philhealth', '$pagibig', '1')";
   
   if(mysqli_query($conn, $insertData)){
     echo "Employee Created!";
