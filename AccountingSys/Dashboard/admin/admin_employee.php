@@ -662,11 +662,12 @@ session_start();
                   } else {
                       $noEmpFound = "No employees";
                       if (mysqli_num_rows($employeeResult) === 0) {
-                          
                           echo "<tr><td colspan='10'>No employees found.</td></tr>";
                       } 
-                      else {
+                      else{
+                      echo "entering While loop";
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
+                        echo "got the first name ".$employeeData['first_name']."!";
                         $comp_id = $employeeData['company_id'];
                         $emp_id = $employeeData['employee_id'];
                         $emp_first_name = $employeeData['first_name'];
