@@ -218,13 +218,13 @@ document.addEventListener('DOMContentLoaded', function(){
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onload = function () {
         if (xhr.status === 200) {
-          alert(xhr.status);
+          alert(xhr.responseText);
           setTimeout(function(){
             location.reload();
           }, 100);
         }
         else {
-          alert(xhr.status);
+          alert(xhr.responseText);
         }
       }
       
