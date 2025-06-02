@@ -639,17 +639,6 @@ session_start();
                   if(empty($finalAccStatus)){
                     $finalAccStatus = "'1'";
                   }
-                  if(empty($finalDeptNames)){
-                    $getAllDept = "SELECT department_name FROM department_table";
-                    $allDeptResult = mysqli_query($conn, $getAllDept);
-                    $allDeptNames = [];
-                    while($allDeptRow = mysqli_fetch_assoc($allDeptResult)){
-                      $allDeptNames = "'".$allDeptRow['department_name']."'";
-                      
-                    }
-                    $finalDeptNames = implode(",", $allDeptNames);
-                  }
-                  
                   
                   if(empty($getDept) && empty($searchname)){
                     $getEmployee = "SELECT * FROM employee_table WHERE is_active IN ($finalAccStatus)";
