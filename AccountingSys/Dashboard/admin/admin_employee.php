@@ -656,18 +656,16 @@ session_start();
                   $sqlError = ''; 
                   $noEmpFound = '';
                   $employeeResult = mysqli_query($conn, $getEmployee);
-                  
+                  $empRowCount = mysqli_num_rows($employeeResult);
                   if (!$employeeResult) {
                       $sqlError = "SQL ERROR: " . mysqli_error($conn);
                   } else {
                       $noEmpFound = "No employees";
-                      if (mysqli_num_rows($employeeResult) === 0) {
+                      if ($empRowCount === 0) {
                           echo "<tr><td colspan='10'>No employees found.</td></tr>";
                       } 
-                      else{
-                      echo "entering While loop";
+                      elseif ($empRowCount > 0){
                       while($employeeData = mysqli_fetch_assoc($employeeResult)){
-                        echo "got the first name ".$employeeData['first_name']."!";
                         $comp_id = $employeeData['company_id'];
                         $emp_id = $employeeData['employee_id'];
                         $emp_first_name = $employeeData['first_name'];
