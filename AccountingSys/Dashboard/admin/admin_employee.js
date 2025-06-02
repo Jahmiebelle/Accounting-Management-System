@@ -206,7 +206,31 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   
   
+  const saveAddBtn = document.getElementById('save-add-btn');
   
+  saveAddBtn.addEventListener('click', function(){
+    const form = document.getElementById('add-ol-form');
+    if(form.checkValidity()){
+      const formData = new FormData(form);
+      
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "checkAddEmp.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          alert(xhr.status);
+          setTimeout(function(){
+            location.reload();
+          }, 100);
+        }
+        else {
+          alert(xhr.status);
+        }
+      }
+      
+      xhr.send(formData);
+    }
+  });
   
   const deptCheckbox = document.querySelectorAll('.dept-checkboxes');
   const filterOverlay = document.getElementById('filter_overlay');

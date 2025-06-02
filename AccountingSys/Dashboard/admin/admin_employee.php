@@ -21,7 +21,7 @@ session_start();
         <form action="" method="POST" class="add-ol-form" id="add-ol-form">
           <div class="upper-add-form">
             ADD EMPLOYEE
-            <button class="save-add-btn" type="submit">Save Employee</button>
+            <button class="save-add-btn" id="save-add-btn" type="button">Save Employee</button>
           </div>
           <div class="lower-add-form">
             <label class="profile-labels" for="lpf-basic">Basic Details</label>
