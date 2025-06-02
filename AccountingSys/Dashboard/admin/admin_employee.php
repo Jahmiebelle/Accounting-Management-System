@@ -598,8 +598,6 @@ session_start();
                               </div>";
                             $count ++;
                             }
-                            $checkedDept = isset($_POST['departments']);
-                            
                             
                           ?>
                         </div>
