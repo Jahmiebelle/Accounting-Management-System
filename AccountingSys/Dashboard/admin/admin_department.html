@@ -140,17 +140,25 @@ session_start();
                   <th>Department ID</th>
                   <th>Department Name</th>
                   <th>Dept. Code</th>
+                  <th>Action</th>
                 </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Information Technology</td>
-                  <td>IT</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Computer Science</td>
-                  <td>CS</td>
-                </tr>                
+                <?php
+                $getDeptQuery = "SELECT * FROM department_table;";
+                $deptNameResult = mysqli_query($getDeptQuery);
+                while($deptRow = mysqli_fetch_assoc($deptNameResult)){
+                  $dept_id = $deptRow['department_id'];
+                  $dept_name = $deptRow['department_name'];
+                  $dept_abbr = $deptRow['acronym'];
+                  echo "<tr>
+                    <td>$dept_id</td>
+                    <td>$dept_name</td>
+                    <td>$dept_abbr</td>
+                    <td><div data-id='dept_id' class='delete-dept'>
+                      
+                    </div></td>
+                  </tr>"
+                }
+                ?>
               </table>
               
             </div>

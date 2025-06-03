@@ -21,3 +21,11 @@ document.getElementById('payroll-tab').addEventListener('click', function () {
 document.getElementById('attendance-tab').addEventListener('click', function () {
   window.location.href = "admin_attendance.php";
 });
+
+
+const deleteBtn = document.querySelectorAll('delete-dept');
+deleteBtn.forEach(function(delBtn){
+  delBtn.addEventListener('click', function(){
+    
+  });
+});

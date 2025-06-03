@@ -445,6 +445,7 @@ td {
   padding: 8px 16px;
   text-justify: center;
   text-align: center;
+  justify-content: center;
   align-content: center;
   align-items: center;
   font-family: 'Poppins-light';
@@ -456,6 +457,16 @@ tr:nth-child(even) {
   background-color: #ffffff;
 }
 
+.delete-dept {
+  display: flex;
+  margin: 0;
+  height: 20px;
+  width: 20px;
+  background-image: url('../Assets/delete.png');
+  background-size: cover;
+  background-position: center;
+  border: solid black 1px;
+}
 
 .footer-container {
   display: flex;
