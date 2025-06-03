@@ -51,5 +51,42 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   });
+  const addDeptForm = document.getElementById('add-ol-form');
+  const saveDeptBtn = document.getElementById('save-add-btn');
+  const addDeptBtn = document.getElementById('add-dept-btn');
+  const addOl = document.getElementById('add-ol');
+  
+  addDeptBtn.addEventListener('click', function(){
+    addOl.classList.add('show');
+    addOl.addEventListener('click', function(event){
+      if(event.target === addOl){
+        addOl.classList.remove('show');
+      }
+    });
+    
+  });
+  
+  saveDeptBtn.addEventListener('click', function(){
+    const form = new FormData(addDeptForm);
+    if(form.checkValidity()){
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "save_dept.php", true);
+      xhr.onload = function(){
+        if(xhr.status === 200){
+          alert(xhr.responseText);
+          setTimeout(function(){
+            location.reload();
+          }, 100);
+        }
+        else{
+          alert(xhr.responseText);
+        }
+      }
+      xhr.send(form);
+    }
+    else{
+      form.reportValidity();
+    }
+  })
 
 });

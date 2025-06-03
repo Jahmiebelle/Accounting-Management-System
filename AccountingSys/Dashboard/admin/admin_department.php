@@ -15,7 +15,47 @@ session_start();
 <body>
 
   <div class="outer-container">
-    
+     <div class="add-ol" id="add-ol">
+      <div class="add-ol-content" id="add-ol-content">
+        <form action="" method="POST" class="add-ol-form" id="add-ol-form">
+          <div class="upper-add-form">
+            <div class="upper-form-header">ADD DEPARTMENT</div>
+            <button class="save-add-btn" id="save-add-btn" type="button">Save</button>
+          </div>
+          <div class="lower-add-form">
+            
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Department Id</legend>
+                </fieldset>
+                <input class="addboxes" type="number" id="add-dept-id" name="add_dept_id" value="" placeholder="e.g. 001" required>
+              </div>
+            </div>
+            
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Department Name</legend>
+                </fieldset>
+                <input class="addboxes" type="text" id="add-dept-name" name="add_dept_name" value="" placeholder="e.g. Information Technology" required>
+              </div>
+            </div>
+            
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Dept Code/Abbr</legend>
+                </fieldset>
+                <input class="addboxes" type="text" id="add-dept-abbr" name="add_dept_abbr" value="" placeholder="IT" required>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>  
     <header class="header-container">
       <div class="brand-container">
         <div class="brand-icon">
