@@ -392,7 +392,7 @@ body {
   gap: 20px;
   align-items: center;
   box-sizing: border-box;
-  /*border: solid darkgreen 1px;*/
+  border: solid darkgreen 3px;
 }
 
 
