@@ -389,10 +389,8 @@ body {
   height: 500px;
   width: 100%;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
   box-sizing: border-box;
-  border: solid darkgreen 1px;
 }
 
 .upper-main-content {
@@ -401,7 +399,28 @@ body {
   height: 40px;
   width: 100%;
   align-items: center;
-  border: solid red 1px;
+}
+
+.add-dept-btn {
+  display: flex;
+  font-family: 'Poppins-regular';
+  padding: 0.2rem 2rem;
+  background-color: #2E7D32;
+  margin-right: 2rem;
+  border-radius: 30px;
+  color: #f4f6f8;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.add-dept-btn:hover{
+  background-color: rgba(0, 0, 0, 0);
+  border: solid #2E7D32 0.5px;
+  color: #2E7D32;
+  box-shadow: none;
+  
 }
 
 .lower-main-content {
@@ -410,7 +429,6 @@ body {
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  border: solid black 1px;
 }
 
 .dept-table {

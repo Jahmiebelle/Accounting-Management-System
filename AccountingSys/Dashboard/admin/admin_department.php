@@ -131,7 +131,7 @@ session_start();
           <div class="main-content">
             <div class="upper-main-content">
               <div class="button-content">
-                <button>Add</button>
+                <button class="add-dept-btn" id="add-dept-btn" type="button">Add</button>
               </div>  
             </div>
             <div class="lower-main-content">
