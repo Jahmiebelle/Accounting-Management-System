@@ -1015,11 +1015,11 @@ legend {
 .lower-maincontent {
   display: flex;
   flex-direction: column;
-  height: auto;
+  min-height: 100vh;
+  flex-shrink: 0;
   width: 100%;
   border: solid darkgreen 3px;
   overflow-y: auto;
-  overflow-x: auto;
   
 }
 
