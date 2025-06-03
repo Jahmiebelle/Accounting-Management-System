@@ -397,6 +397,7 @@ body {
 
 .upper-main-content {
   display: flex;
+  justify-content: flex-end;
   height: 40px;
   width: 100%;
   align-items: center;

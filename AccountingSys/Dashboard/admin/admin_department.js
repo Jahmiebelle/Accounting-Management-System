@@ -26,6 +26,26 @@ document.getElementById('attendance-tab').addEventListener('click', function () 
 const deleteBtn = document.querySelectorAll('delete-dept');
 deleteBtn.forEach(function(delBtn){
   delBtn.addEventListener('click', function(){
-    
+    const deleteId = delBtn.dataset.id;
+    const deleteName = delBtn.dataset.name;
+    const confirmDel = confirm("Are you sure to delete " + deleteName + "?");
+    if(confirmDel){
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "delete_dept.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onload = function(){
+        if (xhr.status === 200) {
+          alert(xhr.responseText);
+          setTimeout(function(){
+            location.reload();
+          }, 100);
+        }
+        else {
+          alert(xhr.responseText);
+        }
+      };
+      const data = "id=" + encodeURIComponent(deleteId);
+      xhr.send(data);
+    }
   });
 });
