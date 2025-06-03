@@ -67,8 +67,9 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   
   saveDeptBtn.addEventListener('click', function(){
-    const form = new FormData(addDeptForm);
-    if(form.checkValidity()){
+    alert('clicked yung save!');
+    if(addDeptForm.checkValidity()){
+      const formData = new FormData(addDeptForm);
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "save_dept.php", true);
       xhr.onload = function(){
@@ -82,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function(){
           alert(xhr.responseText);
         }
       }
-      xhr.send(form);
+      xhr.send(formData);
     }
     else{
-      form.reportValidity();
+      addDeptForm.reportValidity();
     }
   })
 
