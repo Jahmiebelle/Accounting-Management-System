@@ -460,13 +460,14 @@ tr:nth-child(even) {
 
 .delete-dept {
   display: flex;
+  
   margin: 0;
   height: 20px;
   width: 20px;
   background-image: url('../Assets/delete.png');
   background-size: cover;
   background-position: center;
-  border: solid black 1px;
+  z-index: 10;
 }
 
 .footer-container {
