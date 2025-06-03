@@ -156,7 +156,7 @@ session_start();
                     <td><div data-id='dept_id' class='delete-dept'>
                       
                     </div></td>
-                  </tr>"
+                  </tr>";
                 }
                 ?>
               </table>
