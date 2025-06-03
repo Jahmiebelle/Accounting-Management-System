@@ -3,7 +3,7 @@ document.getElementById('logout-icon').addEventListener('click', function () {
 });
 
 document.getElementById('dashboard-tab').addEventListener('click', function () {
-  window.location.href = "admin_dashboard.php";
+  window.location.href = "employee_dashboard.php";
 });
 
 document.getElementById('employee-tab').addEventListener('click', function () {
