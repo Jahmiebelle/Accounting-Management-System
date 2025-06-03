@@ -101,6 +101,13 @@ session_start();
           </div>
           <div class="main-content">
 
+            <div class="upper-main-content">
+
+            </div>
+            <div class="lower-main-content">
+
+            </div>
+
 
           </div>
         </div>
