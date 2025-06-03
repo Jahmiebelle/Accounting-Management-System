@@ -1016,7 +1016,6 @@ legend {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  flex-shrink: 0;
   width: 100%;
   border: solid darkgreen 3px;
   overflow-y: auto;
