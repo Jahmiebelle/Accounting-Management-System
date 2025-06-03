@@ -10,11 +10,11 @@
   $existDeptMsg = [];
   $checkId = "SELECT * FROM department_table WHERE department_id = '$deptId';";
   if(mysqli_num_rows(mysqli_query($conn, $checkId)) > 0){
-    $existDeptMsg = "id";
+    $existDeptMsg[] = "id";
   }
   $checkName = "SELECT * FROM department_table WHERE department_name = '$deptName';";
   if(mysqli_num_rows(mysqli_query($conn, $checkName)) > 0){
-    $existDeptMsg = "name";
+    $existDeptMsg[] = "name";
   }  
   
   if(count($existDeptMsg) > 1){
