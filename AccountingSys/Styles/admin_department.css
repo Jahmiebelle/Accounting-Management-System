@@ -538,7 +538,7 @@ legend {
 
 .upper-main-content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   height: 40px;
   width: 100%;
   align-items: center;
@@ -547,21 +547,20 @@ legend {
 .add-dept-btn {
   display: flex;
   font-family: 'Poppins-regular';
-  padding: 0.2rem 2rem;
-  background-color: #2E7D32;
-  margin-right: 2rem;
+  padding: 0.5rem 12rem;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 30px;
-  color: #f4f6f8;
-  border: none;
+  color: #2E7D32;
+  border: solid #2E7D32 0.5px;
   cursor: pointer;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
 }
 
 .add-dept-btn:hover{
-  background-color: rgba(0, 0, 0, 0);
-  border: solid #2E7D32 0.5px;
-  color: #2E7D32;
+  background-color: #2E7D32;
+  border: none;
+  color: #F4F6F8;
   box-shadow: none;
   
 }
