@@ -49,30 +49,7 @@ session_start();
               Dashboard
             </div>
           </div>
-          <div class="sidetabs" id="profile-tab">
-            <div class="tab-icon" id="profile-tab-icon">
-  
-            </div>
-            <div class="tab-text">
-              Profile 
-            </div>
-          </div>
-          <div class="sidetabs" id="attendance-tab">
-            <div class="tab-icon" id="attendance-tab-icon">
-  
-            </div>
-            <div class="tab-text">
-              Attendance
-            </div>
-          </div>
-          <div class="sidetabs" id="leavereq-tab">
-            <div class="tab-icon" id="leavereq-tab-icon">
-  
-            </div>
-            <div class="tab-text">
-              Leave Requests
-            </div>
-          </div>
+
           <div class="sidetabs" id="payroll-tab">
             <div class="tab-icon" id="payroll-tab-icon">
   
