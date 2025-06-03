@@ -144,7 +144,7 @@ session_start();
                 </tr>
                 <?php
                 $getDeptQuery = "SELECT * FROM department_table;";
-                $deptNameResult = mysqli_query($getDeptQuery);
+                $deptNameResult = mysqli_query($conn, $getDeptQuery);
                 while($deptRow = mysqli_fetch_assoc($deptNameResult)){
                   $dept_id = $deptRow['department_id'];
                   $dept_name = $deptRow['department_name'];
