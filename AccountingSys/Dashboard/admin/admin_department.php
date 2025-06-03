@@ -129,8 +129,31 @@ session_start();
             
           </div>
           <div class="main-content">
-
-
+            <div class="upper-main-content">
+              <div class="button-content">
+                <button>Add</button>
+              </div>  
+            </div>
+            <div class="lower-main-content">
+              <table class="dept-table">
+                <tr>
+                  <th>Department ID</th>
+                  <th>Department Name</th>
+                  <th>Dept. Code</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Information Technology</td>
+                  <td>IT</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Computer Science</td>
+                  <td>CS</td>
+                </tr>                
+              </table>
+              
+            </div>
           </div>
         </div>
       </div>
