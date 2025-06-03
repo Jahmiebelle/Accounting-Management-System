@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   
   
-  const deleteBtn = document.querySelectorAll('delete-dept');
+  const deleteBtn = document.querySelectorAll('.delete-dept');
   deleteBtn.forEach(function(delBtn){
     delBtn.addEventListener('click', function(){
       const deleteId = delBtn.dataset.id;
