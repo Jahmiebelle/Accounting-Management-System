@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   
   saveDeptBtn.addEventListener('click', function(){
-    alert('clicked yung save!');
     if(addDeptForm.checkValidity()){
       const formData = new FormData(addDeptForm);
       const xhr = new XMLHttpRequest();

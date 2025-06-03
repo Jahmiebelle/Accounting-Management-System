@@ -9,11 +9,11 @@
   $deptAbbr = $_POST['add_dept_abbr'];
   $existDeptMsg = [];
   $checkId = "SELECT * FROM department_table WHERE department_id = '$deptId';";
-  if(mysqli_num_rows(mysqli($conn, $checkId)) > 0){
+  if(mysqli_num_rows(mysqli_query($conn, $checkId)) > 0){
     $existDeptMsg = "id";
   }
   $checkName = "SELECT * FROM department_table WHERE department_name = '$deptName';";
-  if(mysqli_num_rows(mysqli($conn, $checkName)) > 0){
+  if(mysqli_num_rows(mysqli_query($conn, $checkName)) > 0){
     $existDeptMsg = "name";
   }  
   
