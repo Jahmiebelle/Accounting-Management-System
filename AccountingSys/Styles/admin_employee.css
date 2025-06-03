@@ -685,7 +685,7 @@ legend {
 
 .main-content {
   display: flex;
-  height: 500px;
+  height: auto;
   width: 100%;
   flex-direction: column;
   flex-wrap: wrap;
@@ -693,6 +693,7 @@ legend {
   align-items: center;
   box-sizing: border-box;
   margin-bottom: 100px;
+  border: solid red 1px;
 }
 
 .upper-maincontent {
@@ -701,6 +702,7 @@ legend {
   height: 40px;
   align-items: center;
   text-align: center;
+  border: solid black 1px;
 }
 
 #search_form {
@@ -1015,7 +1017,7 @@ legend {
 .lower-maincontent {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: auto;
   width: 100%;
   border: solid darkgreen 3px;
   overflow-y: auto;
