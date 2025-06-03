@@ -693,7 +693,6 @@ legend {
   align-items: center;
   box-sizing: border-box;
   margin-bottom: 100px;
-  border: solid red 1px;
 }
 
 .upper-maincontent {
@@ -1019,7 +1018,6 @@ legend {
   flex-direction: column;
   height: auto;
   width: 100%;
-  border: solid darkgreen 3px;
   overflow-y: auto;
   
 }
