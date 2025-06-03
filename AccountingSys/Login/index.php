@@ -9,11 +9,11 @@ session_start();
             echo "<script>alert('Missing Credentials');</script>";
           }
           else {
-            if($role === 'employee'){
-              $query = "SELECT * FROM employee_table WHERE password = '$password' AND company_id = '$company_id'";
-              $result = mysqli_query($conn, $query);
-              if(mysqli_num_rows($result) == 1){
-                $user_data = mysqli_fetch_assoc($result);
+            if($role == 'employee'){
+              $emp_query = "SELECT * FROM employee_table WHERE password = '$password' AND company_id = '$company_id'";
+              $emp_result = mysqli_query($conn, $emp_query);
+              if(mysqli_num_rows($emp_result) == 1){
+                $user_data = mysqli_fetch_assoc($emp_result);
                 $_SESSION['employee_id'] = $user_data['employee_id'];
                 $_SESSION['employee_first_name'] = $user_data['first_name'];
                 $_SESSION['employee_middle_name'] = $user_data['middle_name'];
@@ -29,9 +29,9 @@ session_start();
               }
             }
             else {
-              $query = "SELECT * FROM admin_table WHERE password = '$password' AND company_id = '$company_id'";
-              $result = mysqli_query($conn, $query);
-              if(mysqli_num_rows($result) == 1) {
+              $admin_query = "SELECT * FROM admin_table WHERE password = '$password' AND company_id = '$company_id'";
+              $admin_result = mysqli_query($conn, $admin_query);
+              if(mysqli_num_rows($admin_result) == 1) {
                 $user_data = mysqli_fetch_assoc($result);
                 $_SESSION['admin_id'] = $user_data['admin_id'];
                 $_SESSION['admin_first_name'] = $user_data['first_name'];
