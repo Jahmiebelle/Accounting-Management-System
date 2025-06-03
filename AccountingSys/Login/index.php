@@ -32,7 +32,7 @@ session_start();
               $admin_query = "SELECT * FROM admin_table WHERE password = '$password' AND company_id = '$company_id'";
               $admin_result = mysqli_query($conn, $admin_query);
               if(mysqli_num_rows($admin_result) == 1) {
-                $user_data = mysqli_fetch_assoc($result);
+                $user_data = mysqli_fetch_assoc($admin_result);
                 $_SESSION['admin_id'] = $user_data['admin_id'];
                 $_SESSION['admin_first_name'] = $user_data['first_name'];
                 $_SESSION['admin_middle_name'] = $user_data['middle_name'];
