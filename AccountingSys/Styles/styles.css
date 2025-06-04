@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: 'Poppins-bold';
+  src: url('../Fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Poppins-regular';
   src: url('../Fonts/Poppins-Regular.ttf') format('truetype');
 }
@@ -196,6 +201,7 @@ span {
   margin: 0;
   border: none;
   border-radius: 3px;
+  padding: 0.25rem 0;
 }
 
 #lgn-company-id {
@@ -214,7 +220,7 @@ span {
   border-radius: 20px;
   text-align: center;
   width: 60%;
-  font-family: 'Poppins-medium';
+  font-family: 'Poppins-bold';
   font-size: 0.8rem;
   color: darkslategrey;
   
