@@ -550,7 +550,12 @@ legend {
 .add-dept-btn {
   display: flex;
   font-family: 'Poppins-regular';
-  padding: 0.5rem 12rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-justify: center;
+  padding: 0.5rem 2rem;
+  width: 22rem;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 30px;
   color: #2E7D32;
