@@ -531,7 +531,9 @@ legend {
 
 .main-content {
   display: flex;
-  height: 500px;
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 50px;
   width: 100%;
   gap: 0.5rem;
   flex-direction: column;
