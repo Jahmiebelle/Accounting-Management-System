@@ -113,7 +113,10 @@ session_start();
             </div>
             <div class="right-greetings">
               <div class="datetime">
-                APRIL 28, 2025 10:00 A.M
+                <?php 
+                  date_default_timezone_set("Asia/Manila");
+                  echo date("l, F j, Y g:i A "); 
+                ?> 
               </div>
               <div class="emptybox">
                 
