@@ -11,7 +11,7 @@ document.getElementById('department-tab').addEventListener('click', function () 
 });
 
 document.getElementById('view-btn').addEventListener('click', function () {
-  window.location.href = "admin_leavereq.php";
+  window.location.href = "admin_attendance.php";
 });
 
 document.getElementById('payroll-tab').addEventListener('click', function () {

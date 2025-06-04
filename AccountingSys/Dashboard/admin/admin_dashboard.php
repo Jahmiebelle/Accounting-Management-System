@@ -169,7 +169,7 @@ session_start();
               <div id="request-card" class="lowercard">
                 <div class="request-card-header-container">
                   <div class="rch-text">
-                    Pending Leave Requests: 
+                    Recent Clock-ins: 
                   </div>
                   <div class="rch-count">
                     12
