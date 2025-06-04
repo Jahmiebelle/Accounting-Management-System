@@ -383,6 +383,7 @@ body {
   /*border: solid darkred 1px;*/
   box-sizing: border-box;
   opacity: 0;
+  flex: 1;
   
 }
 

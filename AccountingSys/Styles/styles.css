@@ -13,6 +13,21 @@
   src: url('../Fonts/BebasNeue-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Poppins-regular';
+  src: url('../Fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-medium';
+  src: url('../Fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-light';
+  src: url('../Fonts/Poppins-Light.ttf') format('truetype');
+}
+
 
 body {
   display: flex;
@@ -199,7 +214,7 @@ span {
   border-radius: 20px;
   text-align: center;
   width: 60%;
-  font-family: 'Poppins';
+  font-family: 'Poppins-medium';
   font-size: 0.8rem;
   color: darkslategrey;
   

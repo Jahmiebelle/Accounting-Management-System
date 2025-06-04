@@ -82,7 +82,6 @@ session_start();
         <select class="position" name="position" id="position">
           <option value="employee">Employee</option>
           <option value="admin">Admin</option>
-          <option value="payroll">Payroll Officer</option>
         </select>
         <button type="submit" id="login-btn" name="login">Login</button>
         <h5 onclick="showForgot()" class="forgot-pass" style="text-decoration: underline">Forgot Password?</h5>

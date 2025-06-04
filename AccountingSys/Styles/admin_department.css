@@ -524,6 +524,8 @@ legend {
   width: 100%;
   /*border: solid darkred 1px;*/
   box-sizing: border-box;
+  flex: 1;
+  opacity: 0;
   
 }
 
