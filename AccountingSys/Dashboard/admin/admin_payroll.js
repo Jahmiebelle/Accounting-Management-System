@@ -17,3 +17,4 @@ document.getElementById('department-tab').addEventListener('click', function () 
 document.getElementById('attendance-tab').addEventListener('click', function () {
   window.location.href = "admin_attendance.php";
 });
+

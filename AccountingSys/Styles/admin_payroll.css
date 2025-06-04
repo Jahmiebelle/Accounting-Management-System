@@ -388,13 +388,170 @@ body {
 
 .main-content {
   display: flex;
-  height: 500px;
+  height: auto;
+  min-height: 100vh;
   width: 100%;
   flex-direction: column;
-  gap: 20px;
+  padding-bottom: 50px;
   align-items: center;
   box-sizing: border-box;
   /*border: solid darkgreen 1px;*/
+}
+
+.upper-main-content {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.taxation-form {
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  gap: 0.5rem;
+  width: 50%;
+
+}
+
+.tax-header {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+.tax-label {
+  font-size: 16px;
+  font-family: 'Poppins-bold';
+  margin-right: 3rem;
+}
+
+.edit-tax-btn {
+  padding: 0.25rem 1rem;
+  font-family: 'Poppins-regular';
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #F4F6F8;
+  background-color: #007BFF;
+}
+
+
+.save-tax-btn {
+  padding: 0.25rem 1rem;
+  font-family: 'Poppins-regular';
+  border: none;
+  border-radius: 5px;
+  color: #f4f6f8;
+  background-color: #2E7D32;
+}
+
+.tax-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.tax-containers {
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.tax-card-icon {
+  display: flex;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  background-position: center;
+  background-size: cover;
+}
+
+#sss-icon {
+  background-image: url('../Assets/sss.png');
+}
+
+#philhealth-icon {
+  background-image: url('../Assets/philhealth.png');
+}
+
+#pagibig-icon {
+  background-image: url('../Assets/pagibig.png');
+}
+
+.tax-card-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.tax-card-name {
+  font-family: 'Poppins-medium';
+}
+
+.tax-card-percent {
+  font-size: 16px;
+}
+
+.tax-footer {
+  display: flex;
+  height: auto;
+  width: 100%;
+  padding: 0 1rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  color: #666666;
+
+  
+}
+
+.tax-summary{
+  display: flex;
+  font-size: 12px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.statutory-deduc, .income-tax, .total-deduc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 0.5rem 0;
+}
+
+.total-deduc {
+  border-top: solid #cccccc 1px;
+}
+
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.hourly-rate-form {
+  
+}
+
+.lower-main-content {
+  display: flex;
 }
 
 

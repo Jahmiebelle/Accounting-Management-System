@@ -125,8 +125,66 @@ session_start();
             
           </div>
           <div class="main-content">
-
-
+            <div class="upper-main-content">
+              <form class="taxation-form" id="taxation-form" action="" method="POST">
+                <div class="tax-header">
+                  <div class="tax-label">Taxation Settings</div>
+                  <button class="edit-tax-btn" id="edit-tax-btn">Edit</button>
+                  <button class="save-tax-btn" id="save-tax-btn">Save</button>
+                </div>
+                <div class="tax-body">
+                  <div id="sss-container" class="tax-containers">
+                    <div class="tax-card-icon" id="sss-icon">
+                      
+                    </div>
+                    <div class="tax-card-detail">
+                      <div class="tax-card-name">SSS</div>
+                      <div class="tax-card-percent">2.5%</div>
+                    </div>
+                  </div>
+                  <div id="pagibig-container" class="tax-containers">
+                    <div class="tax-card-icon" id="pagibig-icon">
+                      
+                    </div>
+                    <div class="tax-card-detail">
+                      <div class="tax-card-name">Pagibig</div>
+                      <div class="tax-card-percent">2%</div>
+                    </div>
+                  </div>
+                  <div id="philhealth-container" class="tax-containers">
+                    <div class="tax-card-icon" id="philhealth-icon">
+                      
+                    </div>
+                    <div class="tax-card-detail">
+                      <div class="tax-card-name">PhilHealth</div>
+                      <div class="tax-card-percent">3%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tax-footer">
+                  <div class="tax-summary">
+                    <div class="statutory-deduc">
+                      <h4>Statutory Deductions:</h4>
+                      <h4>7.5%</h4>
+                    </div>
+                    <div class="income-tax">
+                      <h4>Income Tax:</h4>
+                      <h4>2%</h4>
+                    </div>
+                    <div class="total-deduc">
+                      <h4>Total Deduction:</h4>
+                      <h4>9.5%</h4>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form class="hourly-rate-form" id="hourly-rate-form" action="" method="POST">
+                
+              </form>
+            </div>
+            <div class="lower-main-content">
+              
+            </div>
           </div>
         </div>
       </div>
