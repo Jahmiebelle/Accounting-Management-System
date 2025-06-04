@@ -382,6 +382,7 @@ body {
   width: 100%;
   /*border: solid darkred 1px;*/
   box-sizing: border-box;
+  opacity: 0;
   
 }
 

@@ -119,7 +119,7 @@ session_start();
                 ?> 
               </div>
               <div class="emptybox">
-                
+                empty
               </div>
             </div>
             
