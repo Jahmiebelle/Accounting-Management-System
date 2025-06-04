@@ -97,9 +97,10 @@ session_start();
             </div>
             <div class="right-greetings">
               <div class="datetime">
-                <?php date_default_timezone_set("Asia/Manila");
-                      echo date("l, F j, Y \a\\t g:i A T"); 
-                      ?> 
+                <?php 
+                  date_default_timezone_set("Asia/Manila");
+                  echo date("l, F j, Y \a\\t g:i A T"); 
+                ?> 
               </div>
               <div class="emptybox">
                 
