@@ -12,10 +12,6 @@ document.addEventListener('DOMContentLoaded', function(){
     window.location.href = "admin_department.php";
   });
   
-  document.getElementById('leavereq-tab').addEventListener('click', function () {
-    window.location.href = "admin_leavereq.php";
-  });
-  
   document.getElementById('payroll-tab').addEventListener('click', function () {
     window.location.href = "admin_payroll.php";
   });
