@@ -13,3 +13,4 @@ document.getElementById('profile-tab').addEventListener('click', function () {
 document.getElementById('payroll-tab').addEventListener('click', function () {
   window.location.href = "employee_payroll.php";
 });
+
