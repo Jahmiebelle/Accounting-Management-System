@@ -377,13 +377,26 @@ body {
   display: flex;
   height: 500px;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
   align-items: center;
   box-sizing: border-box;
-  /*border: solid darkgreen 1px;*/
+  border: solid darkgreen 3px;
 }
 
+.upper-main-content {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  border: solid black 4px;
+}
+
+.lower-main-content {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  border: solid red 5px;
+}
 
 .footer-container {
   display: flex;
