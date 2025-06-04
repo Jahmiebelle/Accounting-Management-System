@@ -2,8 +2,8 @@ document.getElementById('logout-icon').addEventListener('click', function () {
   window.location.href = "../../Login/logout.php";
 });
 
-document.getElementById('profile-tab').addEventListener('click', function () {
-  window.location.href = "employee_profile.php";
+document.getElementById('dashboard-tab').addEventListener('click', function () {
+  window.location.href = "employee_dashboard.php";
 });
 
 document.getElementById('attendance-tab').addEventListener('click', function () {

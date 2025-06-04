@@ -9,7 +9,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Employee</title>
-  <link rel="stylesheet" href="../../Styles/employee_dashboard.css">
+  <link rel="stylesheet" href="../../Styles/employee_attendance.css">
 </head>
 
 <body>
@@ -80,7 +80,7 @@ session_start();
                 
               </div>
               <div class="section-text">
-                Employee
+                Attendance
               </div>
             </div>
 
@@ -143,7 +143,7 @@ and optimize payroll and performance tracking.
     </footer>
       
   </div>
-  <script src="employee_dashboard.js"></script>
+  <script src="employee_attendance.js"></script>
 </body>
 
 </html>
