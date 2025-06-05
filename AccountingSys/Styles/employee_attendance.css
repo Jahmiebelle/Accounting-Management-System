@@ -221,7 +221,7 @@ body {
   display: flex;
   align-items: center;
   flex: 1;
-  /*border: solid greenyellow 1px;*/
+
 }
 
 .content-container {
@@ -231,7 +231,7 @@ body {
   margin-left: 25vw;
   height: 100%;
   width: 75vw;
-  /*border: solid gray 1px;*/
+ 
   
 }
 
@@ -241,7 +241,7 @@ body {
   height: 95%;
   width: 85%;
   gap: 10px;
-  /*border: solid pink 3px;*/
+ 
   
 }
 
@@ -254,7 +254,6 @@ body {
   height: 50px;
   max-height: 10%;
   width: 100%;
-  /*border: solid black 1px;*/
   box-sizing: border-box;
 }
 
@@ -264,7 +263,6 @@ body {
   gap: calc((75vw * 0.85) * 0.6 * 0.04);
   height: 100%;
   width: 60%;
-  /*border: solid darkred 1px;*/
 }
 
 
@@ -272,7 +270,6 @@ body {
   display: flex;
   height: 40px;
   width: 40px;
-  /*border: solid darkorange 1px;*/
   background-image: url('../Assets/payroll-icon.png');
   background-size: cover;
 }
@@ -281,7 +278,6 @@ body {
   display: flex;
   font-family: 'Poppins-bold';
   font-size: 32px;
-  /*border: solid lawngreen 1px;*/
 }
  
 
@@ -289,13 +285,12 @@ body {
   display: flex;
   height: 30px;
   width: 30px;
- /* border: solid black 1px;*/
   background-image: url('../Assets/logout-icon.png');
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50px;
-  /*border: solid #ccc 0.2px;*/
+  
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.15s;
 }
@@ -324,7 +319,7 @@ body {
   flex-direction: column;
   height: 100%;
   width: 50%;
-  /*border: solid darkgreen 1px;*/
+ 
   
 }
 
@@ -335,7 +330,6 @@ body {
   align-items: center;
   height: auto;
   width: 100%;
-  /*border: solid darkred 1px;*/
   box-sizing: border-box;
 }
 
@@ -346,7 +340,6 @@ body {
   align-items: center;
   height: auto;
   width: 100%;
-  /*border: solid darkblue 1px;*/
   box-sizing: border-box;
 }
 
@@ -358,7 +351,6 @@ body {
   justify-content: right;
   height: auto;
   width: 100%;
-  /*border: solid darkblue 1px;*/
   box-sizing: border-box;
 }
 
@@ -368,22 +360,152 @@ body {
   align-items: center;
   height: auto;
   width: 100%;
-  /*border: solid darkred 1px;*/
   box-sizing: border-box;
   
 }
 
 .main-content {
-  display: flex;
-  height: 500px;
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: center;
+  gap: 30px;
   box-sizing: border-box;
-  /*border: solid darkgreen 1px;*/
+  background-color: #f5f7fa;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: left;
+}
+
+.upper-main-content,
+.lower-main-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.summary-item {
+  background-color: #f0f4f8;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.value {
+  font-weight: bold;
+  color: #2d3436;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.attendance-table th {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attendance-table td {
+  color: #34495e;
+  font-size: 14px;
+}
+
+.status-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #27ae60;
+}
+
+.status-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.active {
+  background-color: #27ae60;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  color: #333333;
+
+}
+
+td, th {
+  margin: 0px;
+  border: 0.1px solid #ccc;
+  
+}
+
+th {
+  padding: 5px 10px;
+  background-color: #eeeeee;
+  color: #333333;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins-light';
+  font-size: 12px;
+
+
+}
+
+td {
+  padding: 8px 16px;
+  text-justify: center;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  font-family: 'Poppins-light';
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
 
 .footer-container {
   display: flex;
