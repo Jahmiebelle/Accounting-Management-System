@@ -1,6 +1,5 @@
 <?php include '../../Login/db.php';
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -10,13 +9,53 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
-  <link rel="stylesheet" href="../../Styles/admin_dashboard.css">
+  <link rel="stylesheet" href="../../Styles/admin_department.css">
 </head>
 
 <body>
 
   <div class="outer-container">
+     <div class="add-ol" id="add-ol">
+      <div class="add-ol-content" id="add-ol-content">
+        <form action="" method="POST" class="add-ol-form" id="add-ol-form">
+          <div class="upper-add-form">
+            <div class="upper-form-header">ADD DEPARTMENT</div>
+            <button class="save-add-btn" id="save-add-btn" type="button">Save</button>
+          </div>
+          <div class="lower-add-form">
 
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Department Id</legend>
+                </fieldset>
+                <input class="addboxes" type="number" id="add-dept-id" name="add_dept_id" value="" placeholder="e.g. 001" required>
+              </div>
+            </div>
+
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Department Name</legend>
+                </fieldset>
+                <input class="addboxes" type="text" id="add-dept-name" name="add_dept_name" value="" placeholder="e.g. Information Technology" required>
+              </div>
+            </div>
+
+            <div class="modern-input-container">
+              <div class="modern-input">
+                <fieldset class="fieldsets">
+                  <legend>Dept Code/Abbr</legend>
+                </fieldset>
+                <input class="addboxes" type="text" id="add-dept-abbr" name="add_dept_abbr" value="" placeholder="IT" required>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
     <header class="header-container">
       <div class="brand-container">
         <div class="brand-icon">
@@ -40,6 +79,7 @@ session_start();
             <div class="sidebar-header-text">
 
             </div>
+
           </div>
           <div class="sidetabs" id="dashboard-tab">
             <div class="tab-icon" id="dashboard-tab-icon">
@@ -85,14 +125,14 @@ session_start();
         </div>
       </div>
       <div class="content-container">
-        <div class="dashboard-content-container">
+        <div class="employee-content-container">
           <div class="upper-content">
             <div class="section-name">
               <div class="section-icon">
 
               </div>
               <div class="section-text">
-                Dashboard
+                Department
               </div>
             </div>
 
@@ -108,7 +148,7 @@ session_start();
                 ?>
               </div>
               <div class="path">
-                Admin / Dashboard
+                Admin / Department
               </div>
             </div>
             <div class="right-greetings">
@@ -125,114 +165,38 @@ session_start();
 
           </div>
           <div class="main-content">
-            <?php
-              $countDept = "SELECT COUNT(department_id) FROM department_table";
-              $deptCountResult = mysqli_query($conn, $countDept);
-              $deptCountRow = mysqli_fetch_array($deptCountResult);
-              $deptCount = $deptCountRow[0];
-              $countEmployee = "SELECT COUNT(employee_id) FROM employee_table";
-              $employeeCountResult = mysqli_query($conn, $countEmployee);
-              $employeeCountRow = mysqli_fetch_array($employeeCountResult);
-              $employeeCount = $employeeCountRow[0];
-
-            ?>
-            <div class="upper-summarycards">
-              <div id="employee-card" class="uppercard">
-                <div id="employee-card-icon" class="uppercard-icon"></div>
-                <div id="employee-card-label" class="uppercard-label">
-                  <div id="employee-card-header" class="uppercard-header">
-                    Total Employees
-                  </div>
-                  <div id="employee-card-count" class="uppercard-count">
-                    <?php
-                      echo $employeeCount;
-                    ?>
-                  </div>
-                </div>
-              </div>
-              <div id="department-card" class="uppercard">
-                <div id="department-card-icon" class="uppercard-icon">
-
-                </div>
-                <div id="department-card-label" class="uppercard-label">
-                  <div id="department-card-header" class="uppercard-header">
-                    Total Departments
-                  </div>
-                  <div id="department-card-count" class="uppercard-count">
-                    <?php
-                      echo $deptCount;
-                    ?>
-                  </div>
-
-                </div>
-
+            <div class="upper-main-content">
+              <div class="button-content">
+                <button class="add-dept-btn" id="add-dept-btn" type="button">Add Department</button>
               </div>
             </div>
-            <div class="lower-summarycards">
-              <div id="request-card" class="lowercard">
-                <div class="request-card-header-container">
-                  <div class="rch-text">
-                    Recent Clock-ins:
-                  </div>
-                  <div class="rch-count">
-                    12
-                  </div>
-                </div>
-                <div class="request-card-content-container">
-                  <div class="leave-person1">
-                    <div class="person1-profile">
+            <div class="lower-main-content">
+              <table class="dept-table">
+                <tr>
+                  <th>Department ID</th>
+                  <th>Department Name</th>
+                  <th>Dept. Code</th>
+                  <th>Action</th>
+                </tr>
+                <?php
+                $getDeptQuery = "SELECT * FROM department_table;";
+                $deptNameResult = mysqli_query($conn, $getDeptQuery);
+                while($deptRow = mysqli_fetch_assoc($deptNameResult)){
+                  $dept_id = $deptRow['department_id'];
+                  $dept_name = $deptRow['department_name'];
+                  $dept_abbr = $deptRow['acronym'];
+                  echo "<tr>
+                    <td>$dept_id</td>
+                    <td>$dept_name</td>
+                    <td>$dept_abbr</td>
+                    <td><div data-name='$dept_name' data-id='$dept_id' class='delete-dept'>
 
-                    </div>
-                    <div class="person1-name">
-                      Harry Deguzman
-                    </div>
-                    <div class="person1-department">
-                      Information Technology
-                    </div>
-                  </div>
-                  <div class="leave-person2">
-                    <div class="person2-profile">
+                    </div></td>
+                  </tr>";
+                }
+                ?>
+              </table>
 
-                    </div>
-                    <div class="person2-name">
-                      Gabby Lopez
-                    </div>
-                    <div class="person2-department">
-                      Computer Science
-                    </div>
-                  </div>
-                </div>
-                <div class="request-card-button-container">
-                  <button class="view-btn" id="view-btn" type="button">View More</button>
-                </div>
-              </div>
-              <div id="payroll-card" class="lowercard">
-                <div class="payroll-card-header-container">
-                  Payroll Summary
-                </div>
-                <div class="payroll-card-content-container">
-                  <div class="pcc-header" id="pcc-header1">
-                    Total Payroll
-                  </div>
-                  <div class="pcc-count" id="pcc-count1">
-                    ₱70,000
-                  </div>
-                  <div class="pcc-header" id="pcc-header2">
-                    Average Salary
-                  </div>
-                  <div class="pcc-count" id="pcc-count2">
-                    ₱10,000
-                  </div>
-                  <div class="pcc-header" id="pcc-header3">
-                    Employee Paid
-                  </div>
-                  <div class="pcc-count" id="pcc-count3">
-                    7
-                  </div>
-
-
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -256,7 +220,7 @@ and optimize payroll and performance tracking.
     </footer>
 
   </div>
-  <script src="admin_dashboard.js"></script>
+  <script src="admin_department.js"></script>
 </body>
 
 </html>
