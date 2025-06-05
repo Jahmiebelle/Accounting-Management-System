@@ -389,23 +389,134 @@ body {
 
 .main-content {
   display: flex;
-  height: 500px;
-  width: 100%;
   flex-direction: column;
-  gap: 20px;
-  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
   box-sizing: border-box;
-  /*border: solid darkgreen 1px;*/
 }
 
-.upper-summarycards {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 25%;
-  width: 95%;
-  /*border: solid black 1px;*/
+.summary-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
+.summary-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.clock-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.clock-in {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.clock-out {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+.clock-button:hover {
+  opacity: 0.85;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.summary-item {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.lower-main-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.attendance-table th {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attendance-table td {
+  color: #34495e;
+  font-size: 14px;
+}
+
+.status-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #27ae60;
+}
+
+.status-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.active {
+  background-color: #27ae60;
+}
+
 
 .uppercard {
   display: flex;

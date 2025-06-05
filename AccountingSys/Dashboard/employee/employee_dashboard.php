@@ -79,9 +79,9 @@ session_start();
               <div class="section-icon">
                 
               </div>
-              <div class="section-text">
-                Employee
               </div>
+              <div class="section-text">
+                Attendance
             </div>
 
             <div class="logout-icon" id="logout-icon">
@@ -109,36 +109,74 @@ session_start();
                 
               </div>
             </div>
-            
           </div>
-          <div class="main-content">
-           <div class="upper-main-content">
-         <div class="upper-summarycards">
-         <div class="clock-in-upperbutton">
-         <button class="clock-in-button">CLOCK IN</button>
-       </div>
-       <div class="clock-out-lowerbutton">
-      <button class="clock-out-button">CLOCK OUT</button>
-    </div>
+          
+          <div class="dashboard-container">
+  <div class="welcome-bar">
+    <span>Welcome, Mr. <?= $employeeName ?? 'Employee' ?>!</span>
+    <span class="power-icon">⏻</span>
   </div>
 
-  <div id="status-card">
-    <div class="status-card-header">Total work hours</div>
-  </div>
-</div>
-            </div>
-            <div class="lower-main-content">
-
-            </div>
-
-
-          </div>
+  <div class="main-dashboard-content">
+    <div class="top-row">
+      <div class="left-box">
+        <div class="clock-buttons">
+          <button class="btn clock-in">CLOCK IN</button>
+          <button class="btn clock-out">CLOCK OUT</button>
         </div>
       </div>
-      
+
+      <div class="right-box">
+        <div class="total-hours-box">
+          <span class="main-text">TOTAL HOURS WORK</span>
+          <h1 class="hours"><?= $totalHoursWorked ?? '100' ?> hrs</h1>
+          <span class="sub-text">Overtime hours: <strong><?= $overtimeHours ?? '50.1' ?> hrs</strong></span>
+        </div>
+      </div>
     </div>
+
+    <div class="summary-row">
+      <div class="summary-card">
+        <span>Total Days Present:</span>
+        <div><?= $totalDaysPresent ?? '0' ?></div>
+      </div>
+      <div class="summary-card">
+        <span>Absent:</span>
+        <div><?= $absents ?? '0' ?></div>
+      </div>
+    </div>
+
+    <div class="attendance-table-section">
+      <table class="attendance-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Clock-In</th>
+            <th>Clock-Out</th>
+            <th>Overtime</th>
+            <th>Total Time Worked</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>05/30/25</td>
+            <td>Friday</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!-- Additional rows dynamically generated -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+         
     
-    <footer class="footer-container">
+ <footer class="footer-container">
       <div class="brand-name-footer">
         HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
       </div>
@@ -154,7 +192,7 @@ and optimize payroll and performance tracking.
     </footer>
       
   </div>
-  <script src="employee_dashboard.js"></script>
+  <script src="employee_attendance.js"></script>
 </body>
 
 </html>
