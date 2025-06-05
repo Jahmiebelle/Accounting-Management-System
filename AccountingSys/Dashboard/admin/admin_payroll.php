@@ -130,7 +130,6 @@ session_start();
                 <div class="tax-header">
                   <div class="tax-label">Taxation</div>
                   <button class="edit-tax-btn" id="edit-tax-btn">Edit</button>
-                  <button class="save-tax-btn" id="save-tax-btn">Save</button>
                 </div>
                 <div class="tax-body">
                   <div id="sss-container" class="tax-containers">
@@ -179,7 +178,12 @@ session_start();
                 </div>
               </form>
               <form class="hourly-rate-form" id="hourly-rate-form" action="" method="POST">
-                
+                <div class="upper-hourly-form">
+                  Dito yung role hourly rate settings
+                </div>
+                <div class="lower-hourly-form">
+                  
+                </div>
               </form>
             </div>
             <div class="lower-main-content">

@@ -406,13 +406,14 @@ body {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  /*border: solid red 1px;*/
+  border: solid red 1px;
 }
 
-.taxation-form {
+.taxation-form, .hourly-rate-form {
   display: flex;
   flex-direction: column;
   height: 95%;
+  min-height: 300px;
   gap: 0.5rem;
   width: 40%;
   padding: 0.5rem 1rem;
@@ -426,6 +427,7 @@ body {
 .tax-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 4rem;
   width: 100%;
   box-sizing: border-box;
@@ -442,8 +444,6 @@ body {
   padding: 0.25rem 1rem;
   font-size: 12px;
   font-family: 'Poppins-regular';
-  margin-right: 0.5rem;
-  margin-left: 1rem;
   border: none;
   border-radius: 5px;
   color: #F4F6F8;
@@ -451,16 +451,6 @@ body {
   
 }
 
-
-.save-tax-btn {
-  padding: 0.25rem 1rem;
-  font-size: 12px;
-  font-family: 'Poppins-regular';
-  border: none;
-  border-radius: 5px;
-  color: #f4f6f8;
-  background-color: #2E7D32;
-}
 
 .tax-body {
   display: flex;
@@ -512,11 +502,12 @@ body {
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  padding: 0 1rem;
+  
 }
 
 .tax-card-name {
-  font-family: 'Poppins-medium';
+  padding-left: 0.5rem;
+  font-family: 'Poppins-regular';
 }
 
 .tax-card-percent {
@@ -529,7 +520,6 @@ body {
   height: auto;
   width: 100%;
   padding: 0 1rem;
-  padding-right: 2rem;
   box-sizing: border-box;
   border-top: solid #cccccc 1px;
   color: #666666;
@@ -562,18 +552,8 @@ h4 {
   margin: 0;
 }
 
-.hourly-rate-form {
-  display: flex;
-  flex-direction: column;
-  height: 95%;
-  gap: 0.5rem;
-  width: 40%;
-  padding: 1rem;
-  padding-bottom: 2rem;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
+
+
 
 .lower-main-content {
   display: flex;
