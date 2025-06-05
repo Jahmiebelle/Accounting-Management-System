@@ -24,8 +24,8 @@ session_start();
         </div>
         <div class="brand-name">
           HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
+          </div>
           
-        </div>
       </div>
       <div class="role">
         employee
@@ -111,6 +111,23 @@ session_start();
           <div class="main-content">
 
             <div class="upper-main-content">
+              <div class="upper-summarycards">
+                <div class="clock-in-upperbutton">
+                   <button class="clock-in-button">CLOCK IN</button>
+                   </div>
+                   <div class="clock-out-lowerbutton">
+                   <button class="clock-out-button">CLOCK OUT</button>
+                   </div>
+                   </div>
+
+                   <div id="status-card">
+                    <div class="status-card-header">STATUS</div>
+                        <p><span style="color: green;">●</span> CLOCK IN: 7:00 AM</p>
+                           <p><span style="color: red;">●</span> CLOCK OUT: 5:00 PM</p>
+                   </div>
+            </div>
+
+
 
             </div>
             <div class="lower-main-content">

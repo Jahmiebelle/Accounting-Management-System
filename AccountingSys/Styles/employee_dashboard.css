@@ -258,6 +258,57 @@ body {
   box-sizing: border-box;
 }
 
+.upper-main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upper-summarycards,
+#status-card {
+  flex: 1;
+  max-width: 400px;
+  min-height: 180px;
+  background-color: #f0f4f8;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.308);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clock-in-upperbutton,
+.clock-out-lowerbutton {
+  margin: 10px 0;
+}
+
+.clock-in-button,
+.clock-out-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  background-color: #f0f4f8;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.308);
+}
+
+.clock-in-button {
+  background-color: #88cc88;
+}
+
+.clock-out-button {
+  background-color: #f2706d;
+}
+
+
 .section-name {
   display: flex;
   align-items: center;
@@ -381,21 +432,21 @@ body {
   gap: 20px;
   align-items: center;
   box-sizing: border-box;
-  border: solid darkgreen 3px;
+ 
 }
 
 .upper-main-content {
   display: flex;
   height: 50%;
   width: 100%;
-  border: solid black 4px;
+  
 }
 
 .lower-main-content {
   display: flex;
   height: 50%;
   width: 100%;
-  border: solid red 5px;
+  
 }
 
 .footer-container {
