@@ -128,7 +128,7 @@ session_start();
             <div class="upper-main-content">
               <form class="taxation-form" id="taxation-form" action="" method="POST">
                 <div class="tax-header">
-                  <div class="tax-label">Taxation</div>
+                  <div class="tax-label">Tax Settings</div>
                   <button class="edit-tax-btn" id="edit-tax-btn">Edit</button>
                 </div>
                 <div class="tax-body">
@@ -179,15 +179,67 @@ session_start();
               </form>
               <form class="hourly-rate-form" id="hourly-rate-form" action="" method="POST">
                 <div class="upper-hourly-form">
-                  Dito yung role hourly rate settings
+                  <div class="hourly-header">
+                    Hourly Rates 
+                  </div>
+                  <button class="edit-rate-btn" id="edit-rate-btn">Edit</button>
                 </div>
                 <div class="lower-hourly-form">
-                  
+                  <div class="role-rate-cards" id="professor-card">
+                    <div class="rate-info">
+                      <p class="role-name">Professor</p>
+                      <p class="hourly-rate-text">Hourly Rate</p>
+                      <input type="number" class="hourly-rate-price" id="professor-rate" value="500">
+                    </div>
+                    <div class="rate-logo">
+                      
+                    </div>
+                  </div>
+                  <div class="role-rate-cards" id="instructor-card">
+                    <div class="rate-info">
+                      <p class="role-name">Instructor</p>
+                      <p class="hourly-rate-text">Hourly Rate</p>
+                      <input type="number" class="hourly-rate-price" id="instructor-rate" value="400">
+                    </div>
+                    <div class="rate-logo">
+                      
+                    </div>
+                  </div>
+                  <div class="role-rate-cards" id="part-time-card">
+                    <div class="rate-info">
+                      <p class="role-name">Part-Time-Staff</p>
+                      <p class="hourly-rate-text">Hourly Rate </p>
+                      <input type="number" class="hourly-rate-price" id="part-time-rate" value="300">
+                    </div>
+                    <div class="rate-logo">
+                      
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
             <div class="lower-main-content">
-              
+              <div class="payroll-header">
+                Payroll History
+              </div>
+              <table class="payroll-table">
+                <tr>
+                  <th>Name</th>
+                  <th>Gross Salary</th>
+                  <th>Deductions</th>
+                  <th>Net Pay</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>Kristian Celfo</td>
+                  <td>18,000</td>
+                  <td>2,700</td>
+                  <td>15,300</td>
+                  <td>Completed</td>
+                  <td><div class="view-payslip" id="view-payslip"></div></td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
