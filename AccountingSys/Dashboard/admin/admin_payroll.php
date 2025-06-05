@@ -128,7 +128,7 @@ session_start();
             <div class="upper-main-content">
               <form class="taxation-form" id="taxation-form" action="" method="POST">
                 <div class="tax-header">
-                  <div class="tax-label">Taxation Settings</div>
+                  <div class="tax-label">Taxation</div>
                   <button class="edit-tax-btn" id="edit-tax-btn">Edit</button>
                   <button class="save-tax-btn" id="save-tax-btn">Save</button>
                 </div>
