@@ -189,7 +189,7 @@ session_start();
                     <div class="rate-info">
                       <p class="role-name">Professor</p>
                       <p class="hourly-rate-text">Hourly Rate</p>
-                      <input type="number" class="hourly-rate-price" id="professor-rate" value="500">
+                      <input type="number" class="hourly-rate-price" id="professor-rate" value="90">
                     </div>
                     <div class="rate-logo">
                       
@@ -199,7 +199,7 @@ session_start();
                     <div class="rate-info">
                       <p class="role-name">Instructor</p>
                       <p class="hourly-rate-text">Hourly Rate</p>
-                      <input type="number" class="hourly-rate-price" id="instructor-rate" value="400">
+                      <input type="number" class="hourly-rate-price" id="instructor-rate" value="85">
                     </div>
                     <div class="rate-logo">
                       
@@ -209,7 +209,7 @@ session_start();
                     <div class="rate-info">
                       <p class="role-name">Part-Time-Staff</p>
                       <p class="hourly-rate-text">Hourly Rate </p>
-                      <input type="number" class="hourly-rate-price" id="part-time-rate" value="300">
+                      <input type="number" class="hourly-rate-price" id="part-time-rate" value="65">
                     </div>
                     <div class="rate-logo">
                       
