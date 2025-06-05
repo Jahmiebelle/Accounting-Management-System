@@ -24,8 +24,8 @@ session_start();
         </div>
         <div class="brand-name">
           HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
-          </div>
           
+        </div>
       </div>
       <div class="role">
         employee
@@ -37,7 +37,7 @@ session_start();
         <div class="sidebar">
           <div class="sidebar-header-container">  
             <div class="sidebar-header-text"></div>
-          </div>
+            </div>
 
           <div class="sidetabs" id="dashboard-tab">
             <div class="tab-icon" id="dashboard-tab-icon"></div>
@@ -65,6 +65,10 @@ session_start();
             <div class="tab-text">
               Payroll
             </div>
+          </div>
+
+          
+
           </div>
         </div>
       </div>
@@ -97,10 +101,9 @@ session_start();
             </div>
             <div class="right-greetings">
               <div class="datetime">
-                <?php 
-                  date_default_timezone_set("Asia/Manila");
-                  echo date("l, F j, Y \a\\t g:i A T"); 
-                ?> 
+                <?php date_default_timezone_set("Asia/Manila");
+                      echo date("l, F j, Y \a\\t g:i A T"); 
+                      ?> 
               </div>
               <div class="emptybox">
                 
@@ -109,26 +112,20 @@ session_start();
             
           </div>
           <div class="main-content">
+           <div class="upper-main-content">
+         <div class="upper-summarycards">
+         <div class="clock-in-upperbutton">
+         <button class="clock-in-button">CLOCK IN</button>
+       </div>
+       <div class="clock-out-lowerbutton">
+      <button class="clock-out-button">CLOCK OUT</button>
+    </div>
+  </div>
 
-            <div class="upper-main-content">
-              <div class="upper-summarycards">
-                <div class="clock-in-upperbutton">
-                   <button class="clock-in-button">CLOCK IN</button>
-                   </div>
-                   <div class="clock-out-lowerbutton">
-                   <button class="clock-out-button">CLOCK OUT</button>
-                   </div>
-                   </div>
-
-                   <div id="status-card">
-                    <div class="status-card-header">STATUS</div>
-                        <p><span style="color: green;">●</span> CLOCK IN: 7:00 AM</p>
-                           <p><span style="color: red;">●</span> CLOCK OUT: 5:00 PM</p>
-                   </div>
-            </div>
-
-
-
+  <div id="status-card">
+    <div class="status-card-header">Total work hours</div>
+  </div>
+</div>
             </div>
             <div class="lower-main-content">
 

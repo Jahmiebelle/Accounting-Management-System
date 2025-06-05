@@ -1,5 +1,3 @@
-/* mga fonts, puro poppins lang gamitin*/
-
 @font-face {
   font-family: 'Poppins-black';
   src: url('../Fonts/Poppins-Black.ttf') format('truetype');
@@ -258,6 +256,7 @@ body {
   box-sizing: border-box;
 }
 
+
 .upper-main-content {
   display: flex;
   justify-content: center;
@@ -272,11 +271,11 @@ body {
 #status-card {
   flex: 1;
   max-width: 400px;
-  min-height: 180px;
-  background-color: #f0f4f8;
-  padding: 30px;
+  min-height: 100px;
+  background-color: #e9e9e9;
+  padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.308);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.301);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,7 +283,7 @@ body {
 
 .clock-in-upperbutton,
 .clock-out-lowerbutton {
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .clock-in-button,
@@ -293,11 +292,11 @@ body {
   padding: 15px;
   font-size: 16px;
   border: none;
-  border-radius: 25px;
+  border-radius: 10px;
   font-weight: bold;
-  background-color: #f0f4f8;
+  color: #e9e9e9;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.308);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.301);
 }
 
 .clock-in-button {
@@ -307,8 +306,6 @@ body {
 .clock-out-button {
   background-color: #f2706d;
 }
-
-
 .section-name {
   display: flex;
   align-items: center;
@@ -428,26 +425,13 @@ body {
   display: flex;
   height: 500px;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
   align-items: center;
   box-sizing: border-box;
- 
+  /*border: solid darkgreen 1px;*/
 }
 
-.upper-main-content {
-  display: flex;
-  height: 50%;
-  width: 100%;
-  
-}
-
-.lower-main-content {
-  display: flex;
-  height: 50%;
-  width: 100%;
-  
-}
 
 .footer-container {
   display: flex;
