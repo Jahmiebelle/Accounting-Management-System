@@ -391,7 +391,7 @@ body {
   height: 500px;
   width: 100%;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   box-sizing: border-box;
   /*border: solid darkgreen 1px;*/
@@ -425,4 +425,75 @@ body {
 
 .brand-info-footer, .brand-copyright {
   font-size: 8px;
+}
+
+.attendance-table-container {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.attendance-table thead {
+  background-color: #4751FF;
+  color: #ffffff;
+}
+
+.attendance-table th {
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+}
+
+.attendance-table td {
+  padding: 12px;
+  text-align: center;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.attendance-table tr:hover {
+  background-color: #f9f9ff;
+  transition: 0.2s ease;
+}
+
+.attendance-filter {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.attendance-filter input[type="text"],
+.attendance-filter select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  min-width: 180px;
+}
+
+.attendance-filter button {
+  padding: 10px 16px;
+  background-color: #4751FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.attendance-filter button:hover {
+  background-color: #3540d8;
 }

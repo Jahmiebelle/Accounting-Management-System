@@ -596,13 +596,14 @@ legend {
 }
 
 td, th {
+  
   margin: 0px;
   border: 0.1px solid #ccc;
   
 }
 
 th {
-  padding: 7px 10px;
+  padding: 5px 10px;
   background-color: #eeeeee;
   color: #333333;
   letter-spacing: 0.5px;
