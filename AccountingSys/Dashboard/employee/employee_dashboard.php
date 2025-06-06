@@ -81,7 +81,7 @@ session_start();
               </div>
               </div>
               <div class="section-text">
-                Dashboard
+                Dashboard`
             </div>
 
             <div class="logout-icon" id="logout-icon">
@@ -89,42 +89,34 @@ session_start();
             </div>
           </div>
           <div class="greetings-content">
-            
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
                   echo $_SESSION['employee_first_name'] . " " . $_SESSION['employee_last_name'];
                 ?>
-              </div> 
+              </div>
+              <div class="path">
+                Employee
+              </div>
             </div>
-
             <div class="right-greetings">
-              
-            </div>
-          </div>
-
-      <div class="welcome-bar">
-        <div class="path">
-                Employee/Dashboard
-              </div> 
               <div class="datetime">
                 <?php date_default_timezone_set("Asia/Manila");
                       echo date("l, F j, Y \a\\t g:i A T"); 
                       ?> 
               </div>
+              <div class="emptybox">
+                
+              </div>
             </div>
-<<<<<<< HEAD
           </div>
           
           <div class="dashboard-container">
   <div class="welcome-bar">
     <span>Welcome, Mr. <?= $employeeName ?? 'Employee' ?>!</span>
-   
   </div>
-=======
->>>>>>> 3de601f32295e9660651cc2ca25d256191cd82f1
 
-  
+  <div class="main-dashboard-content">
     <div class="top-row">
       <div class="left-box">
         <div class="clock-buttons">
@@ -141,45 +133,29 @@ session_start();
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<div class="summary-row">
- x
-  <div class="summary-card">
-    <span>Total Working Hours:</span>
-    <div><?= $totalWorkingHours ?? '100' ?> hrs</div>
-  </div>
-  <div class="summary-card">
-    <span>Total Overtime Hours:</span>
-    <div><?= $totalOvertimeHours ?? '8' ?> hrs</div>
-  </div>
-  <div class="summary-card">
-    <span>Total Working Days:</span>
-    <div><?= $totalWorkingDays ?? '20' ?> days</div>
-  </div>
-  <div class="summary-card">
-    <span>Payroll Status:</span>
-    <div class="payroll-status <?= strtolower($payrollStatus ?? 'pending') ?>">
-      <?= ucfirst($payrollStatus ?? 'Pending') ?>
-=======
 
-<div class="dashboard-container">
-  <div class="main-dashboard-content">
-    <div class="summary-row">
-      <div class="summary-card">
-        <span>Total Days Present:</span>
-        <div><?= $totalDaysPresent ?? '0' ?></div>
-      </div>
-      <div class="summary-card">
-        <span>Absent:</span>
-        <div><?= $absents ?? '0' ?></div>
-      </div>
->>>>>>> 3de601f32295e9660651cc2ca25d256191cd82f1
-    </div>
-  </div>
-</div>
-
- 
-
+ <div class="upper-main-content">
+          <h2 class="section-title">Attendance Summary</h2>
+            <div class="summary-grid">
+            <div class="summary-item">
+              <span class="label">Total Working hours:</span>
+              <span class="value"><?= $totalDaysPresent ?? '100 hrs' ?></span>
+                </div>
+                <div class="summary-item">
+                     <span class="label">Total Overtime hours:</span>
+                     <span class="value"><?= $lateEntries ?? '8 hrs' ?></span>
+                        </div>
+                      <div class="summary-item">
+                    <span class="label">Total Working Days:</span>
+                    <span class="value"><?= $absents ?? '20 Days' ?></span>
+                </div>
+              <div class="summary-item">
+            <span class="label">Payroll Status:</span>
+            <span class="value"><?= $overtimeHours ?? 'pending'?></span>
+            </div>
+               </div>
+                </div>
+                
     <div class="attendance-table-section">
       <table class="attendance-table">
         <thead>
@@ -203,10 +179,10 @@ session_start();
           </tr>
         </tbody>
       </table>
+      
     </div>
   </div>
 </div>
-
 
          
     
