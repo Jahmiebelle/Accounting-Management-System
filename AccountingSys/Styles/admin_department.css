@@ -593,13 +593,13 @@ legend {
   text-justify: center;
   height: auto;
   color: #333333;
-  width: 100%;
-  min-width: 100%;
+  width: auto;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
 td, th {
-  padding: 8px 16px;
+  padding: 8px 70px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
