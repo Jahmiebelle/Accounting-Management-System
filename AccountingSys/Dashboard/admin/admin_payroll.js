@@ -25,7 +25,7 @@ const statutoryTaxInput = document.querySelectorAll('.statutory-tax-input');
 const hourlyRateInput = document.querySelectorAll('.hourly-rate-price');
 
 let editTax = false;
-editTaxBtn.addEventListener('click', function(){
+editTaxBtn.addEventListener('click', function(e){
   if(editTax){
     editTaxBtn.innerText = "Edit";
     editTaxBtn.setAttribute("type", "button");
@@ -37,6 +37,7 @@ editTaxBtn.addEventListener('click', function(){
     });
   }
   else{
+    e.preventDefault();
     editTaxBtn.innerText = "Save";
     editTaxBtn.setAttribute("type", "submit");
     incomeTaxInput.removeAttribute('readonly');
@@ -50,7 +51,7 @@ editTaxBtn.addEventListener('click', function(){
 });
 
 let editRate = false;
-editRateBtn.addEventListener('click', function(){
+editRateBtn.addEventListener('click', function(e){
   if(editRate){
     editRateBtn.innerText = "Edit";
     editRateBtn.setAttribute("type", "button");
@@ -60,6 +61,7 @@ editRateBtn.addEventListener('click', function(){
     });
   }
   else{
+    e.preventDefault();
     editRateBtn.innerText = "Save";
     editRateBtn.setAttribute("type", "submit");
     hourlyRateInput.forEach(function(hourlyRate){
