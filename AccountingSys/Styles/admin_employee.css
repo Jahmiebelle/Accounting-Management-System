@@ -1053,8 +1053,9 @@ th {
 }
 
 td {
-  text-justify: center;
   text-align: center;
+  white-space: normal;
+  word-break: break-word;
   font-family: 'Poppins-light';
   font-size: 12px;
   vertical-align: middle;

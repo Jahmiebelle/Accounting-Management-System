@@ -616,12 +616,9 @@ th {
 }
 
 td {
-  text-justify: center;
+  white-space: normal;
+  word-break: break-word;
   text-align: center;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  justify-items: center;
   font-family: 'Poppins-light';
   font-size: 12px;
   vertical-align: middle;
