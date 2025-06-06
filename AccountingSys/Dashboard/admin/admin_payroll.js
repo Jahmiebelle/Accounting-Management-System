@@ -28,7 +28,7 @@ let editTax = false;
 editTaxBtn.addEventListener('click', function(e){
   if(editTax){
     editTaxBtn.innerText = "Edit";
-    editTaxBtn.setAttribute("type", "button");
+    //editTaxBtn.setAttribute("type", "button");
     incomeTaxInput.setAttribute('readonly', true);
     incomeTaxInput.classList.remove('editable');
     statutoryTaxInput.forEach(function(statuInput){
@@ -54,7 +54,7 @@ let editRate = false;
 editRateBtn.addEventListener('click', function(e){
   if(editRate){
     editRateBtn.innerText = "Edit";
-    editRateBtn.setAttribute("type", "button");
+    //editRateBtn.setAttribute("type", "button");
     hourlyRateInput.forEach(function(hourlyRate){
       hourlyRate.setAttribute('readonly', true);
       hourlyRate.classList.remove('editable');
