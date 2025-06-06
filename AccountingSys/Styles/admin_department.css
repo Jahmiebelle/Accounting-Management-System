@@ -577,26 +577,30 @@ legend {
 
 .lower-main-content {
   display: flex;
+  align-items: center;
   height: auto;
   width: 100%;
   flex-direction: column;
   justify-content: center;
+  border: solid red 1px;
+  box-sizing: border-box;
 }
 
 .dept-table {
-  display: flex;
-  justify-content: center;
+  table-layout: fixed;
   border-spacing: 0px;
   border-collapse: collapse;
-  align-items: center;
   text-align: center;
+  text-justify: center;
   height: 100%;
-  width: 100%;
   color: #333333;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 td, th {
-  padding: 2px 70px;
+  padding: 12px 16px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
