@@ -9,6 +9,13 @@
   $philhealth_tax = $_POST['philhealth_tax'] / 100;
   $income_tax = $_POST['income_tax'] / 100;
   $updateTaxQuery = "UPDATE admin_taxation_table SET sss_tax = '$sss_tax', pagibig_tax = '$pagibig_tax', philhealth_tax = '$philhealth_tax', income_tax = '$income_tax';";
+  $taxQueryResult = mysqli_query($conn, $updateTaxQuery);
+  if ($taxQueryResult) {
+    echo "All goods";
+  }
+  else {
+    echo "Can't Update Tax";
+  }
   
   header("Location: admin_payroll.php");
   
