@@ -570,7 +570,9 @@ h4 {
 
 
 .lower-hourly-form {
-  display: flex;
+  display: flex; 
+  flex-direction: column;
+  gap: 1rem;
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -640,16 +642,17 @@ p {
   width: 100%;
   color: #333333;
 
+
 }
 
 td, th {
+  padding: 12px 20px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
 }
 
 th {
-  padding: 5px 10px;
   background-color: #eeeeee;
   color: #333333;
   letter-spacing: 0.5px;
@@ -660,7 +663,6 @@ th {
 }
 
 td {
-  padding: 8px 16px;
   text-justify: center;
   text-align: center;
   align-content: center;

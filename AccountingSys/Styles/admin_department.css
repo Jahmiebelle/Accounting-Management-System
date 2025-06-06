@@ -596,13 +596,13 @@ legend {
 }
 
 td, th {
+  padding: 2px 70px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
 }
 
 th {
-  padding: 7px 10px;
   background-color: #eeeeee;
   color: #333333;
   letter-spacing: 0.5px;
@@ -613,12 +613,12 @@ th {
 }
 
 td {
-  padding: 10px 16px;
   text-justify: center;
   text-align: center;
   justify-content: center;
   align-content: center;
   align-items: center;
+  justify-items: center;
   font-family: 'Poppins-light';
   font-size: 14px;
   vertical-align: middle;
