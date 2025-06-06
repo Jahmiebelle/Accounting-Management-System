@@ -132,7 +132,10 @@ session_start();
               $sss_tax = $taxRow['sss_tax'] * 100;
               $pagibig_tax = $taxRow['pagibig_tax'] * 100;
               $philhealth_tax = $taxRow['philhealth_tax'] * 100;
+              $statutory_tax = $sss_tax + $pagibig_tax + $philhealth_tax;
               $income_tax = $taxRow['income_tax'] * 100;
+              
+              $total_tax = $statutory_tax + $income_tax;
             ?>
             <div class="upper-main-content">
               <form class="taxation-form" id="taxation-form" action="update_tax.php" method="POST">
@@ -182,7 +185,7 @@ session_start();
                   <div class="tax-summary">
                     <div class="statutory-deduc">
                       <h4>Statutory Deductions:</h4>
-                      <h4>7.5%</h4>
+                      <h4><?php echo $statutory_tax;?>%</h4>
                     </div>
                     <div class="income-tax">
                       <h4>Income Tax:</h4>
@@ -194,7 +197,7 @@ session_start();
                     </div>
                     <div class="total-deduc">
                       <h4>Total Deduction:</h4>
-                      <h4>9.5%</h4>
+                      <h4><?php echo $total_tax;?>%</h4>
                     </div>
                   </div>
                 </div>
