@@ -126,10 +126,6 @@ session_start();
             
           </div>
           <div class="main-content"
-            <div class="filter-section">
-               <select name="department">
-                 <option value="Information Technology">Select Department</option>
-                </select>
             <div class="attendance-header">
               <input type="date" />
               <input type="text" placeholder="Search by name... />
