@@ -582,6 +582,7 @@ legend {
   width: 100%;
   flex-direction: column;
   justify-content: center;
+  overflow-y: auto;
   box-sizing: border-box;
 }
 
@@ -619,7 +620,6 @@ td {
   justify-items: center;
   align-items: center;
   white-space: normal;
-  word-break: break-word;
   text-align: center;
   font-family: 'Poppins-light';
   font-size: 12px;
