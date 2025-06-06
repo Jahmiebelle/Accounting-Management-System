@@ -1036,7 +1036,7 @@ legend {
 }
 
 td, th {
-  padding: 8px 16px;
+  padding: 8px 12px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
@@ -1054,7 +1054,6 @@ th {
 
 td {
   text-align: center;
-  text-align: justify;
   white-space: normal;
   font-family: 'Poppins-light';
   font-size: 12px;
