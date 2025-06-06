@@ -1055,6 +1055,8 @@ th {
 td {
   text-justify: center;
   text-align: center;
+  justify-content: center;
+  justify-items: center;
   align-content: center;
   align-items: center;
   font-family: 'Poppins-light';
