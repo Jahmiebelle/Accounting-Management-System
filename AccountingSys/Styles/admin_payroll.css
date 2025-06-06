@@ -462,7 +462,10 @@ body {
   color: #F4F6F8;
   background-color: #007BFF;
   transition: all 0.15s ease;
-  
+}
+
+.edit-tax-btn:hover, .edit-rate-btn:hover {
+  background-color: darkblue
 }
 
 
@@ -525,8 +528,41 @@ body {
 }
 
 .tax-card-percent {
+  display: flex;
+  position: relative;
+  width: 3rem;
+  height: auto;
+  align-items: center;
+  justify-content: flex-end;
   font-family: 'Poppins-medium';
   font-size: 14px;
+  box-sizing: border-box;
+}
+
+.statutory-tax-input {
+  display: flex;
+  width: 100%;
+  padding-right: 0.7rem;
+  text-align: right;
+  font-family: 'Poppins-medium';
+  font-size: 14px;
+  border: none;
+  border-bottom: solid rgba(0, 0, 0, 0) 1px;
+  transition: all 0.15s ease;
+}
+
+.statutory-tax-input:focus {
+  border: none;
+  outline: none;
+}
+
+.statutory-tax-input.editable {
+  border-bottom: solid #666666 0.25px;
+}
+
+.statutory-percent {
+  display: flex;
+  position: absolute;
 }
 
 .tax-footer {
@@ -537,12 +573,12 @@ body {
   box-sizing: border-box;
   border-top: solid #cccccc 1px;
   color: #666666;
-
   
 }
 
 .tax-summary{
   display: flex;
+  gap: 0.25rem;
   font-size: 12px;
   flex-direction: column;
   height: 100%;
@@ -556,6 +592,47 @@ body {
   height: auto;
   padding: 0.5rem 0;
   margin-top: 0.25rem;
+}
+
+#income-tax-box {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  width: 3rem;
+  height: auto;
+  box-sizing: border-box;
+  
+}
+
+#income-tax-input {
+  display: flex;
+  font-size: 12px;
+  font-family: 'Poppins-medium';
+  color: #666666;
+  width: 100%;
+  height: auto;
+  padding-right: 0.6rem;
+  text-align: right;
+  transition: all 0.25s ease;
+  border: none;
+  border-bottom: solid rgba(0, 0, 0, 0) 1px;
+}
+
+#income-tax-input.editable {
+  color: #333333;
+  border-bottom: solid #666666 0.5px;
+}
+
+#income-tax-input:focus {
+  border: none;
+  outline: none;
+}
+
+.percentage {
+  display: flex;
+  position: absolute;
+  right: 0;
 }
 
 .total-deduc {
@@ -609,12 +686,19 @@ h4 {
   border: none;
   margin: 0;
   width: 8rem;
+  border-radius: 0;
+  border-bottom: solid rgba(0, 0, 0, 0) 1px;
   transition: all 0.15s ease;
 }
 
 .hourly-rate-price:focus {
   outline: none;
   border: none;
+}
+
+.hourly-rate-price.editable {
+  color: #333333;
+  border-bottom: solid #666666 0.5px;
 }
 
 p {
@@ -641,7 +725,6 @@ p {
   height: 100%;
   width: 100%;
   color: #333333;
-
 
 }
 

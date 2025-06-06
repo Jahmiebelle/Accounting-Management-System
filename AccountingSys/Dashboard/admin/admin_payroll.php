@@ -129,7 +129,7 @@ session_start();
               <form class="taxation-form" id="taxation-form" action="" method="POST">
                 <div class="tax-header">
                   <div class="tax-label">Tax Settings</div>
-                  <button class="edit-tax-btn" id="edit-tax-btn">Edit</button>
+                  <button type="button" class="edit-tax-btn" id="edit-tax-btn">Edit</button>
                 </div>
                 <div class="tax-body">
                   <div id="sss-container" class="tax-containers">
@@ -138,7 +138,10 @@ session_start();
                     </div>
                     <div class="tax-card-detail">
                       <div class="tax-card-name">SSS</div>
-                      <div class="tax-card-percent">2.5%</div>
+                      <div class="tax-card-percent">
+                        <input type="text" name="sss_tax" id="sss-tax-input" class="statutory-tax-input" value="2.5" readonly/>
+                        <p class="statutory-percent">%</p>
+                      </div>
                     </div>
                   </div>
                   <div id="pagibig-container" class="tax-containers">
@@ -147,7 +150,10 @@ session_start();
                     </div>
                     <div class="tax-card-detail">
                       <div class="tax-card-name">Pagibig</div>
-                      <div class="tax-card-percent">2%</div>
+                      <div class="tax-card-percent">
+                        <input type="text" name="pagibig_tax" id="pagibig-tax-input" class="statutory-tax-input" value="2" readonly/>
+                        <p class="statutory-percent">%</p>
+                      </div>
                     </div>
                   </div>
                   <div id="philhealth-container" class="tax-containers">
@@ -156,7 +162,10 @@ session_start();
                     </div>
                     <div class="tax-card-detail">
                       <div class="tax-card-name">PhilHealth</div>
-                      <div class="tax-card-percent">3%</div>
+                      <div class="tax-card-percent">
+                        <input type="text" name="philhealth_tax" id="philhealth-tax-input" class="statutory-tax-input" value="3" readonly/>
+                        <p class="statutory-percent">%</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -168,7 +177,11 @@ session_start();
                     </div>
                     <div class="income-tax">
                       <h4>Income Tax:</h4>
-                      <h4>2%</h4>
+                      <div id="income-tax-box">
+                        <input type="text" name="income_tax" id="income-tax-input" value="2" readonly>
+                        <h4 class="percentage">%</h4>
+                      </div>
+                      
                     </div>
                     <div class="total-deduc">
                       <h4>Total Deduction:</h4>
@@ -182,14 +195,14 @@ session_start();
                   <div class="hourly-header">
                     Hourly Rates 
                   </div>
-                  <button class="edit-rate-btn" id="edit-rate-btn">Edit</button>
+                  <button type="button" class="edit-rate-btn" id="edit-rate-btn">Edit</button>
                 </div>
                 <div class="lower-hourly-form">
                   <div class="role-rate-cards" id="professor-card">
                     <div class="rate-info">
                       <p class="role-name">Professor</p>
                       <p class="hourly-rate-text">Hourly Rate</p>
-                      <input type="number" class="hourly-rate-price" id="professor-rate" value="90">
+                      <input type="number" class="hourly-rate-price" id="professor-rate" name="professor_rate" value="90" readonly>
                     </div>
                     <div class="rate-logo">
                       
@@ -199,7 +212,7 @@ session_start();
                     <div class="rate-info">
                       <p class="role-name">Instructor</p>
                       <p class="hourly-rate-text">Hourly Rate</p>
-                      <input type="number" class="hourly-rate-price" id="instructor-rate" value="85">
+                      <input type="number" class="hourly-rate-price" id="instructor-rate" name="instructor_rate" value="85" readonly>
                     </div>
                     <div class="rate-logo">
                       
@@ -209,7 +222,7 @@ session_start();
                     <div class="rate-info">
                       <p class="role-name">Part-Time-Staff</p>
                       <p class="hourly-rate-text">Hourly Rate </p>
-                      <input type="number" class="hourly-rate-price" id="part-time-rate" value="65">
+                      <input type="number" class="hourly-rate-price" id="part-time-rate" name="part_time_rate" value="65" readonly>
                     </div>
                     <div class="rate-logo">
                       
@@ -224,6 +237,7 @@ session_start();
               </div>
               <table class="payroll-table">
                 <tr>
+                  <th>Month</th>
                   <th>Name</th>
                   <th>Gross Salary</th>
                   <th>Deductions</th>
@@ -232,6 +246,7 @@ session_start();
                   <th>Action</th>
                 </tr>
                 <tr>
+                  <td>June</td>
                   <td>Kristian Celfo</td>
                   <td>18,000</td>
                   <td>2,700</td>
