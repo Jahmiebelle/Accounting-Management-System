@@ -81,7 +81,7 @@ session_start();
               </div>
               </div>
               <div class="section-text">
-                Attendance
+                Dashboard
             </div>
 
             <div class="logout-icon" id="logout-icon">
@@ -114,7 +114,7 @@ session_start();
           <div class="dashboard-container">
   <div class="welcome-bar">
     <span>Welcome, Mr. <?= $employeeName ?? 'Employee' ?>!</span>
-    <span class="power-icon">⏻</span>
+   
   </div>
 
   <div class="main-dashboard-content">
@@ -134,17 +134,29 @@ session_start();
         </div>
       </div>
     </div>
-
-    <div class="summary-row">
-      <div class="summary-card">
-        <span>Total Days Present:</span>
-        <div><?= $totalDaysPresent ?? '0' ?></div>
-      </div>
-      <div class="summary-card">
-        <span>Absent:</span>
-        <div><?= $absents ?? '0' ?></div>
-      </div>
+<div class="summary-row">
+ x
+  <div class="summary-card">
+    <span>Total Working Hours:</span>
+    <div><?= $totalWorkingHours ?? '100' ?> hrs</div>
+  </div>
+  <div class="summary-card">
+    <span>Total Overtime Hours:</span>
+    <div><?= $totalOvertimeHours ?? '8' ?> hrs</div>
+  </div>
+  <div class="summary-card">
+    <span>Total Working Days:</span>
+    <div><?= $totalWorkingDays ?? '20' ?> days</div>
+  </div>
+  <div class="summary-card">
+    <span>Payroll Status:</span>
+    <div class="payroll-status <?= strtolower($payrollStatus ?? 'pending') ?>">
+      <?= ucfirst($payrollStatus ?? 'Pending') ?>
     </div>
+  </div>
+</div>
+
+ 
 
     <div class="attendance-table-section">
       <table class="attendance-table">
@@ -173,6 +185,7 @@ session_start();
     </div>
   </div>
 </div>
+
 
          
     
