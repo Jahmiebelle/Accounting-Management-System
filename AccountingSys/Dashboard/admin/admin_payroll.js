@@ -28,6 +28,7 @@ let editTax = false;
 editTaxBtn.addEventListener('click', function(){
   if(editTax){
     editTaxBtn.innerText = "Edit";
+    editTaxBtn.setAttribute("type", "button");
     incomeTaxInput.setAttribute('readonly', true);
     incomeTaxInput.classList.remove('editable');
     statutoryTaxInput.forEach(function(statuInput){
@@ -37,6 +38,7 @@ editTaxBtn.addEventListener('click', function(){
   }
   else{
     editTaxBtn.innerText = "Save";
+    editTaxBtn.setAttribute("type", "submit");
     incomeTaxInput.removeAttribute('readonly');
     incomeTaxInput.classList.add('editable');
     statutoryTaxInput.forEach(function(statuInput){
@@ -51,6 +53,7 @@ let editRate = false;
 editRateBtn.addEventListener('click', function(){
   if(editRate){
     editRateBtn.innerText = "Edit";
+    editRateBtn.setAttribute("type", "button");
     hourlyRateInput.forEach(function(hourlyRate){
       hourlyRate.setAttribute('readonly', true);
       hourlyRate.classList.remove('editable');
@@ -58,6 +61,7 @@ editRateBtn.addEventListener('click', function(){
   }
   else{
     editRateBtn.innerText = "Save";
+    editRateBtn.setAttribute("type", "submit");
     hourlyRateInput.forEach(function(hourlyRate){
       hourlyRate.removeAttribute('readonly');
       hourlyRate.classList.add('editable');

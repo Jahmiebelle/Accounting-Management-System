@@ -125,8 +125,17 @@ session_start();
           
           </div>
           <div class="main-content">
+            <?php
+              $getTaxQuery = "SELECT * FROM admin_taxation_table;";
+              $taxQueryResult = mysqli_query($conn, $getTaxQuery);
+              $taxRow = mysqli_fetch_assoc($taxQueryResult);
+              $sss_tax = $taxRow['sss_tax'] * 100;
+              $pagibig_tax = $taxRow['pagibig_tax'] * 100;
+              $philhealth_tax = $taxRow['philhealth_tax'] * 100;
+              $income_tax = $taxRow['income_tax'] * 100;
+            ?>
             <div class="upper-main-content">
-              <form class="taxation-form" id="taxation-form" action="" method="POST">
+              <form class="taxation-form" id="taxation-form" action="update_tax.php" method="POST">
                 <div class="tax-header">
                   <div class="tax-label">Tax Settings</div>
                   <button type="button" class="edit-tax-btn" id="edit-tax-btn">Edit</button>
@@ -139,7 +148,7 @@ session_start();
                     <div class="tax-card-detail">
                       <div class="tax-card-name">SSS</div>
                       <div class="tax-card-percent">
-                        <input type="text" name="sss_tax" id="sss-tax-input" class="statutory-tax-input" value="2.5" readonly/>
+                        <input type="text" name="sss_tax" id="sss-tax-input" class="statutory-tax-input"<?php echo " value='$sss_tax'"?>readonly/>
                         <p class="statutory-percent">%</p>
                       </div>
                     </div>
@@ -151,7 +160,7 @@ session_start();
                     <div class="tax-card-detail">
                       <div class="tax-card-name">Pagibig</div>
                       <div class="tax-card-percent">
-                        <input type="text" name="pagibig_tax" id="pagibig-tax-input" class="statutory-tax-input" value="2" readonly/>
+                        <input type="text" name="pagibig_tax" id="pagibig-tax-input" class="statutory-tax-input" <?php echo " value='$pagibig_tax'"?> readonly>
                         <p class="statutory-percent">%</p>
                       </div>
                     </div>
@@ -163,7 +172,7 @@ session_start();
                     <div class="tax-card-detail">
                       <div class="tax-card-name">PhilHealth</div>
                       <div class="tax-card-percent">
-                        <input type="text" name="philhealth_tax" id="philhealth-tax-input" class="statutory-tax-input" value="3" readonly/>
+                        <input type="text" name="philhealth_tax" id="philhealth-tax-input" class="statutory-tax-input" <?php echo " value='philhealth_tax'"?> readonly/>
                         <p class="statutory-percent">%</p>
                       </div>
                     </div>
@@ -178,7 +187,7 @@ session_start();
                     <div class="income-tax">
                       <h4>Income Tax:</h4>
                       <div id="income-tax-box">
-                        <input type="text" name="income_tax" id="income-tax-input" value="2" readonly>
+                        <input type="text" name="income_tax" id="income-tax-input" <?php echo " value='$income_tax'"?> readonly>
                         <h4 class="percentage">%</h4>
                       </div>
                       
@@ -190,7 +199,7 @@ session_start();
                   </div>
                 </div>
               </form>
-              <form class="hourly-rate-form" id="hourly-rate-form" action="" method="POST">
+              <form class="hourly-rate-form" id="hourly-rate-form" action="update_hourly_rate.php" method="POST">
                 <div class="upper-hourly-form">
                   <div class="hourly-header">
                     Hourly Rates 
