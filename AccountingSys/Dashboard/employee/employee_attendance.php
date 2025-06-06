@@ -107,15 +107,74 @@ session_start();
             </div>
             
           </div>
-          <div class="main-content">
 
-            <div class="upper-main-content">
 
+      <div class="main-content">
+        
+        <div class="upper-main-content">
+          <h2 class="section-title">Attendance Summary</h2>
+            <div class="summary-grid">
+            <div class="summary-item">
+              <span class="label">Total Days Present:</span>
+              <span class="value"><?= $totalDaysPresent ?? '0' ?></span>
+                </div>
+                <div class="summary-item">
+                     <span class="label">Late Entries:</span>
+                     <span class="value"><?= $lateEntries ?? '0' ?></span>
+                        </div>
+                      <div class="summary-item">
+                    <span class="label">Absents:</span>
+                    <span class="value"><?= $absents ?? '0' ?></span>
+                </div>
+              <div class="summary-item">
+            <span class="label">Overtime Hours:</span>
+            <span class="value"><?= $overtimeHours ?? '0h' ?></span>
             </div>
-            <div class="lower-main-content">
+               </div>
+                </div>
 
-            </div>
-          </div>
+        <div class="lower-main-content">
+            <h2 class="section-title">Employee Attendance List</h2>
+                <table class="attendance-table">
+                  <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Last Name</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Cyrus Cabañes</td>
+                      <td></td>
+                      <td>Information Technology</td>
+                      <td class="status-cell">
+                        <span class="status-dot active"></span> Active
+                      </td>
+                      <td>Profile</td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>Kristian Celfo</td>
+                      <td></td>
+                      <td>Information Technology</td>
+                      <td class="status-cell">
+                        <span class="status-dot active"></span> Active
+                      </td>
+                      <td>Profile</td>
+                    </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
         </div>
       </div>
       
