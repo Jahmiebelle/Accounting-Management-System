@@ -599,7 +599,7 @@ legend {
 }
 
 td, th {
-  padding: 12px 16px;
+  padding: 8px 16px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
@@ -623,7 +623,7 @@ td {
   align-items: center;
   justify-items: center;
   font-family: 'Poppins-light';
-  font-size: 14px;
+  font-size: 12px;
   vertical-align: middle;
 }
 
