@@ -1019,7 +1019,6 @@ legend {
   height: auto;
   width: 100%;
   overflow-y: auto;
-  
 }
 
 .table {
@@ -1028,7 +1027,7 @@ legend {
   border-collapse: collapse;
   text-align: center;
   text-justify: center;
-  height: 100%;
+  height: auto;
   width: 100%;
   min-width: 100%;
   color: #333333;
