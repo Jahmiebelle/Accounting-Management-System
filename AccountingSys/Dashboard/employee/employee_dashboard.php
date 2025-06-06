@@ -89,34 +89,32 @@ session_start();
             </div>
           </div>
           <div class="greetings-content">
+            
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
                   echo $_SESSION['employee_first_name'] . " " . $_SESSION['employee_last_name'];
                 ?>
-              </div>
-              <div class="path">
-                Employee
-              </div>
+              </div> 
             </div>
+
             <div class="right-greetings">
+              
+            </div>
+          </div>
+
+      <div class="welcome-bar">
+        <div class="path">
+                Employee/Dashboard
+              </div> 
               <div class="datetime">
                 <?php date_default_timezone_set("Asia/Manila");
                       echo date("l, F j, Y \a\\t g:i A T"); 
                       ?> 
               </div>
-              <div class="emptybox">
-                
-              </div>
             </div>
-          </div>
-          
-          <div class="dashboard-container">
-  <div class="welcome-bar">
-    <span>Welcome, Mr. <?= $employeeName ?? 'Employee' ?>!</span>
-  </div>
 
-  <div class="main-dashboard-content">
+  
     <div class="top-row">
       <div class="left-box">
         <div class="clock-buttons">
@@ -134,6 +132,8 @@ session_start();
       </div>
     </div>
 
+<div class="dashboard-container">
+  <div class="main-dashboard-content">
     <div class="summary-row">
       <div class="summary-card">
         <span>Total Days Present:</span>
@@ -166,7 +166,6 @@ session_start();
             <td></td>
             <td></td>
           </tr>
-          <!-- Additional rows dynamically generated -->
         </tbody>
       </table>
     </div>

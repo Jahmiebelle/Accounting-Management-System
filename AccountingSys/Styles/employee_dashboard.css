@@ -320,9 +320,9 @@ body {
 }
 
 .dashboard-container {
-  padding: 30px;
+  padding: 20px 50px;
   background-color: white;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins-bold';
 }
 
 .welcome-bar {
@@ -415,16 +415,14 @@ body {
   border-radius: 10px;
   padding: 15px 20px;
   flex: 1;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.200);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.300);
   font-weight: bold;
   color: #333;
 }
 
 .attendance-table-section {
-  background-color: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  padding: 25px;
+  
 }
 
 .attendance-table {
@@ -433,6 +431,7 @@ body {
 }
 
 .attendance-table th, .attendance-table td {
+  font-family: 'Poppins-bold';
   border: 1px solid #99999994;
   padding: 12px;
   font-size: 14px;
