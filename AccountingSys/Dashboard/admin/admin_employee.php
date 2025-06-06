@@ -323,7 +323,7 @@ session_start();
                   <select class="dropdown-boxes" id="emp-position" name="employee_position" value="" disabled>
                     <option id="professor-role" value="professor">Professor</option>
                     <option id="instructor-role" value="instructor">Instructor</option>
-                    <option id="part_time_instructor-role" value="part_time_instructor">Part-Time Instructor</option>
+                    <option id="part_time_instructor-role" value="part_time_staff">Part-Time Staff</option>
                   </select>
                 </div>
               </div>

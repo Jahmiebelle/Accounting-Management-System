@@ -125,13 +125,43 @@ session_start();
             </div>
             
           </div>
-          <div class="main-content">
-          
-
+          <div class="main-content"
+            <div class="attendance-header">
+              <input type="date" />
+              <input type="text" placeholder="Search by name..." />
+              <button class="filter-btn">Filter</button>
+            </div>
+            
+            <table class="attendance-table">
+              <thead>
+                <tr>
+                  <th>Department ID</th>
+                  <th>Employee ID</th>
+                  <th>Employee Name</th>
+                  <th>Date</th>
+                  <th>Clock-in</th>
+                  <th>Clock-out</th>
+                  <th>Overtime</th>
+                  <th>Total Hours of Work</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2025001</td>
+                    <td>Jahmiebelle Laurente</td>
+                    <td>06/06/2025</td>
+                    <td>7:00 AM</td>
+                    <td>3:00 PM</td>
+                    <td>2 hrs</td>
+                    <td>10 hrs</td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-      
     </div>
     
     <footer class="footer-container">

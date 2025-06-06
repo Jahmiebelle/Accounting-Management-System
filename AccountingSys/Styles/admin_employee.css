@@ -1036,13 +1036,13 @@ legend {
 }
 
 td, th {
+  padding: 2px 35px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
 }
 
 th {
-  padding: 5px 10px;
   background-color: #eeeeee;
   color: #333333;
   letter-spacing: 0.5px;
@@ -1053,7 +1053,6 @@ th {
 }
 
 td {
-  padding: 8px 16px;
   text-justify: center;
   text-align: center;
   align-content: center;

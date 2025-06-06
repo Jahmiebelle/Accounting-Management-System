@@ -35,6 +35,10 @@ html {
   scroll-behavior: smooth;
 }
 
+input {
+  font-family: 'Poppins-regular';
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -391,6 +395,7 @@ body {
   height: auto;
   min-height: 100vh;
   width: 100%;
+  gap: 3rem;
   flex-direction: column;
   padding-bottom: 75px;
   align-items: center;
@@ -401,30 +406,38 @@ body {
 .upper-main-content {
   display: flex;
   height: auto;
-  min-height: 400px;
+  min-height: 450px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  border: solid red 1px;
 }
 
 .taxation-form, .hourly-rate-form {
   display: flex;
   flex-direction: column;
-  height: 95%;
-  min-height: 300px;
+  height: auto;
+  min-height: 450px;
   gap: 0.5rem;
-  width: 40%;
+  width: 45%;
   padding: 0.5rem 1rem;
   padding-bottom: 2rem;
-  border-radius: 10px;
+  border-radius: 5px;
+  border: solid #cccccc 0.5px;
+  /*background-color: rgba(0, 0, 0, 0);*/
   background-color: #ffffff;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  /*box-shadow: 0 3px 4px rgba(0, 0, 0, 0.075);*/
 
 }
 
-.tax-header {
+.hourly-rate-form {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  
+}
+
+.tax-header, .upper-hourly-form {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -435,12 +448,12 @@ body {
   border-bottom: solid #cccccc 1px;
 }
 
-.tax-label {
+.tax-label, .hourly-header{
   font-size: 16px;
-  font-family: 'Poppins-bold';
+  font-family: 'Poppins-medium';
 }
 
-.edit-tax-btn {
+.edit-tax-btn, .edit-rate-btn {
   padding: 0.25rem 1rem;
   font-size: 12px;
   font-family: 'Poppins-regular';
@@ -448,6 +461,7 @@ body {
   border-radius: 5px;
   color: #F4F6F8;
   background-color: #007BFF;
+  transition: all 0.15s ease;
   
 }
 
@@ -541,6 +555,7 @@ body {
   justify-content: space-between;
   height: auto;
   padding: 0.5rem 0;
+  margin-top: 0.25rem;
 }
 
 .total-deduc {
@@ -554,9 +569,111 @@ h4 {
 
 
 
+.lower-hourly-form {
+  display: flex; 
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.role-rate-cards {
+  display: flex;
+  height: 5rem;
+  width: 10rem;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.075);
+}
+
+.rate-info {
+  display:flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  justify-content: center;
+}
+
+.role-name {
+  font-family: 'Poppins-Medium';
+}
+
+.hourly-rate-text {
+  font-size: 12px;
+  color: #666666;
+}
+
+.hourly-rate-price {
+  display: flex;
+  border: none;
+  margin: 0;
+  width: 8rem;
+  transition: all 0.15s ease;
+}
+
+.hourly-rate-price:focus {
+  outline: none;
+  border: none;
+}
+
+p {
+  margin: 0;
+}
 
 .lower-main-content {
   display: flex;
+  height: auto;
+  min-height: 70vh;
+  gap: 1rem;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payroll-table {
+  display: flex;
+  justify-content: center;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  color: #333333;
+
+
+}
+
+td, th {
+  padding: 12px 20px;
+  margin: 0px;
+  border: 0.1px solid #ccc;
+  
+}
+
+th {
+  background-color: #eeeeee;
+  color: #333333;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins-light';
+  font-size: 12px;
+
+
+}
+
+td {
+  text-justify: center;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  font-family: 'Poppins-light';
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
 }
 
 

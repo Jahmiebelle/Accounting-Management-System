@@ -89,26 +89,31 @@ session_start();
             </div>
           </div>
           <div class="greetings-content">
+            
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
                   echo $_SESSION['employee_first_name'] . " " . $_SESSION['employee_last_name'];
                 ?>
-              </div>
-              <div class="path">
-                Employee
-              </div>
+              </div> 
             </div>
+
             <div class="right-greetings">
+              
+            </div>
+          </div>
+
+      <div class="welcome-bar">
+        <div class="path">
+                Employee/Dashboard
+              </div> 
               <div class="datetime">
                 <?php date_default_timezone_set("Asia/Manila");
                       echo date("l, F j, Y \a\\t g:i A T"); 
                       ?> 
               </div>
-              <div class="emptybox">
-                
-              </div>
             </div>
+<<<<<<< HEAD
           </div>
           
           <div class="dashboard-container">
@@ -116,8 +121,10 @@ session_start();
     <span>Welcome, Mr. <?= $employeeName ?? 'Employee' ?>!</span>
    
   </div>
+=======
+>>>>>>> 3de601f32295e9660651cc2ca25d256191cd82f1
 
-  <div class="main-dashboard-content">
+  
     <div class="top-row">
       <div class="left-box">
         <div class="clock-buttons">
@@ -134,6 +141,7 @@ session_start();
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <div class="summary-row">
  x
   <div class="summary-card">
@@ -152,6 +160,20 @@ session_start();
     <span>Payroll Status:</span>
     <div class="payroll-status <?= strtolower($payrollStatus ?? 'pending') ?>">
       <?= ucfirst($payrollStatus ?? 'Pending') ?>
+=======
+
+<div class="dashboard-container">
+  <div class="main-dashboard-content">
+    <div class="summary-row">
+      <div class="summary-card">
+        <span>Total Days Present:</span>
+        <div><?= $totalDaysPresent ?? '0' ?></div>
+      </div>
+      <div class="summary-card">
+        <span>Absent:</span>
+        <div><?= $absents ?? '0' ?></div>
+      </div>
+>>>>>>> 3de601f32295e9660651cc2ca25d256191cd82f1
     </div>
   </div>
 </div>
@@ -179,7 +201,6 @@ session_start();
             <td></td>
             <td></td>
           </tr>
-          <!-- Additional rows dynamically generated -->
         </tbody>
       </table>
     </div>

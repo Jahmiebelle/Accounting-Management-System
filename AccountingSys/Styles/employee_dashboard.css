@@ -289,16 +289,7 @@ body {
 }
 
 
-.summary-card {
-  background-color: white;
-  padding: 20px 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  min-width: 180px;
-  text-align: center;
-  flex: 1;
-  max-width: 200px;
-}
+
 
 .summary-title {
   display: block;
@@ -329,9 +320,9 @@ body {
 }
 
 .dashboard-container {
-  padding: 30px;
+  padding: 20px 50px;
   background-color: white;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins-bold';
 }
 
 .welcome-bar {
@@ -343,7 +334,12 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
 }
+<<<<<<< HEAD
   
+=======
+
+
+>>>>>>> 3de601f32295e9660651cc2ca25d256191cd82f1
 .main-dashboard-content {
   display: flex;
   flex-direction: column;
@@ -412,13 +408,29 @@ body {
   color: #666;
 }
 
+<<<<<<< HEAD
   
+=======
+.summary-row {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+
+.summary-card {
+  background-color: #f0f4f8;;
+  border-radius: 10px;
+  padding: 15px 20px;
+  flex: 1;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.300);
+  font-weight: bold;
+  color: #333;
+}
+>>>>>>> 3de601f32295e9660651cc2ca25d256191cd82f1
 
 .attendance-table-section {
-  background-color: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  padding: 25px;
+  
 }
 
 .attendance-table {
@@ -427,16 +439,21 @@ body {
 }
 
 .attendance-table th, .attendance-table td {
-  border: 1px solid #999;
+  font-family: 'Poppins-bold';
+  border: 1px solid #99999994;
   padding: 12px;
   font-size: 14px;
-  text-align: center;
+  font-weight: 400;
+  text-align: center;  
 }
 
-.attendance-table th {
-  background-color: #9bbf8d;
-  color: white;
+.attendance-table th{
+  font-weight: 600;
+  background-color:#ecf0f1;
+  font-size: 17px;
+  color: #34495e;
 }
+
 
 .logout-icon {
   display: flex;
