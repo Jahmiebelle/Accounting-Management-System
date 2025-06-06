@@ -115,14 +115,14 @@ session_start();
               <div class="datetime">
                 <?php 
                   date_default_timezone_set("Asia/Manila");
-                  echo date("l, F j, Y g:i A "); 
+                  echo date("l, F j, Y g:i A ");
                 ?> 
               </div>
               <div class="emptybox">
                 empty
               </div>
             </div>
-            
+          
           </div>
           <div class="main-content">
             <div class="upper-main-content">

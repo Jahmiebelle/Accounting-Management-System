@@ -571,7 +571,6 @@ h4 {
 
 .lower-hourly-form {
   display: flex;
-  flex-wrap: wrap;
   flex: 1;
   justify-content: center;
   align-items: center;
