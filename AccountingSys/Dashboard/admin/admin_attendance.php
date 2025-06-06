@@ -128,7 +128,7 @@ session_start();
           <div class="main-content
             <div class="attendance-header">
               <input type="date" />
-              <input type="text" placeholder="Search by name... />
+              <input type="text" placeholder="Search by name..." />
               <button>Filter</button>
             </div>
             
