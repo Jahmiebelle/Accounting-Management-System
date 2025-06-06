@@ -114,7 +114,6 @@ session_start();
           <div class="dashboard-container">
   <div class="welcome-bar">
     <span>Welcome, Mr. <?= $employeeName ?? 'Employee' ?>!</span>
-    <span class="power-icon">⏻</span>
   </div>
 
   <div class="main-dashboard-content">
