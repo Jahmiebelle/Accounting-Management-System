@@ -1054,6 +1054,7 @@ th {
 
 td {
   text-align: center;
+  text-align: justify;
   white-space: normal;
   font-family: 'Poppins-light';
   font-size: 12px;
