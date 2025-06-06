@@ -616,6 +616,8 @@ th {
 }
 
 td {
+  justify-items: center;
+  align-items: center;
   white-space: normal;
   word-break: break-word;
   text-align: center;
