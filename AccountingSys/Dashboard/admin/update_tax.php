@@ -10,4 +10,6 @@
   $income_tax = $_POST['income_tax'] / 100;
   $updateTaxQuery = "UPDATE admin_taxation_table SET sss_tax = '$sss_tax', pagibig_tax = '$pagibig_tax', philhealth_tax = '$philhealth_tax', income_tax = '$income_tax';";
   
+  header("Location: admin_payroll.php");
+  
 ?>
