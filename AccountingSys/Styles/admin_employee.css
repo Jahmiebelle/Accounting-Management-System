@@ -1159,7 +1159,7 @@ tr:nth-child(even) {
   font-size: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   td, th {
     padding: 8px 16px;
   }
