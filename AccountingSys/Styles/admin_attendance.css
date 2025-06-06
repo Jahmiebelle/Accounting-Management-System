@@ -391,7 +391,7 @@ body {
   height: 500px;
   width: 100%;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   box-sizing: border-box;
   /*border: solid darkgreen 1px;*/
@@ -432,7 +432,7 @@ body {
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  margin-top: 20px;
+  margin-top: 0px;
   overflow-x: auto;
 }
 
