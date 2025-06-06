@@ -666,3 +666,9 @@ tr:nth-child(even) {
 .brand-info-footer, .brand-copyright {
   font-size: 8px;
 }
+
+@media (max-width: 768px) {
+  td, th {
+    padding: 8px 16px;
+  }
+}
