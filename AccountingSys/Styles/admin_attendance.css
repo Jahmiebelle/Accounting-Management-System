@@ -426,3 +426,28 @@ body {
 .brand-info-footer, .brand-copyright {
   font-size: 8px;
 }
+
+.attendance-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: white;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  font-family: 'Poppins-regular';
+}
+
+.attendance-table th {
+  background-color: #ffff88;
+  font-family: 'Poppins-bold';
+}
