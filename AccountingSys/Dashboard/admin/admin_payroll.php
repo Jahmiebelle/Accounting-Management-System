@@ -172,7 +172,7 @@ session_start();
                     <div class="tax-card-detail">
                       <div class="tax-card-name">PhilHealth</div>
                       <div class="tax-card-percent">
-                        <input type="text" name="philhealth_tax" id="philhealth-tax-input" class="statutory-tax-input" <?php echo " value='philhealth_tax'"?> readonly/>
+                        <input type="text" name="philhealth_tax" id="philhealth-tax-input" class="statutory-tax-input" <?php echo " value='$philhealth_tax'"?> readonly/>
                         <p class="statutory-percent">%</p>
                       </div>
                     </div>
