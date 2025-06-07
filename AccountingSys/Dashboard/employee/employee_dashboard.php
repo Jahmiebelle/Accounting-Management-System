@@ -111,8 +111,10 @@ session_start();
           <div class="main-dashboard-content">
             <div class="top-row">
               <div class="left-box">
-                  <button class="btn-clock-in">CLOCK IN</button>
-                  <button class="btn-clock-out">CLOCK OUT</button>
+                <div class="clock-buttons">
+                  <button class="btn clock-in">CLOCK IN</button>
+                  <button class="btn clock-out">CLOCK OUT</button>
+                </div>
               </div>
           
               <div class="right-box">
