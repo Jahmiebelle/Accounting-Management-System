@@ -212,7 +212,7 @@ session_start();
                 <div class="lower-hourly-form">
                   <div class="role-rate-cards" id="professor-card">
                     <div class="rate-info">
-                      <p class="role-name">Professor</p>
+                      <input class="role-name" name="professor_role" value= "Professor" readonly>
                       <p class="hourly-rate-text">Hourly Rate</p>
                       <input type="number" class="hourly-rate-price" id="professor-rate" name="professor_rate" value="90" readonly>
                     </div>
@@ -222,7 +222,7 @@ session_start();
                   </div>
                   <div class="role-rate-cards" id="instructor-card">
                     <div class="rate-info">
-                      <p class="role-name">Instructor</p>
+                      <input class="role-name" name="instructor_role" value= "Instructor" readonly>
                       <p class="hourly-rate-text">Hourly Rate</p>
                       <input type="number" class="hourly-rate-price" id="instructor-rate" name="instructor_rate" value="85" readonly>
                     </div>
@@ -232,7 +232,7 @@ session_start();
                   </div>
                   <div class="role-rate-cards" id="part-time-card">
                     <div class="rate-info">
-                      <p class="role-name">Part-Time-Staff</p>
+                      <input class="role-name" name="part_time_role" value= "Part-Time-Staff" readonly>
                       <p class="hourly-rate-text">Hourly Rate </p>
                       <input type="number" class="hourly-rate-price" id="part-time-rate" name="part_time_rate" value="65" readonly>
                     </div>

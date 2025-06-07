@@ -50,7 +50,7 @@ body {
   flex-direction: column;
   height: auto;
   width: 100%;
-  /*border: solid green 1px;*/
+  border: solid darkred 3px;
 
   
 }
@@ -116,6 +116,7 @@ body {
   margin-top: 80px;
   height: auto;
   width: 100%;
+  border: solid green 2px;
 }
 
 .sidebar-container {
@@ -238,7 +239,7 @@ body {
   height: 95%;
   width: 85%;
   gap: 10px;
-  /*border: solid pink 3px;*/
+  box-sizing: border-box;
   
 }
 .upper-content {
@@ -250,7 +251,6 @@ body {
   height: 50px;
   max-height: 10%;
   width: 100%;
-  /*border: solid black 1px;*/
   box-sizing: border-box;
 }
 
@@ -364,22 +364,33 @@ body {
 /*DITO NA AKO GAGAWA NG MAIN CONTENT*/
 
 .main-dashboard-content {
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
   font-family: 'Arial Rounded MT', sans-serif;
-  background-color: #f0f2e9;
+  background-color: #f4f6f8;
+  margin-bottom: 50px;
 }
 
 /* TOP ROW */
 .top-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 3rem;
   margin-bottom: 30px;
 }
 
 .left-box,
 .right-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 48%;
 }
+
 
 .clock-buttons .btn {
   width: 100%;
@@ -412,7 +423,7 @@ body {
 }
 
 .next-label {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #1e272e;
 }
@@ -425,20 +436,33 @@ body {
 
 /* SUMMARY */
 .upper-main-content {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
   margin-bottom: 30px;
+  overflow-x: auto;
 }
 
 .summary-grid {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  flex-wrap: wrap;
+  height: 95%;
+  width: 90%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  justify-content: space-evenly;
+
 }
 
 .summary-item {
   background-color: #f7f8f3;
-  flex: 1;
+  height: 6rem;
+  padding: 0 1rem;
   border-radius: 12px;
-  padding: 20px;
   text-align: center;
   box-shadow: 3px 3px 6px rgba(0,0,0,0.12);
 }
@@ -466,10 +490,15 @@ body {
 
 /* TABLE */
 .attendance-table-section {
+  display: flex;
+  flex-direction: column ;
   overflow-x: auto;
+  width: 100%;
+  
 }
 
 .attendance-table {
+  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   background-color: white;
