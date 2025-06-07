@@ -4,9 +4,9 @@
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
   
-  $professorRate = $_POST['professor_rate'];
-  $instructorRate = $_POST['instructor_rate'];
-  $partTimeRate = $_POST['part_time_rate'];
+  $professorRate = (int)$_POST['professor_rate'];
+  $instructorRate = (int)$_POST['instructor_rate'];
+  $partTimeRate = (int)$_POST['part_time_rate'];
   
   $instructorRateQuery = "UPDATE role_hourly_rate SET hourly_rate = '$instructorRate' WHERE role_name = 'instructor';";
   $professorRateQuery = "UPDATE role_hourly_rate SET hourly_rate = '$professorRate' WHERE role_name = 'professor';";
