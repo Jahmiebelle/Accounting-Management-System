@@ -205,17 +205,18 @@ session_start();
               <?php
                 $getRoleRates = "SELECT * FROM role_hourly_rate;";
                 $roleRateResult = mysqli_query($conn, $getRoleRates);
-                $professorRate;
-                $instructorRate;
-                $partTimeRate;
+                $professorRate = 0;
+                $instructorRate = 0;
+                $partTimeRate = 0;
                 while($rateRows = mysqli_fetch_assoc($roleRateResult)){
-                  if($rateRows == 'professor'){
+                  $roleName = $rateRows['role_name'];
+                  if($roleName === 'professor'){
                     $professorRate = $rateRows['hourly_rate'];
                   }
-                  elseif($rateRows == 'instructor') {
+                  elseif($roleName === 'instructor') {
                     $instructorRate = $rateRows['hourly_rate'];
                   }
-                  elseif ($rateRows == 'part_time_staff') {
+                  elseif ($roleName === 'part_time_staff') {
                     $partTimeRate = $rateRows['hourly_rate'];
                   }
                 }
