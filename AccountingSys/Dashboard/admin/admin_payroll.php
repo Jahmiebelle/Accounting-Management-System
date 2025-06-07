@@ -202,6 +202,24 @@ session_start();
                   </div>
                 </div>
               </form>
+              <?php
+                $getRoleRates = "SELECT * FROM role_hourly_rate;";
+                $roleRateResult = mysqli_query($conn, $getRoleRates);
+                $professorRate;
+                $instructorRate;
+                $partTimeRate;
+                while($rateRows = mysqli_fetch_assoc($roleRateResult)){
+                  if($roleName === 'professor'){
+                    $professorRate = $rateRows['hourly_rate'];
+                  }
+                  elseif($roleName === 'instructor') {
+                    $instructorRate = $rateRows['hourly_rate'];
+                  }
+                  elseif ($roleName === 'part_time_staff') {
+                    $partTimeRate = $rateRows['hourly_rate'];
+                  }
+                }
+              ?>  
               <form class="hourly-rate-form" id="hourly-rate-form" action="update_hourly_rate.php" method="POST">
                 <div class="upper-hourly-form">
                   <div class="hourly-header">
