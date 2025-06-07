@@ -183,7 +183,7 @@ body {
   /*box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.5);*/
 }
 
-#dashboard-tab:hover, #profile-tab:hover{
+#employee-tab:hover, #department-tab:hover, #leavereq-tab:hover, #payroll-tab:hover, #attendance-tab:hover, #dashboard-tab:hover, #profile-tab:hover{
   background-color: #4751FF;
 }
 
@@ -199,13 +199,35 @@ body {
   background-position: center;
 }
 
-#profile-tab-icon {
+#employee-tab-icon {
   background-image: url('../Assets/employee-icon-white.png');
   background-size: cover;
   background-position: center;
 }
 
+#department-tab-icon {
+  background-image: url('../Assets/department-icon-white.png');
+  background-size: cover;
+  background-position: center;
+}
 
+#leavereq-tab-icon {
+  background-image: url('../Assets/leavereq-icon-white.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#payroll-tab-icon {
+  background-image: url('../Assets/payroll-icon-white.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#attendance-tab-icon {
+  background-image: url('../Assets/attendance-icon-white.png');
+  background-size: cover;
+  background-position: center;
+}
 
 
 .tab-text {
