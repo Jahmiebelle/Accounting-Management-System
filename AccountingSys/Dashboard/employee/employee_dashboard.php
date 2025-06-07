@@ -65,7 +65,7 @@ session_start();
                 
               </div>
               <div class="section-text">
-                Dashboard
+                Welcome!
               </div>
             </div>
 
