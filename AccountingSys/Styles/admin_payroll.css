@@ -767,6 +767,26 @@ tr:nth-child(even) {
   background-color: #ffffff;
 }
 
+.payslip-btn {
+  font-family: 'Poppins-regular';
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  color: #162E7B;
+  border: solid #162E7B 1px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.15s ease;
+}
+
+.payslip-btn:hover {
+  border: none;
+  background-color:  #162e7b;
+  color: #f4f6f8;
+}
+
+.payslip-btn:active {
+  opacity: 0.75;
+}
 
 .footer-container {
   display: flex;

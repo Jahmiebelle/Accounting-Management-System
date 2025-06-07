@@ -1019,6 +1019,7 @@ legend {
   height: auto;
   width: 100%;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .table {
@@ -1036,7 +1037,7 @@ legend {
 }
 
 td, th {
-  padding: 8px 70px;
+  padding: 8px 16px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
@@ -1114,9 +1115,10 @@ tr:nth-child(even) {
   font-size: 12px;
   color: #162e7b;
   background-color: rgba(0, 0, 0, 0);
-  border-radius: 30px;
+  border-radius: 5px;
   border: solid #162e7b 1px;
   transition: all 0.15s ease;
+    
 }
 
 .profile-btn:hover {

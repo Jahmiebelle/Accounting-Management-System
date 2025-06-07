@@ -283,7 +283,7 @@ session_start();
                   <td>2,700</td>
                   <td>15,300</td>
                   <td>Completed</td>
-                  <td><div class="view-payslip" id="view-payslip"></div></td>
+                  <td><div class="view-payslip" id="view-payslip"><button id="payslip-btn" class="payslip-btn" type="button">Payslip</button></div></td>
                 </tr>
               </table>
             </div>
