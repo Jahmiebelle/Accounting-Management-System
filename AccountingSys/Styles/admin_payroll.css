@@ -673,7 +673,15 @@ h4 {
 }
 
 .role-name {
+  width: 8rem;
   font-family: 'Poppins-Medium';
+  border: none;
+  padding: 0;
+}
+
+.role-name:focus {
+  outline: none;
+  border: none;
 }
 
 .hourly-rate-text {

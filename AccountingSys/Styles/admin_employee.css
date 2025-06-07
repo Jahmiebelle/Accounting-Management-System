@@ -1036,7 +1036,7 @@ legend {
 }
 
 td, th {
-  padding: 8px 70px;
+  padding: 8px 24px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
@@ -1164,4 +1164,3 @@ tr:nth-child(even) {
     padding: 8px 16px;
   }
 }
-
