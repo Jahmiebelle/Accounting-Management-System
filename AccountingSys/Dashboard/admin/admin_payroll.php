@@ -232,7 +232,7 @@ session_start();
                     <div class="rate-info">
                       <input class="role-name" name="professor_role" value= "Professor" readonly>
                       <p class="hourly-rate-text">Hourly Rate</p>
-                      <input type="number" class="hourly-rate-price" id="professor-rate" name="professor_rate" value="90" readonly>
+                      <input type="number" class="hourly-rate-price" id="professor-rate" name="professor_rate" value="<?php echo $professorRate;?>" readonly>
                     </div>
                     <div class="rate-logo">
                       
@@ -242,7 +242,7 @@ session_start();
                     <div class="rate-info">
                       <input class="role-name" name="instructor_role" value= "Instructor" readonly>
                       <p class="hourly-rate-text">Hourly Rate</p>
-                      <input type="number" class="hourly-rate-price" id="instructor-rate" name="instructor_rate" value="85" readonly>
+                      <input type="number" class="hourly-rate-price" id="instructor-rate" name="instructor_rate" value="<?php echo $instructorRate;?>" readonly>
                     </div>
                     <div class="rate-logo">
                       
@@ -252,7 +252,7 @@ session_start();
                     <div class="rate-info">
                       <input class="role-name" name="part_time_role" value= "Part-Time-Staff" readonly>
                       <p class="hourly-rate-text">Hourly Rate </p>
-                      <input type="number" class="hourly-rate-price" id="part-time-rate" name="part_time_rate" value="65" readonly>
+                      <input type="number" class="hourly-rate-price" id="part-time-rate" name="part_time_rate" value="<?php echo $partTimeRate;?>" readonly>
                     </div>
                     <div class="rate-logo">
                       
