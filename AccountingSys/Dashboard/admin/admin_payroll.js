@@ -71,4 +71,3 @@ editRateBtn.addEventListener('click', function(e){
   }
   editRate = !editRate;
 });
-
