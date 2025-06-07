@@ -274,7 +274,7 @@ session_start();
                   <th>Deductions</th>
                   <th>Net Pay</th>
                   <th>Status</th>
-                  <th>Action</th>
+                  <th>Payslip</th>
                 </tr>
                 <tr>
                   <td>June</td>
