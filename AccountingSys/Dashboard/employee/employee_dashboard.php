@@ -50,19 +50,7 @@ session_start();
             </div>
           </div>
 
-          <div class="sidetabs" id="attendance-tab">
-            <div class="tab-icon" id="attendance-tab-icon"></div>
-            <div class="tab-text">
-              Attendance
-            </div>
-          </div>
 
-          <div class="sidetabs" id="payroll-tab">
-            <div class="tab-icon" id="payroll-tab-icon"></div>
-            <div class="tab-text">
-              Payroll
-            </div>
-          </div>
 
           
 
@@ -77,7 +65,7 @@ session_start();
                 
               </div>
               <div class="section-text">
-                Dashboard
+                Welcome!
               </div>
             </div>
 
@@ -92,18 +80,13 @@ session_start();
                   echo $_SESSION['employee_first_name'] . " " . $_SESSION['employee_last_name'];
                 ?>
               </div>
-              <div class="path">
-                Employee
-              </div>
-            </div>
+          </div>
+          
             <div class="right-greetings">
               <div class="datetime">
                 <?php date_default_timezone_set("Asia/Manila");
                       echo date("l, F j, Y \a\\t g:i A T"); 
                       ?> 
-              </div>
-              <div class="emptybox">
-                
               </div>
             </div>
             
