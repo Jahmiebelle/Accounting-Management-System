@@ -12,9 +12,9 @@
   $professorRateQuery = "UPDATE role_hourly_rate SET hourly_rate = '$professorRate' WHERE role_name = 'professor';";
   $partTimeRateQuery = "UPDATE role_hourly_rate SET hourly_rate = '$partTimeRate' WHERE role_name = 'part_time_staff';";
   
-  $instructorResult = mysqli_connect($conn, $instructorRateQuery);
-  $professorResult = mysqli_connect($conn, $professorRateQuery);
-  $partTimeResult = mysqli_connect($conn, $partTimeRateQuery);
+  $instructorResult = mysqli_query($conn, $instructorRateQuery);
+  $professorResult = mysqli_query($conn, $professorRateQuery);
+  $partTimeResult = mysqli_query($conn, $partTimeRateQuery);
   
   if($instructorResult && $professorResult && $partTimeResult){
     echo "tax updated successfully";
