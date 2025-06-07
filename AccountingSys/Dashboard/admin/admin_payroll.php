@@ -209,6 +209,7 @@ session_start();
                 $instructorRate;
                 $partTimeRate;
                 while($rateRows = mysqli_fetch_assoc($roleRateResult)){
+                  $roleName = $_POST['role_name'];
                   if($roleName === 'professor'){
                     $professorRate = $rateRows['hourly_rate'];
                   }
