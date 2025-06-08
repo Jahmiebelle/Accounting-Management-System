@@ -382,7 +382,7 @@ include 'hourly_rates.php';
                     $monthName = $date->format('F');
                     $payroll_full_name = $payroll_fn . " " . $payroll_ln;
                     echo "<tr>
-                        <td>$monthName</td>
+                        <td>$payroll_id</td>
                         <td>$payroll_full_name</td>
                         <td>$payroll_gross_pay</td>
                         <td>$payroll_total_deductions</td>
