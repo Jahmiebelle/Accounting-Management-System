@@ -110,13 +110,12 @@ payslipBtn.forEach(function(payslipButton){
     document.getElementById('net-pay-jar').innerText = netPay;
     document.getElementById('status-jar').innerText = status;
     
-    payslipOl.addEventListener('click', function(e){
-      if(e.target == payslipOl){
-        payslipOl.classList.remove('show');
-      }
-    });
-    
     
   });
+});
+payslipOl.addEventListener('click', function(e){
+    if(e.target == payslipOl){
+      payslipOl.classList.remove('show');
+    }
 });
 
