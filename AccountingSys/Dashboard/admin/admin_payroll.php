@@ -88,6 +88,7 @@ include 'hourly_rates.php';
                   <div>Net Pay:</div>
                   <div class="payslip-box-content" id="net-pay-jar">₱20,120</div>
               </div>
+              <button class="pdf-btn" id="download-payslip-btn">Download as PDF</button>
             </div>
           </div>
         </form>
@@ -421,6 +422,8 @@ and optimize payroll and performance tracking.
       
   </div>
   <script src="admin_payroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 
 </html>

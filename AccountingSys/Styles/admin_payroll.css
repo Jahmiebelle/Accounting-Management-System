@@ -237,6 +237,19 @@ body {
   
 }
 
+.pdf-btn {
+  display: flex;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #eeeeee;
+}
+
 .header-container {
   display: flex;
   position: fixed;
