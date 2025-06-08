@@ -50,9 +50,6 @@ body {
   flex-direction: column;
   height: auto;
   width: 100%;
-  border: solid darkred 3px;
-
-  
 }
 
 .header-container {
@@ -116,7 +113,6 @@ body {
   margin-top: 80px;
   height: auto;
   width: 100%;
-  border: solid green 2px;
 }
 
 .sidebar-container {
@@ -182,7 +178,7 @@ body {
 }
 
 #dashboard-tab:hover, #profile-tab:hover, #attendance-tab:hover, #payroll-tab:hover {
-  background-color: #47ff84;
+  background-color: #66B266;
 }
 
 .tab-icon {
@@ -371,7 +367,6 @@ body {
   font-family: 'Arial Rounded MT', sans-serif;
   background-color: #f4f6f8;
   margin-bottom: 50px;
-  border: solid black 1px;
 }
 
 /* TOP ROW */
@@ -381,7 +376,6 @@ body {
   width: 100%;
   gap: 3rem;
   margin-bottom: 30px;
-  border: solid darkorange 1px;
 }
 
 .left-box,
@@ -394,46 +388,67 @@ body {
 }
 
 
-.clock-buttons .btn {
+.clock-buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   width: 100%;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  border-radius: 12px;
+  height: 100%;
   border: none;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.clock-in, .clock-out {
+  width: 70%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins-medium';
+  color: #ffffff;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
 .clock-in {
-  background-color: #58d68d;
-  color: white;
+  background-color: #66B266;
+  color: #f4f6f8;
 }
 
-.clock-out {
-  background-color: #ec7063;
-  color: white;
+.clock-in:hover {
+  background-color: #1E4D2B;
+}
+
+.clock-out{
+  background-color: #E06666;
+  color: #F4F6F8;
+}
+
+.clock-out:hover {
+  background-color: #9E1B1B;
 }
 
 .payroll-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   padding: 25px;
-  border-radius: 18px;
+  border-radius: 5px;
   text-align: center;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
 }
 
 .next-label {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
-  color: #1e272e;
 }
 
 .next-date {
-  font-size: 26px;
+  font-size: 24px;
   margin-top: 10px;
-  color: #1e272e;
 }
 
 /* SUMMARY */
@@ -444,7 +459,6 @@ body {
   width: 100%;
   margin-bottom: 30px;
   overflow-x: auto;
-  border: solid red 1px;
 }
 
 .summary-grid {
@@ -463,10 +477,15 @@ body {
 }
 
 .summary-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #f7f8f3;
   height: 6rem;
   padding: 0 1rem;
-  border-radius: 12px;
+  gap: 0.5rem;
+  border-radius: 5px;
   text-align: center;
   box-shadow: 3px 3px 6px rgba(0,0,0,0.12);
 }
@@ -498,7 +517,6 @@ body {
   flex-direction: column ;
   overflow-x: auto;
   width: 100%;
-  border: solid darkgreen 1px;
   
 }
 
@@ -516,7 +534,7 @@ body {
 }
 
 td, th {
-  padding: 8px 16px;
+  padding: 12px 16px;
   margin: 0px;
   border: 0.1px solid #ccc;
 }
