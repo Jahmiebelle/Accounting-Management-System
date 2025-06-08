@@ -1,6 +1,7 @@
 <?php
 include '../../Login/db.php';
 //include 'update_payslip.php';//
+include 'hourly_rates.php';
 session_start();
 ?>
 
