@@ -626,7 +626,7 @@ session_start();
             <div class="lower-maincontent">
               <table class="table" border="0">
                 <tr class="row-head">
-                  <th>Employee Id</th>
+                  <th>Employee ID</th>
                   <th>First Name</th>        
                   <th>Last Name</th>
                   <th>Department</th>
