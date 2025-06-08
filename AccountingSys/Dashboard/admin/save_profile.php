@@ -33,6 +33,7 @@
   $updateWork = "UPDATE employee_work_table SET hourly_rate = $hourlyRate WHERE employee_id = '$id';";
   
   if (mysqli_query($conn, $updateData)) {
+    mysqli_query($conn, $updateWork);
     echo "Data Saved Successfully!";
   } 
   else {
