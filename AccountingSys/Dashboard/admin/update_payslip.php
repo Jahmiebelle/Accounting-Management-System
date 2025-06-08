@@ -24,6 +24,10 @@
     $empWorkQuery = "SELECT * FROM employee_work_table WHERE employee_id = '$employee_id';";
     $empWorkResult = mysqli_query($conn, $empWorkQuery);
     $empWorkRow = mysqli_fetch_assoc($empWorkResult);
+    if(!$empWorkRow){
+      echo "No work data found for this employee. Baka Ghost";
+      continue;
+    }
     $empHourlyRate = $empWorkRow['hourly_rate'];
     $empTotalHours = $empWorkRow['total_hours_worked'];
     $empTotalOvertime = $empWorkRow['total_overtime_hours'];
