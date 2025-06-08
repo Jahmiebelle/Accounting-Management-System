@@ -95,20 +95,20 @@ payslipBtn.forEach(function(payslipButton){
     const netPay = payslipButton.dataset.netPay;
     const status = payslipButton.dataset.completed;
     
-    document.getElementById('payroll-id-jar').innerText = payrollId;
-    document.getElementById('id-jar').innerText = id;
-    document.getElementById('name-jar').innerText = fullName;
-    document.getElementById('month-jar').innerText = monthName;
-    document.getElementById('salary-jar').innerText = basicSalary;
-    document.getElementById('overtime-jar').innerText = overtimePay;
-    document.getElementById('gross-jar').innerText = grossPay;
-    document.getElementById('sss-jar').innerText = sssTax;
-    document.getElementById('philhealth-jar').innerText = philhealthTax;
-    document.getElementById('pagibig-jar').innerText = pagibigTax;
-    document.getElementById('income-tax-jar').innerText = incomeTax;
-    document.getElementById('total-deduct-jar'). innerText = totalDeduction;
-    document.getElementById('net-pay-jar').innerText = netPay;
-    document.getElementById('status-jar').innerText = status;
+    document.getElementById('payroll-id-jar').innerHTML = payrollId;
+    document.getElementById('id-jar').innerHTML = id;
+    document.getElementById('name-jar').innerHTML = fullName;
+    document.getElementById('month-jar').innerHTML = monthName;
+    document.getElementById('salary-jar').innerHTML = basicSalary;
+    document.getElementById('overtime-jar').innerHTML = overtimePay;
+    document.getElementById('gross-jar').innerHTML = grossPay;
+    document.getElementById('sss-jar').innerHTML = sssTax;
+    document.getElementById('philhealth-jar').innerHTML = philhealthTax;
+    document.getElementById('pagibig-jar').innerHTML = pagibigTax;
+    document.getElementById('income-tax-jar').innerHTML = incomeTax;
+    document.getElementById('total-deduct-jar'). innerHTML = totalDeduction;
+    document.getElementById('net-pay-jar').innerHTML = netPay;
+    document.getElementById('status-jar').innerHTML = status;
     
     
   });
