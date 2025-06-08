@@ -49,12 +49,6 @@ session_start();
               Profile
             </div>
           </div>
-
-
-
-          
-
-          </div>
         </div>
       </div>
       <div class="content-container">

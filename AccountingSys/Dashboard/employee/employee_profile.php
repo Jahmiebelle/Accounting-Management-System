@@ -37,7 +37,7 @@ session_start();
         <div class="sidebar">
           <div class="sidebar-header-container">  
             <div class="sidebar-header-text"></div>
-            </div>
+          </div>
 
           <div class="sidetabs" id="dashboard-tab">
             <div class="tab-icon" id="dashboard-tab-icon"></div>
@@ -53,7 +53,7 @@ session_start();
             </div>
           </div>
 
-          <div class="sidetabs" id="attendance-tab">
+          <!--<div class="sidetabs" id="attendance-tab">
             <div class="tab-icon" id="attendance-tab-icon"></div>
             <div class="tab-text">
               Attendance
@@ -65,11 +65,7 @@ session_start();
             <div class="tab-text">
               Payroll
             </div>
-          </div>
-
-          
-
-          </div>
+          </div>-->
         </div>
       </div>
       <div class="content-container">

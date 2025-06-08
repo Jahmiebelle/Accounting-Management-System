@@ -63,7 +63,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: rgba(11, 173, 32, 0.7);
+  background-color: rgba(30, 77, 43, 0.7);
   backdrop-filter: blur(2px);
   z-index: 4;
 }
@@ -125,7 +125,7 @@ body {
   left: 0;
   height: 100vh;
   width: 25vw;
-  background-color: #0d7527;
+  background-color: #1E4D2B;
   z-index: 4;
   overflow-y: auto;
   overflow-x: hidden;
@@ -527,7 +527,7 @@ body {
   margin-left: 25vw;
   height: 100px;
   width: calc(100% - 25vw);
-  background-color: #162E7B;
+  background-color: #1E4D2B;
   color: #f4f6f8;
 }
 

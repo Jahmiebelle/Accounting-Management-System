@@ -6,10 +6,10 @@ document.getElementById('dashboard-tab').addEventListener('click', function () {
   window.location.href = "employee_dashboard.php";
 });
 
-document.getElementById('attendance-tab').addEventListener('click', function () {
-  window.location.href = "employee_attendance.php";
-});
+//document.getElementById('attendance-tab').addEventListener('click', function () {
+//  window.location.href = "employee_attendance.php";
+//});
 
-document.getElementById('payroll-tab').addEventListener('click', function () {
-  window.location.href = "employee_payroll.php";
-});
+//document.getElementById('payroll-tab').addEventListener('click', function () {
+//  window.location.href = "employee_payroll.php";
+//});
