@@ -161,7 +161,6 @@ body {
   justify-content: space-between;
   padding: 0 2rem;
   width: 100%;
-  box-sizing: border-box;
   border: solid #cccccc 1px;
 
 }
