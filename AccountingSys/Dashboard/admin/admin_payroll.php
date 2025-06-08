@@ -284,15 +284,40 @@ include 'hourly_rates.php';
                   <th>Status</th>
                   <th>Payslip</th>
                 </tr>
-                <tr>
-                  <td>June</td>
-                  <td>Kristian Celfo</td>
-                  <td>18,000</td>
-                  <td>2,700</td>
-                  <td>15,300</td>
-                  <td>Completed</td>
-                  <td><div class="view-payslip" id="view-payslip"><button id="payslip-btn" class="payslip-btn" type="button">Payslip</button></div></td>
-                </tr>
+                <?php
+                  $payrollHistoryQuery = "SELECT * FROM payroll_history_table;";
+                  $payrollHistoryResult = mysqli_query($conn, $payrollHistoryQuery);
+                  while($payrollHistoryRow = mysqli_fetch_assoc($payrollHistoryResult)){
+                    $payroll_id = $payrollHistoryRow['payroll_id'];
+                    $payroll_emp_id =  $payrollHistoryRow['employee_id'];
+                    $payroll_month = $payrollHistoryRow['month_year'];
+                    $payroll_fn = $payrollHistoryRow['first_name'];
+                    $payroll_ln = $payrollHistoryRow['last_name'];
+                    $payroll_basic_salary = $payrollHistoryRow['basic_salary'];
+                    $payroll_overtime_pay = $payrollHistoryRow['overtime_pay'];
+                    $payroll_gross_pay = $payrollHistoryRow['gross_pay'];
+                    $payroll_income_tax = $payrollHistoryRow['income_tax'];
+                    $payroll_sss = $payrollHistoryRow['sss'];
+                    $payroll_philhealth = $payrollHistoryRow['philhealth'];
+                    $payroll_pagibig = $payrollHistoryRow['pagibig'];
+                    $payroll_total_deductions = $payrollHistoryRow['total_deductions'];
+                    $payroll_net_pay = $payrollHistoryRow['net_pay'];
+                    $payroll_is_complete = $payrollHistoryRow['is_complete'];
+                    $payroll_create_at = $payrollHistoryRow['created_at'] ? "complete" : "pending";
+                    $date = new DateTime($payroll_month);
+                    $monthName = $date->format('F');
+                    $payroll_full_name = $payroll_fn . " " . $payroll_ln;
+                    echo "<tr>
+                        <td>$monthName</td>
+                        <td>$payroll_full_name</td>
+                        <td>₱". number_format($payroll_gross_pay, 2)."</td>
+                        <td>₱".number_format($payroll_total_deductions, 2)."</td>
+                        <td>₱".number_format($payroll_net_pay, 2)."</td>
+                        <td>$payroll_is_complete</td>
+                        <td><div class='view-payslip' id='view-payslip'><button id='payslip-btn' class='payslip-btn' type='button'>Payslip</button></div></td>
+                      </tr>";
+                  }
+                ?>
               </table>
             </div>
           </div>
