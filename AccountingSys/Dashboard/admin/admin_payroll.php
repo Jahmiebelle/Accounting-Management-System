@@ -19,7 +19,7 @@ include 'hourly_rates.php';
 
   <div class="outer-container">
     <div class="payslip-ol" id="payslip-ol">
-      <div class="payslip-ol-content" id="payslip-ol-">
+      <div class="payslip-ol-content" id="payslip-ol-content">
         <form class="payslip-ol-form" id="payslip-ol-form" action="" method="POST">
           <div class="upper-payslip-form">
             <div class="header-payslip">
