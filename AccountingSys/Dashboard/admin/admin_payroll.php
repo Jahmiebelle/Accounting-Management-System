@@ -1,4 +1,6 @@
-<?php include '../../Login/db.php';
+<?php
+include '../../Login/db.php';
+//include 'update_payslip.php';//
 session_start();
 ?>
 

@@ -11,10 +11,37 @@
   $instructorRateQuery = "UPDATE role_hourly_rate SET hourly_rate = '$instructorRate' WHERE role_name = 'instructor';";
   $professorRateQuery = "UPDATE role_hourly_rate SET hourly_rate = '$professorRate' WHERE role_name = 'professor';";
   $partTimeRateQuery = "UPDATE role_hourly_rate SET hourly_rate = '$partTimeRate' WHERE role_name = 'part_time_staff';";
+  
+  $selectInstructor = "SELECT * FROM employee_table WHERE position = 'instructor';";
+  $selectProfessor = "SELECT * FROM employee_table WHERE position = 'professor';";
+  $selectPartTime = "SELECT * FROM employee_table WHERE position = 'part_time_staff';";
+  
+  $getInstructorResult = mysqli_query($conn, $selectInstructor);
+  $getProfessorResult = mysqli_query($conn, $selectInstructor);
+  $getPartTimeResult = mysqli_query($conn, $selectInstructor);
+  
+  while($instructorRow = mysqli_fetch_assoc($getInstructorResult)){
+    $instructor_id = $instructorRow['employee_id'];
+    $updateInstructorRate = "UPDATE employee_work_table SET hourly_rate = '$instructorRate' WHERE employee_id = '$instructor_id';";
+    mysqli_query($conn, $updateInstructorRate);
+  }
+  
+  while($professorRow = mysqli_fetch_assoc($getProfessorResult)){
+    $professor_id = $professorRow['employee_id'];
+    $updateProfessorRate = "UPDATE employee_work_table SET hourly_rate = '$instructorRate' WHERE employee_id = '$professor_id';";
+    mysqli_query($conn, $updateProfessorRate);
+  }
+  
+  while($partTimeRow = mysqli_fetch_assoc($getPartTimeResult)){
+    $part_time_id = $partTimeRow['employee_id'];
+    $updatePartTimeRate = "UPDATE employee_work_table SET hourly_rate = '$partTimeRate' WHERE employee_id = '$part_time_id';";
+    mysqli_query($conn, $updatePartTimeRate);
+  }
 
   $instructorResult = mysqli_query($conn, $instructorRateQuery);
   $professorResult = mysqli_query($conn, $professorRateQuery);
   $partTimeResult = mysqli_query($conn, $partTimeRateQuery);
+  
 
   if($instructorResult && $professorResult && $partTimeResult){
     echo "tax updated successfully";
