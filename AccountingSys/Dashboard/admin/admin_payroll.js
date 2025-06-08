@@ -95,7 +95,7 @@ payslipBtn.forEach(function(payslipButton){
     const netPay = payslipButton.dataset.netPay;
     const status = payslipButton.dataset.completed;
     
-    document.getElementById('payroll-id-jar').innerText = payrollId;
+    document.getElementById('payroll-id-jar').innerHTML = payrollId;
     document.getElementById('id-jar').innerHTML = id;
     document.getElementById('name-jar').innerHTML = fullName;
     document.getElementById('month-jar').innerHTML = monthName;
@@ -109,7 +109,7 @@ payslipBtn.forEach(function(payslipButton){
     document.getElementById('total-deduct-jar').innerHTML = totalDeduction;
     document.getElementById('net-pay-jar').innerHTML = netPay;
     document.getElementById('status-jar').innerHTML = status;
-    
+    alert(netPay);
     
   });
 });
