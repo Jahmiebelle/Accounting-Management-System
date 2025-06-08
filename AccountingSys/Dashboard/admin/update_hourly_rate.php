@@ -28,7 +28,7 @@
   
   while($professorRow = mysqli_fetch_assoc($getProfessorResult)){
     $professor_id = $professorRow['employee_id'];
-    $updateProfessorRate = "UPDATE employee_work_table SET hourly_rate = '$instructorRate' WHERE employee_id = '$professor_id';";
+    $updateProfessorRate = "UPDATE employee_work_table SET hourly_rate = '$professorRate' WHERE employee_id = '$professor_id';";
     mysqli_query($conn, $updateProfessorRate);
   }
   
