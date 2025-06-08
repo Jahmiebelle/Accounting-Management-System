@@ -31,8 +31,10 @@
   }
   else {
     $insertData = "INSERT INTO employee_table VALUES('$id', '$cid', '$password', '$fn', 'N/A', '$ln', '$email', '$status', '$dept', '$gender', '$contact', '$emptype', '$position', '$joindate', '$birthdate', '$bank', '$sss', '$philhealth', '$pagibig', '1')";
+    $insertWork = "INSERT INTO employee_work_table VALUES('$id', 0, 0, 0, 0, 0);";
     
     if(mysqli_query($conn, $insertData)){
+      mysqli_query($conn, $insertWork);
       echo "Employee Created!";
     }
     else {
