@@ -105,7 +105,7 @@ payslipBtn.forEach(function(payslipButton){
     document.getElementById('sss-jar').innerText = sssTax;
     document.getElementById('philhealth-jar').innerText = philhealthTax;
     document.getElementById('pagibig-jar').innerText = pagibigTax;
-    document.getElementById('income-tax-jar').innerText = payrollId;
+    document.getElementById('income-tax-jar').innerText = incomeTax;
     document.getElementById('total-deduct-jar'). innerText = totalDeduction;
     document.getElementById('net-pay-jar').innerText = netPay;
     document.getElementById('status-jar').innerText = status;
