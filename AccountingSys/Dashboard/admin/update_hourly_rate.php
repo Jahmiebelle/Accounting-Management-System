@@ -17,8 +17,8 @@
   $selectPartTime = "SELECT * FROM employee_table WHERE position = 'part_time_staff';";
   
   $getInstructorResult = mysqli_query($conn, $selectInstructor);
-  $getProfessorResult = mysqli_query($conn, $selectInstructor);
-  $getPartTimeResult = mysqli_query($conn, $selectInstructor);
+  $getProfessorResult = mysqli_query($conn, $selectProfessor);
+  $getPartTimeResult = mysqli_query($conn, $selectPartTime);
   
   while($instructorRow = mysqli_fetch_assoc($getInstructorResult)){
     $instructor_id = $instructorRow['employee_id'];
