@@ -25,7 +25,6 @@
     $empWorkResult = mysqli_query($conn, $empWorkQuery);
     $empWorkRow = mysqli_fetch_assoc($empWorkResult);
     if(!$empWorkRow){
-      echo "No work data found for this employee. Baka Ghost";
       continue;
     }
     $empHourlyRate = $empWorkRow['hourly_rate'];
@@ -46,7 +45,7 @@
     if(mysqli_num_rows($payslipRecordResult) > 0){
       $updatePayslipQuery = "UPDATE payroll_history_table SET employee_id = $employee_id, first_name = '$emp_fn', last_name = '$emp_ln', basic_salary = $empBasicSalary, overtime_pay = $empOvertimePay, gross_pay = $empGrossPay, income_tax = $incomeTax, sss = $sssTax, philhealth = $philhealthTax, pagibig = $pagibigTax, total_deductions = $totalDeductions, net_pay = $empNetPay WHERE employee_id = $employee_id AND is_complete = 0;";
       if(mysqli_query($conn, $updatePayslipQuery)){
-        echo "Updated recent paylip records";
+        //edi nice
       }
       else{
         echo "SQL Error: " . mysqli_error($conn);
@@ -55,7 +54,7 @@
     else{
       $insertPayslipQuery = "INSERT INTO payroll_history_table (month_year, employee_id, first_name, last_name, basic_salary, overtime_pay, gross_pay, income_tax, sss, philhealth, pagibig, total_deductions, net_pay) VALUES (CURDATE(), '$employee_id', '$emp_fn', '$emp_ln', $empBasicSalary, $empOvertimePay, $empGrossPay, $incomeTax, $sssTax, $philhealthTax, $pagibigTax, $totalDeductions, $empNetPay);";
       if(mysqli_query($conn, $insertPayslipQuery)){
-        echo "Inserted new record to payroll history.";
+        //nice
       }
       else{
         echo "SQL Error: " . mysqli_error($conn);
