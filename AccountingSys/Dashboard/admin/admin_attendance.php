@@ -133,19 +133,54 @@ session_start();
           <div class="main-content">
              <div class="attendance-wrapper">
               <div class="attendance-header">
-                <input class="attendance-date" type="date" />
-                <div class="searchbar">
-                  <div class="name-search">
-                    <div class="search-logo">
-                      
-                    </div>
-                    <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
+                <form method="GET" action="" class="attendance-form">
+                  <div class="filter-group">
+                  <input type="date" id="filter_date" name="filter_date" class="search-label" placeholder="mm/dd/yyyy">
                   </div>
-                </div>
-                <div class="search-btn-container">
-                  <button class="search-btn" type="submit">Search</button>
-                </div>
+                  <button type="submit" name="filter" class="filter-btn">Filter</button>
+                    
+
+                     <div class="filter-group">
+                      <input type="text" id="search_employee" name="search_employee" class="search-label" placeholder="Name & Surname (e.g., Anna Cruz)">
+                      </div>
+                      <button type="submit" name="search" class="search-btn">Search</button>
+                      </form>
+                <?php
+                $filterDate = $_GET['filter_date'] ?? null;
+                $searchEmployee = $_GET['search_employee'] ?? '';
+
+                $query = "SELECT * FROM admin_employee_attendance WHERE 1=1";
+                $params = [];
+
+                if (!empty($filterDate)) {
+                  $query .= " AND employee_date = ?";
+                  $params[] = $filterDate;
+                }
+
+                if (!empty($searchEmployee)) {
+                  $query .= " AND CONCAT(first_name, ' ', last_name) LIKE ?";
+                  $params[] = "%$searchEmployee%";
+                }
+
+                $stmt = $conn->prepare($query);
+
+                if (count($params)) {
+                  $types = str_repeat("s", count($params));
+                  $stmt->bind_param($types, ...$params);
+                }
+
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows === 0) {
+                  echo "<p>No results found.</p>";
+                }
+                if (!$stmt) {
+                  die("Query preparation failed: " . $conn->error);
+                                 }
+                ?>
               </div>
+          
             
              <table class="attendance-table">
               <thead>
@@ -167,7 +202,7 @@ session_start();
 $query = "SELECT * FROM admin_employee_attendance";
 $result = mysqli_query($conn, $query);
 
-while ($row = mysqli_fetch_assoc($result)) {
+while ($row = $result->fetch_assoc()) {
     $clock_in = $row['clock_in'];
     $clock_out = $row['clock_out'];
 
