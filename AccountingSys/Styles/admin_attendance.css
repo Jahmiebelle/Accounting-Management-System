@@ -182,7 +182,7 @@ body {
   /*box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.5);*/
 }
 
-#dashboard-tab:hover, #employee-tab:hover, #department-tab:hover, #leavereq-tab:hover, #payroll-tab:hover {
+#dashboard-tab:hover, #employee-tab:hover, #department-tab:hover, #payroll-tab:hover {
   background-color: #4751FF;
 }
 
@@ -206,12 +206,6 @@ body {
 
 #department-tab-icon {
   background-image: url('../Assets/department-icon-white.png');
-  background-size: cover;
-  background-position: center;
-}
-
-#leavereq-tab-icon {
-  background-image: url('../Assets/leavereq-icon-white.png');
   background-size: cover;
   background-position: center;
 }
@@ -427,71 +421,168 @@ body {
   font-size: 8px;
 }
 
-.attendance-table-container {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+ .attendance-table-container {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+.attendance-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  overflow-x: auto;
-  box-sizing: border-box;
-  margin-top: 10px;
+}
+
+.attendance-header {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .attendance-table {
-  width: 100%;
+  table-layout: fixed;
+  max-width: 100%;
+  border-spacing: 0px;
   border-collapse: collapse;
-  font-size: 14px;
-  font-family: 'Poppins-regular';
+  text-justify: center;
+  height: auto;
+  width: auto;
+  color: #333333;
 }
 
 .attendance-table th, .attendance-table td {
-  padding: 12px 10px;
-  border-bottom: 1px solid #e0e0e0;
-  text-align: left;
+  padding: 10px 25px;
+  margin: 0px;
+  border: 0.1px solid #ccc;
+
+}
+
+.attendance-table td {
+  background-color: #ffffff;
+  text-align: center;
+  white-space: normal;
+  font-family: 'Poppins-light';
+  font-size: 10px;
+  vertical-align: middle;
 }
 
 .attendance-table th {
-  background-color: #162E7B;
-  color: #ffffff;
-  font-family: 'Poppins-bold';
-}
-
-.attendance-table tr:hover {
-  background-color: #f1f3f5;
-}
-
-/* -------------------- Filter Section Styling -------------------- */
-
-.filter-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 10px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.filter-section select, .filter-section input, .filter-section button {
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  background-color: #eeeeee;
+  color: #333333;
   font-family: 'Poppins-light';
-  font-size: 14px;
-  outline: none;
+  font-size: 12px;
 }
 
-.filter-section button {
+.searchbar {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  /*border: solid red 1px;*/
+}
+
+.name-search {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  border: solid #cccccc 1px ;
+  color: #333333;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+.name-search.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-logo {
+  display: flex;
+  position: absolute;
+  left: 10px;
+  height: 15px;
+  width: 15px;
+  background-image: url('../Assets/search.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.search-label {
+  display: flex;
+  font-family: 'Poppins-light';
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  flex: 1;
+  width: 250px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  padding-left: 35px;
+}
+
+.attendance-date{
+  display: flex;
+  font-family: 'Poppins-light';
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  flex: 1;
+  width: 250px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  padding-left: 35px;
+}
+
+
+.search-label:focus {
+  border: none;
+  
+}
+
+.attendance-date:focus {
+  border: none;
+  
+}
+
+.search-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 75px;
+  box-sizing: border-box;
+}
+
+.search-btn {
+  display: flex;
+  text-align: center;
+  font-family: 'Poppins-light';
+  padding: 0.1rem 0.5rem;
+  color: #162E7B;
+  border: solid #162E7B 1px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.15s ease;
+}
+
+.search-btn:hover {
+  color: #f4f6f8;
   background-color: #162E7B;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  border: none;
 }
 
-.filter-section button:hover {
-  background-color: #0e1e5b;
-}
+
 
 @media (max-width: 768px) {
   .content-container {
@@ -504,14 +595,5 @@ body {
     display: none;
   }
 
-  .attendance-table-container {
-    padding: 10px;
-    font-size: 12px;
-  }
 
-  .filter-section {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
 }
