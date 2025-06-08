@@ -34,7 +34,7 @@
     $getPositionRate = "SELECT * FROM role_hourly_rate WHERE role_name = '$position';";
     $positionRateResult = mysqli_query($conn, $getPositionRate);
     $rateRow = mysqli_fetch_assoc($positionRateResult);
-    $hourlyRate = $rateRow['hourly_rate'];
+    $hourlyRate = (int)$rateRow['hourly_rate'];
     $insertWork = "INSERT INTO employee_work_table VALUES('$id', '$hourlyRate', 0, 0, 0, 0);";
     
     if(mysqli_query($conn, $insertData)){

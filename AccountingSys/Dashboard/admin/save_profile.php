@@ -29,7 +29,7 @@
   $getPositionRate = "SELECT * FROM role_hourly_rate WHERE role_name = '$position';";
   $positionRateResult = mysqli_query($conn, $getPositionRate);
   $rateRow = mysqli_fetch_assoc($positionRateResult);
-  $hourlyRate = $rateRow['hourly_rate'];
+  $hourlyRate = (int)$rateRow['hourly_rate'];
   $updateWork = "UPDATE employee_work_table SET hourly_rate = '$hourlyRate' WHERE employee_id = '$id';";
   
   if (mysqli_query($conn, $updateData)) {
