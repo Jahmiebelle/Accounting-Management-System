@@ -107,7 +107,12 @@ include 'hourly_rates.php';
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
-                  echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
+                  if ($_SESSION['admin_first_name'] && $_SESSION['admin_last_name']) {
+                    echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
+                  }
+                  else{
+                    echo "Guest";
+                  }
                 ?>
               </div>
               <div class="path">
