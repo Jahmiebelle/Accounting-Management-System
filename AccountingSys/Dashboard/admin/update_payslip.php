@@ -17,7 +17,7 @@
     $taxRatesRow = mysqli_fetch_assoc($taxRatesResult);
     $sssRate = $taxRatesRow['sss_tax'];
     $philhealthRate = $taxRatesRow['philhealth_tax'];
-    $pagibigRate = $taxRatesRow['pagibigRate'];
+    $pagibigRate = $taxRatesRow['pagibig_tax'];
     $basicRate = $taxRatesRow['income_tax'];
     $payslipRecordQuery = "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m') = '$currentMonth' AND employee_id = '$employee_id';";
     $payslipRecordResult = mysqli_query($conn, $payslipRecordQuery);
