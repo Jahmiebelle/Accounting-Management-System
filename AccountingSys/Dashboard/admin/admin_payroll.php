@@ -421,9 +421,10 @@ and optimize payroll and performance tracking.
     </footer>
       
   </div>
-  <script src="admin_payroll.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="admin_payroll.js" defer></script>
 </body>
 
 </html>

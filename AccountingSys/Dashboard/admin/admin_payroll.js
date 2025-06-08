@@ -118,16 +118,18 @@ payslipOl.addEventListener('click', function(e){
     }
 });
 
+
+const { jsPDF } = window.jspdf;
+
 document.getElementById('download-payslip-btn').addEventListener('click', function () {
   const payslip = document.getElementById('payslip-ol-content');
   const button = document.getElementById('download-payslip-btn');
 
-  // Hide the button temporarily
   button.style.display = 'none';
 
   html2canvas(payslip, { scale: 2 }).then(canvas => {
     const imgData = canvas.toDataURL('image/png');
-    const pdf = new jspdf.jsPDF({
+    const pdf = new jsPDF({
       orientation: 'portrait',
       unit: 'px',
       format: 'a4'
@@ -145,7 +147,6 @@ document.getElementById('download-payslip-btn').addEventListener('click', functi
     pdf.addImage(imgData, 'PNG', x, y, imgWidth * scaleRatio, imgHeight * scaleRatio);
     pdf.save('payslip.pdf');
 
-    // Show the button again
     button.style.display = 'inline-block';
   });
 });
