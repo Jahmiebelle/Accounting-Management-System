@@ -121,7 +121,8 @@ payslipOl.addEventListener('click', function(e){
 
 const { jsPDF } = window.jspdf;
 
-document.getElementById('download-payslip-btn').addEventListener('click', function () {
+document.getElementById('download-payslip-btn').addEventListener('click', function (event) {
+  event.preventDefault();
   const payslip = document.getElementById('payslip-ol-content');
   const button = document.getElementById('download-payslip-btn');
 
