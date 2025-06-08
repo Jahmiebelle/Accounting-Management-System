@@ -30,7 +30,7 @@
   $positionRateResult = mysqli_query($conn, $getPositionRate);
   $rateRow = mysqli_fetch_assoc($positionRateResult);
   $hourlyRate = (int)$rateRow['hourly_rate'];
-  $updateWork = "UPDATE employee_work_table SET hourly_rate = '$hourlyRate' WHERE employee_id = '$id';";
+  $updateWork = "UPDATE employee_work_table SET hourly_rate = $hourlyRate WHERE employee_id = '$id';";
   
   if (mysqli_query($conn, $updateData)) {
     echo "Data Saved Successfully!";

@@ -31,14 +31,15 @@
   }
   else {
     $insertData = "INSERT INTO employee_table VALUES('$id', '$cid', '$password', '$fn', 'N/A', '$ln', '$email', '$status', '$dept', '$gender', '$contact', '$emptype', '$position', '$joindate', '$birthdate', '$bank', '$sss', '$philhealth', '$pagibig', '1')";
-    $getPositionRate = "SELECT * FROM role_hourly_rate WHERE role_name = '$position';";
-    $positionRateResult = mysqli_query($conn, $getPositionRate);
-    $rateRow = mysqli_fetch_assoc($positionRateResult);
-    $hourlyRate = (int)$rateRow['hourly_rate'];
-    $insertWork = "INSERT INTO employee_work_table VALUES('$id', '$hourlyRate', 0, 0, 0, 0);";
+    
     
     if(mysqli_query($conn, $insertData)){
       mysqli_query($conn, $insertWork);
+      $getPositionRate = "SELECT * FROM role_hourly_rate WHERE role_name = '$position';";
+      $positionRateResult = mysqli_query($conn, $getPositionRate);
+      $rateRow = mysqli_fetch_assoc($positionRateResult);
+      $hourlyRate = (int)$rateRow['hourly_rate'];
+      $insertWork = "INSERT INTO employee_work_table VALUES('$id', $hourlyRate, 0, 0, 0, 0);";
       echo "Employee Created!";
     }
     else {

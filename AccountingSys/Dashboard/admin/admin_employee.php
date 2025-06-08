@@ -129,7 +129,7 @@ session_start();
                     <option value="" disabled selected>Select Position</option>
                     <option id="add-professor-role" value="professor">Professor</option>
                     <option id="add-instructor-role" value="instructor">Instructor</option>
-                    <option id="add-part_time_instructor-role" value="part_time_instructor">Part-Time Instructor</option>
+                    <option id="add-part_time_instructor-role" value="part_time_staff">Part-Time Instructor</option>
                   </select>
                 </div>
               </div>
