@@ -320,8 +320,6 @@ body {
 }
 
 .greetings-content {
-  background-color: white;
-  border-radius: 10px;
   display: flex;
   padding-top: 10px;
   padding-right: 10px;

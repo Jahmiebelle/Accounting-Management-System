@@ -71,3 +71,14 @@ editRateBtn.addEventListener('click', function(e){
   }
   editRate = !editRate;
 });
+
+const payslipBtn = document.getElementById('payslip-btn');
+const payslipOl = document.getElementById('payslip-ol');
+payslipBtn.addEventListener('click', function(){
+  payslipOl.classList.add('show');
+  payslipOl.addEventListener('click', function(e){
+    if(e.target == payslipOl){
+      payslipOl.classList.remove('show');
+    }
+  })
+});

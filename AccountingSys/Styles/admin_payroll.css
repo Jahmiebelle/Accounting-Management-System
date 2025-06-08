@@ -57,7 +57,183 @@ body {
   height: auto;
   width: 100%;
   /*border: solid green 1px;*/
+}
 
+.payslip-ol {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.payslip-ol.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.payslip-ol-content {
+  display: flex;
+  height: 700px;
+  max-height: 95vh;
+  width: auto;
+  min-width: 400px;
+  background-color: #f4f6f8;
+  flex-direction: column;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.payslip-ol-form {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.upper-payslip-form {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.header-payslip {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins-bold';
+  font-size: 32px;
+  height: 5rem;
+  width: 100%;
+  padding: 0 2rem;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.payslip-month {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-family: 'Poppins-light';
+}
+
+.status-bar {
+  display: flex;
+  font-size: 12px;
+  color: #f4f6f8;
+  height: 1rem;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: rgba(87, 150, 100, 1);
+}
+
+.payslip-basic-detail {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+#payroll-track-no {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: solid #cccccc 1px;
+
+}
+
+#track-no-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #666666;
+}
+
+.payslip-boxes {
+  display: flex;
+  width: 100%;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+
+.payslip-box-content, .payslip-upperbox-content {
+  display: flex;
+  width: 40%;
+  text-align: left;
+  justify-content: left;
+}
+
+.payslip-upperbox-content {
+  display: flex;
+  justify-content: left;
+}
+
+.lower-payslip-form {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  border-top: solid #cccccc 1px;
+  padding: 1rem 0;
+}
+
+.salary-payslip {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+.deduction-payslip {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  border-top: solid #cccccc 1px;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.total-payslip {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  border-top: solid #cccccc 1px;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+#income-tax-box {
   
 }
 
