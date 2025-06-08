@@ -94,7 +94,6 @@ payslipBtn.forEach(function(payslipButton){
     const totalDeduction = payslipButton.dataset.totaldeduct;
     const netPay = payslipButton.dataset.netpay;
     const status = payslipButton.dataset.completed;
-    alert(netPay);
     document.getElementById('payroll-id-jar').innerHTML = payrollId;
     document.getElementById('id-jar').innerHTML = id;
     document.getElementById('name-jar').innerHTML = fullName;
