@@ -370,7 +370,7 @@ include 'hourly_rates.php';
                     $payroll_basic_salary ="₱" . number_format($payrollHistoryRow['basic_salary'], 2);
                     $payroll_overtime_pay ="₱". number_format($payrollHistoryRow['overtime_pay'], 2);
                     $payroll_gross_pay ="₱".number_format($payrollHistoryRow['gross_pay'], 2);
-                    $payroll_income_tax ="₱".number_format($payrollHistoryRow['income_tax'], 2);
+                    $payroll_income_tax ="₱". number_format($payrollHistoryRow['income_tax'], 2);
                     $payroll_sss ="₱". number_format($payrollHistoryRow['sss'], 2);
                     $payroll_philhealth ="₱". number_format($payrollHistoryRow['philhealth'], 2);
                     $payroll_pagibig ="₱".number_format($payrollHistoryRow['pagibig'], 2);
