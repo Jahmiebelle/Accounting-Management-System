@@ -1,4 +1,5 @@
-<?php include '../../Login/db.php';
+<?php
+include '../../Login/db.php';
 session_start();
 ?>
 

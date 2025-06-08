@@ -26,6 +26,12 @@
   
   $updateData = "UPDATE employee_table SET employee_id = '$id', first_name = '$fn', last_name = '$ln', gender = '$gender', birthdate = '$birthdate', join_date = '$joindate', department = '$dept', position = '$position', employment_type = '$emptype', status = '$status', bank_number = '$bank', sss_number = '$sss', philhealth_number = '$philhealth', pagibig_number = '$pagibig', email = '$email', contact_number = '$contact', is_active = '$is_active' WHERE company_id = '$cid'";
   
+  $getPositionRate = "SELECT * FROM role_hourly_rate WHERE role_name = '$position';";
+  $positionRateResult = mysqli_query($conn, $getPositionRate);
+  $rateRow = mysqli_fetch_assoc($positionRateResult);
+  $hourlyRate = $rateRow['hourly_rate'];
+  $updateWork = "UPDATE employee_work_table SET hourly_rate = '$hourlyRate' WHERE employee_id = '$id';";
+  
   if (mysqli_query($conn, $updateData)) {
     echo "Data Saved Successfully!";
   } 
@@ -33,5 +39,4 @@
     echo "SQL Error: " . mysqli_error($conn);
   }
   
-
 ?>
