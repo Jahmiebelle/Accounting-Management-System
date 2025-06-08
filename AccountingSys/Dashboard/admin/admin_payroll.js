@@ -80,19 +80,19 @@ payslipBtn.forEach(function(payslipButton){
   payslipButton.addEventListener('click', function(){
     payslipOl.classList.add('show');
     payslip_content.scrollTop = 0;
-    const payrollId = payslipButton.dataset.payrollId;
+    const payrollId = payslipButton.dataset.pid;
     const id = payslipButton.dataset.id;
     const fullName = payslipButton.dataset.fn;
     const monthName = payslipButton.dataset.month;
     const basicSalary = payslipButton.dataset.basic;
     const overtimePay = payslipButton.dataset.overtime;
     const grossPay = payslipButton.dataset.gross;
-    const incomeTax = payslipButton.dataset.incomeTax;
+    const incomeTax = payslipButton.dataset.incometax;
     const sssTax = payslipButton.dataset.sss;
     const philhealthTax = payslipButton.dataset.philhealth;
     const pagibigTax = payslipButton.dataset.pagibig;
-    const totalDeduction = payslipButton.dataset.totalDeduct;
-    const netPay = payslipButton.dataset.netPay;
+    const totalDeduction = payslipButton.dataset.totaldeduct;
+    const netPay = payslipButton.dataset.netpay;
     const status = payslipButton.dataset.completed;
     alert(netPay);
     document.getElementById('payroll-id-jar').innerHTML = payrollId;
