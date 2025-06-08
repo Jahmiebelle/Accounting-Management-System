@@ -68,13 +68,13 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('emp-id').value = id;
         document.getElementById('emp-fn').value = fn;
         document.getElementById('emp-ln').value = ln;
-        document.getElementById(gender + '-gender').setAttribute('selected', true);
+        document.getElementById('emp-gender').value = gender;
         document.getElementById('emp-birth').value = birthdate;
         document.getElementById('emp-join').value = joindate;
-        document.getElementById(deptIdName).setAttribute('selected', true);
-        document.getElementById(position + '-role').setAttribute('selected', true);
-        document.getElementById(emptype + '-type').setAttribute('selected', true);
-        document.getElementById(status + '-status').setAttribute('selected', true);
+        document.getElementById('emp-dept').value = dept;
+        document.getElementById('emp-position').value = position;
+        document.getElementById('emp-type').value = emptype;
+        document.getElementById('emp-status').value = status;
         document.getElementById('emp-bank').value = bank;
         document.getElementById('emp-sss').value = sss;
         document.getElementById('emp-philhealth').value = philhealth;
