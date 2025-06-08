@@ -384,9 +384,9 @@ include 'hourly_rates.php';
                     echo "<tr>
                         <td>$monthName</td>
                         <td>$payroll_full_name</td>
-                        <td>₱". number_format($payroll_gross_pay, 2)."</td>
-                        <td>₱".number_format($payroll_total_deductions, 2)."</td>
-                        <td>₱".number_format($payroll_net_pay, 2)."</td>
+                        <td>$payroll_gross_pay</td>
+                        <td>$payroll_total_deductions</td>
+                        <td>$payroll_net_pay</td>
                         <td>$payroll_is_complete</td>
                         <td><div class='view-payslip' id='view-payslip'><button id='payslip-btn' class='payslip-btn' type='button' data-id='$payroll_emp_id' data-payrollId='$payroll_id' data-fn='$payroll_full_name' data-month='$monthName' data-basic='$payroll_basic_salary' data-overtime='$payroll_overtime_pay' data-gross='$payroll_gross_pay' data-incomeTax='$payroll_income_tax' data-sss='$payroll_sss' data-philhealth='$payroll_philhealth' data-pagibig='$payroll_pagibig' data-totalDeduct='$payroll_total_deductions' data-netPay='$payroll_net_pay' data-completed='$payroll_is_complete'>Payslip</button></div></td>
                       </tr>";
