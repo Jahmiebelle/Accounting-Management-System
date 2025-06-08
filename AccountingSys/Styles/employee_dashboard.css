@@ -371,6 +371,7 @@ body {
   font-family: 'Arial Rounded MT', sans-serif;
   background-color: #f4f6f8;
   margin-bottom: 50px;
+  border: solid black 1px;
 }
 
 /* TOP ROW */
@@ -380,6 +381,7 @@ body {
   width: 100%;
   gap: 3rem;
   margin-bottom: 30px;
+  border: solid darkorange 1px;
 }
 
 .left-box,
@@ -442,6 +444,7 @@ body {
   width: 100%;
   margin-bottom: 30px;
   overflow-x: auto;
+  border: solid red 1px;
 }
 
 .summary-grid {
@@ -449,6 +452,7 @@ body {
   flex-wrap: wrap;
   height: 95%;
   width: 90%;
+  padding: 0.5rem 0;
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -494,29 +498,48 @@ body {
   flex-direction: column ;
   overflow-x: auto;
   width: 100%;
+  border: solid darkgreen 1px;
   
 }
 
 .attendance-table {
   table-layout: fixed;
-  width: 100%;
+  border-spacing: 0px;
   border-collapse: collapse;
-  background-color: white;
-  box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  text-justify: center;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+td, th {
+  padding: 8px 16px;
+  margin: 0px;
+  border: 0.1px solid #ccc;
 }
 
 .attendance-table th {
-  background-color: #507d4d;
-  color: white;
-  padding: 12px;
-  text-align: left;
+  background-color: #eeeeee;
+  color: #333333;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins-light';
+  font-size: 12px;
 }
 
 .attendance-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
+  text-align: center;
+  white-space: normal;
+  font-family: 'Poppins-light';
+  font-size: 12px;
+  vertical-align: middle;
 }
 
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
 
 /*THS IS FOOTER SECTION*/
 
