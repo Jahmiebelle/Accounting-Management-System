@@ -130,19 +130,30 @@ session_start();
             </div>
             
           </div>
-          <div class="main-content"
-            <div class="attendance-header">
-              <input type="date" />
-              <input type="text" placeholder="Search by name..." />
-              <button class="filter-btn">Filter</button>
-            </div>
+          <div class="main-content">
+             <div class="attendance-wrapper">
+              <div class="attendance-header">
+                <input class="attendance-date" type="date" />
+                <div class="searchbar">
+                  <div class="name-search">
+                    <div class="search-logo">
+                      
+                    </div>
+                    <input class="search-label" type="text" id="search_employee" name="search_employee" placeholder="Name & Surname (e.g., Anna Cruz)">
+                  </div>
+                </div>
+                <div class="search-btn-container">
+                  <button class="search-btn" type="submit">Search</button>
+                </div>
+              </div>
             
-            <table class="attendance-table">
+             <table class="attendance-table">
               <thead>
                 <tr>
                   <th>Department ID</th>
                   <th>Employee ID</th>
-                  <th>Employee Name</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
                   <th>Date</th>
                   <th>Clock-in</th>
                   <th>Clock-out</th>
@@ -150,20 +161,49 @@ session_start();
                   <th>Total Hours of Work</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>2025001</td>
-                    <td>Jahmiebelle Laurente</td>
-                    <td>06/06/2025</td>
-                    <td>7:00 AM</td>
-                    <td>3:00 PM</td>
-                    <td>2 hrs</td>
-                    <td>10 hrs</td>
-                  </tr>
-                  </tbody>
+               <tbody>
+  <?php
+
+$query = "SELECT * FROM admin_employee_attendance";
+$result = mysqli_query($conn, $query);
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $clock_in = $row['clock_in'];
+    $clock_out = $row['clock_out'];
+
+    $clock_in_time = strtotime(datetime: $clock_in);
+    $clock_out_time = strtotime(datetime: $clock_out);
+    $worked_seconds = $clock_out_time - $clock_in_time;
+    $standard_seconds = 8 * 60 * 60;
+
+    if ($worked_seconds > $standard_seconds) {
+        $overtime_seconds = $worked_seconds - $standard_seconds;
+        $overtime_hours = floor($overtime_seconds / 3600);
+        $overtime_minutes = floor(($overtime_seconds % 3600) / 60);
+        $employee_overtime = sprintf("%02d:%02d", $overtime_hours, $overtime_minutes);
+    } else {
+        $employee_overtime = "00:00";
+    }
+
+    $total_hours = floor($worked_seconds / 3600) . " hrs";
+
+    echo "<tr>";
+    echo "<td>{$row['department_id']}</td>";
+    echo "<td>{$row['employee_id']}</td>";
+    echo "<td>{$row['first_name']}</td>";
+    echo "<td>{$row['last_name']}</td>";
+    echo "<td>{$row['employee_date']}</td>";
+    echo "<td>" . date("h:i A", strtotime($row['clock_in'])) . "</td>";
+    echo "<td>" . date("h:i A", strtotime($row['clock_out'])) . "</td>";
+    echo "<td>$employee_overtime</td>";
+    echo "<td>$total_hours</td>";
+    echo "</tr>";
+}
+?>
+</tbody>
               </table>
-            </div>
+             </div>
+           </div>
           </div>
         </div>
       </div>
