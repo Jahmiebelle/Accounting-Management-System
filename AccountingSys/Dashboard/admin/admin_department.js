@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
             alert(xhr.responseText);
           }
         };
-        const data = "id=" + encodeURIComponent(deleteId);
+        const data = "id=" + encodeURIComponent(deleteId) + "&name=" + encodeURIComponent(deleteName);
         xhr.send(data);
       }
     });
