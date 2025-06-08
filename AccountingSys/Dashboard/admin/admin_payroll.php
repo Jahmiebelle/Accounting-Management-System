@@ -107,7 +107,7 @@ session_start();
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
-                  echo $_SESSION['admin_first_name'] ?? "Guest". " " . $_SESSION['admin_last_name'] ?? "";
+                  echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
                 ?>
               </div>
               <div class="path">
