@@ -19,30 +19,30 @@ include 'hourly_rates.php';
 
   <div class="outer-container">
     <div class="payslip-ol" id="payslip-ol">
-      <div class="payslip-ol-content">
+      <div class="payslip-ol-content" id="payslip-ol-">
         <form class="payslip-ol-form" id="payslip-ol-form" action="" method="POST">
           <div class="upper-payslip-form">
             <div class="header-payslip">
               <div>PAYSLIP</div>
-              <div class="payslip-month">June</div>
+              <div class="payslip-month" id="month-jar">June</div>
             </div>
             <div class="payslip-basic-detail">
               <div id="payroll-track-no">
                 <div id="track-no-label">
                   <h5>Payroll Track No.</h5>
-                  <h5>002</h5>
+                  <h5 id="payroll-id-jar">002</h5>
                 </div>
-                <div class="status-bar" id="">
+                <div class="status-bar" id="status-jar">
                   Completed
                 </div>
               </div>
               <div class="payslip-boxes" id="emp-id-box">
                 <div>Employee ID:</div>
-                <div class="payslip-upperbox-content">1065</div>
+                <div class="payslip-upperbox-content" id="id-jar">1065</div>
               </div>
               <div class="payslip-boxes" id="name-box">
                 <div>Name:</div>
-                <div class="payslip-upperbox-content">Gabriel Lopez</div>
+                <div class="payslip-upperbox-content" id="name-jar">Gabriel Lopez</div>
               </div>
             </div>
           </div>
@@ -50,43 +50,43 @@ include 'hourly_rates.php';
             <div class="salary-payslip">
               <div class="payslip-boxes" id="basic-salary-box">
                   <div>Basic Salary:</div>
-                  <div class="payslip-box-content">₱10,000</div>
+                  <div class="payslip-box-content" id="salary-jar">₱10,000</div>
               </div>
               <div class="payslip-boxes" id="overtime-box">
                   <div>Overtime:</div>
-                  <div class="payslip-box-content">₱1,200</div>
+                  <div class="payslip-box-content" id="overtime-jar">₱1,200</div>
               </div>
               <div class="payslip-boxes" id="gross-pay-box">
                   <div>Gross Pay:</div>
-                  <div class="payslip-box-content">₱11,200</div>
+                  <div class="payslip-box-content" id="gross-jar">₱11,200</div>
               </div>
             </div>
             <div class="deduction-payslip">
               <div class="payslip-boxes" id="sss-box">
                   <div>SSS:</div>
-                  <div class="payslip-box-content">₱730</div>
+                  <div class="payslip-box-content" id="sss-jar">₱730</div>
               </div>
               <div class="payslip-boxes" id="philhealth-box">
                   <div>Philhealth:</div>
-                  <div class="payslip-box-content">₱345</div>
+                  <div class="payslip-box-content" id="philhealth-jar">₱345</div>
               </div>
               <div class="payslip-boxes" id="pagibig-box">
                   <div>Pagibig:</div>
-                  <div class="payslip-box-content">₱630</div>
+                  <div class="payslip-box-content" id="pagibig-jar">₱630</div>
               </div>
               <div class="payslip-boxes" id="income-box">
                   <div>Income Tax:</div>
-                  <div class="payslip-box-content">₱570</div>
+                  <div class="payslip-box-content" id="income-tax-jar">₱570</div>
               </div>
             </div>
             <div class="total-payslip">
               <div class="payslip-boxes" id="total-deduc-box">
                   <div>Total Deductions:</div>
-                  <div class="payslip-box-content">₱2,000</div>
+                  <div class="payslip-box-content" id="total-deduct-jar">₱2,000</div>
               </div>
               <div class="payslip-boxes" id="net-pay-box">
                   <div>Net Pay:</div>
-                  <div class="payslip-box-content">₱20,120</div>
+                  <div class="payslip-box-content" id="net-pay-jar">₱20,120</div>
               </div>
             </div>
           </div>
@@ -367,15 +367,15 @@ include 'hourly_rates.php';
                     $payroll_month = $payrollHistoryRow['month_year'];
                     $payroll_fn = $payrollHistoryRow['first_name'];
                     $payroll_ln = $payrollHistoryRow['last_name'];
-                    $payroll_basic_salary = $payrollHistoryRow['basic_salary'];
-                    $payroll_overtime_pay = $payrollHistoryRow['overtime_pay'];
-                    $payroll_gross_pay = $payrollHistoryRow['gross_pay'];
-                    $payroll_income_tax = $payrollHistoryRow['income_tax'];
-                    $payroll_sss = $payrollHistoryRow['sss'];
-                    $payroll_philhealth = $payrollHistoryRow['philhealth'];
-                    $payroll_pagibig = $payrollHistoryRow['pagibig'];
-                    $payroll_total_deductions = $payrollHistoryRow['total_deductions'];
-                    $payroll_net_pay = $payrollHistoryRow['net_pay'];
+                    $payroll_basic_salary ="₱" . number_format($payrollHistoryRow['basic_salary'], 2);
+                    $payroll_overtime_pay ="₱". number_format($payrollHistoryRow['overtime_pay'], 2);
+                    $payroll_gross_pay ="₱".number_format($payrollHistoryRow['gross_pay'], 2);
+                    $payroll_income_tax ="₱".number_format($payrollHistoryRow['income_tax'], 2);
+                    $payroll_sss ="₱". number_format($payrollHistoryRow['sss'], 2);
+                    $payroll_philhealth ="₱". number_format($payrollHistoryRow['philhealth'], 2);
+                    $payroll_pagibig ="₱".number_format($payrollHistoryRow['pagibig'], 2);
+                    $payroll_total_deductions ="₱".number_format($payrollHistoryRow['total_deductions'], 2);
+                    $payroll_net_pay ="₱".number_format($payrollHistoryRow['net_pay'], 2);
                     $payroll_is_complete = $payrollHistoryRow['is_complete'] ? "completed" : "pending";
                     $payroll_create_at = $payrollHistoryRow['created_at'];
                     $date = new DateTime($payroll_month);
@@ -388,7 +388,7 @@ include 'hourly_rates.php';
                         <td>₱".number_format($payroll_total_deductions, 2)."</td>
                         <td>₱".number_format($payroll_net_pay, 2)."</td>
                         <td>$payroll_is_complete</td>
-                        <td><div class='view-payslip' id='view-payslip'><button id='payslip-btn' class='payslip-btn' type='button' data-id='$payroll_emp_id' data-payroll-id='$payroll_id>Payslip</button></div></td>
+                        <td><div class='view-payslip' id='view-payslip'><button id='payslip-btn' class='payslip-btn' type='button' data-id='$payroll_emp_id' data-payrollId='$payroll_id' data-fn='$payroll_full_name' data-month='$monthName' data-basic='$payroll_basic_salary' data-overtime='$payroll_overtime_pay' data-gross='$payroll_gross_pay' data-incomeTax='$payroll_income_tax' data-sss='$payroll_sss' data-philhealth='$payroll_philhealth' data-pagibig='$payroll_pagibig' data-totalDeduct='$payroll_total_deductions' data-netPay='$payroll_net_pay' data-completed='$payroll_is_complete'>Payslip</button></div></td>
                       </tr>";
                   }
                 ?>

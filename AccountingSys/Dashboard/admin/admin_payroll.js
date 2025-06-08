@@ -72,13 +72,51 @@ editRateBtn.addEventListener('click', function(e){
   editRate = !editRate;
 });
 
-const payslipBtn = document.getElementById('payslip-btn');
+const payslipBtn = document.querySelectorAll('.payslip-btn');
 const payslipOl = document.getElementById('payslip-ol');
-payslipBtn.addEventListener('click', function(){
-  payslipOl.classList.add('show');
-  payslipOl.addEventListener('click', function(e){
-    if(e.target == payslipOl){
-      payslipOl.classList.remove('show');
-    }
-  })
+const payslip_content = document.getElementById('payslip-ol-content');
+
+payslipBtn.forEach(function(payslipButton){
+  payslipButton.addEventListener('click', function(){
+    payslipOl.classList.add('show');
+    payslip_content.scrollTop = 0;
+    const payrollId = payslipButton.dataset.payrollId;
+    const id = payslipButton.dataset.id;
+    const fullName = payslipButton.dataset.fn;
+    const monthName = payslipButton.dataset.month;
+    const basicSalary = payslipButton.dataset.basic;
+    const overtimePay = payslipButton.dataset.overtime;
+    const grossPay = payslipButton.dataset.gross;
+    const incomeTax = payslipButton.dataset.incomeTax;
+    const sssTax = payslipButton.dataset.sss;
+    const philhealthTax = payslipButton.dataset.philhealth;
+    const pagibigTax = payslipButton.dataset.pagibig;
+    const totalDeduction = payslipButton.dataset.totalDeduct;
+    const netPay = payslipButton.dataset.netPay;
+    const status = payslipButton.dataset.completed;
+    
+    document.getElementById('payroll-id-jar').innerText = payrollId;
+    document.getElementById('id-jar').innerText = id;
+    document.getElementById('name-jar').innerText = fullName;
+    document.getElementById('month-jar').innerText = monthName;
+    document.getElementById('salary-jar').innerText = basicSalary;
+    document.getElementById('overtime-jar').innerText = overtimePay;
+    document.getElementById('gross-jar').innerText = grossPay;
+    document.getElementById('sss-jar').innerText = sssTax;
+    document.getElementById('philhealth-jar').innerText = philhealthTax;
+    document.getElementById('pagibig-jar').innerText = pagibigTax;
+    document.getElementById('income-tax-jar').innerText = payrollId;
+    document.getElementById('total-deduct-jar'). innerText = totalDeduction;
+    document.getElementById('net-pay-jar').innerText = netPay;
+    document.getElementById('status-jar').innerText = status;
+    
+    payslipOl.addEventListener('click', function(e){
+      if(e.target == payslipOl){
+        payslipOl.classList.remove('show');
+      }
+    });
+    
+    
+  });
 });
+
