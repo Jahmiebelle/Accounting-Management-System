@@ -208,8 +208,7 @@ session_start();
                 <div class="request-card-button-container">
                   <button class="view-btn" id="view-btn" type="button">View More</button>
                 </div>
-              </div>
-              <?php
+               <?php/*
                 $previousTotalGross = 0;
                 $date = new DateTime('2025-06-01');
                 $date->modify('-1 month');
@@ -224,7 +223,7 @@ session_start();
                   $previousTotalGross += $grossPay;
                 }
                 $totalGrossDisplay = number_format($previousTotalGross, 2);
-              ?>
+              */?>
               <div id="payroll-card" class="lowercard">
                 <div class="payroll-card-header-container">
                   Payroll Summary
@@ -236,7 +235,7 @@ session_start();
                   </div>
                   <div class="pcc-count" id="pcc-count1">
                     <?php
-                      echo "₱ " . $totalGrossDisplay;
+                      echo "₱ " . $totalGrossDisplay ? $totalGrossDisplay : "Not Set";
                     ?>
                   </div>
                   <div class="pcc-header" id="pcc-header2">
