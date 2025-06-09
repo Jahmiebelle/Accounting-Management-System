@@ -136,6 +136,8 @@ body {
 .status-bar {
   display: flex;
   font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
   color: #f4f6f8;
   height: 1rem;
   width: 5rem;
