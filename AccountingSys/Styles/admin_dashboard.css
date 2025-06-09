@@ -405,6 +405,7 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 15%;
+  min-height: auto;
   width: 95%;
 
 }
@@ -412,7 +413,8 @@ body {
 .uppercard {
   display: flex;
   align-items: center;
-  height: 100%;
+  padding: 1rem 0;
+  height: auto;
   width: 48%;
   border-radius: 10px;
   background-color: #FFFFFF;
@@ -467,9 +469,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 30%;
+  height: auto;
+  min-height: 30%;
+  padding: 1rem 0;
   width: 95%;
-  
+  box-sizing: border-box;
 }
 
 .lowercard {
