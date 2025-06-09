@@ -130,7 +130,7 @@ session_start();
               </div>
             </div>
           
-            <!-- Attendance Table -->
+          
             <!-- Attendance Table -->
           <div class="attendance-table-section">
             <table class="attendance-table">
