@@ -391,7 +391,7 @@ body {
 
 .main-content {
   display: flex;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   flex-direction: column;
   gap: 20px;
@@ -404,8 +404,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 15%;
-  min-height: auto;
+  height: auto;
+  min-height: 15%;
   width: 95%;
 
 }
@@ -481,6 +481,7 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
+  padding: 1rem 0;
   width: 48%;
   border-radius: 10px;
   background-color: #FFFFFF;
