@@ -2,7 +2,7 @@
 session_start();
 
 ?>
-
+  
 <!DOCTYPE html>
 <html>
 
@@ -216,6 +216,9 @@ session_start();
                 $previousMonth = $date->format('Y-m');
                 $previousMonthQuery = "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m') = '$previousMonth' AND is_completed = 1;";
                 $previousMonthResult = mysqli_query($conn, $previousMonthQuery);
+                if (!$previousMonthResult) {
+                  die("Query failed: " . mysqli_error($conn));
+                }
                 while($previousMonthRow = mysqli_fetch_assoc($previousMonthResult)){
                   $grossPay = $previousMonthRow['gross_pay'];
                   $previousTotalGross += $grossPay;
@@ -232,7 +235,9 @@ session_start();
                     Total Payroll
                   </div>
                   <div class="pcc-count" id="pcc-count1">
-                    <?php echo "₱ " . $totalGrossDisplay; ?>
+                    <?php
+                      echo "₱ " . $totalGrossDisplay;
+                    ?>
                   </div>
                   <div class="pcc-header" id="pcc-header2">
                     Average Salary
