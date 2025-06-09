@@ -208,8 +208,8 @@ session_start();
                 <div class="request-card-button-container">
                   <button class="view-btn" id="view-btn" type="button">View More</button>
                 </div>
-               <?php
-                echo "<h1>HELLO<h1>";
+              </div>
+              <?php
                 $previousTotalGross = 0;
                 $date = new DateTime('2025-06-01');
                 $date->modify('-1 month');
