@@ -170,8 +170,10 @@ body {
 #track-no-label {
   display: flex;
   align-items: center;
+  width: auto;
   gap: 1rem;
   color: #666666;
+  border: solid red 1px;
 }
 
 .payslip-boxes {
