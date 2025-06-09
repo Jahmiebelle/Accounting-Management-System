@@ -906,15 +906,17 @@ p {
 }
 
 .payroll-table {
-  display: flex;
-  justify-content: center;
+  table-layout: fixed;
+  vertical-align: middle;
+  text-align: center;
   border-spacing: 0px;
   border-collapse: collapse;
-  align-items: center;
   text-align: center;
   height: 100%;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   color: #333333;
+  box-sizing: border-box;
 
 }
 
