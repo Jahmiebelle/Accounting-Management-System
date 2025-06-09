@@ -391,11 +391,13 @@ body {
 
 .main-content {
   display: flex;
-  height: 80vh;
+  height: auto;
+  min-height: 80vh;
   width: 100%;
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  margin-bottom: 5px;
   box-sizing: border-box;
 
 }
@@ -403,22 +405,26 @@ body {
 .upper-summarycards {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: auto;
-  min-height: 15%;
   width: 95%;
+  gap: 2rem;
+  box-sizing: border-box;
 
 }
 
 .uppercard {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   height: auto;
-  width: 48%;
+  width: auto;
+  max-width: 50%;
+  gap: 1rem;
   border-radius: 10px;
   background-color: #FFFFFF;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 #employee-card-icon {
@@ -428,10 +434,8 @@ body {
 #department-card-icon {
   background-image: url('../Assets/department-icon.png');
 }
-
 .uppercard-icon {
   display: flex;
-  margin-left: 20px;
   height: 65px;
   width: 65px;
   background-size: cover;
@@ -443,8 +447,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  flex: 1;
-  /*border: solid black 1px;*/
+  width: 8rem;
 }
 
 .uppercard-header {
@@ -467,12 +470,11 @@ body {
 
 .lower-summarycards {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: auto;
-  min-height: 30%;
   padding: 1rem 0;
   width: 95%;
+  gap: 2rem;
   box-sizing: border-box;
 }
 
@@ -480,7 +482,8 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
+  /*border: solid red 1px;*/
   padding: 1rem 0;
   width: 48%;
   border-radius: 10px;
@@ -492,10 +495,10 @@ body {
 .request-card-header-container {
   display: flex;
   align-items: center;
-  gap: 20px;
-  height: 25%;
-  width: 100%;
-  border-radius: 10px;
+  height: auto;
+  padding: 0.25rem 0;
+  width: 90%;
+  border-bottom: solid #cccccc 1px;
 }
 
 .rch-text {
@@ -523,15 +526,17 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 10px;;
-  height: 45%;
+  height: auto;
   width: 100%;
+  padding: 0.5rem 0;
   /*border: solid darkred 1px;*/
 }
 
 .leave-person1, .leave-person2 {
   display: flex;
   align-items: center;
-  flex: 1;
+  height: auto;
+  padding: 0.25rem 0;
   width: 95%;
   border-radius: 30px;
   background-color: #f4f6f8;
@@ -601,6 +606,7 @@ body {
   align-items: center;
   flex: 1;
   width: 100%;
+  padding: 0.25rem 0;
   /*border: solid darkgreen 1px;*/
 }
 
@@ -638,17 +644,19 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
-  /*border: solid red 1px;*/
+}
+
+.month-indicator {
+  font-size: 12px;
+  margin-top: 0;
 }
 
 .payroll-card-content-container {
   display: flex;
-  flex: 1;
+  height: auto;
   width: 75%;
   flex-direction: column;
   align-items: center;
-  
-  /*border: solid darkblue 1px;*/
 }
 
 .pcc-header {

@@ -108,6 +108,7 @@ session_start();
                     echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
                   }
                   else{
+                    
                     echo "Guest";
                   }
                 ?>
@@ -177,10 +178,7 @@ session_start();
               <div id="request-card" class="lowercard">
                 <div class="request-card-header-container">
                   <div class="rch-text">
-                    Recent Clock-ins: 
-                  </div>
-                  <div class="rch-count">
-                    12
+                    Recent Clock-in
                   </div>
                 </div>  
                 <div class="request-card-content-container">
@@ -211,17 +209,18 @@ session_start();
                   <button class="view-btn" id="view-btn" type="button">View More</button>
                 </div>
               </div>
-              <?php
+              <!--<?php
                 $date = new DateTime('2025-06-01');
                 $date->modify('-1 month');
                 $previousMonth = $date->format('Y-m');
                 $previousMonthQuery= "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m')= '$previousMonth' AND is_completed=1;";
                 
-              ?>
+              ?>-->
               <div id="payroll-card" class="lowercard">
                 <div class="payroll-card-header-container">
                   Payroll Summary
                 </div>
+                <p class="month-indicator">Month: May 2025</p>
                 <div class="payroll-card-content-container">
                   <div class="pcc-header" id="pcc-header1">
                     Total Payroll
