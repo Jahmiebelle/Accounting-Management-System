@@ -209,6 +209,7 @@ session_start();
                   <button class="view-btn" id="view-btn" type="button">View More</button>
                 </div>
                <?php
+                echo "<h1>HELLO<h1>";
                 $previousTotalGross = 0;
                 $date = new DateTime('2025-06-01');
                 $date->modify('-1 month');
