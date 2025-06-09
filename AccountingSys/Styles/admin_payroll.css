@@ -144,6 +144,7 @@ body {
   padding: 0.5rem;
   border-radius: 5px;
   background-color: rgba(87, 150, 100, 1);
+  margin: 0 3rem;
 }
 
 .payslip-basic-detail {
