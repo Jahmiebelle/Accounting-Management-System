@@ -174,7 +174,7 @@ body {
   display: flex;
   align-items: center;
   width: auto;
-  max-width: 40%;
+  max-width: 10rem;
   gap: 1rem;
   color: #666666;
   box-sizing: border-box;
