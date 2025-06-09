@@ -209,13 +209,19 @@ session_start();
                   <button class="view-btn" id="view-btn" type="button">View More</button>
                 </div>
               </div>
-              <!--<?php
+              <?php
+                $previousTotalGross = 0;
                 $date = new DateTime('2025-06-01');
                 $date->modify('-1 month');
                 $previousMonth = $date->format('Y-m');
-                $previousMonthQuery= "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m')= '$previousMonth' AND is_completed=1;";
-                
-              ?>-->
+                $previousMonthQuery = "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m') = '$previousMonth' AND is_completed = 1;";
+                $previousMonthResult = mysqli_query($conn, $previousMonthQuery);
+                while($previousMonthRow = mysqli_fetch_assoc($previousMonthResult)){
+                  $grossPay = $previousMonthRow['gross_pay'];
+                  $previousTotalGross += $grossPay;
+                }
+                $totalGrossDisplay = number_format($previousTotalGross, 2);
+              ?>
               <div id="payroll-card" class="lowercard">
                 <div class="payroll-card-header-container">
                   Payroll Summary
@@ -226,7 +232,7 @@ session_start();
                     Total Payroll
                   </div>
                   <div class="pcc-count" id="pcc-count1">
-                    ₱70,000
+                    <?php echo "₱ " . $totalGrossDisplay; ?>
                   </div>
                   <div class="pcc-header" id="pcc-header2">
                     Average Salary
