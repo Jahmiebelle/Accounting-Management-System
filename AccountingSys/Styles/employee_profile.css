@@ -461,7 +461,8 @@ body {
 .info-box {
   display: flex;
   flex-direction: column;
-  background-color: #f1f5f9;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.12);
   padding: 1rem;
   border-radius: 12px;
   border: solid #cccccc 1px;
@@ -476,7 +477,6 @@ body {
   height: auto;
   padding: 0.5rem 0;
   width: 100%;
-
   justify-content: center;
 
 }
@@ -484,7 +484,8 @@ body {
 .info-box-bottom {
   display: flex;
   flex-direction: column;
-  background-color: #f1f5f9;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.12);
   padding: 1rem;
   border-radius: 12px;
   border: solid #cccccc 1px;
