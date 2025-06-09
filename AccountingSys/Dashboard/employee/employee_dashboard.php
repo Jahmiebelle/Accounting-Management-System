@@ -25,8 +25,8 @@ session_start();
         </div>
       </div>
       <div class="role">
-        employee
-      </div>
+        Employee
+      </div>  
     </header>
     
     <div class="inner-container">
@@ -72,8 +72,8 @@ session_start();
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
-                  if (isset($_SESSION['employee_first_name']) && isset($_SESSION['employee_last_name'])) {
-                    echo $_SESSION['employee_first_name'] . " " . $_SESSION['employee_last_name'];
+                  if (isset($_SESSION['admin_first_name']) && isset($_SESSION['admin_last_name'])) {
+                    echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
                   }
                   else{
                     echo "Guest";
@@ -125,7 +125,7 @@ session_start();
                 </div>
                 <div class="summary-item">
                   <span class="label">Payroll Status:</span>
-                  <span class="status-badge"><?= $overtimeHours ?? 'pending' ?></span>
+                  <span class="status-badge"><?= $overtimeHours ?? 'Pending' ?></span>
                 </div>
               </div>
             </div>

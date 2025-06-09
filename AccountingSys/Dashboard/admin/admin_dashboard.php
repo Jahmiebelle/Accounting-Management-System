@@ -103,7 +103,7 @@ session_start();
           <div class="greetings-content">
             <div class="left-greetings">
               <div class="greetings">
-                Welcome, <?php
+                Welcome <?php
                   if (isset($_SESSION['admin_first_name']) && isset($_SESSION['admin_last_name'])) {
                     echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
                   }
@@ -112,8 +112,8 @@ session_start();
                   }
                 ?>
               </div>
-              <div class="path">
-                Admin / Dashboard
+              <div class="path" style= "opacity: 0;">
+                aaron 
               </div>
             </div>
             <div class="right-greetings">
@@ -211,6 +211,13 @@ session_start();
                   <button class="view-btn" id="view-btn" type="button">View More</button>
                 </div>
               </div>
+              <?php
+                $date = new DateTime('2025-06-01');
+                $date->modify('-1 month');
+                $previousMonth = $date->format('Y-m');
+                $previousMonthQuery= "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m')= '$previousMonth' AND is_completed=1;";
+                
+              ?>
               <div id="payroll-card" class="lowercard">
                 <div class="payroll-card-header-container">
                   Payroll Summary

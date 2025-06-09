@@ -1054,6 +1054,7 @@ th {
 }
 
 td {
+
   text-align: center;
   white-space: normal;
   font-family: 'Poppins-light';
@@ -1066,6 +1067,7 @@ tr:nth-child(even) {
 }
 
 .green-status, .gray-status, .orange-status {
+
   display: flex;
   text-align: center;
   justify-content: center;
@@ -1102,6 +1104,7 @@ tr:nth-child(even) {
   height: 100%;
   width: 100%;
   margin: 0;
+  
 }
 
 

@@ -28,7 +28,7 @@ session_start();
         </div>
       </div>
       <div class="role">
-        employee
+        Employee
       </div>
     </header>
     
@@ -97,7 +97,6 @@ session_start();
                 ?>
               </div>
               <div class="path">
-                Employee
               </div>
             </div>
             <div class="right-greetings">
