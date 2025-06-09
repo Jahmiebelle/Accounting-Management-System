@@ -391,22 +391,22 @@ body {
 
 .main-content {
   display: flex;
-  height: 500px;
+  height: 100vh;
   width: 100%;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   box-sizing: border-box;
-  /*border: solid darkgreen 1px;*/
+
 }
 
 .upper-summarycards {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 25%;
+  height: 15%;
   width: 95%;
-  /*border: solid black 1px;*/
+
 }
 
 .uppercard {
@@ -467,9 +467,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50%;
+  height: 30%;
   width: 95%;
-  /*border: solid orangered 1px;*/
   
 }
 

@@ -113,14 +113,99 @@ session_start();
             
           </div>
           <div class="main-content">
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="circle-pic"></div>
+                <div>
+                  <h2>Gabriel</h2>
+                  <p>Information Technology</p>
+                  <p>EMPLOYEE ID: 1004</p>
+                </div>
+              </div>
 
-            <div class="upper-main-content">
+              <div class="buttons">
+                <button>Edit Profile Picture</button>
+                <button>Request for Update (Profile)</button>
+                <button>Account Settings</button>
+              </div>
+
+              <div class="upper-boxes">
+                <div class="info-box">
+                  <div class="title-box">
+                    Personal Information
+                  </div>
+                  <table class="left-table">
+                    <tr>
+                      <td>FULL NAME: </td>
+                      <td>Jahmiebelle</td>
+                    </tr>
+                    <tr>
+                      <td>BIRTHDAY</td>
+                      <td>11/28/2002</td>
+                    </tr>
+                     <tr>
+                      <td>GENDER:</td>
+                      <td>Female</td>
+                    </tr>
+                     <tr>
+                      <td>PHONE NUMBER:</td>
+                      <td>09123456789</td>
+                    </tr>
+                     <tr>
+                      <td>ADDRESS:</td>
+                      <td>Imus, Cavite</td>
+                    </tr>
+                  </table>    
+                </div>
+
+                <div class="info-box">
+                  <div class="title-box">
+                    Work Information
+                  </div>
+                  <table class="right-table">
+                    <tr>
+                      <td>FULL NAME: </td>
+                      <td>Jahmiebelle</td>
+                    </tr>
+                    <tr>
+                      <td>BIRTHDAY</td>
+                      <td>11/28/2002</td>
+                    </tr>
+                     <tr>
+                      <td>GENDER:</td>
+                      <td>Female</td>
+                    </tr>
+                  </table>    
+                </div>
+              </div>
+              <div class="lower-boxes">
+                <div class="info-box-bottom">
+                  <div class="title-box">
+                    Bank & Payment Information
+                  </div>
+                  <table class="left-table">
+                    <tr>
+                      <td>FULL NAME: </td>
+                      <td>Jahmiebelle</td>
+                    </tr>
+                    <tr>
+                      <td>BIRTHDAY</td>
+                      <td>11/28/2002</td>
+                    </tr>
+                     <tr>
+                      <td>GENDER:</td>
+                      <td>Female</td>
+                    </tr>
+                     <tr>
+                      <td>PHONE NUMBER:</td>
+                      <td>09123456789</td>
+                    </tr>
+                  </table> 
+                </div>
+
+              </div>
 
             </div>
-            <div class="lower-main-content">
-
-            </div>
-
 
           </div>
         </div>
