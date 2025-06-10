@@ -211,7 +211,7 @@ session_start();
               </div>
               <?php
                 $previousTotalGross = 0;
-                $date = new DateTime('2025-06-01');
+                $date = new DateTime();
                 $date->modify('-1 month');
                 $previousMonth = $date->format('Y-m');
                 $previousMonthQuery = "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m') = '$previousMonth' AND is_complete = 1;";
@@ -219,10 +219,12 @@ session_start();
                 if (!$previousMonthResult) {
                   die("Query failed: " . mysqli_error($conn));
                 }
+                $paidEmployees = mysqli_num_rows($previousMonthResult);
                 while($previousMonthRow = mysqli_fetch_assoc($previousMonthResult)){
                   $grossPay = $previousMonthRow['gross_pay'];
                   $previousTotalGross += $grossPay;
                 }
+                $averageSalary = $previousTotalGross / $paidEmployees;
                 $totalGrossDisplay = number_format($previousTotalGross, 2);
               ?>
               <div id="payroll-card" class="lowercard">
@@ -236,20 +238,24 @@ session_start();
                   </div>
                   <div class="pcc-count" id="pcc-count1">
                     <?php
-                      echo ($totalGrossDisplay > 0) ? "₱ " . $totalGrossDisplay : "Not Set";
+                      echo ($totalGrossDisplay > 0) ? "₱ " . $totalGrossDisplay : "No Value";
                     ?>
                   </div>
                   <div class="pcc-header" id="pcc-header2">
                     Average Salary
                   </div>
                   <div class="pcc-count" id="pcc-count2">
-                    ₱10,000
+                    <?php
+                      echo ($averageSalary > 0) ? "₱ " . number_format($averageSalary, 2) : "No Average Value";
+                    ?>
                   </div>
                   <div class="pcc-header" id="pcc-header3">
                     Employee Paid
                   </div>
                   <div class="pcc-count" id="pcc-count3">
-                    7
+                    <?php
+                      echo ($paidEmployees > 0) ? $paidEmployees : "No one has been paid yet.";
+                    ?>
                   </div>
                   
                   
