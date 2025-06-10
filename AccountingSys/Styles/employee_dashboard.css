@@ -421,14 +421,19 @@ body {
   box-sizing: border-box;
 }
 
+.btn {
+  transition: all 0.15s ease;
+}
+
 .clock-in, .clock-out {
   width: 100%;
   padding: 1rem 2rem;
-  border: none;
+  border: rgba(0, 0, 0, 0);
   border-radius: 5px;
   font-family: 'Poppins-medium';
   color: #ffffff;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.15s ease;
 }
 
 .clock-in {
@@ -449,6 +454,17 @@ body {
   background-color: #9E1B1B;
 }
 
+.clock-out.disabled {
+  background-color: #F8D7DA;
+  border: solid #E06666 0.1px;
+  color: #9E1B1B;
+}
+
+.clock-in.disabled {
+  background-color: #D4EDDA;
+  border: solid #66B266 0.1px;
+  color: #1E4D2B;
+}
 
 .payroll-box {
   display: flex;

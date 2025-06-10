@@ -95,6 +95,8 @@ session_start();
             <div class="top-row">
               <div class="left-box">
                 <?php
+                  $dateNow = new DateTime();
+                  $dateNow->format('H:i:s');
                   $employee_id = $_SESSION['employee_id'];
                   $clockedInToday = false;
                   $clockedOutToday = false;
@@ -131,10 +133,11 @@ session_start();
                     $generateTodayAttendance = mysqli_query($conn, $createTodayAttendance);
                   }
                 ?>
-                <form class="clock-buttons" id="clocking-form" action="record_attendance.php" method="POST">
-                  <button class="btn clock-in" id="clock-in-btn" type="submit" <?php echo $clockInToday ? 'disabled' : '';?>>CLOCK IN</button>
-                  <button class="btn clock-out" id="clock-out-btn" type="submit" <?php echo (!$clockInToday && $clockOutToday) ? 'disabled' : '';?>>CLOCK OUT</button>
-                </form>
+                <div class="clock-buttons" id="clocking-form">
+                  <button class="btn clock-in" id="clock-in-btn" type="button" <?php echo $clockInToday ? 'disabled' : ''; echo "data-id = '$employee_id' data-curtime = '$dateNow'"?> >CLOCK IN</button>
+                  <button class="btn clock-out" id="clock-out-btn" type="button" <?php echo (!$clockInToday && $clockOutToday) ? 'disabled' : '';
+                    echo "data-id = '$employee_id' data-curtime = '$dateNow'"?>>CLOCK OUT</button>
+                </div>
               </div>
           
               <div class="right-box">

@@ -16,6 +16,73 @@
   });
 
  const clockInBtn = document.getElementById('clock-in-btn');
+ 
+ if(clockInBtn.disabled){
+   clockInBtn.classList.add('disabled');
+ }
+ else{
+  clockInBtn.classList.remove('disabled');
+  clockInBtn.addEventListener('click', function(){
+    const emp_id = clockInBtn.dataset.id;
+    const curtime = clockInBtn.dataset.curtime;
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "clocking.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onload = function(){
+      if (xhr.status === 200) {
+        alert(xhr.responseText);
+        setTimeout(function(){
+          location.reload();
+        }, 100);
+      }
+      else {
+        alert(xhr.responseText);
+      }
+    };
+    const data = "clock_in_id=" + encodeURIComponent(emp_id) + "&clock_in_curtime=" + encodeURIComponent(curtime);
+    let confirmClockIn = confirm("Are you sure you want to clock in?");
+    if(confirmClockIn){
+      xhr.send(data);
+    }
+    else{
+      
+    }
+  });
+   
+ }
+ 
   
  const clockOutBtn = document.getElementById('clock-out-btn');
+ if(clockOutBtn.disabled){
+  clockOutBtn.classList.add('disabled');
+ }
+ else{
+  clockOutBtn.classList.remove('disabled');
+  clockOutBtn.addEventListener('click', function(){
+    const emp_id = clockOutBtn.dataset.id;
+    const curtime = clockOutBtn.dataset.curtime;
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "clocking.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onload = function(){
+      if (xhr.status === 200) {
+        alert(xhr.responseText);
+        setTimeout(function(){
+          location.reload();
+        }, 100);
+      }
+      else {
+        alert(xhr.responseText);
+      }
+    };
+    const data = "clock_out_id=" + encodeURIComponent(emp_id) + "&clock_out_curtime=" + encodeURIComponent(curtime);
+    let confirmClockOut = confirm("Are you sure you want to clock out?");
+    if(confirmClockOut){
+      xhr.send(data);
+    }
+    else{
+      
+    }
+  });
+ }
  
