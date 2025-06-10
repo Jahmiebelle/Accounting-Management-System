@@ -8,9 +8,9 @@
   $clockInTime = $_POST['clock_in_curtime'];
   
   $clockInTimeObj = new DateTime($clockInTime);
-  $clockInHour = $clockInTimeObj->modify('H');
-  $clockInMin = $clockInTimeObj->modify('i');
-  $clockInSecs = $clockInTimeObj->modify('s');
+  $clockInHour = $clockInTimeObj->format('H');
+  $clockInMin = $clockInTimeObj->format('i');
+  $clockInSecs = $clockInTimeObj->format('s');
   $updateClockIn = "UPDATE admin_employee_attendance SET clock_in = '$clockInTime' WHERE employee_id = '$clockInId' AND employee_date = CURDATE();";
   $clockInResult = mysqli_query($conn, $updateClockIn);
   if($clockInResult){
