@@ -232,7 +232,6 @@ session_start();
                   Payroll Summary
                 </div>
                 <p class="month-indicator">Month: <?php
-                  $date->modify('-1 month');
                   echo $date->format('F, Y');
                 ?></p>
                 <div class="payroll-card-content-container">
