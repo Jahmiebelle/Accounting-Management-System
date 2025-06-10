@@ -231,7 +231,9 @@ session_start();
                 <div class="payroll-card-header-container">
                   Payroll Summary
                 </div>
-                <p class="month-indicator">Month: May 2025</p>
+                <p class="month-indicator">Month: <?php date->modify('-1 month');
+                  echo date->format('F, Y');
+                ?></p>
                 <div class="payroll-card-content-container">
                   <div class="pcc-header" id="pcc-header1">
                     Total Payroll
@@ -250,7 +252,7 @@ session_start();
                     ?>
                   </div>
                   <div class="pcc-header" id="pcc-header3">
-                    Employee Paid
+                    Employee(s) Paid
                   </div>
                   <div class="pcc-count" id="pcc-count3">
                     <?php
