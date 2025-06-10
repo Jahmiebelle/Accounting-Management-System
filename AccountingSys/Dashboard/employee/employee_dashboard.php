@@ -137,9 +137,9 @@ session_start();
                   }
                 ?>
                 <div class="clock-buttons" id="clocking-form">
-                  <button class="btn clock-in" id="clock-in-btn" type="button" <?php echo $clockInToday ? 'disabled' : ''; echo "data-id = '$employee_id' data-curtime = '$dateNow'"?> >CLOCK IN</button>
+                  <button class="btn clock-in" id="clock-in-btn" type="button" <?php echo $clockInToday ? 'disabled' : ''; echo "data-id = '$employee_id' data-curtime = '".$dateNow->format('H:i:s')."'"?> >CLOCK IN</button>
                   <button class="btn clock-out" id="clock-out-btn" type="button" <?php echo (!$clockInToday && $clockOutToday) ? 'disabled' : '';
-                    echo "data-id = '$employee_id' data-curtime = '$dateNow'"?>>CLOCK OUT</button>
+                    echo "data-id = '$employee_id' data-curtime = '".$dateNow->format('H:i:s')."'"?>>CLOCK OUT</button>
                 </div>
               </div>
           
