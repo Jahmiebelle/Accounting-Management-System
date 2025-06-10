@@ -8,6 +8,6 @@
   $clockInTime = $_POST['clock_in_curtime'];
   
   $clockInDate = new DateTime($clockInTime);
-  echo $clockInDate->format('H:i:s');
-  echo $clockInDate . "Agnas";
+  $clockInHourString = $clockInDate->format('H:i:s');
+  echo $clockInHourString . "Agnas";
 ?>
