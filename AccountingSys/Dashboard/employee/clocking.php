@@ -41,4 +41,10 @@
   }
   $updateTotalHours = "UPDATE admin_employee_attendance SET employee_overtime = '$todayOvertime', total_hours = '$todayWorkHours';";
   $updateHoursResult = mysqli_query($conn, $updateTotalHours);
+  if($updateHoursResult){
+    echo "Updated Total & Overtime Hours.";
+  }
+  else{
+    echo mysqli_error($conn);
+  }
 ?>

@@ -1,4 +1,7 @@
-<?php include '../../Login/db.php';
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+include '../../Login/db.php';
 session_start();
 ?>
 
