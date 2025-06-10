@@ -72,8 +72,8 @@ session_start();
             <div class="left-greetings">
               <div class="greetings">
                 Welcome, <?php
-                  if (isset($_SESSION['admin_first_name']) && isset($_SESSION['admin_last_name'])) {
-                    echo $_SESSION['admin_first_name'] . " " . $_SESSION['admin_last_name'];
+                  if (isset($_SESSION['employee_first_name']) && isset($_SESSION['employee_last_name'])) {
+                    echo $_SESSION['employee_first_name'] . " " . $_SESSION['employee_last_name'];
                   }
                   else{
                     echo "Guest";
@@ -94,10 +94,46 @@ session_start();
           <div class="main-dashboard-content">
             <div class="top-row">
               <div class="left-box">
-                <div class="clock-buttons">
-                  <button class="btn clock-in">CLOCK IN</button>
-                  <button class="btn clock-out">CLOCK OUT</button>
-                </div>
+                <?php
+                  $employee_id = $_SESSION['employee_id'];
+                  $clockedInToday;
+                  $clockedOutToday;
+                  $checkTodayAttendance = "SELECT * FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
+                  $todayAttendanceResult = mysqli_query($conn, $checkTodayAttendance);
+                  if(mysqli_num_rows($todayAttendanceResult) > 0){
+                    $checkClockInToday = "SELECT clock_in FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
+                    $todayClockInResult = mysqli_query($conn, $checkClockInToday);
+                    $clockInValue = mysqli_fetch_assoc($todayClockInResult);
+                    
+                    $checkClockOutToday = "SELECT clock_out FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
+                    $todayClockOutResult = mysqli_query($conn, $checkClockOutToday);
+                    $clockOutValue = mysqli_fetch_assoc($todayClockOutResult);
+                    
+                    $clockInToday = $clockInValue ? true : false;
+                    $clockOutToday = $clockOutValue ? true : false;
+                    
+                  }
+                  else {
+                    $getEmployeeData = "SELECT * FROM employee_table WHERE employee_id = $employee_id;";
+                    $employeeDataResult = mysqli_query($conn, $getEmployeeData);
+                    $employeeDataRow = mysqli_fetch_assoc($employeeDataResult);
+                    $empFn = $employeeDataRow['first_name'];
+                    $empLn = $employeeDataRow['last_name'];
+                    $empName = $empFn .
+                     "" . $empLn;
+                    $empDeptName = $employeeDataRow['department'];
+                    $getDeptId = "SELECT department_id FROM department_table WHERE department_name = '$empDeptName'";
+                    $deptIdResult = mysqli_query($conn, $getDeptId);
+                    $deptIdValue = mysqli_fetch_assoc($deptIdResult);
+                    
+                    $createTodayAttendance = "INSERT INTO admin_employee_attendance (department_id, employee_id, employee_name, employee_date, employee_overtime, total_hours) VALUES ($deptIdValue, $employee_id, '$empName', CURDATE(), '00:00:00', '00:00:00');";
+                    $generateTodayAttendance = mysqli_query($conn, $createTodayAttendance);
+                  }
+                ?>
+                <form class="clock-buttons" id="clocking-form" action="record_attendance.php" method="POST">
+                  <button class="btn clock-in" id="clock-in-btn" type="submit" <?php echo $clockInToday ? 'disabled' : '';?>>CLOCK IN</button>
+                  <button class="btn clock-out" id="clock-out-btn" type="submit" <?php echo (!$clockInToday && $clockOutToday) ? 'disabled' : '';?>>CLOCK OUT</button>
+                </form>
               </div>
           
               <div class="right-box">
@@ -129,8 +165,6 @@ session_start();
                 </div>
               </div>
             </div>
-          
-          
             <!-- Attendance Table -->
           <div class="attendance-table-section">
             <table class="attendance-table">

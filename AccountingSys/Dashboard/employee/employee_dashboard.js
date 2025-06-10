@@ -15,4 +15,7 @@
     window.location.href = "employee_payroll.php";
   });
 
+ const clockInBtn = document.getElementById('clock-in-btn');
+  
+ const clockOutBtn = document.getElementById('clock-out-btn');
  

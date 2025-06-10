@@ -187,8 +187,7 @@ session_start();
                 <tr>
                   <th>Department ID</th>
                   <th>Employee ID</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
+                  <th>Name</th>
                   <th>Date</th>
                   <th>Clock-in</th>
                   <th>Clock-out</th>
@@ -225,8 +224,7 @@ while ($row = $result->fetch_assoc()) {
     echo "<tr>";
     echo "<td>{$row['department_id']}</td>";
     echo "<td>{$row['employee_id']}</td>";
-    echo "<td>{$row['first_name']}</td>";
-    echo "<td>{$row['last_name']}</td>";
+    echo "<td>{$row['employee_name']}</td>";
     echo "<td>{$row['employee_date']}</td>";
     echo "<td>" . date("h:i A", strtotime($row['clock_in'])) . "</td>";
     echo "<td>" . date("h:i A", strtotime($row['clock_out'])) . "</td>";
