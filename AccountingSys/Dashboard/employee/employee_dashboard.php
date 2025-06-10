@@ -100,6 +100,7 @@ session_start();
                 <?php
                   $dateNow = new DateTime();
                   $dateNow->format('H:i:s');
+                  $empName = "";
                   $employee_id = (int)$_SESSION['employee_id'];
                   $clockedInToday = false;
                   $clockedOutToday = false;
