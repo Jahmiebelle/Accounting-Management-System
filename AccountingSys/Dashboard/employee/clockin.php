@@ -7,5 +7,6 @@
   $clockInId = $_POST['clock_in_id'];
   $clockInTime = $_POST['clock_in_curtime'];
   
-  
+  $clockInDate = new DateTime($clockInTime);
+  echo $clockInDate;
 ?>
