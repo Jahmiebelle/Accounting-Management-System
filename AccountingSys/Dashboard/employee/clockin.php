@@ -5,7 +5,7 @@
   error_reporting(E_ALL);
   
   $clockInId = (int)$_POST['clock_in_id'];
-  $empName = $_POST['emp_nane'];
+  $empName = $_POST['emp_name'];
   $clockInDate = new DateTime();
   $clockInTimeFormatted = $clockInDate->format('H:i:s');
   
