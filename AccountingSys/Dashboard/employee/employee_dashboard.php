@@ -102,6 +102,10 @@ session_start();
           
               <div class="right-box">
                 <div class="payroll-box">
+                  
+                  
+                   
+              
                   <div class="next-label">NEXT PAYROLL</div>
                   <div class="next-date">JULY 30, 2025</div>
                 </div>
@@ -211,6 +215,7 @@ and optimize payroll and performance tracking.
       
   </div>
   <script src="employee_dashboard.js"></script>
+   
 </body>
 
 </html>
