@@ -231,8 +231,9 @@ session_start();
                 <div class="payroll-card-header-container">
                   Payroll Summary
                 </div>
-                <p class="month-indicator">Month: <?php date->modify('-1 month');
-                  echo date->format('F, Y');
+                <p class="month-indicator">Month: <?php
+                  $date->modify('-1 month');
+                  echo $date->format('F, Y');
                 ?></p>
                 <div class="payroll-card-content-container">
                   <div class="pcc-header" id="pcc-header1">
