@@ -360,7 +360,7 @@ include 'hourly_rates.php';
                   <th>Payslip</th>
                 </tr>
                 <?php
-                  $payrollHistoryQuery = "SELECT * FROM payroll_history_table ORDER BY month_year ASC;";
+                  $payrollHistoryQuery = "SELECT * FROM payroll_history_table ORDER BY month_year DESC;";
                   $payrollHistoryResult = mysqli_query($conn, $payrollHistoryQuery);
                   while($payrollHistoryRow = mysqli_fetch_assoc($payrollHistoryResult)){
                     $payroll_id = $payrollHistoryRow['payroll_id'];
