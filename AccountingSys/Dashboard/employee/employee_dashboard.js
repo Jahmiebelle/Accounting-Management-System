@@ -24,7 +24,7 @@
   clockInBtn.classList.remove('disabled');
   clockInBtn.addEventListener('click', function(){
     const emp_id = clockInBtn.dataset.id;
-    const curtime = clockInBtn.dataset.curtime;
+    const emp_name = clockOutBtn.dataset.name;
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "clockin.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -39,7 +39,7 @@
         alert(xhr.responseText);
       }
     };
-    const data = "clock_in_id=" + encodeURIComponent(emp_id) + "&clock_in_curtime=" + encodeURIComponent(curtime);
+    const data = "clock_in_id=" + encodeURIComponent(emp_id) + "&emp_name=" + encodeURIComponent(emp_name);
     let confirmClockIn = confirm("Are you sure you want to clock in?");
     if(confirmClockIn){
       xhr.send(data);
@@ -60,7 +60,7 @@
   clockOutBtn.classList.remove('disabled');
   clockOutBtn.addEventListener('click', function(){
     const emp_id = clockOutBtn.dataset.id;
-    const curtime = clockOutBtn.dataset.curtime;
+    const emp_name = clockOutBtn.dataset.name;
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "clockout.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -75,7 +75,7 @@
         alert(xhr.responseText);
       }
     };
-    const data = "clock_out_id=" + encodeURIComponent(emp_id) + "&clock_out_curtime=" + encodeURIComponent(curtime);
+    const data = "clock_out_id=" + encodeURIComponent(emp_id) + "&emp_name=" + encodeURIComponent(emp_name);
     let confirmClockOut = confirm("Are you sure you want to clock out?");
     if(confirmClockOut){
       xhr.send(data);

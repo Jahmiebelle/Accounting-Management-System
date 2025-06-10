@@ -4,10 +4,18 @@
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
   
-  $clockInId = $_POST['clock_in_id'];
-  $clockInTime = $_POST['clock_in_curtime'];
+  $clockInId = (int)$_POST['clock_in_id'];
+  $empName = $_POST['emp_nane'];
+  $clockInDate = new DateTime();
+  $clockInTimeFormatted = $clockInDate->format('H:i:s');
   
-  $clockInDate = new DateTime($clockInTime);
-  $clockInHourString = $clockInDate->format('H:i:s');
-  echo $clockInHourString . "Agnas";
+  $updateClockInQuery = "UPDATE admin_employee_attendance SET clock_in = '$clockInTimeFormatted' WHERE employee_id = $clockInId;";
+  $clockInResult = mysqli_query($conn, $updateClockInQuery);
+  if($clockInResult){
+    echo "You've Clocked in! Welcome " . $empName;
+  }
+  else{
+    echo mysqli_error($conn);
+  }
+  
 ?>
