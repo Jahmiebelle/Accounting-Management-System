@@ -8,5 +8,5 @@
   $clockInTime = $_POST['clock_in_curtime'];
   
   $clockInDate = new DateTime($clockInTime);
-  echo $clockInDate;
+  echo $clockInDate->format('H:i:s');
 ?>
