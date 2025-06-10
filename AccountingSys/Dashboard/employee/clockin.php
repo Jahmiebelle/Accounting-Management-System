@@ -7,9 +7,10 @@
   $clockInId = (int)$_POST['clock_in_id'];
   $empName = $_POST['emp_name'];
   $clockInDate = new DateTime();
+  $thisDay = $clockInDate->format('Y-m-d');
   $clockInTimeFormatted = $clockInDate->format('H:i:s');
   
-  $updateClockInQuery = "UPDATE admin_employee_attendance SET clock_in = '$clockInTimeFormatted' WHERE employee_id = $clockInId;";
+  $updateClockInQuery = "UPDATE admin_employee_attendance SET clock_in = '$clockInTimeFormatted' WHERE employee_id = $clockInId AND DATE_FORMAT(employee_date, '%Y-%m-%d') = '$thisDay';";
   $clockInResult = mysqli_query($conn, $updateClockInQuery);
   if($clockInResult){
     echo "You've Clocked in! " . $clockInTimeFormatted;
