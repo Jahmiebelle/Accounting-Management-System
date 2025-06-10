@@ -6,10 +6,6 @@
   
   $clockInId = $_POST['clock_in_id'];
   $clockInTime = $_POST['clock_in_curtime'];
-  $clockOutId = $_POST['clock_out_id'];
-  $clockOutTime = $_POST['clock_out_curtime'];
-  
-  
   
   
 ?>

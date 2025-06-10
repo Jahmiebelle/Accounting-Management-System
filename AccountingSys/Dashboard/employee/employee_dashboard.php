@@ -100,23 +100,17 @@ session_start();
                 <?php
                   $dateNow = new DateTime();
                   $dateNow->format('H:i:s');
-                  $employee_id = $_SESSION['employee_id'];
+                  $employee_id = (int)$_SESSION['employee_id'];
                   $clockedInToday = false;
                   $clockedOutToday = false;
-                  $checkTodayAttendance = "SELECT * FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
+                  $checkTodayAttendance = "SELECT employee_id, clock_in, clock_out FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
                   $todayAttendanceResult = mysqli_query($conn, $checkTodayAttendance);
                   if(mysqli_num_rows($todayAttendanceResult) > 0){
-                    $checkClockInToday = "SELECT clock_in FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
-                    $todayClockInResult = mysqli_query($conn, $checkClockInToday);
-                    $clockInValue = mysqli_fetch_assoc($todayClockInResult);
-                    
-                    $checkClockOutToday = "SELECT clock_out FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
-                    $todayClockOutResult = mysqli_query($conn, $checkClockOutToday);
-                    $clockOutValue = mysqli_fetch_assoc($todayClockOutResult);
-                    
+                    $clockRow = mysqli_fetch_assoc($todayAttendanceResult);
+                    $clockInValue = $clockRow['clock_in'];
+                    $clockOutValue = $clockRow['clock_out'];
                     $clockInToday = $clockInValue ? true : false;
                     $clockOutToday = $clockOutValue ? true : false;
-                    
                   }
                   else {
                     $getEmployeeData = "SELECT * FROM employee_table WHERE employee_id = $employee_id;";
@@ -125,7 +119,7 @@ session_start();
                     $empFn = $employeeDataRow['first_name'];
                     $empLn = $employeeDataRow['last_name'];
                     $empName = $empFn .
-                     "" . $empLn;
+                     " " . $empLn;
                     $empDeptName = $employeeDataRow['department'];
                     $getDeptId = "SELECT department_id FROM department_table WHERE department_name = '$empDeptName'";
                     $deptIdResult = mysqli_query($conn, $getDeptId);
@@ -136,9 +130,9 @@ session_start();
                     $generateTodayAttendance = mysqli_query($conn, $createTodayAttendance);
                   }
                 ?>
-                <div class="clock-buttons" id="clocking-form">
+                <div class="clock-buttons">
                   <button class="btn clock-in" id="clock-in-btn" type="button" <?php echo $clockInToday ? 'disabled' : ''; echo "data-id = '$employee_id' data-curtime = '".$dateNow->format('H:i:s')."'"?> >CLOCK IN</button>
-                  <button class="btn clock-out" id="clock-out-btn" type="button" <?php echo (!$clockInToday && $clockOutToday) ? 'disabled' : '';
+                  <button class="btn clock-out" id="clock-out-btn" type="button" <?php echo ($clockInToday && !$clockOutToday) ? "" : "disabled";
                     echo "data-id = '$employee_id' data-curtime = '".$dateNow->format('H:i:s')."'"?>>CLOCK OUT</button>
                 </div>
               </div>
