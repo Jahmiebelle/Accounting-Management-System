@@ -236,7 +236,7 @@ session_start();
                   </div>
                   <div class="pcc-count" id="pcc-count1">
                     <?php
-                      echo "₱ " . $totalGrossDisplay ? $totalGrossDisplay : "Not Set";
+                      echo ($totalGrossDisplay > 0) ? "₱ " . $totalGrossDisplay : "Not Set";
                     ?>
                   </div>
                   <div class="pcc-header" id="pcc-header2">
