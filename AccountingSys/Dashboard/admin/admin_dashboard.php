@@ -214,7 +214,7 @@ session_start();
                 $date = new DateTime('2025-06-01');
                 $date->modify('-1 month');
                 $previousMonth = $date->format('Y-m');
-                $previousMonthQuery = "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m') = '$previousMonth' AND is_completed = 1;";
+                $previousMonthQuery = "SELECT * FROM payroll_history_table WHERE DATE_FORMAT(month_year, '%Y-%m') = '$previousMonth' AND is_complete = 1;";
                 $previousMonthResult = mysqli_query($conn, $previousMonthQuery);
                 if (!$previousMonthResult) {
                   die("Query failed: " . mysqli_error($conn));
