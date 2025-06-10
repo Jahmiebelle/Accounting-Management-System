@@ -124,7 +124,8 @@ session_start();
                     $empDeptName = $employeeDataRow['department'];
                     $getDeptId = "SELECT department_id FROM department_table WHERE department_name = '$empDeptName'";
                     $deptIdResult = mysqli_query($conn, $getDeptId);
-                    $deptIdValue = mysqli_fetch_assoc($deptIdResult);
+                    $deptIdRow = mysqli_fetch_assoc($deptIdResult);
+                    $deptIdValue = $deptIdRow['department_id'];
                     
                     $createTodayAttendance = "INSERT INTO admin_employee_attendance (department_id, employee_id, employee_name, employee_date, employee_overtime, total_hours) VALUES ($deptIdValue, $employee_id, '$empName', CURDATE(), '00:00:00', '00:00:00');";
                     $generateTodayAttendance = mysqli_query($conn, $createTodayAttendance);
