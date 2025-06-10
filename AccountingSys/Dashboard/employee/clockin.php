@@ -9,4 +9,5 @@
   
   $clockInDate = new DateTime($clockInTime);
   echo $clockInDate->format('H:i:s');
+  echo $clockInDate . "Agnas";
 ?>
