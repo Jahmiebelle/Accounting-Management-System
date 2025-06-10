@@ -22,7 +22,7 @@
   
   $clockOutId = $_POST['clock_out_id'];
   $clockOutTime = $_POST['clock_out_curtime'];
-  $updateClockOut = "UPDATE admin_employee_attendance SET clock_out = '$clockOutTime' WHERE employee_id = '$clockInId' AND employee_date = CURDATE();";
+  $updateClockOut = "UPDATE admin_employee_attendance SET clock_out = '$clockOutTime' WHERE employee_id = '$clockOutId' AND employee_date = CURDATE();";
   $clockOutResult = mysqli_query($conn, $updateClockOut);
   if($clockOutResult){
     echo "Clocked out! Thanks for your hardwork!";
