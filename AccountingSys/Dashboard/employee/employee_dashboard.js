@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
  
  if(clockInBtn.disabled){
    clockInBtn.classList.add('disabled');
+   clockInBtn.innerText = "CLOCKED IN";
  }
  else{
   clockInBtn.classList.remove('disabled');
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
  const clockOutBtn = document.getElementById('clock-out-btn');
  if(clockOutBtn.disabled){
   clockOutBtn.classList.add('disabled');
+  clockOutBtn.innerText = "CLOCKED OUT";
  }
  else{
   clockOutBtn.classList.remove('disabled');
