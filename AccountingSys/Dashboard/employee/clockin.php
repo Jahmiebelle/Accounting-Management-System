@@ -12,7 +12,7 @@
   $updateClockInQuery = "UPDATE admin_employee_attendance SET clock_in = '$clockInTimeFormatted' WHERE employee_id = $clockInId;";
   $clockInResult = mysqli_query($conn, $updateClockInQuery);
   if($clockInResult){
-    echo "You've Clocked in! Welcome " . $empName;
+    echo "You've Clocked in! " . $clockInTimeFormatted;
   }
   else{
     echo mysqli_error($conn);
