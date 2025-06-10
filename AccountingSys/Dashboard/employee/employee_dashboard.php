@@ -129,6 +129,13 @@ session_start();
                     
                     $createTodayAttendance = "INSERT INTO admin_employee_attendance (department_id, employee_id, employee_name, employee_date, employee_overtime, total_hours) VALUES ($deptIdValue, $employee_id, '$empName', CURDATE(), '00:00:00', '00:00:00');";
                     $generateTodayAttendance = mysqli_query($conn, $createTodayAttendance);
+                    if(mysqli_num_rows($todayAttendanceResult) > 0){
+                    $clockRow = mysqli_fetch_assoc($todayAttendanceResult);
+                    $clockInValue = $clockRow['clock_in'];
+                    $clockOutValue = $clockRow['clock_out'];
+                    $clockInToday = $clockInValue ? true : false;
+                    $clockOutToday = $clockOutValue ? true : false;
+                    }
                   }
                 ?>
                 <div class="clock-buttons">
