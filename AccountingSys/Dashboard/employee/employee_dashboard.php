@@ -96,8 +96,8 @@ session_start();
               <div class="left-box">
                 <?php
                   $employee_id = $_SESSION['employee_id'];
-                  $clockedInToday;
-                  $clockedOutToday;
+                  $clockedInToday = false;
+                  $clockedOutToday = false;
                   $checkTodayAttendance = "SELECT * FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
                   $todayAttendanceResult = mysqli_query($conn, $checkTodayAttendance);
                   if(mysqli_num_rows($todayAttendanceResult) > 0){
