@@ -24,11 +24,12 @@
   $clockOutDateTime = new DateTime($timeOutString);
 
   $timeBetweenClock = $clockInDateTime->diff($clockOutDateTime);
-  $totalHoursWorked = $timeBetweenClock->format('H:i:s');
+  $totalHoursWorked = $timeBetweenClock->format('%H:%I:%S');
+  $timeBetweenDateTime = new DateTime($totalHoursWorked);
   $totalHours = $timeBetweenClock->format('H');
   $overtimeHoursWorked;
   if ((int)$totalHours > 8) {
-    $overtimeDateTime = $timeBetweenClock->modify('-8 hours');
+    $overtimeDateTime = $timeBetweenDateTime->modify('-8 hours');
     $overtimeHoursWorked = $overtimeDateTime->format('H:i:s');
   }
   else{
@@ -39,9 +40,9 @@
   
   
   //i uupdate yung total hours and overtime ng work table pag sasamasamahin lang yung total_hour at overtime  g employee sa admin_attendance_table
-  $getTotalHoursQuery = "SELECT employee_id, SEC_TO_TIME(SUM(TIME_TO_SEC(total_hours))) AS total_hours FROM admin_employee_attendance WHERE employee_id = $clock_out_id AND DATE_FORMAT(employee_date, '%Y-%m') = '$thisMonth';";
-  $getTotalOvertimeQuery = "SELECT employee_id, SEC_TO_TIME(SUM(TIME_TO_SEC(employee_overtime)) AS total_overtime FROM admin_employee_attendance WHERE employee_id = $clock_out_id AND DATE_FORMAT(employee_date, '%Y-%m') = '$thisMonth';";
-  $countDaysQuery = "SELECT COUNT(attendance_id) AS days_of_work FROM admin_attendance_table WHERE employee_id = $clock_out_id AND DATE_FORMAT(employee_date, '%Y-%m');";
+  $getTotalHoursQuery = "SELECT employee_id, SEC_TO_TIME(SUM(TIME_TO_SEC(total_hours))) AS total_hours FROM admin_employee_attendance WHERE employee_id = $clockOutId AND DATE_FORMAT(employee_date, '%Y-%m') = '$thisMonth';";
+  $getTotalOvertimeQuery = "SELECT employee_id, SEC_TO_TIME(SUM(TIME_TO_SEC(employee_overtime))) AS total_overtime FROM admin_employee_attendance WHERE employee_id = $clockOutId AND DATE_FORMAT(employee_date, '%Y-%m') = '$thisMonth';";
+  $countDaysQuery = "SELECT COUNT(attendance_id) AS days_of_work FROM admin_attendance_table WHERE employee_id = $clockOutId AND DATE_FORMAT(employee_date, '%Y-%m') = '$thisMonth';";
   
   $totalHoursResult = mysqli_query($conn, $getTotalHoursQuery);
   $totalOvertimeResult = mysqli_query($conn, $getTotalOvertimeQuery);
