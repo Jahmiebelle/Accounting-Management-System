@@ -16,8 +16,8 @@
     $clockRow = mysqli_fetch_assoc($todayAttendanceResult);
     $clockInValue = $clockRow['clock_in'];
     $clockOutValue = $clockRow['clock_out'];
-    $clockInToday = $clockInValue ? true : false;
-    $clockOutToday = $clockOutValue ? true : false;
+    $clockedInToday = $clockInValue ? true : false;
+    $clockedOutToday = $clockOutValue ? true : false;
   }
   else {
     $getEmployeeData = "SELECT * FROM employee_table WHERE employee_id = $employee_id;";
@@ -39,8 +39,8 @@
     $clockRow = mysqli_fetch_assoc($todayAttendanceResult);
     $clockInValue = $clockRow['clock_in'];
     $clockOutValue = $clockRow['clock_out'];
-    $clockInToday = $clockInValue ? true : false;
-    $clockOutToday = $clockOutValue ? true : false;
+    $clockedInToday = $clockInValue ? true : false;
+    $clockedOutToday = $clockOutValue ? true : false;
     }
   }
 

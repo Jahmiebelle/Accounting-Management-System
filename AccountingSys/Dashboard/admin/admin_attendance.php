@@ -135,16 +135,14 @@ session_start();
               <div class="attendance-header">
                 <form method="GET" action="" class="attendance-form">
                   <div class="filter-group">
-                  <input type="date" id="filter_date" name="filter_date" class="search-label" placeholder="Mm/Dd/YYyy">
+                    <input type="date" id="filter_date" name="filter_date" class="search-label" placeholder="Mm/Dd/YYyy">
                   </div>
                   <button type="submit" name="filter" class="filter-btn">Filter</button>
-                    
-
-                     <div class="filter-group">
+                  <div class="filter-group">
                       <input type="text" id="search_employee" name="search_employee" class="search-label" placeholder="Name & Surname (e.g., Anna Cruz)">
-                      </div>
-                      <button type="submit" name="search" class="search-btn">Search</button>
-                      </form>
+                  </div>
+                  <button type="submit" name="search" class="search-btn">Search</button>
+                </form>
                 <?php
                 $filterDate = $_GET['filter_date'] ?? null;
                 $searchEmployee = $_GET['search_employee'] ?? '';
