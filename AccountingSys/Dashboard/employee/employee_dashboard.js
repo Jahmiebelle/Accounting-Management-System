@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(xhr.responseText);
       }
     };
-    const data = "clock_in_id=" + encodeURIComponent(emp_id) + "&emp_name=" + encodeURIComponent(emp_name);
+    const data = "clock_in_id=" + encodeURIComponent(emp_id);
     let confirmClockIn = confirm("Are you sure you want to clock in?");
     if(confirmClockIn){
       xhr.send(data);
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(xhr.responseText);
       }
     };
-    const data = "clock_out_id=" + encodeURIComponent(emp_id) + "&emp_name=" + encodeURIComponent(emp_name);
+    const data = "clock_out_id=" + encodeURIComponent(emp_id);
     let confirmClockOut = confirm("Are you sure you want to clock out?");
     if(confirmClockOut){
       xhr.send(data);

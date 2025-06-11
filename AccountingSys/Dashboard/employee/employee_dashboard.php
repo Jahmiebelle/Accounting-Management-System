@@ -139,9 +139,9 @@ session_start();
                   }
                 ?>
                 <div class="clock-buttons">
-                  <button class="btn clock-in" id="clock-in-btn" type="button" <?php echo $clockInToday ? 'disabled ' : ''; echo "data-id = '$employee_id' data-name = '$empName'";?> >CLOCK IN</button>
+                  <button class="btn clock-in" id="clock-in-btn" type="button" <?php echo $clockInToday ? 'disabled ' : ''; echo "data-id = '$employee_id'";?> >CLOCK IN</button>
                   <button class="btn clock-out" id="clock-out-btn" type="button" <?php echo ($clockInToday && !$clockOutToday) ? " " : " disabled ";
-                    echo "data-id = '$employee_id' data-name = '$empName'";?>>CLOCK OUT</button>
+                    echo "data-id = '$employee_id'";?>>CLOCK OUT</button>
                 </div>
               </div>
           
