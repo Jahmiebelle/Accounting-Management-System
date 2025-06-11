@@ -139,8 +139,8 @@
             <div class="top-row">
               <div class="left-box">
                 <div class="clock-buttons">
-                  <button class="btn clock-in" id="clock-in-btn" type="button" <?php echo $clockInToday ? 'disabled ' : ''; echo "data-id = '$employee_id'";?> >CLOCK IN</button>
-                  <button class="btn clock-out" id="clock-out-btn" type="button" <?php echo ($clockInToday && !$clockOutToday) ? " " : " disabled ";
+                  <button class="btn clock-in" id="clock-in-btn" type="button" <?php echo $clockedInToday ? 'disabled ' : ''; echo "data-id = '$employee_id'";?> >CLOCK IN</button>
+                  <button class="btn clock-out" id="clock-out-btn" type="button" <?php echo ($clockedInToday && !$clockedOutToday) ? " " : " disabled ";
                     echo "data-id = '$employee_id'";?>>CLOCK OUT</button>
                 </div>
               </div>
