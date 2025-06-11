@@ -129,7 +129,7 @@ session_start();
               </div>
 
               <div class="upper-boxes">
-                <div class="info-box">
+                <form class="info-box" action="savePersonalInfo.php" method="POST">
                   <div class="title-box">
                     Personal Information
                   </div>
@@ -155,7 +155,7 @@ session_start();
                       <td>Imus, Cavite</td>
                     </tr>
                   </table>    
-                </div>
+                </form>
 
                 <div class="info-box">
                   <div class="title-box">
