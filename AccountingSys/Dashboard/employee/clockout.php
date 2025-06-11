@@ -62,7 +62,7 @@
   $totalOvertime = (int)$totalOvertimeArray[0];
   
   //now update na natin employee_work_table
-  $updateWorkHoursQuery = "UPDATE employee_work_table SET total_hours_worked = $totalHours, total_overtime_hours = $totalOvertime, total_working_days = $totalDayCount;";
+  $updateWorkHoursQuery = "UPDATE employee_work_table SET total_hours_worked = $totalHours, total_overtime_hours = $totalOvertime, total_working_days = $totalDayCount WHERE employee_id = $clockOutId;";
   $workHoursResult = mysqli_query($conn, $updateWorkHoursQuery);
   if($workHoursResult){
     echo "Sawakas";
