@@ -169,12 +169,12 @@ session_start();
                     $overtimeDateTime = new DateTime($overtimeTime);
                     $overtimeFormatted = $overtimeDateTime->format('H');
                     $overtimeMinute = (int)$overtimeDateTime->format('i');
-                    $computedOvertime = $overtimeMinute / 60;
+                    $computedOvertime = (int)$overtimeMinute / 60;
                     //total hours naman
                     $totalHoursDateTime = new DateTime($totalHoursTime);
                     $totalHoursFormatted = $totalHoursDateTime->format('H');
                     $totalHoursMinute = (int)$totalHoursDateTime->format('i');
-                    $computedTotalHours = $totalHoursMinute / 60;
+                    $computedTotalHours = (int)$totalHoursMinute / 60;
                     echo "<tr>
                         <td>$attendanceDate</td>
                         <td>$deptNameValue</td>
