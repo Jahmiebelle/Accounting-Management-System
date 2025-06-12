@@ -410,6 +410,7 @@ body {
   width: 95%;
   gap: 2rem;
   box-sizing: border-box;
+  border: solid black 1px;
 
 }
 
@@ -476,6 +477,7 @@ body {
   width: 95%;
   gap: 2rem;
   box-sizing: border-box;
+  border: solid red 1px;
 }
 
 .lowercard {
@@ -484,6 +486,7 @@ body {
   flex-direction: column;
   height: auto;
   width: auto;
+  min-width: 100%;
   /*border: solid red 1px;*/
   padding: 1rem 1rem;
   border-radius: 10px;
