@@ -110,8 +110,8 @@ session_start();
               </form>
             </div>
             <?php
-              $filterMonth = $_POST['filter_month'];
-              $searchString = $_POST['search_employee'];
+              $filterMonth = isset($_POST['filter_month']) ? $_POST['filter_month'] : date('Y-m');
+              $searchString = isset($_POST['search_employee']) ? $_POST['search_employee'] : '';
               $searchNameParts = explode(' ', $searchString);
               $firstName;
               $lastName;
