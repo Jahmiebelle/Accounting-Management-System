@@ -95,7 +95,7 @@ session_start();
                 
                   <div class="month-searchbar">
                     <label id="label-for-month" for="month-input-box">Filter by date</label>
-                    <input class="month-input-box" type="date" id="month-input-box" name="filter_month" value="<?php isset($_POST['filter_month']) ? $_POST['filter_month'] : date('Y-m-d')?>">
+                    <input class="month-input-box" type="date" id="month-input-box" name="filter_month" value="<?php isset($_POST['filter_month']) ? $_POST['filter_month'] : date('Y-m-d');?>">
                   </div>
                 
                 <div class="searchbar">
