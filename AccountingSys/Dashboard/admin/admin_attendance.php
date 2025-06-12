@@ -146,7 +146,7 @@ session_start();
                   <th>Total Work Hours</th>
                 </tr>
                 <?php
-                if($attendanceResult){
+                if(mysqli_num_rows($attendanceResult) > 0){
                   while($attendanceRow = mysqli_fetch_assoc($attendanceResult)){
                     $attendanceDate = $attendanceRow['employee_date'];
                     $deptNumber = (int)$attendanceRow['department_id'];
@@ -188,7 +188,7 @@ session_start();
                   }
                 }
                 else{
-                  echo mysqli_error($conn);
+                  echo "<tr><td colspan='10'>No employees found.</td></tr>";
                 }
                 ?>
               </table>
