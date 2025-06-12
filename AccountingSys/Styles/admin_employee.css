@@ -919,7 +919,7 @@ legend {
   width: 50%;
   align-items: center;
   justify-content: center;
-  /*border: solid red 1px;*/
+  border: solid red 1px;
 }
 
 .name-search {

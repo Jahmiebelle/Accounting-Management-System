@@ -18,3 +18,14 @@ document.getElementById('payroll-tab').addEventListener('click', function () {
   window.location.href = "admin_payroll.php";
 });
 
+document.getElementById('search_employee').addEventListener('keydown', function(e){
+    if(e.key === "Enter"){
+      e.preventDefault();
+    }
+  });
+
+document.getElementById('month-input-box').addEventListener('keydown', function(e){
+    if(e.key === "Enter"){
+      e.preventDefault();
+    }
+  });
