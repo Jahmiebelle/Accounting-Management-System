@@ -181,8 +181,8 @@ session_start();
                         <td>$attendanceName</td>
                         <td>$clockInFormatted</td>
                         <td>$clockOutFormatted</td>
-                        <td>$computedOvertime hrs</td>
-                        <td>$computedTotalHours hrs</td>
+                        <td>".number_format($computedOvertime, 1).". hrs</td>
+                        <td>".number_format($computedTotalHours, 1)." hrs</td>
                       </tr>";
                   }
                 }
