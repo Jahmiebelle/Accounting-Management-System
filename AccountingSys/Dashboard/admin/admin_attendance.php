@@ -94,8 +94,8 @@ session_start();
               <form class="filter-form" action="" method="POST" accept-charset="utf-8">
                 
                   <div class="month-searchbar">
-                    <label id="label-for-month" for="month-input-box">Filter by month</label>
-                    <input class="month-input-box" type="month" id="month-input-box" name="filter_month" value="2025-06">
+                    <label id="label-for-month" for="month-input-box">Filter by date</label>
+                    <input class="month-input-box" type="date" id="month-input-box" name="filter_month" value="<?php isset($_POST['filter_month']) ? $_POST['filter_month'] : date('Y-m-d')?>">
                   </div>
                 
                 <div class="searchbar">
@@ -110,7 +110,7 @@ session_start();
               </form>
             </div>
             <?php
-              $filterMonth = isset($_POST['filter_month']) ? $_POST['filter_month'] : date('Y-m');
+              $filterMonth = isset($_POST['filter_month']) ? $_POST['filter_month'] : date('Y-m-d');
               $searchString = isset($_POST['search_employee']) ? $_POST['search_employee'] : '';
               $searchNameParts = explode(' ', $searchString);
               $firstName;
@@ -123,13 +123,13 @@ session_start();
                 $lastName = implode(' ', $searchNameParts);
                 $firstName = implode(' ', $searchNameParts);
               }
-              $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m') = '$filterMonth';";
+              $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m-%d') = '$filterMonth';";
               
-              if(empty($searchString) || !isset($searchString)){
-                $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m') = '$filterMonth';";
+              if(empty($searchString)){
+                $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m-%d') = '$filterMonth';";
               }
               else{
-                $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m') = '$filterMonth' AND (employee_name LIKE '%$firstName%'OR employee_name LIKE '%$lastName%');";
+                $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m-%d') = '$filterMonth' AND (employee_name LIKE '%$firstName%'OR employee_name LIKE '%$lastName%');";
               }
               
               $attendanceResult = mysqli_query($conn, $searchAttendanceQuery);

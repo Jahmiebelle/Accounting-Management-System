@@ -423,11 +423,13 @@ body {
 #label-for-month {
   color: #666666;
   font-size: 12px;
+  padding-right: 0.5rem;
   border-right: solid #cccccc 1px;
 }
 
 .month-input-box {
   border-radius: 30px;
+  flex: 1;
   padding: 5px 10px;
   padding-left: 2rem;
   align-items: center;
