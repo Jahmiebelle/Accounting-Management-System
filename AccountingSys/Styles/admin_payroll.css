@@ -149,6 +149,11 @@ body {
   margin: 0 3rem;
 }
 
+.status-bar.pending {
+  background-color: #f1c40f;
+  color: #333333;
+}
+
 .payslip-basic-detail {
   display: flex;
   flex-direction: column;

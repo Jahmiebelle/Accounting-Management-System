@@ -33,7 +33,7 @@ include 'hourly_rates.php';
                   <h5 id="payroll-id-jar">002</h5>
                 </div>
                 <div class="status-bar" id="status-jar">
-                  Completed
+                  
                 </div>
               </div>
               <div class="payslip-boxes" id="emp-id-box">

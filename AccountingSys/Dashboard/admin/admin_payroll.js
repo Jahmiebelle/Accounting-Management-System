@@ -94,6 +94,7 @@ payslipBtn.forEach(function(payslipButton){
     const totalDeduction = payslipButton.dataset.totaldeduct;
     const netPay = payslipButton.dataset.netpay;
     const status = payslipButton.dataset.completed;
+    
     document.getElementById('payroll-id-jar').innerHTML = payrollId;
     document.getElementById('id-jar').innerHTML = id;
     document.getElementById('name-jar').innerHTML = fullName;
@@ -108,7 +109,12 @@ payslipBtn.forEach(function(payslipButton){
     document.getElementById('total-deduct-jar').innerHTML = totalDeduction;
     document.getElementById('net-pay-jar').innerHTML = netPay;
     document.getElementById('status-jar').innerHTML = status;
-    
+    if(status == "pending"){
+      document.getElementById('status-jar').classList.add('pending');
+    }
+    else{
+      document.getElementById('status-jar').classList.remove('pending');
+    }
     
   });
 });
