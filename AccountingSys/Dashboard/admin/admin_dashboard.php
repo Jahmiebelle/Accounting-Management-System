@@ -152,7 +152,7 @@ session_start();
                   <div id="employee-card-count" class="uppercard-count">
                     <?php 
                       echo $employeeCount;
-                    ?>
+                    ?>10
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@ session_start();
                   <div id="department-card-count" class="uppercard-count">
                     <?php 
                       echo $deptCount;
-                    ?>
+                    ?>16
                   </div>
                   
                 </div>
