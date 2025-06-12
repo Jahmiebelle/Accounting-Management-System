@@ -192,46 +192,30 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>05/30/25</td>
-                  <td>Friday</td>
-                  <td>08:00 AM</td>
-                  <td>05:00 PM</td>
-                  <td>1 hr</td>
-                  <td>9 hrs</td>
-                </tr>
-                <tr>
-                  <td>05/31/25</td>
-                  <td>Saturday</td>
-                  <td>08:00 AM</td>
-                  <td>03:00 PM</td>
-                  <td>0 hr</td>
-                  <td>7 hrs</td>
-                </tr>
-                <tr>
-                  <td>06/01/25</td>
-                  <td>Sunday</td>
-                  <td>--</td>
-                  <td>--</td>
-                  <td>--</td>
-                  <td>--</td>
-                </tr>
-                <tr>
-                  <td>06/02/25</td>
-                  <td>Monday</td>
-                  <td>08:15 AM</td>
-                  <td>05:15 PM</td>
-                  <td>0.5 hr</td>
-                  <td>9 hrs</td>
-                </tr>
-                <tr>
-                  <td>06/03/25</td>
-                  <td>Tuesday</td>
-                  <td>08:00 AM</td>
-                  <td>04:00 PM</td>
-                  <td>0 hr</td>
-                  <td>8 hrs</td>
-                </tr>
+              <?php
+              $employee_id = $_SESSION['employee_id'];
+              $getEmpQuery = "SELECT * FROM admin_employee_attendance WHERE employee_id = '$employee_id';";
+              $EmpResult = mysqli_query($conn, $getEmpQuery);
+
+              while($employeeRow = mysqli_fetch_assoc($EmpResult)){
+
+              $empID= $employeeRow ['employee_id'];
+               $empClockIn = $employeeRow ['clock_in'];
+               $empClockOut = $employeeRow ['clock_out'];
+                $empOvertime = $employeeRow['employee_overtime'];
+                $empTotalHours = $employeeRow['total_hours'];
+
+              echo "<tr> 
+                 <td>$empID</td>
+                 <td>$empClockIn</td>
+                 <td>$empClockOut</td>
+                 <td>$empOvertime</td>
+                <td>$empTotalHours</td>
+               </tr>";
+               }
+               ?>
+
+
               </tbody>
             </table>
             
