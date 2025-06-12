@@ -957,6 +957,21 @@ tr:nth-child(even) {
   background-color: #ffffff;
 }
 
+.table-status {
+  border: solid #33691E 0.25px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 30px;
+  background-color: rgba(51,105,30, 0.1);
+  color: #33691E;
+}
+
+.table-status.pending {
+  border: solid #995500 0.25px;
+  background-color: rgba(153, 85, 0, 0.1);
+  color: #995500;
+}
+
+
 .payslip-btn {
   font-family: 'Poppins-regular';
   font-size: 12px;
