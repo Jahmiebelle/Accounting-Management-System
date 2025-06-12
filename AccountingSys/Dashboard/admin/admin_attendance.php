@@ -123,6 +123,7 @@ session_start();
                 $lastName = implode(' ', $searchNameParts);
                 $firstName = implode(' ', $searchNameParts);
               }
+              $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m') = '$filterMonth';";
               
               if(empty($searchString) || !isset($searchString)){
                 $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m') = '$filterMonth';";
