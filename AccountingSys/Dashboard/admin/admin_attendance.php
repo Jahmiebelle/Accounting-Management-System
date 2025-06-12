@@ -167,22 +167,22 @@ session_start();
                     $clockOutFormatted = $clockOutDateTime->format('g:i A');
                     //yung overtime naman
                     $overtimeDateTime = new DateTime($overtimeTime);
-                    $overtimeFormatted = $overtimeDateTime->format('H');
+                    $overtimeFormatted = (int)$overtimeDateTime->format('H');
                     $overtimeMinute = (int)$overtimeDateTime->format('i');
-                    $computedOvertime = (int)$overtimeMinute / 60;
+                    $computedOvertime = (int)$overtimeFormatted + ($overtimeMinute / 60);
                     //total hours naman
                     $totalHoursDateTime = new DateTime($totalHoursTime);
-                    $totalHoursFormatted = $totalHoursDateTime->format('H');
+                    $totalHoursFormatted = (int)$totalHoursDateTime->format('H');
                     $totalHoursMinute = (int)$totalHoursDateTime->format('i');
-                    $computedTotalHours = (int)$totalHoursMinute / 60;
+                    $computedTotalHours = (int)$totalHoursFormatted + ($totalHoursMinute / 60);
                     echo "<tr>
                         <td>$attendanceDate</td>
                         <td>$deptNameValue</td>
                         <td>$attendanceName</td>
                         <td>$clockInFormatted</td>
                         <td>$clockOutFormatted</td>
-                        <td>".$overtimeFormatted.".".$computedOvertime." hrs</td>
-                        <td>".$totalHoursFormatted.".".$computedTotalHours." hrs</td>
+                        <td>$computedOvertime hrs</td>
+                        <td>$computedTotalHours hrs</td>
                       </tr>";
                   }
                 }
