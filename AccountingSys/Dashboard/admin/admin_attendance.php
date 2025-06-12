@@ -124,7 +124,7 @@ session_start();
                 $firstName = implode(' ', $searchNameParts);
               }
               
-              if(empty($searchString)){
+              if(empty($searchString) || !isset($searchString)){
                 $searchAttendanceQuery = "SELECT * FROM admin_employee_attendance WHERE DATE_FORMAT(employee_date, '%Y-%m') = '$filterMonth';";
               }
               else{
