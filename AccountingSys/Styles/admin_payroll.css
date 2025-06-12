@@ -957,7 +957,7 @@ tr:nth-child(even) {
   background-color: #ffffff;
 }
 
-.table-status {
+.complete-status {
   border: solid #33691E 0.25px;
   padding: 0.5rem 0.5rem;
   border-radius: 30px;
@@ -965,7 +965,9 @@ tr:nth-child(even) {
   color: #33691E;
 }
 
-.table-status.pending {
+.pending-status {
+  border-radius: 30px;
+  padding: 0.5rem 0.5rem;
   border: solid #995500 0.25px;
   background-color: rgba(153, 85, 0, 0.1);
   color: #995500;

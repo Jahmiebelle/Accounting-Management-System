@@ -18,15 +18,6 @@ document.getElementById('attendance-tab').addEventListener('click', function () 
   window.location.href = "admin_attendance.php";
 });
 
-const tableStatus = document.getElementById('table-status');
-if(tableStatus.innerText = "pending"){
-  tableStatus.classList.add('pending');
-}
-else{
-  tableStatus.classList.remove('pending');
-}
-
-
 const editTaxBtn = document.getElementById('edit-tax-btn');
 const editRateBtn = document.getElementById('edit-rate-btn');
 const incomeTaxInput = document.getElementById('income-tax-input');
