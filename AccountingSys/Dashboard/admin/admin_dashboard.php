@@ -176,7 +176,30 @@ session_start();
             </div>
             <div class="lower-summarycards">
               <?php
-                $getLatestClockQuery = "SELECT * FROM admin_employee_attendance WHERE employee()"
+                $getLatestClockQuery = "SELECT * FROM admin_employee_attendance WHERE employee_date = CURDATE() ORDER BY clock_in ASC LIMIT 2;";
+                $latestClockInResult = mysqli_query($conn, $getLatestClockQuery);
+                $firstClockInRow = mysqli_fetch_assoc($latestClockInResult);
+                $secondClockInRow = mysqli_fetch_assoc($latestClockInResult);
+                if($firstClockInRow){
+                  $firstEmpName = $firstClockInRow['employee_name'];
+                  $firstClockIn = $firstClockInRow['clock_in'];
+                  $firstEmpDateTime = new DateTime($firstClockIn);
+                  $firstEmpTime = $firstEmpDateTime->format('g:i A');
+                }
+                else{
+                  $firstEmpName = "Waiting for next clock-in...";
+                  $firstEmpTime = "-";
+                }
+                if($secondClockInRow){
+                  $secondEmpName = $secondClockInRow['employee_name'];
+                  $secondClockIn = $secondClockInRow['clock_in'];
+                  $secondEmpDateTime = new DateTime($secondClockInRow);
+                  $secondEmpTime = $secondEmpDateTime->format('g:i A');
+                }
+                else{
+                  $secondEmpName = "Waiting for next clock-in...";
+                  $secondEmpTime = "-";
+                }
               
               ?>
               <div id="request-card" class="lowercard">
