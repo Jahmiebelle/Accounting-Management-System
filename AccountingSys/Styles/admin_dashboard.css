@@ -488,7 +488,6 @@ body {
   flex-direction: column;
   height: auto;
   width: auto;
-  min-width: 45%;
   border: solid red 1px;
   padding: 1rem 1rem;
   min-height: 100%;
@@ -499,6 +498,7 @@ body {
 }
 #request-card {
   padding: 1rem 0.75rem;
+  min-width: 45%;
 }
 
 .request-card-header-container {
@@ -651,6 +651,7 @@ body {
   display: flex;
   padding: 1rem 2rem;
   flex-direction: column;
+  flex: 1;
 }
 
 .payroll-card-header-container {
