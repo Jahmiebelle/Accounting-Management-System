@@ -198,15 +198,19 @@
               $EmpResult = mysqli_query($conn, $getEmpQuery);
 
               while($employeeRow = mysqli_fetch_assoc($EmpResult)){
-
-              $empID= $employeeRow ['employee_id'];
-               $empClockIn = $employeeRow ['clock_in'];
-               $empClockOut = $employeeRow ['clock_out'];
+                
+                $empID=$employeeRow['employee_id'];
+                $empDate=$employeeRow['employee_date'];
+                $fullDateTime = new DateTime ($empDate);
+                $dayToday = $fullDateTime -> format('l');
+                $empClockIn = $employeeRow ['clock_in'];
+                $empClockOut = $employeeRow ['clock_out'];
                 $empOvertime = $employeeRow['employee_overtime'];
                 $empTotalHours = $employeeRow['total_hours'];
 
               echo "<tr> 
-                 <td>$empID</td>
+                 <td>$empDate</td>
+                 <td>$dayToday</td>
                  <td>$empClockIn</td>
                  <td>$empClockOut</td>
                  <td>$empOvertime</td>
