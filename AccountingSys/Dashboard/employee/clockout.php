@@ -65,7 +65,7 @@
   $updateWorkHoursQuery = "UPDATE employee_work_table SET total_hours_worked = $totalHours, total_overtime_hours = $totalOvertime, total_working_days = $totalDayCount WHERE employee_id = $clockOutId;";
   $workHoursResult = mysqli_query($conn, $updateWorkHoursQuery);
   if($workHoursResult){
-    echo $clockOutId;
+    echo $overtimeHoursWorked;
   }
   else{
     echo mysqli_error($conn);
