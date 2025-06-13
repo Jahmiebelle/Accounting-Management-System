@@ -176,7 +176,7 @@ session_start();
             </div>
             <div class="lower-summarycards">
               <?php
-                $getLatestClockQuery = "SELECT * FROM admin_employee_attendance WHERE employee_date = CURDATE() ORDER BY clock_in ASC LIMIT 2;";
+                $getLatestClockQuery = "SELECT * FROM admin_employee_attendance WHERE employee_date = CURDATE() ORDER BY clock_in DESC LIMIT 2;";
                 $latestClockInResult = mysqli_query($conn, $getLatestClockQuery);
                 $firstClockInRow = mysqli_fetch_assoc($latestClockInResult);
                 $secondClockInRow = mysqli_fetch_assoc($latestClockInResult);
