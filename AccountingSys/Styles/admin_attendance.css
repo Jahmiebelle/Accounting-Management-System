@@ -1,4 +1,4 @@
-/* mga fonts, puro poppins lang gamitin*/
+
 
 @font-face {
   font-family: 'Poppins-black';
@@ -535,7 +535,7 @@ body {
 }
 
 td, th {
-  padding: 8px 28px;
+  padding: 8px 30px;
   margin: 0px;
   border: 0.1px solid #ccc;
 }
@@ -591,6 +591,6 @@ tr:nth-child(even) {
 
 @media (max-width: 1024px) {
   td, th {
-    padding: 8px 16px;
+    padding: 8px 30px;
   }
 }

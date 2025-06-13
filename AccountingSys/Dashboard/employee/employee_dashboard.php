@@ -172,10 +172,6 @@
                   <span class="label">Total Working Days:</span>
                   <span class="value"><?= $absents ?? '20 days' ?></span>
                 </div>
-                <div class="summary-item">
-                  <span class="label">Payroll Status:</span>
-                  <span class="status-badge"><?= $overtimeHours ?? 'Pending' ?></span>
-                </div>
               </div>
             </div>
             <!-- Attendance Table -->
