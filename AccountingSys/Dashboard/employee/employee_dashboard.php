@@ -148,11 +148,17 @@
               <div class="right-box">
                 <div class="payroll-box">
                   
-                  
-                   
-              
                   <div class="next-label">NEXT PAYROLL</div>
-                  <div class="next-date">JULY 30, 2025</div>
+                  <?php
+                  //kukunin yung full next payroll date then format
+                    $currentMonth = $dateNow->format('F');
+                    $currentYear = $dateNow->format('Y');
+                    $payrollFullString = $currentMonth . " 30, " . $currentYear;
+                  //get yung data from database work table then display yung data sa summary cards
+                    $getWorkDataQuery = "SELECT * FROM employee_work_table;";
+                    $workDataResult = mysqli_query($conn, $getWorkDataQuery);
+                  ?>
+                  <div class="next-date"><?php echo $payrollFullString;?></div>
                 </div>
               </div>
             </div>
