@@ -180,8 +180,8 @@ session_start();
                         <td>$attendanceDate</td>
                         <td>$deptNameValue</td>
                         <td>$attendanceName</td>
-                        <td>$clockInFormatted</td>
-                        <td>$clockOutFormatted</td>
+                        <td>".$clockInTime ? $clockInFormatted : '-'."</td>
+                        <td>".$clockOutTime ? $clockOutFormatted : '-'."</td>
                         <td>".number_format($computedOvertime, 1)." hrs</td>
                         <td>".number_format($computedTotalHours, 1)." hrs</td>
                       </tr>";
