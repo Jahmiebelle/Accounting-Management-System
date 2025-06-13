@@ -530,6 +530,7 @@ body {
 .request-card-content-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 10px;;
   height: auto;
@@ -654,6 +655,7 @@ body {
   font-family: 'Poppins-medium';
   height: 25%;
   width: 100%;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
