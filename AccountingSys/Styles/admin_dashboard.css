@@ -561,7 +561,7 @@ body {
 }
 
 .person1-profile {
-  background-image: url('../Assets/profile1.jpg');
+  background-image: url('../Assets/default-user.png');
   background-size: cover;
   background-position: center;
 }
