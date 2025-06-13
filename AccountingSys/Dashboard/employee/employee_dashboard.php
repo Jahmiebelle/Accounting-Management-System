@@ -42,6 +42,16 @@
     $clockedInToday = $clockInValue ? true : false;
     $clockedOutToday = $clockOutValue ? true : false;
     }
+
+  $employee_id = (int)$_SESSION['employee_id'];
+
+  $attendanceCardQuery = $pdo->prepare("SELECT SUM(total_hours) as total_working_hours, SUM(employee_overtime) as total_overtime_hours, COUNT(DISTINCT employee_date) as total_working_days FROM admin_employee_attendance WHERE employee_id = ?");
+  $attendanceCardQuery->execute([$employeeId]);
+  $result = $attendanceCardQuery->fetch();
+
+  $totalWorkingHours = $result['total_working_hours'] ?? 0;
+  $totalOvertimeHours = $result['total_overtime_hours'] ?? 0;
+  $totalWorkingDays = $result['total_working_days'] ?? 0;
   }
 
 ?>
@@ -169,15 +179,15 @@
               <div class="summary-grid">
                 <div class="summary-item">
                   <span class="label">Total Working hours:</span>
-                  <span class="value"><?= $totalDaysPresent ?? '100 hrs' ?></span>
+                  <span class="value"><?= $total_working_hours ?? 'hrs' ?></span>
                 </div>
                 <div class="summary-item">
                   <span class="label">Total Overtime hours:</span>
-                  <span class="value"><?= $lateEntries ?? '8 hrs' ?></span>
+                  <span class="value"><?= $total_overtime_hours ?? 'hrs' ?></span>
                 </div>
                 <div class="summary-item">
                   <span class="label">Total Working Days:</span>
-                  <span class="value"><?= $absents ?? '20 days' ?></span>
+                  <span class="value"><?= $total_working_days ??  'days' ?></span>
                 </div>
               </div>
             </div>
