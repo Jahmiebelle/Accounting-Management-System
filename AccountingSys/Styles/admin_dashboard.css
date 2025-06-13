@@ -410,6 +410,7 @@ body {
   width: 95%;
   gap: 2rem;
   box-sizing: border-box;
+  border: solid red 0.1px;
 
 }
 
