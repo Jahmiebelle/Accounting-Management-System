@@ -546,7 +546,6 @@ body {
   padding: 0.5rem 0.5rem;
   gap: 0.5rem;
   border-radius: 30px;
-  border: solid red 0.1px;
   background-color: #f4f6f8;
   box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -584,7 +583,6 @@ body {
   width: 40%;
   word-wrap: break-word;
   height: auto;
-  border: solid red 0.1px;
   
 }
 
