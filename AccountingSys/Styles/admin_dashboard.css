@@ -408,6 +408,7 @@ body {
   justify-content: center;
   height: auto;
   width: 95%;
+  padding: 0 2rem;
   gap: 2rem;
   box-sizing: border-box;
 
@@ -417,8 +418,10 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 1rem;
-  height: auto;
   width: auto;
+  flex-grow: 1;
+  height: auto;
+  min-height: 100%;
   gap: 1rem;
   border-radius: 10px;
   background-color: #FFFFFF;
@@ -446,8 +449,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
-  width: auto;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .uppercard-header {
@@ -472,7 +476,7 @@ body {
   display: flex;
   justify-content: center;
   height: auto;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   width: 95%;
   gap: 2rem;
   box-sizing: border-box;
@@ -484,7 +488,6 @@ body {
   flex-direction: column;
   height: auto;
   width: auto;
-  /*border: solid red 1px;*/
   padding: 1rem 1rem;
   min-height: 100%;
   border-radius: 10px;
@@ -494,6 +497,7 @@ body {
 }
 #request-card {
   padding: 1rem 0.75rem;
+  min-width: 45%;
 }
 
 .request-card-header-container {
@@ -540,6 +544,7 @@ body {
 .leave-person1, .leave-person2 {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: auto;
   width: 95%;
   padding: 0.5rem 0.5rem;
@@ -587,10 +592,10 @@ body {
 
 .person1-department, .person2-department {
   display: flex;
-  margin-right: 10px;
-  padding: 0.25rem 0.75rem;
+  padding: 0.3rem 0.75rem;
   font-size: 12px;
   align-items: center;
+  margin-right: 10px;
   justify-content: center;
   text-align: center;
   width: 7rem;
@@ -646,6 +651,7 @@ body {
   display: flex;
   padding: 1rem 2rem;
   flex-direction: column;
+  flex: 1;
 }
 
 .payroll-card-header-container {
@@ -666,7 +672,8 @@ body {
 .payroll-card-content-container {
   display: flex;
   height: auto;
-  width: 75%;
+  width: auto;
+  min-width: 80%;
   flex-direction: column;
   align-items: center;
 }
@@ -718,4 +725,8 @@ body {
 
 .brand-info-footer, .brand-copyright {
   font-size: 8px;
+}
+
+@media (min-width: 1025px) {
+  
 }
