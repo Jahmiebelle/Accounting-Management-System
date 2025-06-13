@@ -42,16 +42,6 @@
     $clockedInToday = $clockInValue ? true : false;
     $clockedOutToday = $clockOutValue ? true : false;
     }
-
-  $employee_id = (int)$_SESSION['employee_id'];
-
-  $attendanceCardQuery = $pdo->prepare("SELECT SUM(total_hours) as total_working_hours, SUM(employee_overtime) as total_overtime_hours, COUNT(DISTINCT employee_date) as total_working_days FROM admin_employee_attendance WHERE employee_id = ?");
-  $attendanceCardQuery->execute([$employeeId]);
-  $result = $attendanceCardQuery->fetch();
-
-  $totalWorkingHours = $result['total_working_hours'] ?? 0;
-  $totalOvertimeHours = $result['total_overtime_hours'] ?? 0;
-  $totalWorkingDays = $result['total_working_days'] ?? 0;
   }
 
 ?>
@@ -168,6 +158,9 @@
                     $getWorkDataQuery = "SELECT * FROM employee_work_table WHERE employee_id = $employee_id;";
                     $workDataResult = mysqli_query($conn, $getWorkDataQuery);
                     $workDataRow = mysqli_fetch_assoc($workDataResult);
+                    $totalWorkHours = $workDataRow['total_hours_worked'];
+                    $totalOvertime = $workDataRow['total_overtime_hours'];
+                    $totalWorkDays = $workDataRow['total_working_days'];
                   ?>
                   <div class="next-date"><?php echo $payrollFullString;?></div>
                 </div>
@@ -179,15 +172,15 @@
               <div class="summary-grid">
                 <div class="summary-item">
                   <span class="label">Total Working hours:</span>
-                  <span class="value"><?= $total_working_hours ?? 'hrs' ?></span>
+                  <span class="value"><?php echo $totalWorkHours ? $totalWorkHours." hours" : "-";?></span>
                 </div>
                 <div class="summary-item">
                   <span class="label">Total Overtime hours:</span>
-                  <span class="value"><?= $total_overtime_hours ?? 'hrs' ?></span>
+                  <span class="value"><?php echo $totalOvertime ? $totalOvertime." hours" : "-";?></span>
                 </div>
                 <div class="summary-item">
                   <span class="label">Total Working Days:</span>
-                  <span class="value"><?= $total_working_days ??  'days' ?></span>
+                  <span class="value"><?php echo $totalWorkDays ? $totalWorkDays." days" : "-";?></span>
                 </div>
               </div>
             </div>
