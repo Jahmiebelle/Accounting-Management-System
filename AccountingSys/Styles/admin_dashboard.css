@@ -540,6 +540,7 @@ body {
 .leave-person1, .leave-person2 {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: auto;
   width: 95%;
   padding: 0.5rem 0.5rem;
