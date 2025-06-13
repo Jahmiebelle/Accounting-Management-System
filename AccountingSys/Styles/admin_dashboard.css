@@ -418,7 +418,9 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 1rem;
-  flex: 1;
+  width: auto;
+  flex-grow: 1;
+  height: auto;
   min-height: 100%;
   gap: 1rem;
   border-radius: 10px;
