@@ -651,6 +651,7 @@ body {
   display: flex;
   padding: 1rem 2rem;
   flex-direction: column;
+  flex: 1;
 }
 
 .payroll-card-header-container {
