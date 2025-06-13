@@ -193,7 +193,7 @@ session_start();
                 if($secondClockInRow){
                   $secondEmpName = $secondClockInRow['employee_name'];
                   $secondClockIn = $secondClockInRow['clock_in'];
-                  $secondEmpDateTime = new DateTime($secondClockInRow);
+                  $secondEmpDateTime = new DateTime($secondClockIn);
                   $secondEmpTime = $secondEmpDateTime->format('g:i A');
                 }
                 else{
