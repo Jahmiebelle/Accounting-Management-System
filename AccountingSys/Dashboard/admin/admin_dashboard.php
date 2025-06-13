@@ -214,10 +214,10 @@ session_start();
                       
                     </div>
                     <div class="person1-name">
-                      Harry Deguzman
+                      <?php echo $firstEmpName;?>
                     </div>
                     <div class="person1-department">
-                      8:00 AM
+                      <?php echo $firstEmpTime;?>
                     </div>
                   </div>
                   <div class="leave-person2">
@@ -225,10 +225,10 @@ session_start();
                       
                     </div>
                     <div class="person2-name">
-                      Gabby Lopez
+                      <?php echo $secondEmpName;?>
                     </div>
                     <div class="person2-department">
-                      8:12 AM
+                      <?php echo $secondEmpTime;?>
                     </div>
                   </div>
                 </div>
