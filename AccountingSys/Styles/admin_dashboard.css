@@ -499,8 +499,6 @@ body {
 .request-card-header-container {
   display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: center;
   height: auto;
   padding: 0.25rem 0;
   width: 90%;
