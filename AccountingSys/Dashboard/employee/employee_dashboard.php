@@ -217,8 +217,8 @@
               echo "<tr> 
                  <td>$empDate</td>
                  <td>$dayToday</td>
-                 <td>($empClockIn ? $empClockIn : '-')</td>
-                 <td>($empClockOut ? $empClockOut : '-')</td>
+                 <td>" . ($empClockIn ? $empClockIn : '-'). "</td>
+                 <td>".($empClockOut ? $empClockOut : '-')."</td>
                  <td>$empOvertime</td>
                 <td>$empTotalHours</td>
                </tr>";
