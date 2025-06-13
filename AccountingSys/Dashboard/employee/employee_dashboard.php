@@ -155,8 +155,9 @@
                     $currentYear = $dateNow->format('Y');
                     $payrollFullString = $currentMonth . " 30, " . $currentYear;
                   //get yung data from database work table then display yung data sa summary cards
-                    $getWorkDataQuery = "SELECT * FROM employee_work_table;";
+                    $getWorkDataQuery = "SELECT * FROM employee_work_table WHERE employee_id = $employee_id;";
                     $workDataResult = mysqli_query($conn, $getWorkDataQuery);
+                    $workDataRow = mysqli_fetch_assoc($workDataResult);
                   ?>
                   <div class="next-date"><?php echo $payrollFullString;?></div>
                 </div>
