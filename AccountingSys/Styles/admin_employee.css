@@ -1075,7 +1075,7 @@ th {
 }
 
 td {
-
+  justify-items: center;
   text-align: center;
   white-space: normal;
   font-family: 'Poppins-light';
