@@ -408,6 +408,7 @@ body {
   justify-content: center;
   height: auto;
   width: 95%;
+  padding: 0 2rem;
   gap: 2rem;
   box-sizing: border-box;
   border: solid red 0.1px;
@@ -418,9 +419,7 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 1rem;
-  height: auto;
-  width: auto;
-  min-width: 45%;
+  flex: 1;
   gap: 1rem;
   border: solid black 0.1px;
   border-radius: 10px;
@@ -475,7 +474,7 @@ body {
   display: flex;
   justify-content: center;
   height: auto;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   width: 95%;
   gap: 2rem;
   box-sizing: border-box;
