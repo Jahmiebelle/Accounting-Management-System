@@ -251,7 +251,12 @@ session_start();
                   $grossPay = $previousMonthRow['gross_pay'];
                   $previousTotalGross += $grossPay;
                 }
-                $averageSalary = $previousTotalGross / $paidEmployees;
+                if($paidEmployees == 0 || !$paidEmployees){
+                  $averageSalary = 0;
+                }
+                else{
+                  $averageSalary = $previousTotalGross / $paidEmployees;
+                }
                 $totalGrossDisplay = number_format($previousTotalGross, 2);
               ?>
               <div id="payroll-card" class="lowercard">
