@@ -175,10 +175,14 @@ session_start();
               </div>
             </div>
             <div class="lower-summarycards">
+              <?php
+                $getLatestClockQuery = "SELECT * FROM admin_employee_attendance WHERE employee()"
+              
+              ?>
               <div id="request-card" class="lowercard">
                 <div class="request-card-header-container">
                   <div class="rch-text">
-                    Recent Clock-in
+                    Morning Starters
                   </div>
                 </div>  
                 <div class="request-card-content-container">
@@ -190,7 +194,7 @@ session_start();
                       Harry Deguzman
                     </div>
                     <div class="person1-department">
-                      Information Technology
+                      8:00 AM
                     </div>
                   </div>
                   <div class="leave-person2">
@@ -201,7 +205,7 @@ session_start();
                       Gabby Lopez
                     </div>
                     <div class="person2-department">
-                      Computer Science
+                      8:12 AM
                     </div>
                   </div>
                 </div>
