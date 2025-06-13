@@ -188,7 +188,7 @@ session_start();
                   }
                 }
                 else{
-                  echo "<tr><td colspan='10'>No employees found.</td></tr>";
+                  echo "<tr><td colspan='10'>No attendance record found.</td></tr>";
                 }
                 ?>
               </table>

@@ -21,7 +21,7 @@ session_start();
       <div class="add-ol-content" id="add-ol-content">
         <form action="" method="POST" class="add-ol-form" id="add-ol-form">
           <div class="upper-add-form">
-            ADD EMPLOYEE
+            Add Employee
             <button class="save-add-btn" id="save-add-btn" type="button">Save Employee</button>
           </div>
           <div class="lower-add-form">

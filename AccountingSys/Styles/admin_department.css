@@ -66,7 +66,6 @@ body {
   z-index: 100;/*starting point ng overlay is 100 index pataas*/
   height: 100vh;
   width: 100vw;
-  
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   flex-direction: column;
@@ -85,11 +84,11 @@ body {
 .add-ol-content {
   display: flex;
   position: fixed;
-  background-color: #F4F6F8;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
-  height: 400px;
+  height: auto;
   max-height: 85%;
-  width: 250px;
+  width: 400px;
   max-width: 85%;
 }
 
@@ -99,6 +98,8 @@ body {
   width: 100%;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2rem;
+  gap: 1rem
   
 }
 
@@ -106,16 +107,16 @@ body {
   display: flex;
   height: 4rem;
   width: 100%;
-  padding: 0 1rem;
-  justify-content: space-between;
+  padding: 0 2rem;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
 
 .save-add-btn {
   display: flex;
-  padding: 0.25rem 0.75rem;
-  border: none;
+  padding: 0.5rem 5rem;
+  border: solid rgba(0, 0, 0, 0) 1px;
   border-radius: 5px;
   color: #f4f6f8;
   background-color: #007BFF;
@@ -132,8 +133,8 @@ body {
 
 .upper-form-header {
   display: flex;
-  font-size: 16px;
-  font-family: 'Poppins-bold';
+  font-size: 20px;
+  font-family: 'Poppins-medium';
 }
 
 .lower-add-form {
@@ -148,7 +149,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: auto;
   width: 200px;
   box-sizing: border-box;
   margin: 0.5rem 0px;
@@ -159,19 +160,24 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: auto;
   width: 100%;
   box-sizing: border-box;
+  
 }
 
 .fieldsets {
   display: flex;
   position: absolute;
-  padding: 3px 0;
+  padding: 0;
   margin: 0;
   height: 100%;
   width: 100%;
+  border: solid #cccccc 1px;
+  border-radius: 2px;
+  pointer-events: none;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 legend {
@@ -180,23 +186,25 @@ legend {
   font-size: 10px;
   padding: 0 5px;
   margin: 0;
+  pointer-events: none;
 }
 
 .addboxes {
   display: flex;
   position: relative;
-  margin-top: 0.7rem;
-  padding-left: 0.5rem;
-  height: calc(100% - 1rem);
+  margin-top: 1rem;
+  padding: 0.25rem 0.5rem;
+  padding-bottom: 0.5rem;
+  height: auto;
   width: 100%;
   background: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
   z-index: 10;
-  border: none;
   box-sizing: border-box;
 }
 
 .addboxes:focus {
-  border: solid rgba(0, 0, 0, 0);
+  border: solid rgba(0, 0, 0, 0) 1px;
   outline: none;
 }
 

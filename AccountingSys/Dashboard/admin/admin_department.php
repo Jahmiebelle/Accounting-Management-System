@@ -19,8 +19,7 @@ session_start();
       <div class="add-ol-content" id="add-ol-content">
         <form action="" method="POST" class="add-ol-form" id="add-ol-form">
           <div class="upper-add-form">
-            <div class="upper-form-header">ADD DEPARTMENT</div>
-            <button class="save-add-btn" id="save-add-btn" type="button">Save</button>
+            <div class="upper-form-header">Add Department</div>
           </div>
           <div class="lower-add-form">
 
@@ -51,7 +50,7 @@ session_start();
                 </div>
               </div>
             </div>
-
+            <button class="save-add-btn" id="save-add-btn" type="button">Create</button>
           </div>
         </form>
       </div>
