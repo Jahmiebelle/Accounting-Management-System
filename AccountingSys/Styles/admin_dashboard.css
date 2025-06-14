@@ -665,6 +665,8 @@ body {
 }
 
 .month-indicator {
+  text-align: center;
+  justify-content: center;
   font-size: 12px;
   margin-top: 0;
 }
