@@ -25,9 +25,9 @@
   $timeBetweenClock = $clockInDateTime->diff($clockOutDateTime);
   $totalHoursWorked = $timeBetweenClock->format('%H:%I:%S');
   $timeBetweenDateTime = new DateTime($totalHoursWorked);
-  $totalHours = $timeBetweenClock->format('H');
+  $totalHoursWork = $timeBetweenDateTime->format('H');
   $overtimeHoursWorked;
-  if ((int)$totalHours > 8) {
+  if ((int)$totalHoursWork > 8) {
     $overtimeDateTime = $timeBetweenDateTime->modify('-8 hours');
     $overtimeHoursWorked = $overtimeDateTime->format('H:i:s');
   }
