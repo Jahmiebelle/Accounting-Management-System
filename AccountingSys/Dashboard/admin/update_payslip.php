@@ -30,7 +30,7 @@
     $empHourlyRate = $empWorkRow['hourly_rate'];
     $empTotalHours = $empWorkRow['total_hours_worked'];
     $empTotalOvertime = $empWorkRow['total_overtime_hours'];
-    $empBasicSalary = $empHourlyRate * $empTotalHours;
+    $empBasicSalary = $empHourlyRate * ($empTotalHours - $empTotalOvertime);
     $empOvertimePay = $empTotalOvertime * ($empHourlyRate * 1.2);
     $empGrossPay = $empBasicSalary + $empOvertimePay;
     $incomeTax = $basicRate * $empGrossPay;
