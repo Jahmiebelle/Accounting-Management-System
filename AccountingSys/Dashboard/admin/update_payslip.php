@@ -5,11 +5,12 @@
   error_reporting(E_ALL);
   
   $currentMonth = date('Y-m');
+  $firstDayInMonth = date('Y-m-01');
   $getEmployeeQuery = "SELECT * FROM employee_table;";
   $getEmployeeResult = mysqli_query($conn, $getEmployeeQuery);
   
   while($empTableRow = mysqli_fetch_assoc($getEmployeeResult)){
-    $employee_id = $empTableRow['employee_id'];
+    $employee_id = (int)$empTableRow['employee_id'];
     $emp_fn = $empTableRow['first_name'];
     $emp_ln = $empTableRow['last_name'];
     $taxRatesQuery = "SELECT * FROM admin_taxation_table;";
@@ -59,6 +60,11 @@
       else{
         echo "SQL Error: " . mysqli_error($conn);
       }
+      //auto complete past payslips tsaka rereset yung work table
+      $completePreviousQuery = "UPDATE payroll_history_table SET is_complete = 1 WHERE month_year < '$firstDayInMonth';";
+      $completePreviousResult = mysqli_query($conn, $completePreviousQuery);
+      $resetWorkTableQuery = "UPDATE employee_work_table SET total_hours_worked = 0, total_overtime_hours = 0, total_working_days = 0 WHERE employee_id = $employee_id;";
+      $resetWorkTableResult = mysqli_query($conn, $resetWorkTableQuery);
     }
   }
   
