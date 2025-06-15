@@ -1,10 +1,10 @@
 <?php  
   include '../../Login/db.php';
-  include 'employee_dashboard.php';
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
-  $currentEmpId = $employee_id;
+  session_start();
+  $currentEmpId = $_SESSION['employee_id'];
   $thisMonth = date('Y-m');
   
   $getTotalHoursQuery = "SELECT employee_id, SEC_TO_TIME(SUM(TIME_TO_SEC(total_hours))) AS total_hours FROM admin_employee_attendance WHERE employee_id = $currentEmpId AND DATE_FORMAT(employee_date, '%Y-%m') = '$thisMonth';";
