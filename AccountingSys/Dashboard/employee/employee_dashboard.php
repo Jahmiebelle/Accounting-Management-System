@@ -3,13 +3,13 @@
   ini_set('display_errors', 1);
   include '../../Login/db.php';
   include '../admin/update_payslip.php';
-  include 'updateWorkTable.php';
   session_start();
   
   $dateNow = new DateTime();
   $dateNow->format('H:i:s');
   $empName = "";
   $employee_id = (int)$_SESSION['employee_id'];
+  include 'updateWorkTable.php';
   $clockedInToday = false;
   $clockedOutToday = false;
   $checkTodayAttendance = "SELECT employee_id, clock_in, clock_out FROM admin_employee_attendance WHERE employee_id = $employee_id AND employee_date = CURDATE();";
