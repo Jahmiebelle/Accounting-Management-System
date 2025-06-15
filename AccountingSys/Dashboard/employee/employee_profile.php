@@ -157,7 +157,7 @@ session_start();
                   </table>    
                 </form>
 
-                <div class="info-box">
+                <form class="info-box">
                   <div class="title-box">
                     Work Information
                   </div>
@@ -175,10 +175,10 @@ session_start();
                       <td>Female</td>
                     </tr>
                   </table>    
-                </div>
+                </form>
               </div>
               <div class="lower-boxes">
-                <div class="info-box-bottom">
+                <form class="info-box-bottom">
                   <div class="title-box">
                     Bank & Payment Information
                   </div>
@@ -200,7 +200,7 @@ session_start();
                       <td>09123456789</td>
                     </tr>
                   </table> 
-                </div>
+                </form>
 
               </div>
 

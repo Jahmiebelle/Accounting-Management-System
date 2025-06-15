@@ -32,7 +32,6 @@ include 'hourly_rates.php';
       $totalHours = (int)$totalHoursArray[0];
       $totalOvertimeArray = $totalOvertimeTime ? explode(':', $totalOvertimeTime) : ['0'];
       $totalOvertime = (int)$totalOvertimeArray[0];
-      
       //now update na natin employee_work_table
       $updateWorkHoursQuery = "UPDATE employee_work_table SET total_hours_worked = $totalHours, total_overtime_hours = $totalOvertime, total_working_days = $totalDayCount WHERE employee_id = $employee_id;";
       $workHoursResult = mysqli_query($conn, $updateWorkHoursQuery);
