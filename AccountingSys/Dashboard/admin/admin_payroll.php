@@ -3,7 +3,14 @@ include '../../Login/db.php';
 session_start();
 include 'update_payslip.php';
 include 'hourly_rates.php';
-      //icheck yung current value ng attendance for this month then rerecompute work table, kahit walang attendance, for accidental purposes lng
+      //icheck yung values ng attendance per employee for this month then rerecompute work table, kahit walang attendance, for accidental purposes lng
+    $currentMonth = date('Y-m');
+    $firstDayInMonth = date('Y-m-01');
+    $getEmployeeQuery = "SELECT * FROM employee_table;";
+    $getEmployeeResult = mysqli_query($conn, $getEmployeeQuery);
+    
+    while($empTableRow = mysqli_fetch_assoc($getEmployeeResult)){
+      $employee_id = (int)$empTableRow['employee_id'];
       $getTotalHoursQuery = "SELECT employee_id, SEC_TO_TIME(SUM(TIME_TO_SEC(total_hours))) AS total_hours FROM admin_employee_attendance WHERE employee_id = $employee_id AND DATE_FORMAT(employee_date, '%Y-%m') = '$currentMonth';";
       $getTotalOvertimeQuery = "SELECT employee_id, SEC_TO_TIME(SUM(TIME_TO_SEC(employee_overtime))) AS total_overtime FROM admin_employee_attendance WHERE employee_id = $employee_id AND DATE_FORMAT(employee_date, '%Y-%m') = '$currentMonth';";
       $countDaysQuery = "SELECT COUNT(attendance_id) AS days_of_work FROM admin_employee_attendance WHERE employee_id = $employee_id AND DATE_FORMAT(employee_date, '%Y-%m') = '$currentMonth';";
@@ -27,7 +34,7 @@ include 'hourly_rates.php';
       $totalOvertime = (int)$totalOvertimeArray[0];
       
       //now update na natin employee_work_table
-      $updateWorkHoursQuery = "UPDATE employee_work_table SET total_hours_worked = $totalHours, total_overtime_hours = $totalOvertime, total_working_days = $totalDayCount WHERE employee_id = $clockOutId;";
+      $updateWorkHoursQuery = "UPDATE employee_work_table SET total_hours_worked = $totalHours, total_overtime_hours = $totalOvertime, total_working_days = $totalDayCount WHERE employee_id = $employee_id;";
       $workHoursResult = mysqli_query($conn, $updateWorkHoursQuery);
       if($workHoursResult){
         echo $overtimeHoursWorked;
@@ -35,7 +42,7 @@ include 'hourly_rates.php';
       else{
         echo mysqli_error($conn);
       }
-          
+    }    
 ?>
 
 <!DOCTYPE html>
