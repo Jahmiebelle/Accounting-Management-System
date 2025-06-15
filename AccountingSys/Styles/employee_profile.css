@@ -494,6 +494,69 @@ body {
   width: 100%;
 }
 
+.modern-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 200px;
+  box-sizing: border-box;
+  margin: 0.5rem 0px;
+}
+
+.modern-input {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+
+.fieldsets {
+  display: flex;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border: solid #cccccc 1px;
+  border-radius: 2px;
+  pointer-events: none;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+legend {
+  text-align: left;
+  font-family: 'Poppins-light';
+  font-size: 10px;
+  padding: 0 5px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.inputboxes {
+  display: flex;
+  position: relative;
+  margin-top: 1rem;
+  padding: 0.25rem 0.5rem;
+  padding-bottom: 0.5rem;
+  height: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.inputboxes:focus {
+  border: solid rgba(0, 0, 0, 0) 1px;
+  outline: none;
+}
+
 .footer-container {
   display: flex;
   justify-content: center;

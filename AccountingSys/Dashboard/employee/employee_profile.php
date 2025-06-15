@@ -133,48 +133,26 @@ session_start();
                   <div class="title-box">
                     Personal Information
                   </div>
-                  <table class="left-table">
-                    <tr>
-                      <td>FULL NAME: </td>
-                      <td>Jahmiebelle</td>
-                    </tr>
-                    <tr>
-                      <td>BIRTHDAY</td>
-                      <td>11/28/2002</td>
-                    </tr>
-                     <tr>
-                      <td>GENDER:</td>
-                      <td>Female</td>
-                    </tr>
-                     <tr>
-                      <td>PHONE NUMBER:</td>
-                      <td>09123456789</td>
-                    </tr>
-                     <tr>
-                      <td>ADDRESS:</td>
-                      <td>Imus, Cavite</td>
-                    </tr>
-                  </table>    
+                  <div class="left-table">
+                    
+                  </div>    
                 </form>
 
                 <form class="info-box">
                   <div class="title-box">
                     Work Information
                   </div>
-                  <table class="right-table">
-                    <tr>
-                      <td>FULL NAME: </td>
-                      <td>Jahmiebelle</td>
-                    </tr>
-                    <tr>
-                      <td>BIRTHDAY</td>
-                      <td>11/28/2002</td>
-                    </tr>
-                     <tr>
-                      <td>GENDER:</td>
-                      <td>Female</td>
-                    </tr>
-                  </table>    
+                  <div class="right-table">
+                    <div class="modern-input-container">
+                      <div class="modern-input">
+                        <fieldset class="fieldsets">
+                          <legend>Department Name</legend>
+                        </fieldset>
+                        <input class="inputboxes" type="text" id="add-dept-name" name="add_dept_name" value="Information Technology" placeholder="e.g. Information Technology" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  
                 </form>
               </div>
               <div class="lower-boxes">
@@ -182,28 +160,12 @@ session_start();
                   <div class="title-box">
                     Bank & Payment Information
                   </div>
-                  <table class="left-table">
-                    <tr>
-                      <td>FULL NAME: </td>
-                      <td>Jahmiebelle</td>
-                    </tr>
-                    <tr>
-                      <td>BIRTHDAY</td>
-                      <td>11/28/2002</td>
-                    </tr>
-                     <tr>
-                      <td>GENDER:</td>
-                      <td>Female</td>
-                    </tr>
-                     <tr>
-                      <td>PHONE NUMBER:</td>
-                      <td>09123456789</td>
-                    </tr>
-                  </table> 
+                  <div class="left-table">
+                    
+                  </div>
+                    
                 </form>
-
               </div>
-
             </div>
 
           </div>
