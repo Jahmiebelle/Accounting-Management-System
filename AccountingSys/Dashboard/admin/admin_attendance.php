@@ -22,7 +22,13 @@ session_start();
           HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
         </div>
       </div>
-      <div class="role">admin</div>
+      <div class="logout-container">
+      <div class="role">
+        ADMIN
+      </div>
+      <div class="logout-icon" id="logout-icon"></div>
+       </div>
+
     </header>
 
     <div class="inner-container">
@@ -61,7 +67,7 @@ session_start();
               <div class="section-icon"></div>
               <div class="section-text">Attendance</div>
             </div>
-            <div class="logout-icon" id="logout-icon"></div>
+        
           </div>
 
           <div class="greetings-content">
