@@ -20,17 +20,19 @@ session_start();
     <header class="header-container">
       <div class="brand-container">
         <div class="brand-icon">
-          
-          
-        </div>
+          </div>
         <div class="brand-name">
           HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
-          
-        </div>
+           </div>
       </div>
+
+      <div class="logout-container">
       <div class="role">
-        admin
+        ADMIN
       </div>
+      <div class="logout-icon" id="logout-icon"></div>
+       </div>
+
     </header>
     
     <div class="inner-container">
@@ -94,10 +96,6 @@ session_start();
               <div class="section-text">
                 Dashboard
               </div>
-            </div>
-
-            <div class="logout-icon" id="logout-icon">
-              
             </div>
           </div>
           <div class="greetings-content">
