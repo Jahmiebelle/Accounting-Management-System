@@ -36,12 +36,7 @@ include 'hourly_rates.php';
       //now update na natin employee_work_table
       $updateWorkHoursQuery = "UPDATE employee_work_table SET total_hours_worked = $totalHours, total_overtime_hours = $totalOvertime, total_working_days = $totalDayCount WHERE employee_id = $employee_id;";
       $workHoursResult = mysqli_query($conn, $updateWorkHoursQuery);
-      if($workHoursResult){
-        echo $overtimeHoursWorked;
-      }
-      else{
-        echo mysqli_error($conn);
-      }
+      
     }    
 ?>
 
