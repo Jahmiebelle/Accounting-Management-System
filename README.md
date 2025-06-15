@@ -1,17 +1,17 @@
 <!-- Banner -->
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/0000000/your-banner.png" alt="Accounting Management System" width="100%" />
+  <img src="https://img.shields.io/badge/Accounting%20Management%20System--Payroll%2FAttendance-blueviolet?style=for-the-badge" />
 </p>
 
 <h1 align="center">📊 Accounting Management System</h1>
 <p align="center">
-  A complete solution for managing payroll, employee attendance, and departmental records with real-time filtering and smart automation.
+  A powerful web-based platform for handling payroll, employee attendance, department management, and automated payslip generation.
 </p>
 
 <p align="center">
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/your-username/Accounting-Management-System?style=flat-square">
-  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/your-username/Accounting-Management-System?style=flat-square">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/your-username/Accounting-Management-System?style=flat-square">
+  <img alt="Repo size" src="https://img.shields.io/github/repo-size/Jahmiebelle/Accounting-Management-System?style=flat-square" />
+  <img alt="Contributors" src="https://img.shields.io/github/contributors/Jahmiebelle/Accounting-Management-System?style=flat-square" />
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Jahmiebelle/Accounting-Management-System?style=flat-square" />
 </p>
 
 ---
@@ -31,36 +31,28 @@
 ## 🔥 Key Features
 
 ✅ **Payroll System** — Automated payroll calculations based on attendance and rates  
-✅ **Payslip Generation** — Instant downloadable payslips per employee  
+✅ **Payslip Generation** — Instantly downloadable payslips for each employee  
 ✅ **Attendance Tracking** — Real-time clock-in and clock-out system  
-✅ **Taxation Handling** — Deductions based on your country’s tax brackets  
-✅ **Hourly Rate Computation** — Accurate computations for part-time and full-time staff  
-✅ **Department Management** — Add, edit, or remove departments  
-✅ **Employee Management** — Edit employee info, activate/deactivate accounts  
-✅ **Search & Filter Tools** — 
-- Filter by name, department, or account status  
-- Smart keyword search with instant results
+✅ **Taxation Handling** — Deductions based on tax configuration  
+✅ **Hourly Rate Computation** — For both part-time and full-time staff  
+✅ **Department Management** — Add, edit, or delete departments  
+✅ **Employee Management** — Edit info, activate/deactivate/reactivate accounts  
+✅ **Smart Filtering & Search** — Filter by department, status, and name search  
 
 ---
 
 ## 📸 Screenshots
 
-> *Note: Replace these with actual screenshots from your system*
-
+### 🛠️ Admin Dashboard
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/0000000/placeholder-dashboard.png" width="600"/>
-  <br><i>👆 Dashboard overview</i><br><br>
-  <img src="https://user-images.githubusercontent.com/0000000/placeholder-payslip.png" width="600"/>
-  <br><i>👆 Auto-generated payslip</i>
+  <img src="./AccountingSys/sampleImages/admin.jpg" width="600"/>
+  <br><i>Admin view with control over departments, payroll, and employees</i>
 </p>
 
----
-
-## 🎞️ Live Demo (Optional GIF)
-
+### 👷 Employee Dashboard
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/0000000/placeholder-gif.gif" width="600"/>
-  <br><i>⚡ Real-time attendance + payroll update</i>
+  <img src="./AccountingSys/sampleImages/employee.jpg" width="600"/>
+  <br><i>Employee view with attendance and payslip access</i>
 </p>
 
 ---
@@ -68,15 +60,15 @@
 ## 🛠️ How to Set Up
 
 ```bash
-# Clone this repo
-git clone https://github.com/your-username/Accounting-Management-System.git
+# Clone the repo
+git clone https://github.com/Jahmiebelle/Accounting-Management-System.git
 
-# Move into the directory
-cd Accounting-Management-System
+# Move into the project
+cd Accounting-Management-System/AccountingSys
 
-# Open in local server (e.g., XAMPP / Laragon / PHP server)
-# Ensure MariaDB is running
+# Place in XAMPP/Laragon's www or htdocs directory
 
-# Import the database (SQL file inside /database)
-# Then open your browser at:
-http://localhost/Accounting-Management-System/
+# Import the SQL database via phpMyAdmin or CLI
+
+# Visit in your browser:
+http://localhost/Accounting-Management-System/AccountingSys/
