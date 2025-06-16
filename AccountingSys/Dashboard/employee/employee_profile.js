@@ -28,6 +28,7 @@ editProfileBtn.addEventListener('click', function(){
       pInput.classList.add('editable');
       pInput.removeAttribute('readonly');
     });
+    profileSelect.classList.add('editable');
     profileSelect.removeAttribute('disabled');
 
   }
@@ -41,6 +42,7 @@ editProfileBtn.addEventListener('click', function(){
         pInput.classList.remove('editable');
         pInput.setAttribute('readonly', true);
       });
+      profileSelect.classList.remove('editable');
       profileSelect.setAttribute('disabled', true);
     }
   }
