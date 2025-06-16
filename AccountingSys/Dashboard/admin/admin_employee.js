@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const contact = button.dataset.contact;
         let is_active = button.dataset.active;
         let accstatus = is_active === "1" ? "Deactivate" : "Reactivate";
+        const imagePath = button.dataset.image;
         
         document.getElementById('deac-btn').addEventListener('click', function(){
           let confirmed = confirm("Are you sure you want to " + accstatus + " this account?");
@@ -63,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('upf-upper-name').innerText = fn + " " + ln;
         document.getElementById('upf-upper-dept').innerText = dept;
         const deptIdName = (dept.toLowerCase()).replace(/\s+/g, '');
-        
+        let imageContainer = document.getElementById('upf-upper-profile');
+        imageContainer.style.backgroundImage = "url('" + imagePath + "')";
         document.getElementById('emp-cid').value = cid;
         document.getElementById('emp-id').value = id;
         document.getElementById('emp-fn').value = fn;
