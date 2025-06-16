@@ -24,9 +24,12 @@ editProfileBtn.addEventListener('click', function(){
 
   }
   else{
-    editProfileBtn.innerText = "Edit Personal Info";
-    editProfileBtn.classList.remove('editable');
-    editProfile = !editProfile;
-    editProfileBtn.type = 'submit';
+    const profileSaveConfirm = confirm("Are you sure you want to save?");
+    if(profileSaveConfirm){
+      editProfileBtn.innerText = "Edit Personal Info";
+      editProfileBtn.classList.remove('editable');
+      editProfile = !editProfile;
+      editProfileBtn.type = 'submit';
+    }
   }
 });
