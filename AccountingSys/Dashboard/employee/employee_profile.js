@@ -13,3 +13,9 @@ document.getElementById('dashboard-tab').addEventListener('click', function () {
 //document.getElementById('payroll-tab').addEventListener('click', function () {
 //  window.location.href = "employee_payroll.php";
 //});
+
+const editProfileBtn = document.getElementById('personal-btn');
+let editProfile = false;
+editProfileBtn.addEventListener('click', function(){
+  
+});
