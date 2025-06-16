@@ -22,14 +22,15 @@ let editProfile = false;
 
 editProfileBtn.addEventListener('click', function(){
   if(!editProfile){
+    profileSelect.classList.add('editable');
+    profileSelect.removeAttribute('disabled');
     editProfileBtn.innerText = "Save Personal Info";
     editProfile = !editProfile;
     profileInput.forEach(function(pInput){
       pInput.classList.add('editable');
       pInput.removeAttribute('readonly');
     });
-    profileSelect.classList.add('editable');
-    profileSelect.removeAttribute('disabled');
+    
 
   }
   else{
@@ -43,7 +44,6 @@ editProfileBtn.addEventListener('click', function(){
         pInput.setAttribute('readonly', true);
       });
       profileSelect.classList.remove('editable');
-      profileSelect.setAttribute('disabled', true);
     }
   }
 });
