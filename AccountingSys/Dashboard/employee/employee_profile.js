@@ -102,3 +102,26 @@ savePicBtn.addEventListener('click', function(){
     submitFile.click();
   }
 });
+
+const changePassBtn = document.getElementById('change-pass-btn');
+const passOl = document.getElementById('pass-ol');
+changePassBtn.addEventListener('click', function(){
+  passOl.classList.add('show');
+  
+  
+});
+passOl.addEventListener('click', function(e){
+  if(e.target == passOl){
+    passOl.classList.remove('show');
+  }
+});
+
+const savePassBtn = document.getElementById('reset-pass-btn');
+savePassBtn.addEventListener('click', function(e){
+  const newPass = document.getElementById('new-pass');
+  const confirmPass = document.getElementById('confirm-pass');
+  if(newPass !== confirmPass){
+    e.preventDefault();
+  }
+  alert("Passwords do not match.");
+});

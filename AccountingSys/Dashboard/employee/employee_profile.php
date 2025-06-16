@@ -15,7 +15,22 @@ session_start();
 <body>
 
   <div class="outer-container">
-    
+    <div class="pass-ol" id="pass-ol">
+      <div class="pass-ol-content" id="pass-ol-content">
+        <form class="reset-pass-form" action="resetPassword.php" method="POST" accept-charset="utf-8">
+          <div class="reset-pass-header">
+            Change Password
+          </div>
+          <label for="old-pass">Old Password</label>
+          <input type="password" id="old_pass" name="old-pass" value="" required/>
+          <label for="new-pass">New Password</label>
+          <input type="password" name="new_pass" id="new-pass" value="" required/>
+          <label for="confirm-pass">Confirm New Password</label>
+          <input type="password" name="confirm_pass" id="confirm-pass" value="" required/>
+          <button id="reset-pass-btn" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
     <header class="header-container">
       <div class="brand-container">
         <div class="brand-icon">
@@ -135,7 +150,7 @@ session_start();
               <div class="buttons">
                 <button type="button" form="personal-info-form" id="personal-btn">Edit Personal Info</button>
                 <button type="button" id="select-pic-btn">Edit Profile Picture</button>
-                <button>Change Password</button>
+                <button id="change-pass-btn" type= "button">Change Password</button>
               </div>
 
               <div class="upper-boxes">

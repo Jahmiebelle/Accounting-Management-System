@@ -53,8 +53,75 @@ body {
   height: auto;
   width: 100%;
   /*border: solid green 1px;*/
+}
 
-  
+.pass-ol {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.pass-ol.show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.pass-ol-content {
+  display: flex;
+  height: auto;
+  width: auto;
+  max-width: 80%;
+  background-color: #f4f6f8;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.reset-pass-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  gap: 0.5rem;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-bottom: solid #ccc 1px;
+}
+
+.reset-pass-form label{
+  font-size: 12px;
+  text-align: center;
+  width: 110%;
+  border-bottom: solid #ccc 1px;
+}
+
+#reset-pass-btn {
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #1E4D2B;
+  border: solid rgba(0, 0, 0, 0) 0.2px;
+  color: #f4f6f8;
+}
+
+#reset-pass-btn:hover {
+  opacity: 0.75;
 }
 
 .header-container {
@@ -460,7 +527,6 @@ p, h2 {
   display: flex;
   justify-content: space-evenly;
   margin: 1rem 0;
-
   gap: 0.5rem;
 
 }
@@ -469,7 +535,7 @@ p, h2 {
   padding: 0.6rem 1.2rem;
   border: solid rgba(0, 0, 0, 0) 1px;
   border-radius: 8px;
-  background-color: #2563eb;
+  background-color: #1E4D2B;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -479,21 +545,21 @@ p, h2 {
 
 #bank-btn {
   padding: 0.3rem 1.5rem;
-  border: solid #1e40af 0.25px;
+  border: solid #1E4D2B 0.25px;
   background-color: rgba(0, 0, 0, 0);
-  color: #1e40af;
+  color: #1E4D2B;
   border-radius: 8px;
   transition: all 0.2s ease;
 }
 
 #bank-btn:hover {
   border: solid rgba(0, 0, 0, 0) 1px;
-  background-color: #1e40af;
+  background-color: #1E4D2B;
   color: #f4f6f8;
 }
 
 .buttons button:hover {
-  background-color: #1e40af;
+  opacity: 0.75;
   cursor: pointer;
 }
 
