@@ -430,7 +430,6 @@ include 'hourly_rates.php';
                         <td>
                           <div class='view-payslip' id='view-payslip'>
                             <button id='payslip-btn' class='payslip-btn' type='button' data-id='$payroll_emp_id' data-pid='$payroll_id' data-fn='$payroll_full_name' data-month='$monthName' data-basic='$payroll_basic_salary' data-overtime='$payroll_overtime_pay' data-gross='$payroll_gross_pay' data-incometax='$payroll_income_tax' data-sss='$payroll_sss' data-philhealth='$payroll_philhealth' data-pagibig='$payroll_pagibig' data-totaldeduct='$payroll_total_deductions' data-netpay='$payroll_net_pay' data-completed='$payroll_is_complete'> View </button>
-                            <button id='payslip-btn' class='payslip-btn' type='button' data-id='$payroll_emp_id' data-pid='$payroll_id' data-fn='$payroll_full_name' data-month='$monthName' data-basic='$payroll_basic_salary' data-overtime='$payroll_overtime_pay' data-gross='$payroll_gross_pay' data-incometax='$payroll_income_tax' data-sss='$payroll_sss' data-philhealth='$payroll_philhealth' data-pagibig='$payroll_pagibig' data-totaldeduct='$payroll_total_deductions' data-netpay='$payroll_net_pay' data-completed='$payroll_is_complete'> View</button>
                           </div>
                         </td>
                      </tr>";
