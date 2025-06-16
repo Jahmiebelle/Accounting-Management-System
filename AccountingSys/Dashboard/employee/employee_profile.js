@@ -83,12 +83,12 @@ selectPicBtn.addEventListener('click', function(){
   fileInput.click();
 });
 
-fileInput.addEventListener('change', function(){
+fileInput.addEventListener('change', function() {
   const file = this.files[0];
-  if(file){
+  if (file) {
     const imageURL = URL.createObjectURL(file);
-    previewPic.src = imageURL;
+    previewPic.style.backgroundImage = `url('${imageURL}')`;
+    previewPic.style.backgroundSize = 'cover';
+    previewPic.style.backgroundPosition = 'center';
   }
-  
-  
 });
