@@ -119,10 +119,10 @@ passOl.addEventListener('click', function(e){
 const savePassBtn = document.getElementById('reset-pass-btn');
 
 savePassBtn.addEventListener('click', function(e){
-  const realPass = document.getElementById('realPass');
-  const oldPass = document.getElementById('old-pass');
-  const newPass = document.getElementById('new-pass');
-  const confirmPass = document.getElementById('confirm-pass');
+  const realPass = document.getElementById('realPass').value;
+  const oldPass = document.getElementById('old-pass').value;
+  const newPass = document.getElementById('new-pass').value;
+  const confirmPass = document.getElementById('confirm-pass').value;
   if(realPass !== oldPass){
     e.preventDefault();
     alert("Incorrect Password!");
