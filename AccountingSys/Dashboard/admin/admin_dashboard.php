@@ -229,7 +229,7 @@ session_start();
                     </div>
                   </div>
                   <div class="leave-person2">
-                    <div class="person2-profile" style="background-image: url('<?=$secondImagePath?>');">
+                    <div class="person2-profile" style="background-image: url('<?=$secondImagePath ?? "../../Assets/default-user.png"?>');">
                       
                     </div>
                     <div class="person2-name">
