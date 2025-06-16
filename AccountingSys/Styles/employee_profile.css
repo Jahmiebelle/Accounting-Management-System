@@ -581,7 +581,6 @@ p, h2 {
 
 .profile-input.editable, .bank-input.editable{
   border-bottom: 1px solid #666;
-  background-color: #fff;
   color: #222;
   cursor: text;
 }

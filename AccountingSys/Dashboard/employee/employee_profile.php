@@ -144,7 +144,10 @@ session_start();
                     
                     <div class="profile-input-group">
                       <label for="gender">Gender</label>
-                      <input type="text" id="gender" value="Male" class="profile-input" name="gender" readonly>
+                      <select type="text" id="gender" value="<?=$gender?>" class="profile-input" name="gender" readonly>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
                     </div>
                     <div class="profile-input-group">
                       <label for="birthdate">Birthdate</label>
@@ -156,7 +159,7 @@ session_start();
                     </div>
                     <div class="profile-input-group">
                       <label for="contact">Contact No.</label>
-                      <input type="text" id="contact" value="<?=$contact?>" class="profile-input" name="contact" readonly>
+                      <input type="number" id="contact" value="<?=$contact?>" class="profile-input" name="contact" readonly>
                     </div>
                   </div>    
                 </form>
