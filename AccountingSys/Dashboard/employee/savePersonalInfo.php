@@ -12,7 +12,7 @@
   $birthdate = $_POST['birthdate'];
   $email = $_POST['email'];
   $contact = $_POST['contact'];
-  $updateEmployeePersonal = "UPDATE employee_table SET first_name = '$fname', last_name = '$lname', gender = '$emp_gender', birthdate = '$birthdate', email = '$email', contact_number = '$contact';";
+  $updateEmployeePersonal = "UPDATE employee_table SET first_name = '$fname', last_name = '$lname', gender = '$emp_gender', birthdate = '$birthdate', email = '$email', contact_number = '$contact' WHERE employee_id = '$empId';";
   $updateEmployeeResult = mysqli_query($conn, $updateEmployeePersonal);
   
   header("Location: employee_profile.php");
