@@ -132,6 +132,9 @@ savePassBtn.addEventListener('click', function(e){
       e.preventDefault();
       alert("Passwords do not match.");
     }
+    else{
+      alert("Password changed successfully.");
+    }
   }
   
   
