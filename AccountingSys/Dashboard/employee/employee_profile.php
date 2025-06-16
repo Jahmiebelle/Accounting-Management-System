@@ -21,8 +21,12 @@ session_start();
           <div class="reset-pass-header">
             Change Password
           </div>
+          <?php
+            $password = $_SESSION['password'];
+          ?>
+          <input type="hidden" id="realPass" name="realPass" value="<?=$password?>" style="position: absolute;">
           <label for="old-pass">Old Password</label>
-          <input type="password" id="old_pass" name="old-pass" value="" required/>
+          <input type="password" id="old-pass" name="old_pass" value="" required/>
           <label for="new-pass">New Password</label>
           <input type="password" name="new_pass" id="new-pass" value="" required/>
           <label for="confirm-pass">Confirm New Password</label>

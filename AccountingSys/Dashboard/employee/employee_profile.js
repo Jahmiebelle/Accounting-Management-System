@@ -117,11 +117,22 @@ passOl.addEventListener('click', function(e){
 });
 
 const savePassBtn = document.getElementById('reset-pass-btn');
+
 savePassBtn.addEventListener('click', function(e){
+  const realPass = document.getElementById('realPass');
+  const oldPass = document.getElementById('old-pass');
   const newPass = document.getElementById('new-pass');
   const confirmPass = document.getElementById('confirm-pass');
-  if(newPass !== confirmPass){
+  if(realPass !== oldPass){
     e.preventDefault();
+    alert("Incorrect Password!");
   }
-  alert("Passwords do not match.");
+  else{
+    if (newPass !== confirmPass) {
+      e.preventDefault();
+      alert("Passwords do not match.");
+    }
+  }
+  
+  
 });
