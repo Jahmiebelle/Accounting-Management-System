@@ -27,9 +27,12 @@ session_start();
           
         </div>
       </div>
+      <div class="new-logout-container">
       <div class="role">
-        Employee
+        EMPLOYEE
       </div>
+      <div class="new-logout-icon" id="new-logout-icon"></div>
+       </div>
     </header>
     
     <div class="inner-container">

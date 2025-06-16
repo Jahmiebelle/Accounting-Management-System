@@ -66,9 +66,12 @@ session_start();
 
         </div>
       </div>
+      <div class="new-logout-container">
       <div class="role">
-        admin
+        ADMIN
       </div>
+      <div class="new-logout-icon" id="new-logout-icon"></div>
+       </div>
     </header>
 
     <div class="inner-container">
