@@ -406,12 +406,19 @@ body {
   box-sizing: border-box;
 }
 
-.circle-pic {
+.circle-pic, #preview-pic {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #cbd5e1;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid #ccc 0.25px;
   margin-right: 1rem;
+}
+
+#preview-pic {
+  background-size: cover;
+  background-position: center;
+  
 }
 
 .header-info {
