@@ -543,7 +543,7 @@ p, h2 {
   /*border-top: solid #cccccc 0.1px;*/
 }
 
-.profile-input {
+.profile-input, .work-input, .bank-input {
   border: none;
   border-bottom: solid rgba(0, 0, 0, 0) 0.1px;
   background: transparent;
@@ -560,7 +560,7 @@ p, h2 {
   width: auto;
 }
 
-.profile-input.editable{
+.profile-input.editable, .bank-input.editable{
   border-bottom: 1px solid #666;
   background-color: #fff;
   color: #222;

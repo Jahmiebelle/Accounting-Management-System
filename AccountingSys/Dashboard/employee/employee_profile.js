@@ -17,5 +17,17 @@ document.getElementById('dashboard-tab').addEventListener('click', function () {
 const editProfileBtn = document.getElementById('personal-btn');
 let editProfile = false;
 editProfileBtn.addEventListener('click', function(){
-  
+  if(!editProfile){
+    editProfileBtn.innerText = "Save Personal Info";
+    editProfileBtn.classList.add('editable');
+    editProfile = !editProfile;
+    editProfileBtn.type = 'submit';
+
+  }
+  else{
+    editProfileBtn.innerText = "Edit Personal Info";
+    editProfileBtn.classList.remove('editable');
+    editProfile = !editProfile;
+    editProfileBtn.type = 'button';
+  }
 });

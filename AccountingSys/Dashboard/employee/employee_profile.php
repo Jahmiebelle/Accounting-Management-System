@@ -123,8 +123,8 @@ session_start();
               </div>
 
               <div class="buttons">
-                <button type="button" form="personal-info-form" id="personal-btn">Edit Profile Picture</button>
-                <button>Edit Personal Information</button>
+                <button type="button" form="personal-info-form" id="personal-btn">Edit Personal Info</button>
+                <button>Edit Profile Picture</button>
                 <button>Change Password</button>
               </div>
 
@@ -173,23 +173,23 @@ session_start();
                     </div>-->
                     <div class="profile-input-group">
                       <label for="compId">Company ID</label>
-                      <input type="text" id="compId" value="2025113" class="profile-input" readonly>
+                      <input type="text" id="compId" value="2025113" class="work-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="department">Department</label>
-                      <input type="text" id="department" value="IT Department" class="profile-input" readonly>
+                      <input type="text" id="department" value="IT Department" class="work-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="position">Position</label>
-                      <input type="text" id="position" value="Professor" class="profile-input" readonly>
+                      <input type="text" id="position" value="Professor" class="work-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="status">Status</label>
-                      <input type="text" id="status" value="Active" class="profile-input" readonly>
+                      <input type="text" id="status" value="Active" class="work-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="joindate">Join Date</label>
-                      <input type="text" id="joindate" value="2025-02-03" class="profile-input" readonly>
+                      <input type="text" id="joindate" value="2025-02-03" class="work-input" readonly>
                     </div>
                     
                   </div>
@@ -204,19 +204,19 @@ session_start();
                   <div class="left-table">
                     <div class="profile-input-group">
                       <label for="bank">Bank Account Number</label>
-                      <input type="number" id="bank" value="123456789012" class="profile-input" readonly>
+                      <input type="number" id="bank" value="123456789012" class="bank-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="sss">SSS Number</label>
-                      <input type="text" id="sss" value="02-3456789-0" class="profile-input" readonly>
+                      <input type="text" id="sss" value="02-3456789-0" class="bank-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="philhealth">PhilHealth Number</label>
-                      <input type="text" id="philhealth" value="2345-67890-12" class="profile-input" readonly>
+                      <input type="text" id="philhealth" value="2345-67890-12" class="bank-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="pagibig">Pagibig Number</label>
-                      <input type="text" id="pagibig" value="2345-6789-0123" class="profile-input" readonly>
+                      <input type="text" id="pagibig" value="2345-6789-0123" class="bank-input" readonly>
                     </div>
                   </div>
                     
