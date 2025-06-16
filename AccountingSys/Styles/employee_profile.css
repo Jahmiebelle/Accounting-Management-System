@@ -421,6 +421,28 @@ body {
   
 }
 
+.save-pic-btn {
+  opacity: 0;
+  padding: 0.25rem 1rem;
+  border: solid #1E4D2B 0.2px;
+  color: #1E4D2B;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.save-pic-btn:hover {
+  background-color: #1E4D2B;
+  color: #f4f6f8;
+  border: solid rgba(0, 0, 0, 0) 0.2px;
+}
+
+.save-pic-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .header-info {
   display: flex;
   flex-direction: column;

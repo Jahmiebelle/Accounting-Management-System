@@ -78,8 +78,10 @@ bankBtn.addEventListener('click', function(){
 const previewPic = document.getElementById('preview-pic');
 const fileInput = document.getElementById('fileInput');
 const selectPicBtn = document.getElementById('select-pic-btn');
-
+const submitFile = document.getElementById('submitFile');
+const savePicBtn = document.getElementById('save-pic-btn');
 selectPicBtn.addEventListener('click', function(){
+  savePicBtn.classList.add('show');
   fileInput.click();
 });
 
@@ -90,5 +92,13 @@ fileInput.addEventListener('change', function() {
     previewPic.style.backgroundImage = `url('${imageURL}')`;
     previewPic.style.backgroundSize = 'cover';
     previewPic.style.backgroundPosition = 'center';
+  }
+});
+
+savePicBtn.addEventListener('click', function(){
+  let savePicConfirmation = confirm("Are you sure you you want this as your profile picture?");
+  if(savePicConfirmation){
+    savePicBtn.classList.remove('show');
+    submitFile.click();
   }
 });

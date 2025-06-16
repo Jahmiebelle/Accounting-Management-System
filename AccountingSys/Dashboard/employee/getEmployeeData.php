@@ -25,4 +25,5 @@
   $sss = $employeeDataRow['sss_number'];
   $philhealth = $employeeDataRow['philhealth_number'];
   $pagibig = $employeeDataRow['pagibig_number'];
+  $imageUrl = $employeeDataRow['image'];
 ?>
