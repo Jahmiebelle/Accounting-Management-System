@@ -30,7 +30,7 @@
     echo "Company Id / Employee Id already Exist";
   }
   else {
-    $insertData = "INSERT INTO employee_table VALUES('$id', '$cid', '$password', '$fn', 'N/A', '$ln', '$email', '$status', '$dept', '$gender', '$contact', '$emptype', '$position', '$joindate', '$birthdate', '$bank', '$sss', '$philhealth', '$pagibig', '1')";
+    $insertData = "INSERT INTO employee_table (employee_id, company_id, password, first_name, middle_name, last_name, email, status, department, gender, contact_number, employment_type, position, join_date, birthdate, bank_number, sss_number, philhealth_number, pagibig_number, is_active) VALUES('$id', '$cid', '$password', '$fn', 'N/A', '$ln', '$email', '$status', '$dept', '$gender', '$contact', '$emptype', '$position', '$joindate', '$birthdate', '$bank', '$sss', '$philhealth', '$pagibig', '1')";
     
     $getPositionRate = "SELECT * FROM role_hourly_rate WHERE role_name = '$position';";
     $positionRateResult = mysqli_query($conn, $getPositionRate);
