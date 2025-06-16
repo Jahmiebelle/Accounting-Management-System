@@ -179,6 +179,11 @@ session_start();
                 $firstClockInRow = mysqli_fetch_assoc($latestClockInResult);
                 $secondClockInRow = mysqli_fetch_assoc($latestClockInResult);
                 if($firstClockInRow){
+                  $firstEmpId = $firstClockInRow['employee_id'];
+                  $getFirstImage = "SELECT image FROM employee_table WHERE employee_id = '$firstEmpId';";
+                  $firstImageResult = mysqli_query($conn, $getFirstImage);
+                  $firstImageRow = mysqli_fetch_assoc($firstImageResult);
+                  $firstImagePath = $firstImageRow['image'] ? $firstImageRow['image'] : "../../Assets/default-user.png";
                   $firstEmpName = $firstClockInRow['employee_name'];
                   $firstClockIn = $firstClockInRow['clock_in'];
                   $firstEmpDateTime = new DateTime($firstClockIn);
@@ -189,6 +194,11 @@ session_start();
                   $firstEmpTime = "-";
                 }
                 if($secondClockInRow){
+                  $secondEmpId = $secondClockInRow['employee_id'];
+                  $getSecondImage = "SELECT image FROM employee_table WHERE employee_id = '$secondEmpId';";
+                  $secondImageResult = mysqli_query($conn, $getSecondImage);
+                  $secondImageRow = mysqli_fetch_assoc($secondImageResult);
+                  $secondImagePath = $secondImageRow['image'] ? $secondImageRow['image'] : "../../Assets/default-user.png";
                   $secondEmpName = $secondClockInRow['employee_name'];
                   $secondClockIn = $secondClockInRow['clock_in'];
                   $secondEmpDateTime = new DateTime($secondClockIn);
@@ -208,7 +218,7 @@ session_start();
                 </div>  
                 <div class="request-card-content-container">
                   <div class="leave-person1">
-                    <div class="person1-profile">
+                    <div class="person1-profile" style="background-image: url('<?=$firstImagePath?>');">
                       
                     </div>
                     <div class="person1-name">
@@ -219,7 +229,7 @@ session_start();
                     </div>
                   </div>
                   <div class="leave-person2">
-                    <div class="person2-profile">
+                    <div class="person2-profile" style="background-image: url('<?=$secondImagePath?>');">
                       
                     </div>
                     <div class="person2-name">
