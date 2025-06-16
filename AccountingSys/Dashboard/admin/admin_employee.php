@@ -221,7 +221,7 @@ session_start();
         <form action="" method="POST" class="profile-form-ol" id="profile-form-ol">
           <div class="upper-profile-form">
             <div class="upf-profile-container">
-              <div class="upf-upper-profile">
+              <div class="upf-upper-profile" id="upf-upper-profile">
               </div>
               <div class="upf-upper-info">
                  <input style="display: none; pointer-events: none;" type="number" id="emp-cid" name="employee_cid" value="" readonly>
@@ -687,6 +687,7 @@ session_start();
                         $email = $employeeData['email'];
                         $contact = $employeeData['contact_number'];
                         $is_active = $employeeData['is_active'];
+                        $image = $employeeData['image'] ?? "../../Assets/default-user.png";
                         
                         if(strtolower($status) == "active"){
                           $status_color = "green-status";
@@ -707,7 +708,7 @@ session_start();
                           <td> 
                             <form class='profile-form' action='admin_employee.php' method='POST' accept-charset='utf-8'>
                               <input type='hidden' name='emp_id' id='emp_id' value='$emp_id'>
-                                <button class='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$emp_first_name' data-ln='$emp_last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact' data-active='$is_active'>Profile</button>
+                                <button class='profile-btn' type='button' data-cid='$comp_id' data-id='$emp_id' data-fn='$emp_first_name' data-ln='$emp_last_name' data-gender='$gender' data-birthdate='$birthdate' data-joindate='$join_date' data-dept='$department' data-position='$position' data-emptype='$emp_type' data-status='$status' data-bank='$bank' data-sss='$sss' data-philhealth='$philhealth' data-pagibig='$pagibig' data-email='$email' data-contact='$contact' data-active='$is_active' data-image='$image'>Profile</button>
                             </form>
                           </td>
                         </tr>";

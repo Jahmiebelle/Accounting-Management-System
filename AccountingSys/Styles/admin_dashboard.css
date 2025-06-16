@@ -570,13 +570,11 @@ body {
 }
 
 .person1-profile {
-  background-image: url('../Assets/default-user.png');
   background-size: cover;
   background-position: center;
 }
 
 .person2-profile {
-  background-image: url('../Assets/default-user.png');
   background-size: cover;
   background-position: center;
 }

@@ -120,17 +120,21 @@ session_start();
           <div class="main-content">
             <div class="profile-card">
               <div class="profile-header">
-                <div class="circle-pic"></div>
+                <div class="circle-pic" id="preview-pic" style="background-image: url('<?=$imageUrl ?? "../../Assets/default-user.png"?>'); background-size: cover; background-position: center;"></div>
                 <div class="header-info">
                   <h2><?=$fullname?></h2>
                   <p><?=$department?></p>
                   <p>ID: <?=$empId?></p>
                 </div>
               </div>
-
+              <form id="fileForm" action="uploadProfilePic.php" method="POST" enctype="multipart/form-data" style="display: none;">
+                <input type="file" id="fileInput" accept="image/*" name="fileInput" style="display: none;">
+                <input type="submit" id="submitFile" name="submitFile" value="Submit" style="display: none;">
+              </form>
+              <button type="button" class="save-pic-btn" id="save-pic-btn">Save Profile</button>
               <div class="buttons">
                 <button type="button" form="personal-info-form" id="personal-btn">Edit Personal Info</button>
-                <button>Edit Profile Picture</button>
+                <button type="button" id="select-pic-btn">Edit Profile Picture</button>
                 <button>Change Password</button>
               </div>
 
