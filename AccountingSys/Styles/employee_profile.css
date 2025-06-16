@@ -444,6 +444,8 @@ p, h2 {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s;
 }
 
 #bank-btn {
@@ -463,6 +465,7 @@ p, h2 {
 
 .buttons button:hover {
   background-color: #1e40af;
+  cursor: pointer;
 }
 
 .upper-boxes {
@@ -605,6 +608,7 @@ p, h2 {
   width: calc(100% - 25vw);
   background-color: #1E4D2B;
   color: #f4f6f8;
+  border: solid bla;
 }
 
 .brand-name-footer, .brand-info-footer, .brand-copyright {
