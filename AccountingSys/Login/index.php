@@ -65,10 +65,10 @@ session_start();
 <body>
   <div class="outer-box">
     <h2 class="brand-namin">Teach<span style="color: greenyellow">Track</span></h2>
-      <h1 class="background-text-bottom">EMPLOYEE•MANAGEMENT•SYSTEM</h1>
-      <h1 class="background-text-bottom2">EMPLOYEE•MANAGEMENT•SYSTEM</h1>
-      <h1 class="background-text-top">EMPLOYEE•MANAGEMENT•SYSTEM</h1>
-      <h1 class="background-text-top2">EMPLOYEE•MANAGEMENT•SYSTEM</h1>
+      <h1 class="background-text-bottom">ACCOUNTING•MANAGEMENT•SYSTEM</h1>
+      <h1 class="background-text-bottom2">ACCOUNTING•MANAGEMENT•SYSTEM</h1>
+      <h1 class="background-text-top">ACCOUNTING•MANAGEMENT•SYSTEM</h1>
+      <h1 class="background-text-top2">ACCOUNTING•MANAGEMENT•SYSTEM</h1>
     <div class="overlay">
       <h6 class="copyright">©2025 All Rights Reserved.</h6>
     </div>

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
   
-  document.getElementById('logout-icon').addEventListener('click', function () {
+  document.getElementById('new-logout-icon').addEventListener('click', function () {
     window.location.href = "../../Login/logout.php";
   });
   
