@@ -933,7 +933,7 @@ p {
 }
 
 td, th {
-  padding: 8px 45px;
+  padding: 12px 45px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
@@ -1032,6 +1032,6 @@ tr:nth-child(even) {
 
 @media (max-width: 1024px) {
   td, th {
-    padding: 8px 16px;
+    padding: 12px 16px;
   }
 }
