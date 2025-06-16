@@ -23,7 +23,7 @@ let editProfile = false;
 editProfileBtn.addEventListener('click', function(){
   if(!editProfile){
     profileSelect.classList.add('editable');
-    profileSelect.removeAttribute('disabled');
+    profileSelect.disabled = false;
     editProfileBtn.innerText = "Save Personal Info";
     editProfile = !editProfile;
     profileInput.forEach(function(pInput){
@@ -44,6 +44,7 @@ editProfileBtn.addEventListener('click', function(){
         pInput.setAttribute('readonly', true);
       });
       profileSelect.classList.remove('editable');
+      profileSelect.disabled = false;
     }
   }
 });
