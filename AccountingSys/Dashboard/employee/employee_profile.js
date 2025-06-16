@@ -21,13 +21,12 @@ editProfileBtn.addEventListener('click', function(){
     editProfileBtn.innerText = "Save Personal Info";
     editProfileBtn.classList.add('editable');
     editProfile = !editProfile;
-    editProfileBtn.type = 'submit';
 
   }
   else{
     editProfileBtn.innerText = "Edit Personal Info";
     editProfileBtn.classList.remove('editable');
     editProfile = !editProfile;
-    editProfileBtn.type = 'button';
+    editProfileBtn.type = 'submit';
   }
 });
