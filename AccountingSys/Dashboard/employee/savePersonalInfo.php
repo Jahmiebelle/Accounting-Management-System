@@ -5,7 +5,16 @@
   error_reporting(E_ALL);
   session_start();
   
+  $empId = $_SESSION['employee_id'];
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $gender = $_POST['gender'];
+  $birthdate = $_POST['birthdate'];
+  $email = $_POST['email'];
+  $contact = $_POST['contact'];
+  $updateEmployeePersonal = "UPDATE employee_table SET first_name = '$fname', last_name = '$lname', gender = '$gender', birthdate = '$birthdate', email = '$email', contact_number = '$contact';";
+  $updateEmployeeResult = mysqli_query($conn, $updateEmployeePersonal);
   
-  header("Location: employee_dashboard.php");
+  //header("Location: employee_dashboard.php");//
   
 ?>

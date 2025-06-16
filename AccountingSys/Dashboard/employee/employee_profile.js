@@ -16,6 +16,7 @@ document.getElementById('dashboard-tab').addEventListener('click', function () {
 
 const editProfileBtn = document.getElementById('personal-btn');
 const profileInput = document.querySelectorAll('.profile-input');
+const profileSelect = document.querySelector('.profile-select');
 let editProfile = false;
 
 
@@ -27,6 +28,7 @@ editProfileBtn.addEventListener('click', function(){
       pInput.classList.add('editable');
       pInput.removeAttribute('readonly');
     });
+    profileSelect.removeAttribute('disabled');
 
   }
   else{
@@ -36,9 +38,10 @@ editProfileBtn.addEventListener('click', function(){
       editProfile = !editProfile;
       editProfileBtn.type = 'submit';
       profileInput.forEach(function(pInput) {
-      pInput.classList.remove('editable');
-      pInput.setAttribute('readonly', true);
+        pInput.classList.remove('editable');
+        pInput.setAttribute('readonly', true);
       });
+      profileSelect.setAttribute('disabled', true);
     }
   }
 });

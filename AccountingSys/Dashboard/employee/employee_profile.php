@@ -138,13 +138,17 @@ session_start();
                   </div>
                   <div class="left-table">
                     <div class="profile-input-group">
-                      <label for="employee-name">Name</label>
-                      <input type="text" id="employee-name" value="<?=$fullname?>" class="profile-input" name="name" readonly>
+                      <label for="employee-fname">First Name</label>
+                      <input type="text" id="employee-fname" value="<?=$fname?>" class="profile-input" name="fname" readonly>
+                    </div>
+                    <div class="profile-input-group">
+                      <label for="employee-lname">Last Name</label>
+                      <input type="text" id="employee-lname" value="<?=$lname?>" class="profile-input" name="lname" readonly>
                     </div>
                     
                     <div class="profile-input-group">
                       <label for="gender">Gender</label>
-                      <select type="text" id="gender" value="<?=$gender?>" class="profile-input" name="gender" readonly>
+                      <select type="text" id="gender" value="<?=$gender?>" class="profile-select" name="gender" disabled>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                       </select>
