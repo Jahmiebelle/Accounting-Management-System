@@ -935,11 +935,7 @@ p {
 }
 
 td, th {
-<<<<<<< HEAD
-  padding: 5px 25px;
-=======
-  padding: 12px 45px;
->>>>>>> 0e221ea318fedeb3cbfe80c43674c3e053a9321e
+  padding: 8px 35px;
   margin: 0px;
   border: 0.1px solid #ccc;
   
@@ -1038,10 +1034,7 @@ tr:nth-child(even) {
 
 @media (max-width: 1024px) {
   td, th {
-<<<<<<< HEAD
-    padding: 5px 25px;
-=======
     padding: 12px 16px;
->>>>>>> 0e221ea318fedeb3cbfe80c43674c3e053a9321e
+
   }
 }
