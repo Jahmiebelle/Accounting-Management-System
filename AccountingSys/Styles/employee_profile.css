@@ -448,6 +448,8 @@ p, h2 {
 
 .buttons button:hover {
   background-color: #1e40af;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .upper-boxes {
