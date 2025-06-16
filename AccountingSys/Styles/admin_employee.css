@@ -417,15 +417,12 @@ legend {
 .role {
   display: flex;
   font-family: 'Poppins-light';
-  font-size: 16px;
-  height: 40%;
-  width: auto;
-  padding: 0 20px;
-  margin-right: 20px;
+  font-size: 17px;
+  padding: 5px 15px;
+  margin-right: 10px;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  border-radius: 50px;
+  border-radius: 10px;
   border: solid #f4f6f8 1px;
   color: #f4f6f8;
 }
@@ -614,25 +611,29 @@ legend {
   /*border: solid lawngreen 1px;*/
 }
  
-
-.logout-icon {
+.new-logout-container{
   display: flex;
-  height: 30px;
-  width: 30px;
- /* border: solid black 1px;*/
-  background-image: url('../Assets/logout-icon.png');
+  align-items: center;  
+  justify-content: flex-end; 
+  gap: 0.5 rem;
+} 
+
+.new-logout-icon {
+  display: flex;
+  height: 35px;
+  width: 35px;
+  background-image: url('../Assets/rec-white-logout-icon.png');
   background-size: 100%;
-  background-position: center;
   background-repeat: no-repeat;
-  border-radius: 50px;
-  /*border: solid #ccc 0.2px;*/
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  margin-right: 20px;
   transition: all 0.15s;
+  cursor: pointer;
 }
 
-.logout-icon:hover {
-  opacity: 0.75px;
-  box-shadow: none;
+.new-logout-icon:hover {
+ opacity: 0.75px;
+  box-shadow: 0px 3px 3px rgba(235, 227, 227, 0.24);
 
 }
 

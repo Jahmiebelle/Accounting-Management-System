@@ -69,9 +69,12 @@
           
         </div>
       </div>
+      <div class="new-logout-container">
       <div class="role">
-        Employee
-      </div>  
+        EMPLOYEE
+      </div>
+      <div class="new-logout-icon" id="new-logout-icon"></div>
+       </div>
     </header>
     
     <div class="inner-container">
