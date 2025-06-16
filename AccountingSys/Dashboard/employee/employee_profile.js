@@ -74,3 +74,21 @@ bankBtn.addEventListener('click', function(){
     }
   }
 });
+
+const previewPic = document.getElementById('preview-pic');
+const fileInput = document.getElementById('fileInput');
+const selectPicBtn = document.getElementById('select-pic-btn');
+
+selectPicBtn.addEventListener('click', function(){
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', function(){
+  const file = this.files[0];
+  if(file){
+    const imageURL = URL.createObjectURL(file);
+    previewPic.src = imageURL;
+  }
+  
+  
+});

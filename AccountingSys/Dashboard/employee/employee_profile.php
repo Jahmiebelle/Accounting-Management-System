@@ -117,17 +117,17 @@ session_start();
           <div class="main-content">
             <div class="profile-card">
               <div class="profile-header">
-                <div class="circle-pic"></div>
+                <div class="circle-pic" id="preview-pic"></div>
                 <div class="header-info">
                   <h2><?=$fullname?></h2>
                   <p><?=$department?></p>
                   <p>ID: <?=$empId?></p>
                 </div>
               </div>
-
+              <input type="file" id="fileInput" accept="image/*" style="display: none;">
               <div class="buttons">
                 <button type="button" form="personal-info-form" id="personal-btn">Edit Personal Info</button>
-                <button>Edit Profile Picture</button>
+                <button type="button" id="select-pic-btn">Edit Profile Picture</button>
                 <button>Change Password</button>
               </div>
 
