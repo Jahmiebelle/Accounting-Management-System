@@ -9,4 +9,6 @@
   $newPassword = $_POST['new_pass'];
   $updatePassQuery = "UPDATE employee_table SET password = '$newPassword' WHERE employee_id = '$empId';";
   $updatePassResult = mysqli_query($conn, $updatePassQuery);
+  
+  header("Location: employee_profile.php");
 ?>
