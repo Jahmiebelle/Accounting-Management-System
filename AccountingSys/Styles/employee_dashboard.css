@@ -419,6 +419,8 @@ body {
   border: none;
   cursor: pointer;
   box-sizing: border-box;
+ 
+  
 }
 
 .btn {
@@ -477,8 +479,6 @@ body {
   border-radius: 5px;
   text-align: center;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
-  
-  
 }
 
 .next-label {

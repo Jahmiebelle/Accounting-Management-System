@@ -577,6 +577,7 @@ p, h2 {
   width: calc(100% - 25vw);
   background-color: #1E4D2B;
   color: #f4f6f8;
+  border: solid bla;
 }
 
 .brand-name-footer, .brand-info-footer, .brand-copyright {
