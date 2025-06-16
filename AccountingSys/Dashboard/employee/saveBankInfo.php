@@ -6,6 +6,6 @@
   session_start();
   
   
-  header("Location: employee_dashboard.php");
+  header("Location: employee_profile.php");
   
 ?>
