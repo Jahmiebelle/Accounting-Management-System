@@ -148,9 +148,9 @@ session_start();
                     
                     <div class="profile-input-group">
                       <label for="gender">Gender</label>
-                      <select type="text" id="gender" value="<?=$gender?>" class="profile-select" name="gender" disabled>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                      <select id="gender" class="profile-select" name="gender" disabled>
+                        <option value="male" <?= $gender == 'male' ? 'selected' : '' ?>>Male</option>
+                        <option value="female" <?= $gender == 'female' ? 'selected' : '' ?>>Female</option>
                       </select>
                     </div>
                     <div class="profile-input-group">
