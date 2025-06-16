@@ -15,21 +15,56 @@ document.getElementById('dashboard-tab').addEventListener('click', function () {
 //});
 
 const editProfileBtn = document.getElementById('personal-btn');
+const profileInput = document.querySelectorAll('.profile-input');
 let editProfile = false;
+
+
 editProfileBtn.addEventListener('click', function(){
   if(!editProfile){
     editProfileBtn.innerText = "Save Personal Info";
-    editProfileBtn.classList.add('editable');
     editProfile = !editProfile;
+    profileInput.forEach(function(pInput){
+      pInput.classList.add('editable');
+      pInput.removeAttribute('readonly');
+    });
 
   }
   else{
     const profileSaveConfirm = confirm("Are you sure you want to save?");
     if(profileSaveConfirm){
       editProfileBtn.innerText = "Edit Personal Info";
-      editProfileBtn.classList.remove('editable');
       editProfile = !editProfile;
       editProfileBtn.type = 'submit';
+      profileInput.forEach(function(pInput) {
+      pInput.classList.remove('editable');
+      pInput.setAttribute('readonly', true);
+      });
+    }
+  }
+});
+
+const bankBtn = document.getElementById('bank-btn');
+const bankInput = document.querySelectorAll('.bank-input');
+let editBank = false;
+bankBtn.addEventListener('click', function(){
+  if(!editBank){
+    bankBtn.innerText = "Save";
+    editBank = !editBank;
+    bankInput.forEach(function(bInput){
+      bInput.classList.add('editable');
+      bInput.removeAttribute('readonly');
+    });
+  }
+  else{
+    const bankSaveConfirm = confirm("Are you sure you want to save?");
+    if(bankSaveConfirm){
+      bankBtn.innerText = "Edit";
+      editBank = !editBank;
+      bankInput.forEach(function(bInput) {
+        bInput.classList.remove('editable');
+        bInput.setAttribute('readonly', true);
+      });
+      bankBtn.type = 'submit';
     }
   }
 });

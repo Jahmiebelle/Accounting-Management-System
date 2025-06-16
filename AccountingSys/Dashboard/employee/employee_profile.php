@@ -111,14 +111,17 @@ session_start();
             </div>
             
           </div>
+          <?php
+            include 'getEmployeeData.php';
+          ?>
           <div class="main-content">
             <div class="profile-card">
               <div class="profile-header">
                 <div class="circle-pic"></div>
                 <div class="header-info">
-                  <h2>Gabriel Lopez</h2>
-                  <p>Information Technology</p>
-                  <p>ID: 1004</p>
+                  <h2><?=$fullname?></h2>
+                  <p><?=$department?></p>
+                  <p>ID: <?=$empId?></p>
                 </div>
               </div>
 
@@ -136,24 +139,24 @@ session_start();
                   <div class="left-table">
                     <div class="profile-input-group">
                       <label for="employee-name">Name</label>
-                      <input type="text" id="employee-name" value="Juan Dela Cruz" class="profile-input" readonly>
+                      <input type="text" id="employee-name" value="Juan Dela Cruz" class="profile-input" name="name" readonly>
                     </div>
                     
                     <div class="profile-input-group">
                       <label for="gender">Gender</label>
-                      <input type="text" id="gender" value="Male" class="profile-input" readonly>
+                      <input type="text" id="gender" value="Male" class="profile-input" name="gender" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="birthdate">Birthdate</label>
-                      <input type="date" id="birthdate" value="2004-08-17" class="profile-input" readonly>
+                      <input type="date" id="birthdate" value="2004-08-17" class="profile-input" name="birthdate" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="email">Email</label>
-                      <input type="text" id="email" value="gab@gmail.com" class="profile-input" readonly>
+                      <input type="text" id="email" value="gab@gmail.com" class="profile-input" name="email" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="contact">Contact No.</label>
-                      <input type="text" id="contact" value="09516325318" class="profile-input" readonly>
+                      <input type="text" id="contact" value="09516325318" class="profile-input" name="contact" readonly>
                     </div>
                   </div>    
                 </form>
@@ -197,26 +200,29 @@ session_start();
                 </form>
               </div>
               <div class="lower-boxes">
-                <form class="info-box-bottom">
+                <form class="info-box-bottom" action="saveBankInfo.php" method="POST" id="bank-info-form">
                   <div class="title-box">
                     Bank & Payment Information
+                    <div class="saveBankBtnContainer">
+                      <button type="button" id="bank-btn">Edit</button>
+                    </div>
                   </div>
                   <div class="left-table">
                     <div class="profile-input-group">
                       <label for="bank">Bank Account Number</label>
-                      <input type="number" id="bank" value="123456789012" class="bank-input" readonly>
+                      <input type="number" id="bank" value="123456789012" class="bank-input" name="bank" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="sss">SSS Number</label>
-                      <input type="text" id="sss" value="02-3456789-0" class="bank-input" readonly>
+                      <input type="text" id="sss" value="02-3456789-0" class="bank-input" name="sss" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="philhealth">PhilHealth Number</label>
-                      <input type="text" id="philhealth" value="2345-67890-12" class="bank-input" readonly>
+                      <input type="text" id="philhealth" value="2345-67890-12" class="bank-input" name="philhealth" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="pagibig">Pagibig Number</label>
-                      <input type="text" id="pagibig" value="2345-6789-0123" class="bank-input" readonly>
+                      <input type="text" id="pagibig" value="2345-6789-0123" class="bank-input" name="pagibig" readonly>
                     </div>
                   </div>
                     
