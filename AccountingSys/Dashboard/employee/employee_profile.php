@@ -139,7 +139,7 @@ session_start();
                   <div class="left-table">
                     <div class="profile-input-group">
                       <label for="employee-name">Name</label>
-                      <input type="text" id="employee-name" value="Juan Dela Cruz" class="profile-input" name="name" readonly>
+                      <input type="text" id="employee-name" value="<?=$fullname?>" class="profile-input" name="name" readonly>
                     </div>
                     
                     <div class="profile-input-group">
@@ -148,15 +148,15 @@ session_start();
                     </div>
                     <div class="profile-input-group">
                       <label for="birthdate">Birthdate</label>
-                      <input type="date" id="birthdate" value="2004-08-17" class="profile-input" name="birthdate" readonly>
+                      <input type="date" id="birthdate" value="<?=$birthdate?>" class="profile-input" name="birthdate" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="email">Email</label>
-                      <input type="text" id="email" value="gab@gmail.com" class="profile-input" name="email" readonly>
+                      <input type="text" id="email" value="<?=$email?>" class="profile-input" name="email" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="contact">Contact No.</label>
-                      <input type="text" id="contact" value="09516325318" class="profile-input" name="contact" readonly>
+                      <input type="text" id="contact" value="<?=$contact?>" class="profile-input" name="contact" readonly>
                     </div>
                   </div>    
                 </form>
@@ -176,23 +176,23 @@ session_start();
                     </div>-->
                     <div class="profile-input-group">
                       <label for="compId">Company ID</label>
-                      <input type="text" id="compId" value="2025113" class="work-input" readonly>
+                      <input type="text" id="compId" value="<?=$company_id?>" class="work-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="department">Department</label>
-                      <input type="text" id="department" value="IT Department" class="work-input" readonly>
+                      <input type="text" id="department" value="<?=$department?>" class="work-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="position">Position</label>
-                      <input type="text" id="position" value="Professor" class="work-input" readonly>
+                      <input type="text" id="position" value="<?=$position?>" class="work-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="status">Status</label>
-                      <input type="text" id="status" value="Active" class="work-input" readonly>
+                      <input type="text" id="status" value="<?=$status?>" class="work-input" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="joindate">Join Date</label>
-                      <input type="text" id="joindate" value="2025-02-03" class="work-input" readonly>
+                      <input type="text" id="joindate" value="<?=$joindate?>" class="work-input" readonly>
                     </div>
                     
                   </div>
@@ -210,19 +210,19 @@ session_start();
                   <div class="left-table">
                     <div class="profile-input-group">
                       <label for="bank">Bank Account Number</label>
-                      <input type="number" id="bank" value="123456789012" class="bank-input" name="bank" readonly>
+                      <input type="number" id="bank" value="<?=$bank?>" class="bank-input" name="bank" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="sss">SSS Number</label>
-                      <input type="text" id="sss" value="02-3456789-0" class="bank-input" name="sss" readonly>
+                      <input type="text" id="sss" value="<?=$sss?>" class="bank-input" name="sss" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="philhealth">PhilHealth Number</label>
-                      <input type="text" id="philhealth" value="2345-67890-12" class="bank-input" name="philhealth" readonly>
+                      <input type="text" id="philhealth" value="<?=$philhealth?>" class="bank-input" name="philhealth" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="pagibig">Pagibig Number</label>
-                      <input type="text" id="pagibig" value="2345-6789-0123" class="bank-input" name="pagibig" readonly>
+                      <input type="text" id="pagibig" value="<?=$pagibig?>" class="bank-input" name="pagibig" readonly>
                     </div>
                   </div>
                     
