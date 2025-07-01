@@ -65,6 +65,33 @@
       $completePreviousResult = mysqli_query($conn, $completePreviousQuery);
       $resetWorkTableQuery = "UPDATE employee_work_table SET total_hours_worked = 0, total_overtime_hours = 0, total_working_days = 0 WHERE employee_id = $employee_id;";
       $resetWorkTableResult = mysqli_query($conn, $resetWorkTableQuery);
+      //after i complete a mag reset.. I rerecompute na yung payslips this month
+      $empWorkQuery = "SELECT * FROM employee_work_table WHERE employee_id = '$employee_id';";
+      $empWorkResult = mysqli_query($conn, $empWorkQuery);
+      $empWorkRow = mysqli_fetch_assoc($empWorkResult);
+      if(!$empWorkRow){
+        continue;
+      }
+      $empHourlyRate = $empWorkRow['hourly_rate'];
+      $empTotalHours = $empWorkRow['total_hours_worked'];
+      $empTotalOvertime = $empWorkRow['total_overtime_hours'];
+      $empBasicSalary = $empHourlyRate * ($empTotalHours - $empTotalOvertime);
+      $empOvertimePay = $empTotalOvertime * ($empHourlyRate * 1.2);
+      $empGrossPay = $empBasicSalary + $empOvertimePay;
+      $incomeTax = $basicRate * $empGrossPay;
+      $sssTax = $sssRate * $empGrossPay;
+      $philhealthTax = $philhealthRate * $empGrossPay;
+      $pagibigTax = $pagibigRate * $empGrossPay;
+      $totalDeductions = $incomeTax + $sssTax + $philhealthTax + $pagibigTax;
+      $empNetPay = $empGrossPay - $totalDeductions;
+      $updatePayslipQuery = "UPDATE payroll_history_table SET employee_id = $employee_id, first_name = '$emp_fn', last_name = '$emp_ln', basic_salary = $empBasicSalary, overtime_pay = $empOvertimePay, gross_pay = $empGrossPay, income_tax = $incomeTax, sss = $sssTax, philhealth = $philhealthTax, pagibig = $pagibigTax, total_deductions = $totalDeductions, net_pay = $empNetPay WHERE employee_id = $employee_id AND is_complete = 0;";
+      if(mysqli_query($conn, $updatePayslipQuery)){
+        //edi nice
+      }
+      else{
+        echo "SQL Error: " . mysqli_error($conn);
+      }
+      
     }
   }
   
