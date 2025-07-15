@@ -28,9 +28,9 @@ include 'hourly_rates.php';
       $totalDayCount = (int)$totalDaysRow['days_of_work'];
       
       //seperate yung time into 3parts like this 12:01:00 into ['12', '01', '00'] then acces yung index zero para makuha yung hours, then yun yung ilalagay sa employee_work_table hehe
-      $totalHoursArray = explode(':', $totalHoursTime);
+      $totalHoursArray = $totalHoursTime ? explode(':', $totalHoursTime) : ['0'];
       $totalHours = (int)$totalHoursArray[0];
-      $totalOvertimeArray = explode(':', $totalOvertimeTime);
+      $totalOvertimeArray = $totalOvertimeTime ? explode(':', $totalOvertimeTime) : ['0'];
       $totalOvertime = (int)$totalOvertimeArray[0];
       
       //now update na natin employee_work_table
