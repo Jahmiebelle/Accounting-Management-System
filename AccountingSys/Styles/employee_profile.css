@@ -147,9 +147,9 @@ body {
 
 .brand-icon {
   display: flex;
-  height: 70px;
-  width: 70px;
-  background-image: url('../Assets/heroes-logo.png');
+  height: 50px;
+  width: 50px;
+  background-image: url('../Assets/teachTrackLogo.png');
   background-size: cover;
   background-position: center;
 }
