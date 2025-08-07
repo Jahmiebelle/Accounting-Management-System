@@ -164,7 +164,7 @@ session_start();
                   <fieldset class="fieldsets">
                     <legend>Bank Number</legend>
                   </fieldset>
-                  <input class="addboxes" type="text" id="add-bank" name="add_bank" value="" placeholder="e.g. 012345678901" required>
+                  <input class="addboxes" type="number" id="add-bank" name="add_bank" value="" placeholder="e.g. 012345678901" required>
                 </div>
               </div>
               <div class="modern-input-container">

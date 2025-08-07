@@ -65,7 +65,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: rgba(22, 46, 123, 0.2);
+  background-color: rgba(22, 46, 123, 0.7);
   backdrop-filter: blur(2px);
   z-index: 4;
 }
@@ -80,9 +80,9 @@ body {
 
 .brand-icon {
   display: flex;
-  height: 70px;
-  width: 70px;
-  background-image: url('../Assets/heroes-logo.png');
+  height: 100px;
+  width: 100px;
+  background-image: url('../Assets/teachTrackLogo.png');
   background-size: cover;
   background-position: center;
 }

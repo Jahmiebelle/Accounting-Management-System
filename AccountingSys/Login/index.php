@@ -36,7 +36,7 @@ session_start();
                 $_SESSION['admin_id'] = $user_data['admin_id'];
                 $_SESSION['admin_first_name'] = $user_data['first_name'];
                 $_SESSION['admin_middle_name'] = $user_data['middle_name'];
-                $_SESSION['admin_last_name'] = $user_data['last_name'];
+                $_SESSION['admin_last_name'] = $user_data['last_name']; 
                 $_SESSION['admin_email'] = $user_data['email'];
                 $_SESSION['company_id'] = $user_data['company_id'];
                 $_SESSION['password'] = $user_data['password'];
