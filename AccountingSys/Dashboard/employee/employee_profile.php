@@ -75,6 +75,12 @@ session_start();
             </div>
           </div>
 
+           <a href="employee_leaverequest.php" class="sidetabs" id="leave-request-tab">
+            <div class="tab-icon" id="leaverequest-tab-icon"></div>
+            <div class="tab-text">
+            Leave Request
+            </div></a>
+
           <!--<div class="sidetabs" id="attendance-tab">
             <div class="tab-icon" id="attendance-tab-icon"></div>
             <div class="tab-text">

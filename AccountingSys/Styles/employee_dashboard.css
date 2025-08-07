@@ -196,6 +196,12 @@ body {
   background-position: center;
 }
 
+#leaverequest-tab-icon {
+  background-image: url('../Assets/leavereq-icon-white.png');
+  background-size: cover;
+  background-position: center;
+}
+
 #attendance-tab-icon {
   background-image: url('../Assets/attendance-icon-white.png');
   background-size: cover;

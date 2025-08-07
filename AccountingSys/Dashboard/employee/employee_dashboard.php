@@ -97,6 +97,13 @@
               Profile
             </div>
           </div>
+
+           <a href="employee_leaverequest.php" class="sidetabs" id="leave-request-tab">
+            <div class="tab-icon" id="leaverequest-tab-icon"></div>
+            <div class="tab-text">
+            Leave Request
+            </div></a>
+
           </div>
         </div>
       </div>
