@@ -1,12 +1,13 @@
 <?php include 'db.php';
 session_start();
+      $errorMsg = "";
       if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $company_id = $_POST['lgn_company_id'];
         $password = $_POST['lgn_password'];
         $role = $_POST['position'];
         if(isset($_POST['login'])) {
           if(empty($company_id) || empty($password)){
-            echo "<script>alert('Missing Credentials');</script>";
+            //echo "<script>alert('Missing Credentials');</script>";
           }
           else {
             if($role == 'employee'){
@@ -25,7 +26,7 @@ session_start();
                 exit();
               }
               else {
-                echo "<script>alert('Invalid Credentials');</script>";
+                $errorMsg = "mali";
               }
             }
             else {
@@ -44,7 +45,7 @@ session_start();
                 exit();
               }
               else {
-                echo "<script>alert('Invalid Credentials');</script>";
+                $errorMsg = "may mali";
               }
             }
           }
@@ -77,8 +78,8 @@ session_start();
         <h2 class="lgn-header"> Login </h2>
       </div>
       <div class="form-content">
-        <input onclick="toggleAnimation()" type="number" id="lgn-company-id" name="lgn_company_id" placeholder="Company ID#">
-        <input type="password" id="lgn-password" name="lgn_password" placeholder="Password">
+        <input onclick="toggleAnimation()" type="number" id="lgn-company-id" name="lgn_company_id" placeholder="Company ID#" required>
+        <input type="password" id="lgn-password" name="lgn_password" placeholder="Password" required>
         <select class="position" name="position" id="position">
           <option value="employee">Employee</option>
           <option value="admin">Admin</option>
@@ -102,5 +103,10 @@ session_start();
     </form>
   </div>
   <script src="main.js"></script>
+  <?php
+    if($errorMsg !== ""){
+      echo "<script>alert('$errorMsg');</script>";      
+    }
+  ?>
 </body>
 </html>
