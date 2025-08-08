@@ -2,3 +2,25 @@ function showForgot(){
   document.querySelector('.forgotPass-form').classList.toggle('show');
   document.querySelector('.login-form').classList.toggle('hide');
 }
+
+const login_btn = document.getElementById('login-btn');
+const companyIDBox = document.getElementById('lgn-company-id');
+const passwordBox = document.getElementById('lgn-password');
+
+login_btn.addEventListener('click', function (e) {
+  const companyID = companyIDBox.value.trim();
+  const password = passwordBox.value.trim();
+
+  companyIDBox.style.border = "";
+  passwordBox.style.border = "";
+
+  if (companyID === "") {
+    companyIDBox.style.border = "0.75px solid red";
+  }
+
+  if (password === "") {
+    passwordBox.style.border = "0.75px solid red";
+  }
+
+});
+
