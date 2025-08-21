@@ -63,9 +63,9 @@ session_start();
             else {
               $errorMessage = "invalidLogin";
             }
-          }
         }
-      }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +76,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../Styles/styles.css?v=1.0">
   <title>Login </title>
-  </head>
+</head>
   
 <body> 
   <div class="outer-box">
