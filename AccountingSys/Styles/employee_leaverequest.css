@@ -167,55 +167,54 @@ body {
   color: #F4F6F8;
   height: 60px;
   width: 90%;
-  /*border: solid #F4F6F8 1px;*/
   border-radius: 30px;
   box-sizing: border-box;
   transition: all 0.15s ease-out;
+  cursor: pointer;
+  border: none;
+  text-decoration: none; 
 }
 
-#dashboard-tab {
+#leave-request-tab {
   border: solid #f4f6f8 1px;
   /*box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.5);*/
 }
 
-#dashboard-tab:hover, #profile-tab:hover, #attendance-tab:hover, #payroll-tab:hover {
+.sidetabs:hover {
   background-color: #66B266;
+}
+
+
+.sidetabs.active {
+  border: solid #ffffff 1px; 
 }
 
 .tab-icon {
   display: flex;
   height: 35px;
   width: 35px;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+
+.sidetabs:hover .tab-icon {
+  filter: brightness(0.9);
 }
 
 #dashboard-tab-icon {
   background-image: url('../Assets/home-icon-white.png');
-  background-size: cover;
-  background-position: center;
 }
 
 #profile-tab-icon {
   background-image: url('../Assets/employee-icon-white.png');
-  background-size: cover;
-  background-position: center;
 }
 
 #leaverequest-tab-icon {
   background-image: url('../Assets/leavereq-icon-white.png');
-  background-size: cover;
-  background-position: center;
-}
-
-#attendance-tab-icon {
-  background-image: url('../Assets/attendance-icon-white.png');
-  background-size: cover;
-  background-position: center;
-}
-
-#payroll-tab-icon {
-  background-image: url('../Assets/payroll-icon-white.png');
-  background-size: cover;
-  background-position: center;
 }
 
 
@@ -378,29 +377,35 @@ body {
 /*DITO NA AKO GAGAWA NG MAIN CONTENT*/
 /* REQUEST LEAVE FORM */
 .leave-form-container {
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: 10px;
+  padding: 30px;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .leave-form-header {
   text-align: center;
   font-family: 'Poppins-bold';
-  font-size: 20px;
-  background-color: #1E4D2B;
-  color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  color: #1E4D2B;
+  padding: 15px;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
 }
 
 .leave-form label {
   display: block;
   font-size: 14px;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  font-family: 'Poppins-regular';
+  font-weight: 500;
+  color: #333;
+  margin-top: 12px;
+  margin-bottom: 6px;
 }
 
 .leave-form input[type="text"],
@@ -408,16 +413,24 @@ body {
 .leave-form input[type="number"],
 .leave-form input[type="file"] {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
   font-family: 'Poppins-regular';
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.leave-form input:focus {
+  border-color: #1E4D2B;
+  outline: none;
+  box-shadow: 0 0 6px rgba(30, 77, 43, 0.2);
 }
 
 .date-group {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 25px;
 }
 
 .date-field {
@@ -426,22 +439,25 @@ body {
 
 /* Submit button */
 .submit-btn {
-  width: 30%;
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #1E4D2B;
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: linear-gradient(135deg, #1E4D2B, #3A6B48);
   color: white;
   font-family: 'Poppins-bold';
   font-size: 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(30, 77, 43, 0.2);
 }
 
 .submit-btn:hover {
-  background-color: #3A6B48;
+  background: linear-gradient(135deg, #3A6B48, #4F8A5C);
+  transform: translateY(-2px);
 }
+
 
 /*THS IS FOOTER SECTION*/
 
