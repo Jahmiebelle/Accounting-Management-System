@@ -136,29 +136,6 @@
             </form>
           </div>
 
-          <!-- LEAVE HISTORY -->
-          <div class="leave-history-container">
-            <div class="leave-history-header">LEAVE HISTORY</div>
-            <table class="leave-history-table">
-              <thead>
-                <tr>
-                  <th>REQUEST DATE</th>
-                  <th>LEAVE TYPE</th>
-                  <th>START-END DATES</th>
-                  <th>STATUS</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>05/30/25</td>
-                  <td>Vacation Leave</td>
-                  <td>06/01/25 - 06/10/25</td>
-                  <td><span class="status-approved">APPROVED</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
         </div>
       </div>
     </div>
