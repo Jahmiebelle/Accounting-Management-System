@@ -17,7 +17,7 @@ session_start();
             $resetQuery = "SELECT * FROM employee_table WHERE company_id = '$resetCompanyID' AND email = '$resetEmail'";
             $resetResult = mysqli_query($conn, $resetQuery);
             if(mysqli_num_rows($resetResult) === 1){
-              //echo "<script>openOverlay()</script>";
+              echo "<script>openOverlay()</script>";
             }
             else{
               $resetErrorMsg = "resetFailed";
