@@ -1,56 +1,64 @@
-<?php include 'db.php';
+<?php 
+include 'db.php';
 session_start();
-      $errorMsg = "";
-      if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        $company_id = $_POST['lgn_company_id'];
-        $password = $_POST['lgn_password'];
-        $role = $_POST['position'];
-        if(isset($_POST['login'])) {
-          if(empty($company_id) || empty($password)){
-            //echo "<script>alert('Missing Credentials');</script>";
-          }
-          else {
+
+$errorMessage = "";
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $company_id = $_POST['lgn_company_id'];
+    $password = $_POST['lgn_password'];
+    $role = $_POST['position'];
+
+    if(isset($_POST['login'])) {
+        if(empty($company_id) || empty($password)){
+            $errorMessage = "Missing Credentials";
+        }
+        else {
             if($role == 'employee'){
-              $emp_query = "SELECT * FROM employee_table WHERE password = '$password' AND company_id = '$company_id'";
-              $emp_result = mysqli_query($conn, $emp_query);
-              if(mysqli_num_rows($emp_result) == 1){
-                $user_data = mysqli_fetch_assoc($emp_result);
-                $_SESSION['employee_id'] = $user_data['employee_id'];
-                $_SESSION['employee_first_name'] = $user_data['first_name'];
-                $_SESSION['employee_middle_name'] = $user_data['middle_name'];
-                $_SESSION['employee_last_name'] = $user_data['last_name'];
-                $_SESSION['employee_email'] = $user_data['email'];
-                $_SESSION['company_id'] = $user_data['company_id'];
-                $_SESSION['password'] = $user_data['password'];
-                header("Location: ../Dashboard/employee/employee_dashboard.php");
-                exit();
-              }
-              else {
-                $errorMsg = "mali";
-              }
+                $emp_query = "SELECT * FROM employee_table WHERE password = '$password' AND company_id = '$company_id'";
+                $emp_result = mysqli_query($conn, $emp_query);
+
+                if(mysqli_num_rows($emp_result) == 1){
+                    $user_data = mysqli_fetch_assoc($emp_result);
+                    $_SESSION['employee_id'] = $user_data['employee_id'];
+                    $_SESSION['employee_first_name'] = $user_data['first_name'];
+                    $_SESSION['employee_middle_name'] = $user_data['middle_name'];
+                    $_SESSION['employee_last_name'] = $user_data['last_name'];
+                    $_SESSION['employee_email'] = $user_data['email'];
+                    $_SESSION['company_id'] = $user_data['company_id'];
+                    $_SESSION['password'] = $user_data['password'];
+
+                    header("Location: ../Dashboard/employee/employee_dashboard.php");
+                    exit();
+                }
+                else {
+                    $errorMessage = "Invalid Employee Credentials";
+                }
             }
             else {
-              $admin_query = "SELECT * FROM admin_table WHERE password = '$password' AND company_id = '$company_id'";
-              $admin_result = mysqli_query($conn, $admin_query);
-              if(mysqli_num_rows($admin_result) == 1) {
-                $user_data = mysqli_fetch_assoc($admin_result);
-                $_SESSION['admin_id'] = $user_data['admin_id'];
-                $_SESSION['admin_first_name'] = $user_data['first_name'];
-                $_SESSION['admin_middle_name'] = $user_data['middle_name'];
-                $_SESSION['admin_last_name'] = $user_data['last_name']; 
-                $_SESSION['admin_email'] = $user_data['email'];
-                $_SESSION['company_id'] = $user_data['company_id'];
-                $_SESSION['password'] = $user_data['password'];
-                header("Location: ../Dashboard/admin/admin_dashboard.php");
-                exit();
-              }
-              else {
-                $errorMsg = "may mali";
-              }
+                $admin_query = "SELECT * FROM admin_table WHERE password = '$password' AND company_id = '$company_id'";
+                $admin_result = mysqli_query($conn, $admin_query);
+
+                if(mysqli_num_rows($admin_result) == 1) {
+                    $user_data = mysqli_fetch_assoc($admin_result);
+                    $_SESSION['admin_id'] = $user_data['admin_id'];
+                    $_SESSION['admin_first_name'] = $user_data['first_name'];
+                    $_SESSION['admin_middle_name'] = $user_data['middle_name'];
+                    $_SESSION['admin_last_name'] = $user_data['last_name']; 
+                    $_SESSION['admin_email'] = $user_data['email'];
+                    $_SESSION['company_id'] = $user_data['company_id'];
+                    $_SESSION['password'] = $user_data['password'];
+
+                    header("Location: ../Dashboard/admin/admin_dashboard.php");
+                    exit();
+                }
+                else {
+                    $errorMessage = "Invalid Admin Credentials";
+                }
             }
-          }
         }
-      }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -61,9 +69,9 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../Styles/styles.css?v=1.0">
   <title>Login </title>
-  </head>
+</head>
   
-<body>
+<body> 
   <div class="outer-box">
     <h2 class="brand-namin">Teach<span style="color: greenyellow">Track</span></h2>
       <h1 class="background-text-bottom">ACCOUNTING•MANAGEMENT•SYSTEM</h1>
@@ -104,8 +112,8 @@ session_start();
   </div>
   <script src="main.js"></script>
   <?php
-    if($errorMsg !== ""){
-      echo "<script>alert('$errorMsg');</script>";      
+    if (!empty($errorMessage)) {
+        echo "<script>alert('$errorMessage');</script>";
     }
   ?>
 </body>
