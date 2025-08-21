@@ -7,7 +7,7 @@
 //auth_username=heroesteachtrack@gmail.com
 //itong nasa baba ang auth pass
 //aajr ovdj dqmv mtpr
-$to = "gabriellopezquipid@gmail.com"; // dito sesend ung email
+$to = "cyruscabanes@gmail.com"; // dito sesend ung email
 $subject = "OTP Test Email";
 $otp = rand(100000, 999999);
 $message = "Your One-Time Password (OTP) is: " . $otp;
