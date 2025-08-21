@@ -169,9 +169,9 @@
                     $getWorkDataQuery = "SELECT * FROM employee_work_table WHERE employee_id = $employee_id;";
                     $workDataResult = mysqli_query($conn, $getWorkDataQuery);
                     $workDataRow = mysqli_fetch_assoc($workDataResult);
-                    $totalWorkHours = $workDataRow['total_hours_worked'];
-                    $totalOvertime = $workDataRow['total_overtime_hours'];
-                    $totalWorkDays = $workDataRow['total_working_days'];
+                    $totalWorkHours = $workDataRow['total_hours_worked'] ? $workDataRow['total_hours_worked'] : "-";
+                    $totalOvertime = $workDataRow['total_overtime_hours'] ? $workDataRow['total_overtime_hours'] : "-";
+                    $totalWorkDays = $workDataRow['total_working_days'] ? $workDataRow['total_working_days'] : "-";
                   ?>
                   <div class="next-date"><?php echo $payrollFullString;?></div>
                 </div>
