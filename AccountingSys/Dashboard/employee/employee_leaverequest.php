@@ -34,7 +34,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Employee Leave Request</title>
+  <title>Employee</title>
   <link rel="stylesheet" href="../../Styles/employee_leaverequest.css">
 </head>
 
@@ -107,7 +107,7 @@
             </div>
           </div>
 
-          <!-- REQUEST LEAVE FORM -->
+          <!-- ETO ANG MAIN CONTENT-->
           <div class="leave-form-container">
             <div class="leave-form-header">REQUEST LEAVE FORM</div>
             <form action="process_leave.php" method="POST" enctype="multipart/form-data" class="leave-form">
