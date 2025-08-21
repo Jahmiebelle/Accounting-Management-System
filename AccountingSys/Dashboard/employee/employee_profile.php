@@ -249,22 +249,22 @@ session_start();
                   <div class="left-table">
                     <div class="profile-input-group">
                       <label for="bank">Bank Account Number</label>
-                      <input type="number" pattern="\d*" inputmode="numeric"
+                      <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
  id="bank" value="<?=$bank?>" class="bank-input" name="bank" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="sss">SSS Number</label>
-                      <input type="number" pattern="\d*" inputmode="numeric"
+                      <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
  id="sss" value="<?=$sss?>" class="bank-input" name="sss" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="philhealth">PhilHealth Number</label>
-                      <input type="number" pattern="\d*" inputmode="numeric"
+                      <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
  id="philhealth" value="<?=$philhealth?>" class="bank-input" name="philhealth" readonly>
                     </div>
                     <div class="profile-input-group">
                       <label for="pagibig">Pagibig Number</label>
-                      <input type="number" pattern="\d*" inputmode="numeric"
+                      <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
  id="pagibig" value="<?=$pagibig?>" class="bank-input" name="pagibig" readonly>
                     </div>
                   </div>
