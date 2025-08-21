@@ -51,6 +51,7 @@ span {
 
 .brand-namin {
   font-weight: bold;
+  letter-spacing: 1px;
   display: flex;
   color: white;
   position: absolute;
@@ -145,17 +146,17 @@ span {
 .login-form {
   color: ghostwhite;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
   display: flex;
-  min-height: 200px;
+  min-height: 350px;
   max-height: 95%;
-  height: 300px;
-  width: 260px;
+  height: 350px;
+  width: 300px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: none;
+  border: solid gray 0.1px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -176,8 +177,12 @@ span {
   justify-content: center;
   align-items: center;
   max-height: 90px;
+  padding-top: 2rem;
   height: 30%;
   width: 100%;
+  word-spacing: 0.2rem;
+  letter-spacing: 1.5px;
+  box-sizing: border-box;
 }
 
 .lgn-header, .forgotPass-header {
@@ -190,10 +195,12 @@ span {
 .form-content {
   display: flex;
   flex: 1;
-  padding-bottom: 15px;
-  gap: 10%;
+  width: 90%;
+  padding-bottom: 10px;
+  gap: 25px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   
 }
 
@@ -201,28 +208,11 @@ span {
   margin: 0;
   border: none;
   border-radius: 3px;
-  padding: 0.25rem 0;
-}
-
-#lgn-company-id {
-}
-
-#lgn-password {
+  padding: 0.5rem 0.75rem;
 }
 
 #lgn-company-id::placeholder, #lgn-password::placeholder, #company-id::placeholder, #email::placeholder {
   text-align: center;
-  
-  
-}
-
-.position {
-  border-radius: 20px;
-  text-align: center;
-  width: 60%;
-  font-family: 'Poppins-bold';
-  font-size: 0.8rem;
-  color: darkslategrey;
   
 }
 
@@ -248,10 +238,15 @@ span {
   color: white;
   font-family: 'Poppins';
   background-color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
   backdrop-filter: blur(10px);
   border: solid white 0.1px;
   border-radius: 5px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+#login-btn:hover, #verify-btn:hover {
+  opacity: 0.6;
 }
 
 #login-btn:active , #verify-btn:active {
@@ -266,15 +261,15 @@ span {
   display: flex;
   flex-direction: column;
   position: absolute;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  min-height: 200px;
+  min-height: 350px;
   max-height: 95%;
-  height: 300px;
-  width: 260px;
-  background-color: rgba(255, 255, 255, 0.1);
+  height: 350px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
-  border: none;
+  border: solid gray 0.1px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -296,20 +291,28 @@ span {
 }
 
 #verify-btn {
-  margin-top: 10%;
   color: white;
   border: solid white 0.1px;
-}
-
-.remember-pass {
-  margin-top: 10%;
 }
 
 .copyright {
   color: ghostwhite;
   display: flex;
+  letter-spacing: 1.5px;
   font-family: 'BebasNeue';
 }
+
+.error {
+  display: none;
+  opacity: 0;
+  color: rgb(255, 41, 41);
+  font-family: "Poppins-medium";
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+
 
 
 @keyframes galawRight-Left {

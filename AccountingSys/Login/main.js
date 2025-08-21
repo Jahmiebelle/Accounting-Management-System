@@ -6,6 +6,7 @@ function showForgot(){
 const login_btn = document.getElementById('login-btn');
 const companyIDBox = document.getElementById('lgn-company-id');
 const passwordBox = document.getElementById('lgn-password');
+const lgnError = document.getElementById('lgn-error');
 
 login_btn.addEventListener('click', function (e) {
   const companyID = companyIDBox.value.trim();
@@ -15,10 +16,16 @@ login_btn.addEventListener('click', function (e) {
   passwordBox.style.border = "";
 
   if (companyID === "") {
+    lgnError.innerText = "Missing Credentials.";
+    lgnError.style.display = "flex";
+    lgnError.style.opacity = 1;
     companyIDBox.style.border = "0.75px solid red";
   }
 
   if (password === "") {
+    lgnError.innerText = "Missing Credentials.";
+    lgnError.style.display = "flex";
+    lgnError.style.opacity = 1;
     passwordBox.style.border = "0.75px solid red";
   }
 

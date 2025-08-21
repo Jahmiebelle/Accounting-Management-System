@@ -65,7 +65,7 @@
         <div class="brand-icon">
         </div>
         <div class="brand-name">
-          HEROES TEACH<span id="track" style="color: #ADD8E6">TRACK</span>
+          HEROES TEACH<span id="track" style="color: greenyellow">TRACK</span>
           
         </div>
       </div>
