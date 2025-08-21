@@ -8,7 +8,7 @@ session_start();
       $resetErrorMsg = "";
       if($_SERVER['REQUEST_METHOD'] === 'POST'){
         if(isset($_POST['verify'])){
-          $resetCompanyID = $_POST['company-id'];
+          $resetCompanyID = $_POST['company_id'];
           $resetEmail = $_POST['email'];
           if(empty($resetCompanyID) || empty($resetEmail)){
             $resetErrorMsg = "";
@@ -17,7 +17,7 @@ session_start();
             $resetQuery = "SELECT * FROM employee_table WHERE company_id = '$resetCompanyID' AND email = '$resetEmail'";
             $resetResult = mysqli_query($conn, $resetQuery);
             if(mysqli_num_rows($resetResult) === 1){
-              echo "<script>openOverlay()</script>";
+              echo "<script>otpOverlay()</script>";
             }
             else{
               $resetErrorMsg = "resetFailed";
