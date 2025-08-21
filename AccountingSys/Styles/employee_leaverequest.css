@@ -562,54 +562,6 @@ body {
   background-color: #3A6B48;
 }
 
-/* LEAVE HISTORY */
-.leave-history-container {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #E6EEDC;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.leave-history-header {
-  text-align: center;
-  font-family: 'Poppins-bold';
-  font-size: 20px;
-  background-color: #1E4D2B;
-  color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.leave-history-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: 'Poppins-regular';
-  font-size: 14px;
-}
-
-.leave-history-table th,
-.leave-history-table td {
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: 8px;
-}
-
-.leave-history-table th {
-  background-color: #1E4D2B;
-  color: white;
-}
-
-.status-approved {
-  background-color: #4CAF50;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-
-
 /*THS IS FOOTER SECTION*/
 
 .footer-container {
