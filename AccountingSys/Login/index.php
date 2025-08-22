@@ -2,7 +2,7 @@
 
 use Dom\Mysql;
 
- include 'db.php';
+include 'db.php';
 session_start();
       $errorMessage = "";
       $resetErrorMsg = "";
@@ -17,7 +17,8 @@ session_start();
             $resetQuery = "SELECT * FROM employee_table WHERE company_id = '$resetCompanyID' AND email = '$resetEmail'";
             $resetResult = mysqli_query($conn, $resetQuery);
             if(mysqli_num_rows($resetResult) === 1){
-              echo "<script>otpOverlay()</script>";
+              
+
             }
             else{
               $resetErrorMsg = "resetFailed";
@@ -79,7 +80,27 @@ session_start();
 </head>
   
 <body> 
-  <div class="outer-box">
+  <div class="outer-box" id="outerBox">
+    <div class="otp-overlay" id="otp-overlay">
+      <div class="otp-header">
+        <div class="close-overlay-btn" id="close-overlay-btn"></div>
+        <h4 class="otp-headtext" id="otp-mainheadText">Verify Account</h4>
+        <h6 class="otp-headtext">We emailed a six digit code to <span id="email_receiver"></span></h6>
+        <h6 class="otp-headtext">Enter the code below to confirm your email address.</h6>
+      </div>
+      <div class="otp-body">
+        <input type="text" maxlength="1" class="otp-input">
+        <input type="text" maxlength="1" class="otp-input">
+        <input type="text" maxlength="1" class="otp-input">
+        <input type="text" maxlength="1" class="otp-input">
+        <input type="text" maxlength="1" class="otp-input">
+        <input type="text" maxlength="1" class="otp-input">
+      </div>
+      <div class="otp-footer">
+        <button type="button" id="verify-otp-btn">Verify</button> 
+        <p id="resend-text">Didn't receive the code? <span id="resend-btn" style="color:yellowgreen;">Resend</span></p>
+      </div>
+    </div>
     <h2 class="brand-namin">HEROES TEACH<span style="color: greenyellow">TRACK</span></h2>
       <h1 class="background-text-bottom">ACCOUNTING•MANAGEMENT•SYSTEM</h1>
       <h1 class="background-text-bottom2">ACCOUNTING•MANAGEMENT•SYSTEM</h1>
@@ -108,7 +129,7 @@ session_start();
     </form>
     
     
-    <form class="forgotPass-form" action="" method="POST">
+    <form class="forgotPass-form" id="forgotPassForm" action="" method="POST">
       <div class="form-header">
         <h2 class="forgotPass-header">Password Recovery</h2>
       </div>

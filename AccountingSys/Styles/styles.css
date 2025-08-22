@@ -79,8 +79,107 @@ span {
   transition: all 5s;
   overflow: hidden;
   
+}
 
-  
+.otp-overlay {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  font-family: "Poppins-medium";
+  letter-spacing: 1px;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  border-radius: 5px;
+  border: solid gray 1px;
+  height: auto;
+  z-index: 10;
+  color: white;
+}
+
+.otp-overlay.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#email_receiver {
+  margin-left: 0.25rem; 
+}
+
+.otp-header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  width: 100%;
+}
+
+.close-overlay-btn {
+  display: flex;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: 45px;
+  width: 45px;
+  background-image: url('../Assets/close.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.close-overlay-btn:hover {
+  opacity: 0.75;
+}
+
+.close-overlay-btn:active {
+  opacity: 0.5;
+}
+
+.otp-headtext {
+  display: flex;
+  margin: 0;
+  padding: 0.2rem;
+
+}
+
+#otp-mainheadText {
+  display: flex;
+  font-family: "Poppins";
+  padding: 0.75rem;
+  padding-top: 1.25rem;
+}
+
+.otp-body {
+  display: flex; 
+  gap: 0.5rem;
+
+}
+
+.otp-input {
+  display: flex;
+  border-radius: 5px;
+  text-align: center;
+  text-justify: center;
+  font-size: 2rem;
+  height: 4rem;
+  width: 2rem;
+  border: solid gray 1px;
+}
+
+.otp-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
 }
 
 .outer-box.animate {
@@ -231,7 +330,7 @@ span {
   
 }
 
-#login-btn, #verify-btn {
+#login-btn, #verify-btn, #verify-otp-btn {
   width: 35%;
   height: 2rem;
   font-weight: bold;
@@ -245,15 +344,22 @@ span {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-#login-btn:hover, #verify-btn:hover {
+#login-btn:hover, #verify-btn:hover, #verify-otp-btn:hover {
   opacity: 0.6;
 }
 
-#login-btn:active , #verify-btn:active {
+#login-btn:active , #verify-btn:active, #verify-otp-btn:active {
   background-color: rgba(0, 0, 0, 0.1);
   opacity: 0.8;
   box-shadow: none;
   border: none;
+}
+
+#verify-otp-btn {
+  text-align: center;
+  margin: 0;
+  text-justify: center;
+
 }
 
 .forgotPass-form {
